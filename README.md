@@ -43,26 +43,30 @@
 ## Technologies - Frontend
 
 * [Angular framework v9.0.5](https://angular.io/)
+* [Angular Universal](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
+* [Bootstrap v4.4.1](https://getbootstrap.com/)
+* [Font Awesome](https://fontawesome.com/) icons
+* [jQuery](https://jquery.com/download/)
+* [Angular Express Engine](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
 
 ## Setup - Backend
 
-* Change to `/server` directory
+* Change to `/backend` directory
 * Install dependencies using `npm i`
 * Install [nodemon v2.0.2](https://www.npmjs.com/package/nodemon) globally if you don't already have it
 * Install [PostgreSQL](https://www.postgresql.org/) & run it (requires the password you created during installation)
-* Add postgresql database & weather API access credentials to .env file
+* Add postgresql database & any API access credentials to .env file
 * Run `nodemon server` for a dev server on port 5000
 
 ## Setup - Frontend
 
 * Change to `/client` directory
-* Install dependencies using `npm i`. (I have not tried this method and cannot be sure it will work)
-* Alternatively - and better - bootstrap a new React project using `npx create-react-app my-app`
+* Install dependencies using `npm i`.
 * Run `npm start`. Frontend will open at `http://localhost:3000/`
 
 ## Setup - Full stack
 
-* From top level `\pern-stack-database` run `npm run dev` for a dev server on port 5000 and a React fontend at `http://localhost:3000/`
+* From top level `\pern-stack-api-display` run `npm run dev` for a dev server on port 5000 and a React fontend at `http://localhost:3000/`
 
 ## Code Examples - Backend
 
@@ -86,7 +90,7 @@
 
 ## Features - Frontend
 
-* f
+* [Versión 81.0.4044.92 (Build oficial) (64 bits)](https://www.google.com/chrome/) latest version was required to e2e testing to work
 
 ## Status & To-Do List
 

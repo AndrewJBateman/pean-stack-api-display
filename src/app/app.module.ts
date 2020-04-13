@@ -13,7 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
     NotFoundComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'pean-stack-api-display' }),
     AppRoutingModule,
   ],
   providers: [],
