@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pean-stack-api-display';
+  version = 'Angular version 9.0.5';
 }
