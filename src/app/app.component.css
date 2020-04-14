@@ -1,9 +1,8 @@
-h1 {
-  color: blue;
+.app main, .app footer {
+  padding-left: 1rem;
 }
 
-.app {
-  font-family: Arial, Helvetica, sans-serif;
-  max-width: 500px;
-  margin: auto;
+.footer {
+  background: #3F729B;
+  padding: 2em;
 }

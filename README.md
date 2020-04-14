@@ -80,7 +80,7 @@
 
 * f
 
-```javascript
+```typescript
 
 ```
 
@@ -90,7 +90,7 @@
 
 ## Features - Frontend
 
-* [Versión 81.0.4044.92 (Build oficial) (64 bits)](https://www.google.com/chrome/) latest version was required to e2e testing to work
+* [Versión 81.0.4044.92 (Build oficial) (64 bits)](https://www.google.com/chrome/) latest version was required to get e2e testing to work
 
 ## Status & To-Do List
 
@@ -99,6 +99,7 @@
 
 ## Inspiration/General Tools
 
+* [Seth Gwartney, article: Server Side Rendering with Angular Universal](https://alligator.io/angular/angular-universal/)
 * [PostgreSQL Quick Command List](http://jcsites.juniata.edu/faculty/rhodes/dbms/pgsql.htm)
 
 ## Contact

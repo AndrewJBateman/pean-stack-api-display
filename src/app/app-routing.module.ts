@@ -7,6 +7,31 @@ import { NotFoundComponent } from './modules/general/not-found/not-found.compone
 const routes: Routes = [
   { path: '', component: HomeComponent, },
   {
+    path: 'httpclient',
+    loadChildren: () => import('./modules/application/items/items.module')
+      .then(mod => mod.ItemsModule)
+  },
+  {
+    path: 'template-driven-forms',
+    loadChildren: () => import('./modules/application/template-driven-forms/template-driven-forms.module')
+      .then(mod => mod.TemplateDrivenFormsModule)
+  },
+  {
+    path: 'chartjs',
+    loadChildren: () => import('./modules/application/chartjs/chartjs.module')
+      .then(mod => mod.ChartjsModule)
+  },
+  {
+    path: 'services',
+    loadChildren: () => import('./modules/application/services/services.module')
+      .then(mod => mod.ServicesModule)
+  },
+  {
+    path: 'components',
+    loadChildren: () => import('./modules/application/components/components.module')
+      .then(mod => mod.ComponentsModule)
+  },
+  {
     path: 'about',
     loadChildren: () => import('./modules/general/about/about.module')
       .then(mod => mod.AboutModule)
@@ -27,7 +52,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     initialNavigation: 'enabled'
-})],
+  })],
   exports: [RouterModule],
   declarations: []
 })
