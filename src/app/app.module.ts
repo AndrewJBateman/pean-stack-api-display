@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent, HomeComponent, NotFoundComponent],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'angular-starter' }),
+    BrowserModule,
     AppRoutingModule,
     HttpClientModule,
   ],

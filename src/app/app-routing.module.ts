@@ -7,7 +7,7 @@ import { NotFoundComponent } from './modules/general/not-found/not-found.compone
 const routes: Routes = [
   { path: '', component: HomeComponent, },
   {
-    path: 'httpclient',
+    path: 'items',
     loadChildren: () => import('./modules/application/items/items.module')
       .then(mod => mod.ItemsModule)
   },
