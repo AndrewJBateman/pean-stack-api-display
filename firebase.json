@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/pean-stack-api-display/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

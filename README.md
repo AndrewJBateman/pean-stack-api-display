@@ -17,6 +17,8 @@
 
 ## General info
 
+* [Sitemaps XML format](https://www.sitemaps.org/protocol.html) used to create `sitemap.xml` to imnprove Lighthouse SEO score to 100%
+
 ### Backend
 
 * PostgreSQL needs to be installed and running - I started it from my Windows 10 PostgreSQL 12 dropdown option 'SQL shell (psql)'
@@ -48,6 +50,7 @@
 * [Font Awesome](https://fontawesome.com/) icons
 * [jQuery](https://jquery.com/download/)
 * [Angular Express Engine](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
+* [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) to check quality of website
 
 ## Setup - Backend
 
