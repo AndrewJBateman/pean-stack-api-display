@@ -6,3 +6,8 @@
   background: #3F729B;
   padding: 2em;
 }
+
+.fab, .fa, .fas {
+  font-size: 20px;
+  padding: 0 8px;
+}

@@ -1,10 +1,11 @@
 <div class="app">
 
   <header>
-    <nav class="navbar navbar-expand-md fixed-top navbar-dark " style="background-color: #212121;">
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark" style="background-color: #455A64;">
       <a class="navbar-brand" routerLink="/">
-        <span class="mr-1" style="color:white">AB</span>
-        <img src="./../assets/params/images/logo/angular.png" width="20" height="20" alt="">
+        <span class="mr-1" style="color:white">
+          <i class="fas fa-home"></i>
+        </span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
         aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,28 +14,23 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" routerLink="/">
-              <i class="fas fa-home mr-1"></i>home
-            </a>
-          </li>
-          <li class="nav-item active">
             <a class="nav-link" routerLink="/about">
-              <i class="far fa-question-circle mr-1"></i>About
+              <i class="fa fa-info-circle"></i>
             </a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" routerLink="/contact">
-              <i class="fas fa-envelope mr-1"></i>Contact
+              <i class="fas fa-envelope"></i>
             </a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" routerLink="/signin">
-              <i class="fas fa-user mr-1"></i>Sign in
+              <i class="fas fa-user"></i>
             </a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="https://github.com/AndrewJBateman">
-              <i class="fab fa-github mr-1"></i>Github
+              <i class="fab fa-github"></i>
             </a>
           </li>
         </ul>
@@ -47,14 +43,5 @@
       <router-outlet></router-outlet>
     </div>
   </main>
-
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <p class="text-center text-white">&copy; www.andrewbateman.org</p>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
 </div>

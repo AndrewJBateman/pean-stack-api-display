@@ -17,30 +17,21 @@
 
 ## General info
 
-* [Sitemaps XML format](https://www.sitemaps.org/protocol.html) used to create `sitemap.xml` to imnprove Lighthouse SEO score to 100%
-
 ### Backend
 
-* PostgreSQL needs to be installed and running - I started it from my Windows 10 PostgreSQL 12 dropdown option 'SQL shell (psql)'
-* Postman used to test the backend before frontend was available
-* Postgresql shell commands: `\l` list all databases. `\c database1` connect to database1. `\dt` inspect tables. `\q` to quit.
+* to follow
 
 ### Frontend
 
-* Angular frontend includes a ..
+* Angular frontend includes Bootstrap responsive navbar with icon links. Main section made of cards that will link to API data. Progressive Web App (PWA) functionality added. Very high Lighthouse score but can be tweaked to be even higher - use jp2 images etc.
 
 ## Screenshots
 
-![Backend screenshot](./img/postgresql.png)
-![Frontend screenshot](./img/angular.png)
+![Frontend screenshot](./img/front.png)
 
 ## Technologies - Backend
 
-* [PostgreSQL v12.2](https://www.postgresql.org/)
-* [PostgreSQL Installer for Windows](https://www.postgresqltutorial.com/install-postgresql/)
-* [Express.js middleware v4.17.1](https://expressjs.com/)
-* [Node.js v12.4.0](https://nodejs.org/es/)
-* [Nodemon](https://www.npmjs.com/package/nodemon) npm module so backend server will automatically restart after code changes
+* to follow
 
 ## Technologies - Frontend
 
@@ -54,26 +45,22 @@
 
 ## Setup - Backend
 
-* Change to `/backend` directory
-* Install dependencies using `npm i`
-* Install [nodemon v2.0.2](https://www.npmjs.com/package/nodemon) globally if you don't already have it
-* Install [PostgreSQL](https://www.postgresql.org/) & run it (requires the password you created during installation)
-* Add postgresql database & any API access credentials to .env file
-* Run `nodemon server` for a dev server on port 5000
+* to follow
 
 ## Setup - Frontend
 
-* Change to `/client` directory
 * Install dependencies using `npm i`.
-* Run `npm start`. Frontend will open at `http://localhost:3000/`
-
-## Setup - Full stack
-
-* From top level `\pern-stack-api-display` run `npm run dev` for a dev server on port 5000 and a React fontend at `http://localhost:3000/`
+* Run `ng serve` for a dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
+* Run `npm run lint` to lint test entire codebase
+* Run `npm run test` to run testing
+* Run `npm run e2e` to run end-to-end testing files in individual modules etc.
+* Run `npm run build:ssr` to generate a Server-Side-Rendered build file
+* Run `npm run serve:ssr` to see on a sev server
+* Run `firebase deploy` to deploy to Google Firebase Hosting (already setup)
 
 ## Code Examples - Backend
 
-* f
+* to follow
 
 ```javascript
 
@@ -81,7 +68,7 @@
 
 ## Code Examples - Frontend
 
-* f
+* to follow
 
 ```typescript
 
@@ -89,7 +76,7 @@
 
 ## Features - Backend
 
-* All data stored in PostgreSQL database that can also be viewed and changed from the PostgreSQL shell (psql)
+* to follow
 
 ## Features - Frontend
 
@@ -97,13 +84,15 @@
 
 ## Status & To-Do List
 
-* Status: in dev
-* To-Do: complete
+* Status: frontend mostly done. Deployed to Firebase hosting
+* To-Do: complete frontend then do backend APIs
 
 ## Inspiration/General Tools
 
 * [Seth Gwartney, article: Server Side Rendering with Angular Universal](https://alligator.io/angular/angular-universal/)
 * [PostgreSQL Quick Command List](http://jcsites.juniata.edu/faculty/rhodes/dbms/pgsql.htm)
+* [Sitemaps XML format](https://www.sitemaps.org/protocol.html) used to create `sitemap.xml` to improve Lighthouse SEO score to 100%
+* [Archive converter](https://convertio.co/es/) converts png to jp2 etc
 
 ## Contact
 

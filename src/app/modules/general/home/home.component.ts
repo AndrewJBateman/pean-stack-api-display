@@ -10,55 +10,49 @@ import { environment } from '../../../../environments/environment';
 export class HomeComponent implements OnInit {
 
   name = environment.application.name;
-  angular = environment.application.angular;
-  bootstrap = environment.application.bootstrap;
-  fontawesome = environment.application.fontawesome;
 
   features: any;
 
-  constructor(
-    private meta: Meta,
-    private titleService: Title
-  ) {
+  constructor(private meta: Meta, private titleService: Title) 
+  {
     this.features =
       [
         {
           icon: 'far fa-chart-bar',
           type: 'Charts',
-          description: 'Integrate the open-source library Chart.js',
+          description: 'API data from API-1',
           image: 'showcase-charts.png',
           link: 'chartjs'
         },
         {
           icon: 'far fa-chart-bar',
           type: 'Components',
-          description: 'Smartphone Component with Input, Output and Event Emitter',
+          description: 'API data from API-2',
           image: 'showcase-components.png',
           link: 'components'
         },
         {
           icon: 'far fa-chart-bar',
           type: 'Services',
-          description: 'Use services to view a playlist and a youtube player',
+          description: 'API data from API-3',
           image: 'showcase-services-playlist-youtube.png',
           link: 'services'
         },
         {
           icon: 'far fa-chart-bar',
           type: 'HttpClient',
-          description: 'Use an external API with the HttpClient module',
+          description: 'API data from API-4',
           image: 'showcase-items.png',
           link: 'items'
         },
         {
           icon: 'far fa-chart-bar',
           type: 'Responsive Images list',
-          description: 'Display a Responsive List of Images',
+          description: 'API data from API-5',
           image: 'showcase-responsive-images-list.png',
           link: 'template-driven-forms'
         },
       ];
-
   }
 
   ngOnInit() {
