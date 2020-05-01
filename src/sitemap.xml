@@ -14,7 +14,7 @@
     <loc>https://pern-stack-api-display.web.app/signin</loc>
   </url>
   <url>
-    <loc>https://pern-stack-api-display.web.app/template-driven-forms</loc>
+    <loc>https://pern-stack-api-display.web.app/films</loc>
   </url>
   <url>
     <loc>https://pern-stack-api-display.web.app/chartjs</loc>
@@ -27,5 +27,5 @@
   </url>
   <url>
     <loc>https://pern-stack-api-display.web.app/items</loc>
-  </url> 
+  </url>
 </urlset>

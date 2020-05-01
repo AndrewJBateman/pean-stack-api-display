@@ -1,20 +1,25 @@
 <head>
-  <meta
-  name="items"           
-  content="Shows api data">
+  <meta name="items" content="Shows api data" />
 </head>
 
 <div class="row pb-4">
-
   <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
     <div class="row pb-4">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Feature : HttpClient</h5>
-          <hr>
+          <hr />
           <p class="card-text">Use HttpClient</p>
-          <button type="button" class="btn btn-primary mr-4" (click)="getUsers()">Get</button>
-          <button type="button" class="btn btn-primary" (click)="resetUsers()">Reset</button>
+          <button
+            type="button"
+            class="btn btn-primary mr-4"
+            (click)="getUsers()"
+          >
+            Get
+          </button>
+          <button type="button" class="btn btn-primary" (click)="resetUsers()">
+            Reset
+          </button>
         </div>
       </div>
       <div *ngIf="!loaded">
@@ -45,7 +50,10 @@
 
   <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
     <div class="row">
-      <div class="table-responsive httpclient-table blue-gradient" *ngIf="loaded">
+      <div
+        class="table-responsive httpclient-table blue-gradient"
+        *ngIf="loaded"
+      >
         <table class="table table-hover table-striped table-responsive-md">
           <thead>
             <tr>
@@ -56,14 +64,13 @@
           </thead>
           <tbody>
             <tr *ngFor="let item of items">
-              <td>{{item.name}}</td>
-              <td>{{item.username}}</td>
-              <td>{{item.email}}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.username }}</td>
+              <td>{{ item.email }}</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
-
 </div>

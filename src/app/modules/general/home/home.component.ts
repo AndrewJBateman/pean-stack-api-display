@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   features: any;
 
-  constructor(private meta: Meta, private titleService: Title) 
+  constructor(private meta: Meta, private titleService: Title)
   {
     this.features =
       [
@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
           type: 'Responsive Images list',
           description: 'API data from API-5',
           image: 'showcase-responsive-images-list.png',
-          link: 'template-driven-forms'
+          link: 'films'
         },
       ];
   }

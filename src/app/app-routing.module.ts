@@ -12,9 +12,9 @@ const routes: Routes = [
       .then(mod => mod.ItemsModule)
   },
   {
-    path: 'template-driven-forms',
-    loadChildren: () => import('./modules/application/template-driven-forms/template-driven-forms.module')
-      .then(mod => mod.TemplateDrivenFormsModule)
+    path: 'films',
+    loadChildren: () => import('./modules/application/films/films.module')
+      .then(mod => mod.FilmsModule)
   },
   {
     path: 'chartjs',

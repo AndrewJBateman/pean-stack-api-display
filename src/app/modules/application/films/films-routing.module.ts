@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TemplateDrivenFormsComponent } from './template-driven-forms.component';
+import { FilmsComponent } from './films.component';
 
 const routes: Routes = [
-  { path: '', component: TemplateDrivenFormsComponent }
+  { path: '', component: FilmsComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TemplateDrivenFormsRoutingModule { }
+export class FilmsRoutingModule { }

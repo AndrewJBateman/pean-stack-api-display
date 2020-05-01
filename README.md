@@ -85,7 +85,7 @@
 ## :clipboard: Status & To-Do List
 
 * Status: frontend mostly done. Deployed to Firebase hosting
-* To-Do: complete frontend then do backend APIs
+* To-Do: complete frontend then do backend APIs. Add components: movie database then postSQL database for full-stack. Add NASA API, Angular Material table, Angular-data-dashboard, angular-app-crypto
 
 ## :clap: Inspiration/General Tools
 
