@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ChartjsComponent } from './chartjs.component';
+import { NasaComponent } from './nasa.component';
 
 const routes: Routes = [
-  { path: '', component: ChartjsComponent }
+  { path: '', component: NasaComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ChartjsRoutingModule { }
+export class NasaRoutingModule { }
+

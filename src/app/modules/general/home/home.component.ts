@@ -18,11 +18,11 @@ export class HomeComponent implements OnInit {
     this.features =
       [
         {
-          icon: 'far fa-chart-bar',
-          type: 'Charts',
-          description: 'API data from API-1',
-          image: 'showcase-charts.png',
-          link: 'chartjs'
+          icon: 'fas fa-satellite-dish',
+          type: 'Nasa',
+          description: 'Nasa API',
+          image: 'nasa.png',
+          link: 'nasa'
         },
         {
           icon: 'far fa-chart-bar',

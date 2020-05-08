@@ -17,9 +17,9 @@ const routes: Routes = [
       .then(mod => mod.FilmsModule)
   },
   {
-    path: 'chartjs',
-    loadChildren: () => import('./modules/application/chartjs/chartjs.module')
-      .then(mod => mod.ChartjsModule)
+    path: 'nasa',
+    loadChildren: () => import('./modules/application/nasa/nasa.module')
+      .then(mod => mod.NasaModule)
   },
   {
     path: 'services',

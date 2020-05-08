@@ -39,7 +39,7 @@
 * [Angular Universal](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
 * [Bootstrap v4](https://getbootstrap.com/)
 * [Font Awesome](https://fontawesome.com/) icons
-* [jQuery v3](https://jquery.com/download/) required by Bootstreap
+* [jQuery v3](https://jquery.com/download/) required by Bootstrap. Latest version 3.5.1 resolved nav-bar breaking change in previous version.
 * [Angular Express Engine](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
 * [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) to check quality of website
 
@@ -85,6 +85,7 @@
 ## :clipboard: Status & To-Do List
 
 * Status: frontend mostly done. Deployed to Firebase hosting
+* To-Do: change icons
 * To-Do: complete frontend then do backend APIs. Add components: movie database then postSQL database for full-stack. Add NASA API, Angular Material table, Angular-data-dashboard, angular-app-crypto
 
 ## :clap: Inspiration/General Tools

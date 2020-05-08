@@ -1,13 +1,3 @@
-.app main, .app footer {
+.app main {
   padding-left: 1rem;
-}
-
-.footer {
-  background: #3F729B;
-  padding: 2em;
-}
-
-.fab, .fa, .fas {
-  font-size: 20px;
-  padding: 0 8px;
 }

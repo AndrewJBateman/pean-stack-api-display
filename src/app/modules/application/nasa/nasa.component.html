@@ -1,0 +1,35 @@
+<div class="main-div" *ngIf="nasaImgObj">
+  <div class="card rounded">
+    <div class="card-header">
+      <img
+        class="header-image float-left"
+        src="../../../../assets/params/images/logo/nasa-image.jpg"
+        alt="Nasa logo"
+      />
+      <h5 class="card-title">Today's Image:</h5>
+      <h5 class="card-subtitle">
+        {{ nasaImgObj.title }}
+      </h5>
+    </div>
+    <div class="card-body">
+      <img class="card-img-top" [src]="nasaImgObj.hdurl" alt="Card image" />
+      <p class="card-text">{{ nasaImgObj.explanation }}</p>
+      <div class="actions">
+        <p class="credit-para">
+          <i class="far fa-copyright fa-lg mr-2"></i>{{ nasaImgObj.copyright }}
+        </p>
+        <p>
+          <i class="fas fa-calendar-day"></i>
+          {{ nasaImgObj.date | date }}
+        </p>
+        <a
+          href="https://api.nasa.gov/index.html#getting-started"
+          target="_blank"
+          rel="noreferrer"
+          class="btn btn-primary"
+          ><i class="fas fa-info-circle"></i></a
+        >
+      </div>
+    </div>
+  </div>
+</div>

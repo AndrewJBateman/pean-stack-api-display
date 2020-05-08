@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChartjsComponent } from './chartjs.component';
+import { NasaComponent } from './nasa.component';
 
-describe('ChartjsComponent', () => {
-  let component: ChartjsComponent;
-  let fixture: ComponentFixture<ChartjsComponent>;
+describe('NasaComponent', () => {
+  let component: NasaComponent;
+  let fixture: ComponentFixture<NasaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChartjsComponent ]
+      declarations: [ NasaComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChartjsComponent);
+    fixture = TestBed.createComponent(NasaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,28 @@
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 800px;
+}
+
+.card-title {
+  padding-left: 80px;
+}
+
+.card-subtitle {
+  padding-left: 80px;
+}
+
+.header-image {
+  background-image: url("../../../../assets/params/images/logo/nasa-image.jpg");
+  background-size: cover;
+  width: 64px;
+  height: 64px;
+}
+
+.fab, .fa, .fas, .far {
+  font-size: 24px;
+}
