@@ -1,32 +1,35 @@
 <head>
   <meta
-  name="description"           
-  content="Home page shows a collection of Bootstrap cards. Clicking on one routes to an API data display">
+    name="description"
+    content="Home page shows a collection of Bootstrap cards. Clicking on one routes to an API data display"
+  />
 </head>
 
-<div class="row pt-1 mb-2">
-  <div class="col-md-3 text-center mb-2">
-    <h1 class="h5">
-      <i class="fas fa-laptop fa-lg mr-2 text-primary"></i>
-      {{ name }}
-    </h1>
-  </div>
-</div>
-<hr>
-
 <div class="row pt-2 pb-4">
-  <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4" *ngFor="let item of features">
+  <div
+    class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4"
+    *ngFor="let item of features"
+  >
     <div class="card">
       <div class="card-img">
         <a routerLink="/{{ item.link }}">
-          <img class="card-img-top" src="./assets/params/images/showcase/{{ item.image }}" alt="Card image cap">
+          <img
+            class="card-img-top"
+            src="./assets/params/images/api-images/{{ item.image }}"
+            alt="Card image cap"
+          />
         </a>
       </div>
-      <div class="card-body pt-8">
+      <div class="card-body">
         <h6 class="card-title">
-          <span style="font-size: 14px;"><i class="{{ item.icon}} fa-lg mr-2 text-primary"></i><strong>{{ item.description }}
-            </strong></span>
+          <span style="font-size: 14px;"
+            ><i class="{{ item.icon }} fa-lg mr-2 text-primary"></i
+            ><strong>{{ item.title }} </strong></span
+          >
         </h6>
+        <p class="mb-0">
+          {{ item.description }}
+        </p>
       </div>
     </div>
   </div>

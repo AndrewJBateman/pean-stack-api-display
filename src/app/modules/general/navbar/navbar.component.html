@@ -3,16 +3,66 @@
   style="background-color: #455a64;"
 >
   <a
-    class="nav-link"
-    routerLink="/"
+    class="nav-link p-1"
+    [routerLink]="['/']"
     routerLinkActive="nav-link-active"
     [routerLinkActiveOptions]="{ exact: true }"
   >
     <span class="mr-1">
-      <!-- <i class="fas fa-home"></i> -->
-      <i class="fas fa-laptop"></i>
+      <i class="fas fa-list"></i>
+      {{ name }}
     </span>
   </a>
+<div *ngIf="isNasaRoute()">
+  <a
+    class="nav-link"
+    [routerLink]="['/nasa']"
+    routerLinkActive="nav-link-active"
+    >
+    Nasa API
+  </a>
+</div>
+
+<div *ngIf="isCryptoRoute()">
+  <a
+    class="nav-link"
+    [routerLink]="['/crypto']"
+    routerLinkActive="nav-link-active"
+    >
+    Crypto API
+  </a>
+</div>
+
+<div *ngIf="isMapRoute()">
+  <a
+    class="nav-link"
+    [routerLink]="['/map']"
+    routerLinkActive="nav-link-active"
+    >
+    Map API
+  </a>
+</div>
+
+<div *ngIf="isNewsRoute()">
+  <a
+    class="nav-link"
+    [routerLink]="['/news']"
+    routerLinkActive="nav-link-active"
+    >
+    News API
+  </a>
+</div>
+
+<div *ngIf="isDataRoute()">
+  <a
+    class="nav-link"
+    [routerLink]="['/data']"
+    routerLinkActive="nav-link-active"
+    >
+    Data API
+  </a>
+</div>
+
   <button
     class="navbar-toggler"
     type="button"

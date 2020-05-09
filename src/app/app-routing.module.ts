@@ -7,29 +7,29 @@ import { NotFoundComponent } from './modules/general/not-found/not-found.compone
 const routes: Routes = [
   { path: '', component: HomeComponent, },
   {
-    path: 'items',
-    loadChildren: () => import('./modules/application/items/items.module')
-      .then(mod => mod.ItemsModule)
-  },
-  {
-    path: 'films',
-    loadChildren: () => import('./modules/application/films/films.module')
-      .then(mod => mod.FilmsModule)
-  },
-  {
     path: 'nasa',
     loadChildren: () => import('./modules/application/nasa/nasa.module')
       .then(mod => mod.NasaModule)
   },
   {
-    path: 'services',
-    loadChildren: () => import('./modules/application/services/services.module')
-      .then(mod => mod.ServicesModule)
+    path: 'crypto',
+    loadChildren: () => import('./modules/application/crypto/crypto.module')
+      .then(mod => mod.CryptoModule)
   },
   {
-    path: 'components',
-    loadChildren: () => import('./modules/application/components/components.module')
-      .then(mod => mod.ComponentsModule)
+    path: 'map',
+    loadChildren: () => import('./modules/application/map/map.module')
+      .then(mod => mod.MapModule)
+  },
+  {
+    path: 'news',
+    loadChildren: () => import('./modules/application/news/news.module')
+      .then(mod => mod.NewsModule)
+  },
+  {
+    path: 'data',
+    loadChildren: () => import('./modules/application/data/data.module')
+      .then(mod => mod.DataModule)
   },
   {
     path: 'about',

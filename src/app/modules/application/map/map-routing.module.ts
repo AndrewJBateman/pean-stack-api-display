@@ -1,12 +1,12 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { NasaComponent } from "./nasa.component";
+import { MapComponent } from "./map.component";
 
-const routes: Routes = [{ path: "", component: NasaComponent }];
+const routes: Routes = [{ path: "", component: MapComponent }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class NasaRoutingModule {}
+export class MapRoutingModule {}

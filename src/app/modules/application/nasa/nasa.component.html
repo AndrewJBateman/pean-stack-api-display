@@ -1,34 +1,43 @@
+<head>
+  <meta
+  name="api"
+  content="Shows Nasa api data">
+</head>
+
 <div class="main-div" *ngIf="nasaImgObj">
   <div class="card rounded">
-    <div class="card-header">
+    <div class="card-header bg-light">
       <img
         class="header-image float-left"
         src="../../../../assets/params/images/logo/nasa-image.jpg"
         alt="Nasa logo"
       />
-      <h5 class="card-title">Today's Image:</h5>
-      <h5 class="card-subtitle">
+      <h5 class="card-title text-dark">Today's Image:</h5>
+      <h3 class="card-subtitle font-italic">
         {{ nasaImgObj.title }}
-      </h5>
+      </h3>
     </div>
     <div class="card-body">
       <img class="card-img-top" [src]="nasaImgObj.hdurl" alt="Card image" />
-      <p class="card-text">{{ nasaImgObj.explanation }}</p>
+      <p class="card-text"><i class="far fa-sticky-note pr-1 text-info"></i>{{ nasaImgObj.explanation }}</p>
       <div class="actions">
-        <p class="credit-para">
-          <i class="far fa-copyright fa-lg mr-2"></i>{{ nasaImgObj.copyright }}
-        </p>
-        <p>
-          <i class="fas fa-calendar-day"></i>
-          {{ nasaImgObj.date | date }}
-        </p>
-        <a
-          href="https://api.nasa.gov/index.html#getting-started"
-          target="_blank"
-          rel="noreferrer"
-          class="btn btn-primary"
-          ><i class="fas fa-info-circle"></i></a
-        >
+        <div class="d-flex justify-content-between">
+          <div class="p-2">
+            <p class="mb-0">
+              <i class="fas fa-calendar-day text-success"></i>
+              {{ nasaImgObj.date | date }}
+            </p>
+          </div>
+          <div class="p-2">
+            <p class="mb-0">
+              <i class="far fa-copyright text-success"></i>
+              {{ nasaImgObj.copyright }}
+            </p>
+          </div>
+
+        </div>
+
+
       </div>
     </div>
   </div>

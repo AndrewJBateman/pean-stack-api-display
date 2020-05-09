@@ -3,6 +3,6 @@ export const environment = {
   NASA_KEY: "",
   application:
   {
-    name: 'API Data'
+    name: 'API Dashboard'
   }
 };

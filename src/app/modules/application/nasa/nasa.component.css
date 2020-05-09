@@ -12,6 +12,10 @@
   padding-left: 80px;
 }
 
+.card-text {
+  margin: 16px 0;
+}
+
 .card-subtitle {
   padding-left: 80px;
 }

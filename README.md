@@ -1,6 +1,6 @@
 # :zap: PEAN Full Stack API Display
 
-* PostgreSQL Express Angular Node (PEAN) full-stack app, integrates Angular frontend with Node.js backend. Show a collection of API data.
+* PostgreSQL Express Angular Node (PEAN) full-stack app, integrates Angular frontend with Node.js backend. Shows a collection of API data.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -38,6 +38,7 @@
 * [Angular framework v9](https://angular.io/)
 * [Angular Universal](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
 * [Bootstrap v4](https://getbootstrap.com/)
+* [Font Awesome icons](https://fontawesome.com/icons?d=gallery)
 * [Font Awesome](https://fontawesome.com/) icons
 * [jQuery v3](https://jquery.com/download/) required by Bootstrap. Latest version 3.5.1 resolved nav-bar breaking change in previous version.
 * [Angular Express Engine](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
@@ -49,7 +50,8 @@
 
 ## :floppy_disk: Setup - Frontend
 
-* Install dependencies using `npm i`.
+* Install dependencies using `npm i`
+* Get yourself API keys for the Nasa, Google Maps and News apps
 * Run `ng serve` for a dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
 * Run `npm run lint` to lint test entire codebase
 * Run `npm run test` to run testing
@@ -84,9 +86,8 @@
 
 ## :clipboard: Status & To-Do List
 
-* Status: frontend mostly done. Deployed to Firebase hosting
-* To-Do: change icons
-* To-Do: complete frontend then do backend APIs. Add components: movie database then postSQL database for full-stack. Add NASA API, Angular Material table, Angular-data-dashboard, angular-app-crypto
+* Status: frontend in progress - Nasa API working
+* To-Do: complete frontend then do backend APIs. 
 
 ## :clap: Inspiration/General Tools
 
