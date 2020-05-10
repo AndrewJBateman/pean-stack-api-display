@@ -86,8 +86,8 @@
 
 ## :clipboard: Status & To-Do List
 
-* Status: frontend in progress - Nasa API working
-* To-Do: complete frontend then do backend APIs. 
+* Status: frontend in progress - Nasa, Crypto APIs working
+* To-Do: complete frontend then do backend APIs.
 
 ## :clap: Inspiration/General Tools
 

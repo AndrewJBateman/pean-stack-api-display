@@ -1,0 +1,30 @@
+/* div#crypto-container {
+  background: white;
+  width: 70%;
+  margin: 0 auto 4px auto;
+  padding: 1em;
+  border: grey;
+  box-shadow: 2px 2px 0 lightgrey;
+} */
+
+h1,
+a {
+  position: center;
+  width: 70%;
+  margin: 0 auto 4px auto;
+  padding: 1em;
+}
+
+span.left {
+  font-weight: bold;
+}
+
+span.right {
+  float: right;
+  color: blue;
+}
+
+.card {
+  max-width: 800px;
+  margin: auto auto;
+}

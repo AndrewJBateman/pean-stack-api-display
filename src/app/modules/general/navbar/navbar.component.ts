@@ -1,39 +1,40 @@
-import { Component, OnInit } from '@angular/core';
-import { environment } from '../../../../environments/environment';
-import { Router } from '@angular/router';
-
+import { Component, OnInit } from "@angular/core";
+import { environment } from "../../../../environments/environment";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  selector: "app-navbar",
+  templateUrl: "./navbar.component.html",
+  styleUrls: ["./navbar.component.css"],
 })
 export class NavbarComponent implements OnInit {
   name = environment.application.name;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  isHomeRoute() {
+    return this.router.url === "/";
   }
 
-    isNasaRoute() {
-      return this.router.url === '/nasa';
-    }
+  isNasaRoute() {
+    return this.router.url === "/nasa";
+  }
 
-    isCryptoRoute() {
-      return this.router.url === '/crypto';
-    }
+  isCryptoRoute() {
+    return this.router.url === "/crypto";
+  }
 
-    isMapRoute() {
-      return this.router.url === '/map';
-    }
+  isMapRoute() {
+    return this.router.url === "/map";
+  }
 
-    isNewsRoute() {
-      return this.router.url === '/news';
-    }
+  isNewsRoute() {
+    return this.router.url === "/news";
+  }
 
-    isDataRoute() {
-      return this.router.url === '/data';
-    }
-
+  isDataRoute() {
+    return this.router.url === "/data";
+  }
 }

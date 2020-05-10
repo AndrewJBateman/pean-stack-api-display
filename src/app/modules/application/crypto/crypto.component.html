@@ -1,5 +1,43 @@
 <head>
-  <meta
-  name="api"
-  content="Shows cryptocurrency api data">
+  <meta name="api" content="Shows cryptocurrency api data" />
 </head>
+
+<div class="card rounded text-center" *ngIf="cryptos">
+  <!-- <div class="card-header">
+    CryptoCurrency Prices
+  </div> -->
+  <div class="card-body p-0">
+    <table class="table table-hover table-bordered">
+      <thead class="bg-light">
+        <tr>
+          <th scope="col">Cryptocurrency</th>
+          <th scope="col">Symbol</th>
+          <th scope="col"><i class="fas fa-euro-sign"> Price</i></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let crypto of objectKeys(cryptos)">
+          <th scope="row">{{ crypto }}</th>
+          <td>
+            <img
+              src="../../../../assets/icons/crypto-icons/{{
+                crypto | lowercase
+              }}.svg"
+            />
+          </td>
+          <td>{{ cryptos[crypto].EUR | currency: "EUR" }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-footer text-muted">
+    <p class="mb-0">
+      Data provided by the:<a
+        href="https://min-api.cryptocompare.com/"
+        target="_blank"
+        title="cryptoCurrency_link"
+        >CryptoCompare API</a
+      >
+    </p>
+  </div>
+</div>
