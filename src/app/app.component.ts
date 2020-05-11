@@ -7,8 +7,8 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pean-stack-api-display';
-  version = 'Angular version 9.0.5';
+  title = 'angular-apis';
+  version = 'Angular version 9.1.4';
 
   constructor(
     private metaTagService: Meta

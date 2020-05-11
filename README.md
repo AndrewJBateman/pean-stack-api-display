@@ -70,10 +70,24 @@
 
 ## :computer: Code Examples - Frontend
 
-* to follow
+* function to get APOD data from NASA API as Observable using an Apod model response
 
 ```typescript
+export class NasaService {
+apiKey: string = "";
 
+constructor(private http: HttpClient) {}
+
+public getNasaImage(): Observable<Apod> {
+  const year = new Date().getFullYear();
+  const month = new Date().getMonth() + 1;
+  const day = new Date().getDate();
+  this.apiKey = environment.NASA_KEY;
+  const apodUrl = `https://api.nasa.gov/planetary/apod?date=${year}-${month}-${day}&api_key=${this.apiKey}&hd=true`;
+  return this.http
+    .get<Apod>(apodUrl);
+  }
+}
 ```
 
 ## :cool: Features - Backend
@@ -86,7 +100,7 @@
 
 ## :clipboard: Status & To-Do List
 
-* Status: frontend in progress - Nasa, Crypto APIs working
+* Status: frontend Nasa, Crypto APIs working. More APIs to finish
 * To-Do: complete frontend then do backend APIs.
 
 ## :clap: Inspiration/General Tools

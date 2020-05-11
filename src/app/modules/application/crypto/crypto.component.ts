@@ -8,6 +8,7 @@ import { CryptoService } from '../../../services/crypto.service';
 })
 export class CryptoComponent implements OnInit {
   objectKeys = Object.keys;
+
   cryptos: any;
 
   constructor(private cryptoService: CryptoService) { }

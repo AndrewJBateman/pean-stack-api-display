@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { map } from "rxjs/operators";
+import { Observable } from "rxjs";
 
 import { Crypto } from "../models/crypto";
-import { Observable } from "rxjs";
 
 @Injectable()
 export class CryptoService {
@@ -25,4 +25,5 @@ export class CryptoService {
       )
       .pipe(map((result) => (this.result = result)));
   }
+
 }

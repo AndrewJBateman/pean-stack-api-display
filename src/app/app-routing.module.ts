@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './modules/general/home/home.component';
-import { NotFoundComponent } from './modules/general/not-found/not-found.component';
+import { HomeComponent } from './modules/common/home/home.component';
+import { NotFoundComponent } from './modules/common/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, },
@@ -33,17 +33,17 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    loadChildren: () => import('./modules/general/about/about.module')
+    loadChildren: () => import('./modules/common/about/about.module')
       .then(mod => mod.AboutModule)
   },
   {
     path: 'contact',
-    loadChildren: () => import('./modules/general/contact/contact.module')
+    loadChildren: () => import('./modules/common/contact/contact.module')
       .then(mod => mod.ContactModule)
   },
   {
     path: 'signin',
-    loadChildren: () => import('./modules/general/signin/signin.module')
+    loadChildren: () => import('./modules/common/signin/signin.module')
       .then(mod => mod.SigninModule)
   },
   { path: '**', component: NotFoundComponent }
