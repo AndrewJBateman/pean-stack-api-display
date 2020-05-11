@@ -9,9 +9,9 @@ import { Location } from "../models/location";
 export class LocationService {
   locationSearchUrl = "https://ipapi.co/json/";
 
-  constructor(private http: HttpClient) {}
+  constructor(private httpClient: HttpClient) {}
 
   getLocation() {
-    return this.http.get<Location>(this.locationSearchUrl);
+    return this.httpClient.get<Location>(this.locationSearchUrl);
   }
 }

@@ -9,14 +9,14 @@ import { LocationService } from "../../../services/location.service";
   styleUrls: ["./map.component.css"],
 })
 export class MapComponent implements OnInit, AfterViewInit {
-  lat: string;
-  lng: string;
+  lat = "";
+  lng = "";
   country = "";
   calling_code = "";
   city = "";
   ip = 0;
   location: Object;
-  map;
+  map: any;
 
   constructor(private locationService: LocationService) {}
 
@@ -42,7 +42,6 @@ export class MapComponent implements OnInit, AfterViewInit {
       lat: 37.7964333,
       lng: -1.5121459,
     };
-
     const zoomLevel = 12;
     this.map = L.map("map", {
       center: [myLocation.lat, myLocation.lng],
