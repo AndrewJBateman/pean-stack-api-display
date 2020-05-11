@@ -23,7 +23,15 @@
 
 ### Frontend
 
-* Angular frontend includes Bootstrap responsive navbar with icon links. Main section made of cards that will link to API data. Progressive Web App (PWA) functionality added. Very high Lighthouse score but can be tweaked to be even higher - use jp2 images etc.
+* Angular frontend includes Bootstrap responsive navbar with icon links
+* Main section made of cards that link to API data
+* NASA card shows Astronomy Picture of the Day (APOD) from the [NASA API](https://api.nasa.gov/)
+* Crypto card shows prices of a list of cryptocurrencies from the [CryptoCompare API](https://min-api.cryptocompare.com/)
+* Map card shows location data from the [ipapi API](https://ipapi.co/)
+* News card shows latest news from the [newsapi](https://newsapi.org/)
+* Data card shows data from a data API using [Google Charts](https://developers.google.com/chart/)
+* Progressive Web App (PWA) functionality added
+* Very high Lighthouse score but can be tweaked to be even higher - use jp2 images etc
 
 ## :camera: Screenshots
 
@@ -68,7 +76,7 @@
 
 ```
 
-## :computer: Code Examples - Frontend
+## :computer: Code Examples - Frontend NASA API
 
 * function to get APOD data from NASA API as Observable using an Apod model response
 
@@ -100,12 +108,13 @@ public getNasaImage(): Observable<Apod> {
 
 ## :clipboard: Status & To-Do List
 
-* Status: frontend Nasa, Crypto APIs working. More APIs to finish
+* Status: frontend Nasa, Crypto and map APIs working. More APIs to finish
 * To-Do: complete frontend then do backend APIs.
 
 ## :clap: Inspiration/General Tools
 
 * [Seth Gwartney, article: Server Side Rendering with Angular Universal](https://alligator.io/angular/angular-universal/)
+* [Vidéo 2 - Ajouter un marker à carte Leaflet affichée par une application Angular 9](https://www.youtube.com/watch?v=d2G9YvscDmk)
 * [PostgreSQL Quick Command List](http://jcsites.juniata.edu/faculty/rhodes/dbms/pgsql.htm)
 * [Sitemaps XML format](https://www.sitemaps.org/protocol.html) used to create `sitemap.xml` to improve Lighthouse SEO score to 100%
 * [Archive converter](https://convertio.co/es/) converts png to jp2 etc
