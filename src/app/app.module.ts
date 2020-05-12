@@ -7,6 +7,7 @@ import { NotFoundComponent } from "./modules/common/not-found/not-found.componen
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 import { NavbarComponent } from "./modules/common/navbar/navbar.component";
+import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { NavbarComponent } from "./modules/common/navbar/navbar.component";
     NotFoundComponent,
     NavbarComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, PipesModule],
   providers: [],
   bootstrap: [AppComponent],
 })

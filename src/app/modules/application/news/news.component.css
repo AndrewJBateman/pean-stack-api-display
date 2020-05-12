@@ -1,0 +1,27 @@
+.main {
+  padding: 0 !important;
+}
+
+.main-div {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 600px;
+  margin: auto auto;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.action-buttons {
+  text-align: center;
+}
+
+.fab, .fa, .fas, .far {
+    font-size: 24px;
+    margin-right: 4px;
+  }

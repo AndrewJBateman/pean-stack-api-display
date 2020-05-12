@@ -1,5 +1,55 @@
 <head>
-  <meta
-  name="api"
-  content="Shows News api data">
+  <meta name="api" content="Shows News api data" />
 </head>
+
+<div class="main-div">
+  <div class="pb-1" *ngFor="let article of mArticles">
+
+    <div class="card rounded" *ngIf="article.urlToImage">
+
+      <div class="card-header bg-light pb-0">
+        <h6 class="card-title text-dark">
+          <i class="fab fa-telegram-plane text-info"></i>{{ article.title }}
+        </h6>
+      </div>
+
+      <div class="card-body">
+        <img
+          class="card-img-top"
+          src="{{ article.urlToImage }}"
+          alt="news article image"
+        />
+        <p class="card-text pt-2 pb-0">
+          <i class="far fa-newspaper pr-1 text-info"></i
+          >{{ article.description }}
+        </p>
+
+        <div class="actions">
+          <div class="d-flex flex-wrap">
+            <div class="p-2" *ngIf="article.publishedAt">
+              <p class="mb-0">
+                <i class="fas fa-calendar-day text-success"></i>
+                {{ article.publishedAt | dateConvert }}
+              </p>
+            </div>
+            <div class="p-2" *ngIf="article.author">
+              <p class="mb-0">
+                <i class="fas fa-pen text-success"></i>
+                {{ article.author }}
+              </p>
+            </div>
+            <div class="p-2" *ngIf="article.source.name">
+              <p class="mb-0">
+                <i class="fas fa-building text-success"></i>
+                {{ article.source.name }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
