@@ -103,7 +103,7 @@
           User location data is fetched from
           <a href="https://ipapi.co"
             >ipapi, a real-time Geolocation & Reverse IP Lookup REST API</a
-          >. if location data is not available then the coordinates of the
+          >. If location data is not available then the coordinates of the
           Eiffel Tower are used to center the map. Map data is obtained using
           <a href="https://ipapi.com/">Leaflet</a>, an open-source JavaScript
           library for mobile-friendly interactive maps that requires no API key.
@@ -134,9 +134,12 @@
         data-parent="#accordion"
       >
         <div class="card-body">
-          Fetches news from the <a href="https://newsapi.org//">newsapi.org</a>,
+          User country location data is fetched from
+          <a href="https://ipapi.co"
+            >ipapi, a real-time Geolocation & Reverse IP Lookup REST API</a
+          >. Using the user's country, news is fetched from the <a href="https://newsapi.org//">newsapi.org</a>,
           a HTTP REST API for searching and retrieving live articles from the
-          web.
+          web. This news API does not have the news for all countries - Spain is missing for example. If the user is in Spain the news will default to the 'us'. The code uses a countryCode array of countries supported by the news API with a simple 'indexOf' array operation to see if the user country is in the array.
         </div>
       </div>
     </div>

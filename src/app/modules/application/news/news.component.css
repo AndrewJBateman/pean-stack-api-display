@@ -6,11 +6,16 @@
   /* display: flex; */
   justify-content: center;
   align-items: center;
+  padding: 0 !important;
 }
 
 .card {
   max-width: 600px;
   margin: auto auto;
+}
+
+.card-text {
+  margin-bottom: 0 !important;
 }
 
 .card-title {

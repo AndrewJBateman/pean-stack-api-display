@@ -47,6 +47,14 @@ export class HomeComponent implements OnInit {
         link: "news",
       },
       {
+        icon: "fas fa-chart-bar",
+        type: "Google-charts",
+        title: "Google Charts",
+        description: "Data shown using Google charts",
+        image: "google-charts.png",
+        link: "google-charts",
+      },
+      {
         icon: "fas fa-database",
         type: "Data",
         title: "Data API",

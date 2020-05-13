@@ -27,6 +27,11 @@ const routes: Routes = [
       .then(mod => mod.NewsModule)
   },
   {
+    path: 'google-charts',
+    loadChildren: () => import('./modules/application/google-chart/google-chart.module')
+      .then(mod => mod.GoogleChartModule)
+  },
+  {
     path: 'data',
     loadChildren: () => import('./modules/application/data/data.module')
       .then(mod => mod.DataModule)

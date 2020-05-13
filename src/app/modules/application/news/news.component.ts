@@ -2,7 +2,6 @@ import { Component, OnInit } from "@angular/core";
 
 import { NewsService } from "../../../services/news.service";
 import { LocationService } from "../../../services/location.service";
-import { Article } from "../../../models/news";
 
 // array of countries served by the news API service - note it does not include Spain
 const countryCodeArray = [
@@ -106,7 +105,6 @@ export class NewsComponent implements OnInit {
         this.status = data.status;
         this.sources = data.sources;
 
-        // this.newsStorageService.storeData('newsSources', JSON.stringify(this.sources));
         console.log(
           'ngOnInit getSources function ran with status "',
           this.status,

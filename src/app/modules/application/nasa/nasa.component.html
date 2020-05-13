@@ -29,14 +29,12 @@
               {{ nasaImgObj.date | date }}
             </p>
           </div>
-          <div class="p-2">
+          <div class="p-2" *ngIf="nasaImgObj.copyright">
             <p class="mb-0">
               <i class="far fa-copyright text-success"></i>
               {{ nasaImgObj.copyright }}
             </p>
           </div>
-          
-
         </div>
       </div>
     </div>

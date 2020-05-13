@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "pean-stack-api-display": {
@@ -34,7 +34,8 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/assets/params/js/index.js"
+              "src/assets/params/js/index.js",
+              "src/assets/js/loader.js"
             ]
           },
           "configurations": {
@@ -99,10 +100,12 @@
               "src/assets",
               "src/manifest.webmanifest"
             ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+            "styles": ["src/styles.css"],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/loader.js"
+            ]
           }
         },
         "lint": {
@@ -113,9 +116,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -169,15 +170,14 @@
           "options": {
             "browserTarget": "pean-stack-api-display:build:production",
             "serverTarget": "pean-stack-api-display:server:production",
-            "routes": [
-              "/"
-            ]
+            "routes": ["/"]
           },
           "configurations": {
             "production": {}
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "pean-stack-api-display"
 }
