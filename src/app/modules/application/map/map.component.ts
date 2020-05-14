@@ -47,7 +47,7 @@ export class MapComponent implements OnInit, AfterViewInit {
             lat: 48.858222,
             lng: 2.2945,
           };
-      const zoomLevel = 11;
+      const zoomLevel = 12;
       this.map = L.map("map", {
         center: [myLocation.lat, myLocation.lng],
         zoom: zoomLevel,

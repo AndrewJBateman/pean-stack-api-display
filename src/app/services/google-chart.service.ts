@@ -1,10 +1,10 @@
 import { Injectable } from "@angular/core";
-import { ServiceModule } from "./service.module";
+import { GoogleChartServiceModule } from "./google-chart.service.module";
 
 declare const google: any;
 
 @Injectable({
-  providedIn: ServiceModule,
+  providedIn: GoogleChartServiceModule,
 })
 export class GoogleChartService {
   private google: any;

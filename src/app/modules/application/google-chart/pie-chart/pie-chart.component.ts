@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { GoogleChartService } from "../service/google-chart.service";
+import { GoogleChartService } from "../../../../services/google-chart.service";
 
 @Component({
   selector: "app-pie-chart",
@@ -13,7 +13,7 @@ export class PieChartComponent implements OnInit {
     this.gLib = this.gChartService.getGoogle();
 
     // Load the Visualization API and the controls package.
-    this.gLib.charts.load("current", { packages: ["corechart", "table"] });
+    this.gLib.charts.load("current", { packages: ["corechart"] });
 
     // Set a callback to run when the Google Visualization API is loaded.
     this.gLib.charts.setOnLoadCallback(this.drawChart.bind(this));
@@ -26,17 +26,16 @@ export class PieChartComponent implements OnInit {
       document.getElementById("divPieChart")
     );
     const data = new this.gLib.visualization.DataTable();
-    data.addColumn("string", "Accessories");
-    data.addColumn("number", "Quantity");
+    data.addColumn("string", "Framework");
+    data.addColumn("number", "%");
     data.addRows([
-      ["Computers", 3],
-      ["Hard Drives", 6],
-      ["Printers", 4],
-      ["Monitors", 5],
-      ["RAM", 2],
+      ["React", 44.3],
+      ["Angular", 29.4],
+      ["jQuery", 19.7],
+      ["Vue", 6.6],
     ]);
 
-    const options = { title: "Sales Info" };
+    const options = { title: "Top Framework Job Market Share", pieHole: 0.2 };
 
     chart.draw(data, options);
   }

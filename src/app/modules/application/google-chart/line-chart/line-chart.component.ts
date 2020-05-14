@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { GoogleChartService } from  '../service/google-chart.service';
+import { GoogleChartService } from  '../../../../services/google-chart.service';
 
 @Component({
   selector: "app-line-chart",
@@ -22,8 +22,6 @@ export class LineChartComponent implements OnInit {
 
   ngOnInit() {}
 
-  // method using the Google Charts library using the gLib variable
-  // create a new chart using the LineChart method, passing in the container div to show the line chart.
   private drawChart() {
     const data = this.gLib.visualization.arrayToDataTable([
       ["Year", "Sales", "Expenses"],

@@ -29,6 +29,7 @@
 * Crypto card shows prices of a list of cryptocurrencies from the [CryptoCompare API](https://min-api.cryptocompare.com/)
 * Map card shows location data from the [ipapi API](https://ipapi.co/)
 * News card shows latest news from the [newsapi](https://newsapi.org/)
+* Google charts card shows a range of charts
 * Data card shows data from a data API using [Google Charts](https://developers.google.com/chart/)
 * Progressive Web App (PWA) functionality added
 * Very high Lighthouse score but can be tweaked to be even higher - use jp2 images etc
@@ -51,6 +52,7 @@
 * [jQuery v3](https://jquery.com/download/) required by Bootstrap. Latest version 3.5.1 resolved nav-bar breaking change in previous version.
 * [Angular Express Engine](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
 * [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) to check quality of website
+* [Google Charts](https://developers.google.com/chart/interactive/docs/gallery)
 
 ## :floppy_disk: Setup - Backend
 
