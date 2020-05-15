@@ -7,7 +7,7 @@ div.container-fluid {
 }
 
 .main-div {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
 }

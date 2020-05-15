@@ -55,12 +55,12 @@ export class HomeComponent implements OnInit {
         link: "google-charts",
       },
       {
-        icon: "fas fa-database",
-        type: "Data",
-        title: "Data API",
-        description: "Data shown in a table.",
-        image: "data.png",
-        link: "data",
+        icon: "fas fa-book-open",
+        type: "Books",
+        title: "Books API",
+        description: "Google book search facility",
+        image: "books.png",
+        link: "books",
       },
     ];
   }

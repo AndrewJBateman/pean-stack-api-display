@@ -110,8 +110,8 @@ public getNasaImage(): Observable<Apod> {
 
 ## :clipboard: Status & To-Do List
 
-* Status: frontend Nasa, Crypto and map APIs working. More APIs to finish
-* To-Do: complete frontend then do backend APIs.
+* Status: frontend Nasa, Crypto, Map, News, Charts APIs working. Books API to finish
+* To-Do: complete frontend then do backend.
 
 ## :clap: Inspiration/General Tools
 

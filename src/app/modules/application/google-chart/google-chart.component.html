@@ -2,58 +2,151 @@
   <meta name="api" content="Shows google charts data" />
 </head>
 
-<!-- <div class="main-div"> -->
-<div class="card rounded">
-  <div class="card-header bg-light pb-0">
-    <h6 class="card-title text-dark">
-      <i class="fas fa-chart-bar text-info"></i>Google Line Chart
-    </h6>
-  </div>
-  <div class="card-body p-1">
-    <app-line-chart></app-line-chart>
-  </div>
-</div>
+<div class="main-div">
+  <div id="accordion">
+    <!--card 1-->
+    <div class="card rounded">
+      <div class="bg-light pb-0" id="headingOne">
+        <h5 class="card-title text-dark pb-0">
+          <button
+            class="btn btn-outline-dark"
+            style="width: 145px; text-align: left;"
+            data-toggle="collapse"
+            data-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            <i class="fas fa-chart-bar pr-1 text-info"></i>
+            Line Chart
+          </button>
+        </h5>
+      </div>
+      <div
+        id="collapseOne"
+        class="collapse show"
+        aria-labelledby="headingOne"
+        data-parent="#accordion"
+      >
+        <div class="card-body">
+          <app-line-chart></app-line-chart>
+        </div>
+      </div>
+    </div>
 
-<div class="card rounded">
-  <div class="card-header bg-light pb-0">
-    <h6 class="card-title text-dark">
-      <i class="fas fa-chart-bar text-info"></i>Google Pie Chart
-    </h6>
-  </div>
-  <div class="card-body p-1">
-    <app-pie-chart></app-pie-chart>
-  </div>
-</div>
+    <!--card 2-->
+    <div class="card rounded">
+      <div class="bg-light pb-0" id="headingTwo">
+        <h5 class="card-title text-dark pb-0">
+          <button
+            class="btn btn-outline-dark"
+            style="width: 145px; text-align: left;"
+            data-toggle="collapse"
+            data-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            <i class="fas fa-chart-bar pr-1 text-info"></i>
+            Pie Chart
+          </button>
+        </h5>
+      </div>
+      <div
+        id="collapseTwo"
+        class="collapse hide"
+        aria-labelledby="headingTwo"
+        data-parent="#accordion"
+      >
+        <div class="card-body">
+          <app-pie-chart></app-pie-chart>
+        </div>
+      </div>
+    </div>
 
-<div class="card rounded">
-  <div class="card-header bg-light pb-0">
-    <h6 class="card-title text-dark">
-      <i class="fas fa-chart-bar text-info"></i>Google Gauges
-    </h6>
-  </div>
-  <div class="card-body p-1">
-    <app-gauge-chart></app-gauge-chart>
-  </div>
-</div>
+    <!--card 3-->
+    <div class="card rounded">
+      <div class="bg-light pb-0" id="headingThree">
+        <h5 class="card-title text-dark pb-0">
+          <button
+            class="btn btn-outline-dark"
+            style="width: 145px; text-align: left;"
+            data-toggle="collapse"
+            data-target="#collapseThree"
+            aria-expanded="false"
+            aria-controls="collapseThree"
+          >
+            <i class="fas fa-chart-bar pr-1 text-info"></i>
+            Gauges
+          </button>
+        </h5>
+      </div>
+      <div
+        id="collapseThree"
+        class="collapse hide"
+        aria-labelledby="headingThree"
+        data-parent="#accordion"
+      >
+        <div class="card-body">
+          <app-gauge-chart></app-gauge-chart>
+        </div>
+      </div>
+    </div>
 
-<div class="card rounded">
-  <div class="card-header bg-light pb-0">
-    <h6 class="card-title text-dark">
-      <i class="fas fa-chart-bar text-info"></i>Google Table Chart
-    </h6>
-  </div>
-  <div class="card-body p-1">
-    <app-table-chart></app-table-chart>
-  </div>
-</div>
+    <!--card 4-->
+    <div class="card rounded">
+      <div class="bg-light pb-0" id="headingFour">
+        <h5 class="card-title text-dark pb-0">
+          <button
+            class="btn btn-outline-dark"
+            style="width: 145px; text-align: left;"
+            data-toggle="collapse"
+            data-target="#collapseFour"
+            aria-expanded="false"
+            aria-controls="collapseFour"
+          >
+            <i class="fas fa-chart-bar pr-1 text-info"></i>
+            Table Chart
+          </button>
+        </h5>
+      </div>
+      <div
+        id="collapseFour"
+        class="collapse hide"
+        aria-labelledby="headingFour"
+        data-parent="#accordion"
+      >
+        <div class="card-body">
+          <app-table-chart></app-table-chart>
+        </div>
+      </div>
+    </div>
 
-<div class="card rounded">
-  <div class="card-header bg-light pb-0">
-    <h6 class="card-title text-dark">
-      <i class="fas fa-chart-bar text-info"></i>Google Bar Chart
-    </h6>
-  </div>
-  <div class="card-body p-1">
-    <app-bar-chart></app-bar-chart>
+    <!--card 5-->
+    <div class="card rounded">
+      <div class="bg-light pb-0" id="headingFive">
+        <h5 class="card-title text-dark pb-0">
+          <button
+            class="btn btn-outline-dark"
+            style="width: 145px; text-align: left;"
+            data-toggle="collapse"
+            data-target="#collapseFive"
+            aria-expanded="false"
+            aria-controls="collapseFive"
+          >
+            <i class="fas fa-chart-bar pr-1 text-info"></i>
+            Bar Chart
+          </button>
+        </h5>
+      </div>
+      <div
+        id="collapseFive"
+        class="collapse hide"
+        aria-labelledby="headingFive"
+        data-parent="#accordion"
+      >
+        <div class="card-body">
+          <app-bar-chart></app-bar-chart>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

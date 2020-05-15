@@ -1,11 +1,12 @@
 .main-div {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
 }
 
 .card {
   max-width: 800px;
+  margin: auto auto;
 }
 
 .card-title {
@@ -29,4 +30,4 @@
 
 .fab, .fa, .fas, .far {
   font-size: 24px;
-} 
+}

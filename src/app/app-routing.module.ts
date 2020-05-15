@@ -32,9 +32,9 @@ const routes: Routes = [
       .then(mod => mod.GoogleChartModule)
   },
   {
-    path: 'data',
-    loadChildren: () => import('./modules/application/data/data.module')
-      .then(mod => mod.DataModule)
+    path: 'books',
+    loadChildren: () => import('./modules/application/books/books.module')
+      .then(mod => mod.BooksModule)
   },
   {
     path: 'about',
