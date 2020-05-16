@@ -1,0 +1,13 @@
+<a [routerLink]="['/book', id]" style="width: 100%;">
+  <div class="card rounded">
+    <div class="card-body">
+      <img
+        class="img-fluid"
+        *ngIf="thumbnail"
+        [src]="thumbnail"
+        alt="Book logo"
+      />
+      <p class="text-dark">{{ book.volumeInfo.title }}</p>
+    </div>
+  </div>
+</a>

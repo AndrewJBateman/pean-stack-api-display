@@ -1,29 +1,45 @@
 <head>
-  <meta
-  name="api"
-  content="Shows data from an api">
+  <meta name="api" content="Shows data from an api" />
 </head>
 
 <div class="main-div">
+  <!--card for user book search-->
   <div class="card rounded">
     <div class="card-header bg-light">
       <img
         class="header-image float-left"
         src="../../../../assets/params/images/logo/books.jpg"
-        alt="Nasa logo"
+        alt="Book logo"
       />
-      <h5 class="card-title text-dark">Search for a Book</h5>
+      <h5 class="card-title text-dark">Google Book API</h5>
       <h6 class="card-subtitle font-italic">
         Search by title
       </h6>
     </div>
     <div class="card-body">
+      <!--User input of book title-->
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text text-info"><i class="fas fa-pen"></i></span>
+          <span class="input-group-text text-info"
+            ><i class="fas fa-pen"></i
+          ></span>
         </div>
-        <input type="text" class="form-control" aria-label="Enter book title">
+        <input
+          ngInput
+          type="text"
+          class="form-control"
+          placeholder="Enter book title"
+          aria-label="Enter book title"
+          (keyup)="bookQuery($event.target.value)"
+        />
       </div>
+    </div>
+  </div>
+
+  <!--cards for book search results-->
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let book of books | async">
+      <app-book-item [book]="book"></app-book-item>
     </div>
   </div>
 </div>

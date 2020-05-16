@@ -25,5 +25,4 @@ export class CryptoService {
       )
       .pipe(map((result) => (this.result = result)));
   }
-
 }

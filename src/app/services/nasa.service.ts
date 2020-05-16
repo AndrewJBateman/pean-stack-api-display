@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { HttpClient, HttpResponse } from "@angular/common/http";
 
-import { Apod } from '../models/apod';
+import { Apod } from "../models/apod";
 import { environment } from "../../environments/environment";
 
 @Injectable({
@@ -19,7 +19,6 @@ export class NasaService {
     const day = new Date().getDate();
     this.apiKey = environment.NASA_KEY;
     const apodUrl = `https://api.nasa.gov/planetary/apod?date=${year}-${month}-${day}&api_key=${this.apiKey}&hd=true`;
-		return this.http
-			.get<Apod>(apodUrl);
+    return this.http.get<Apod>(apodUrl);
   }
 }
