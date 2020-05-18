@@ -1,7 +1,5 @@
 <head>
-  <meta
-  name="api"
-  content="Shows Nasa api data">
+  <meta name="api" content="Shows Nasa api data" />
 </head>
 
 <div class="main-div" *ngIf="nasaImgObj">
@@ -18,8 +16,29 @@
       </h3>
     </div>
     <div class="card-body">
-      <img class="card-img-top" [src]="nasaImgObj.hdurl" alt="Card image" />
-      <p class="card-text"><i class="far fa-sticky-note pr-1 text-info"></i>{{ nasaImgObj.explanation }}</p>
+      <!-- Show image if the media_type = image -->
+      <img
+        class="card-img-top"
+        [src]="nasaImgObj.hdurl"
+        alt="Card image"
+        *ngIf="nasaImgObj.media_type === 'image'"
+      />
+
+      <div id="video" *ngIf="nasaImgObj.media_type === 'video'">
+        <!-- Display and embed the YouTube video if the media_type is set to video -->
+        <iframe
+          *ngIf="nasaImgObj.media_type === 'video'"
+          [src]="nasaImgObj.url | safe: 'resourceUrl'"
+          width="560" height="315"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <p class="card-text">
+        <i class="far fa-sticky-note pr-1 text-info"></i
+        >{{ nasaImgObj.explanation }}
+      </p>
       <div class="actions">
         <!-- <div class="d-flex justify-content-between"> -->
         <div class="d-flex flex-wrap">

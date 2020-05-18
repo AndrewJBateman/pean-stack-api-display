@@ -2,64 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 import { NewsService } from "../../../services/news.service";
 import { LocationService } from "../../../services/location.service";
-
-// array of countries served by the news API service - note it does not include Spain
-const countryCodeArray = [
-  "ae",
-  "ar",
-  "at",
-  "au",
-  "be",
-  "bg",
-  "br",
-  "ca",
-  "ch",
-  "cn",
-  "co",
-  "cu",
-  "cz",
-  "de",
-  "eg",
-  "fr",
-  "gb",
-  "gr",
-  "hk",
-  "hu",
-  "id",
-  "ie",
-  "il",
-  "in",
-  "it",
-  "jp",
-  "kr",
-  "lt",
-  "lv",
-  "ma",
-  "mx",
-  "my",
-  "ng",
-  "nl",
-  "no",
-  "nz",
-  "ph",
-  "pl",
-  "pt",
-  "ro",
-  "rs",
-  "ru",
-  "sa",
-  "se",
-  "sg",
-  "si",
-  "sk",
-  "th",
-  "tr",
-  "tw",
-  "ua",
-  "us",
-  "ve",
-  "za",
-];
+import { CountryCheckService } from "../../../services/country-check.service";
 
 @Component({
   selector: "app-news",
@@ -67,6 +10,7 @@ const countryCodeArray = [
   styleUrls: ["./news.component.css"],
 })
 export class NewsComponent implements OnInit {
+  userCountry: string;
   countryCode: string;
   checkedCountryCode: string;
   mArticles: Array<any>;
@@ -75,26 +19,31 @@ export class NewsComponent implements OnInit {
   status = "";
   sources = [];
   onlySources = [];
-  selectedSource = "CNN";
-  defaultCountry = "us";
+  // selectedSource = "CNN";
+  defaultCountryCode = "us";
+  defaultCountry = "the United States"
   sourceChosen = false;
   selectedLanguage: "string";
 
   constructor(
     private locationService: LocationService,
+    private countryCheckService: CountryCheckService,
     private newsService: NewsService
   ) {}
 
   ngOnInit(): void {
-    console.log('ngOninit started');
     this.locationService.getLocation().subscribe((data) => {
       console.log("country code search: ", data);
       const countryData = data;
       this.countryCode = countryData.country.toLowerCase();
-      const checkedCountryCode =
-        countryCodeArray.indexOf(this.countryCode.toLowerCase()) === -1
-          ? this.defaultCountry
-          : countryData.country.toLowerCase();
+      const checkedCountryCode = this.countryCheckService.checkApiIncludesCountry(
+        this.countryCode
+      )
+        ? this.countryCode
+        : this.defaultCountryCode;
+
+      this.userCountry = this.checkedCountryCode !== this.countryCode ? this.defaultCountry : countryData.country_name;
+
       console.log("Country code is: ", checkedCountryCode);
       this.getCountryNews(checkedCountryCode);
     });
@@ -124,7 +73,7 @@ export class NewsComponent implements OnInit {
       .getNews("top-headlines?country=" + countryCode)
       .subscribe((data) => {
         this.mArticles = data["articles"];
-        console.log('articles: ', this.mArticles);
+        console.log("articles: ", this.mArticles);
       });
   }
 }

@@ -12,7 +12,7 @@
 .card-title {
   padding-left: 80px;
 }
-  
+
 .card-subtitle {
   padding-left: 80px;
 }
@@ -21,6 +21,10 @@
   background-size: cover;
   width: 64px;
   height: 64px;
+}
+
+.book-card {
+  padding: 12px 0;
 }
 
 .fab, .fa, .fas, .far {

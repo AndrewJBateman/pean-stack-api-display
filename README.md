@@ -25,12 +25,11 @@
 
 * Angular frontend includes Bootstrap responsive navbar with icon links
 * Main section made of cards that link to API data
-* NASA card shows Astronomy Picture of the Day (APOD) from the [NASA API](https://api.nasa.gov/)
+* NASA card shows Astronomy Picture of the Day (APOD) from the [NASA API](https://api.nasa.gov/). Note video function requires npm module [safe-pipe](https://www.npmjs.com/package/safe-pipe)
 * Crypto card shows prices of a list of cryptocurrencies from the [CryptoCompare API](https://min-api.cryptocompare.com/)
 * Map card shows location data from the [ipapi API](https://ipapi.co/)
 * News card shows latest news from the [newsapi](https://newsapi.org/)
-* Google charts card shows a range of charts
-* Data card shows data from a data API using [Google Charts](https://developers.google.com/chart/)
+* Google charts card shows a range of charts using the [Google Charts API](https://developers.google.com/chart/)
 * Progressive Web App (PWA) functionality added
 * Very high Lighthouse score but can be tweaked to be even higher - use jp2 images etc
 
