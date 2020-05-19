@@ -3,6 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { NewsService } from "../../../services/news.service";
 import { LocationService } from "../../../services/location.service";
 import { CountryCheckService } from "../../../services/country-check.service";
+// import { checkApiIncludesCountry } from "countryapicheck";
 
 @Component({
   selector: "app-news",
@@ -21,7 +22,7 @@ export class NewsComponent implements OnInit {
   onlySources = [];
   // selectedSource = "CNN";
   defaultCountryCode = "us";
-  defaultCountry = "the United States"
+  defaultCountry = "the United States";
   sourceChosen = false;
   selectedLanguage: "string";
 
@@ -39,10 +40,14 @@ export class NewsComponent implements OnInit {
       const checkedCountryCode = this.countryCheckService.checkApiIncludesCountry(
         this.countryCode
       )
+      // const checkedCountryCode = checkApiIncludesCountry(this.countryCode)
         ? this.countryCode
         : this.defaultCountryCode;
 
-      this.userCountry = this.checkedCountryCode !== this.countryCode ? this.defaultCountry : countryData.country_name;
+      this.userCountry =
+        this.checkedCountryCode !== this.countryCode
+          ? this.defaultCountry
+          : countryData.country_name;
 
       console.log("Country code is: ", checkedCountryCode);
       this.getCountryNews(checkedCountryCode);

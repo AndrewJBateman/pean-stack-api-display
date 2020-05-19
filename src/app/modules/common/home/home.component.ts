@@ -62,6 +62,14 @@ export class HomeComponent implements OnInit {
         image: "books.png",
         link: "books",
       },
+      {
+        icon: "fas fa-book-reader",
+        type: "Bestsellers",
+        title: "Bestsellers API",
+        description: "New York Times Bestsellers",
+        image: "nyt-bestsellers.png",
+        link: "nyt-bestsellers",
+      }
     ];
   }
 

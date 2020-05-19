@@ -1,47 +1,22 @@
 <head>
-  <meta name="api" content="Shows data from the Google Books api" />
+  <meta name="api" content="Shows data from the New York Times Bestsellers API" />
 </head>
 
 <body>
   <div class="main-div">
-    <!--card for user book search-->
-    <div class="card rounded">
-      <div class="card-header bg-light">
-        <img
-          class="header-image float-left"
-          src="../../../../assets/params/images/logo/books.jpg"
-          alt="Book logo"
-        />
-        <h5 class="card-title text-dark">Google Book API</h5>
-        <h6 class="card-subtitle font-italic">
-          Search by title
-        </h6>
-      </div>
+    <div class="card text-white bg-info mb-2">
       <div class="card-body">
-        <!--User input of book title-->
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text text-info"
-              ><i class="fas fa-pen"></i
-            ></span>
-          </div>
-          <input
-            ngInput
-            type="text"
-            class="form-control"
-            placeholder="Enter book title"
-            aria-label="Enter book title"
-            (keyup)="bookQuery($event.target.value)"
-          />
-        </div>
+        <h5 class="card-title mb-0">
+          <i class="fas fa-award pr-1"></i>The current New York Times bestsellers
+        </h5>
       </div>
     </div>
 
     <!--cards for book search results-->
-    <div class="row">
+    <!-- <div class="row">
       <div
         class="book-card col-lg-2 col-md-4 col-sm-6"
-        *ngFor="let book of books | async"
+        *ngFor="let book of mBooks | async"
       >
         <app-book-item
           [book]="book"
@@ -69,6 +44,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </body>
