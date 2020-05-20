@@ -15,7 +15,7 @@ import { PipesModule } from './pipes/pipes.module';
     HomeComponent,
     NotFoundComponent,
     NavbarComponent
-  ],
+   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, PipesModule],
   providers: [],
   bootstrap: [AppComponent],

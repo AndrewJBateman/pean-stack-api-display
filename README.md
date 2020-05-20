@@ -31,7 +31,8 @@
 * News card shows latest news from the [newsapi](https://newsapi.org/)
 * Google charts card shows a range of charts using the [Google Charts API](https://developers.google.com/chart/)
 * Google Book seaerch card lets user search for any book. Resullts displayed in an array of Bootstrap cards. **complete book detail modal**
-* New York Times API - bestseller list displayed
+* New York Times API - bestseller list displayed **complete book detail modal**
+* Github card shows Github repo details from user search
 * Progressive Web App (PWA) functionality added
 * Very high Lighthouse score but can be tweaked to be even higher - use jp2 images etc
 

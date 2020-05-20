@@ -40,11 +40,12 @@
     <!--cards for book search results-->
     <div class="row">
       <div
-        class="book-card col-lg-2 col-md-4 col-sm-6"
+        class="book-card col-lg-2 col-md-4 col-sm-6 pb-3"
         *ngFor="let book of books | async"
       >
         <app-book-item
           [book]="book"
+          (click)="onClick(book.id)"
           data-toggle="modal"
           data-target="#exampleModal"
         ></app-book-item>

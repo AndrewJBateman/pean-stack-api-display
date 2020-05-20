@@ -69,6 +69,14 @@ export class HomeComponent implements OnInit {
         description: "New York Times Bestsellers",
         image: "nyt-bestsellers.png",
         link: "nyt-bestsellers",
+      },
+      {
+        icon: "fab fa-github",
+        type: "Github",
+        title: "Github API",
+        description: "Github repo search",
+        image: "github.png",
+        link: "github",
       }
     ];
   }

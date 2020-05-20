@@ -10,7 +10,9 @@ import { Observable } from 'rxjs';
   styleUrls: ["./nyt-bestsellers.component.css"],
 })
 export class NytBestsellersComponent implements OnInit {
-  mBooks: Observable<any>;
+  bestsellers: Observable<NytApiResponse>;
+  // bestsellers: any;
+  clicked: boolean=false;
 
   constructor(private nytBestsellersService: NytBestsellersService) {}
 
@@ -20,8 +22,13 @@ export class NytBestsellersComponent implements OnInit {
 
   getBooks() {
     this.nytBestsellersService.getBooks().subscribe((data: any) => {
-      this.mBooks = data;
-      console.log("Bestsellers: ", this.mBooks);
+      this.bestsellers = data;
+      console.log("Bestsellers: ", this.bestsellers);
     });
+  }
+
+  onClick(id:string) {
+
+    this.clicked=true;
   }
 }

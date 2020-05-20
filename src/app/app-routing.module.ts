@@ -42,6 +42,11 @@ const routes: Routes = [
       .then(mod => mod.NytBestsellersModule)
   },
   {
+    path: 'github',
+    loadChildren: () => import('./modules/application/github/github.module')
+      .then(mod => mod.GithubModule)
+  },
+  {
     path: 'about',
     loadChildren: () => import('./modules/common/about/about.module')
       .then(mod => mod.AboutModule)

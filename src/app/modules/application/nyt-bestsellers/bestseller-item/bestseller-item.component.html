@@ -1,0 +1,16 @@
+<div class="card rounded">
+  <div class="card-header">
+    <p class="category-text">
+      <i class="fas fa-clipboard-list text-info"></i>
+      {{ bestseller.list_name }}
+    </p>
+  </div>
+  <div class="card-body p-0">
+    <img
+      style="width: 100%; height: 100%;"
+      *ngIf="bestseller.list_image"
+      [src]="bestseller.list_image"
+      alt="bestseller logo"
+    />
+  </div>
+</div>
