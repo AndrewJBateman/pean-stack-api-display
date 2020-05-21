@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./modules/common/home/home.component";
@@ -16,7 +17,7 @@ import { PipesModule } from './pipes/pipes.module';
     NotFoundComponent,
     NavbarComponent
    ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, PipesModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, PipesModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

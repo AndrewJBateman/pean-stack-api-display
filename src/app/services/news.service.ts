@@ -1,8 +1,8 @@
 import { Injectable, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Router } from "@angular/router";
-import { Observable, throwError } from "rxjs";
-import { map, catchError } from "rxjs/operators";
+import { throwError, Observable } from "rxjs";
+import { map, catchError, tap } from "rxjs/operators";
 
 import { SourcesResponse, NewsApiResponse } from "../models/news";
 import { Article } from "../models/news";
@@ -30,18 +30,20 @@ export class NewsService implements OnInit {
   }
 
   // fetch sources from news API using url input
-  getSources(url: string) {
-    return this.http.get(`${apiUrl}/${url}&apiKey=${apiKey}`).pipe(
-      map((data: SourcesResponse) => data),
-      catchError((err) => {
-        return throwError("News sources not found, error: ", err);
-      })
-    );
-  }
+  // getSources(url: string) {
+  //   return this.http.get(`${apiUrl}/${url}&apiKey=${apiKey}`).pipe(
+  //     map((data: SourcesResponse) => data),
+  //     catchError((err) => {
+  //       return throwError("News sources not found, error: ", err);
+  //     })
+  //   );
+  // }
 
   // fetch news from news API using url input
-  getNews(url: string) {
-    return this.http.get(`${apiUrl}/${url}&apiKey=${apiKey}`).pipe(
+  getNews(url: string): Observable<NewsApiResponse> {
+    const newsUrl = `${apiUrl}/${url}&apiKey=${apiKey}`;
+    return this.http.get<NewsApiResponse>(newsUrl).pipe(
+      tap((data: NewsApiResponse) => console.log("tapped data: ", data)),
       map((data: NewsApiResponse) => data),
       catchError((err) => {
         return throwError("Problem fetching news from API, error: ", err);

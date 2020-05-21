@@ -54,23 +54,23 @@ export class NewsComponent implements OnInit {
     });
 
     // get list of news sources via news API service
-    this.newsService.getSources("/sources?").subscribe(
-      (data) => {
-        this.status = data.status;
-        this.sources = data.sources;
+    // this.newsService.getSources("/sources?").subscribe(
+    //   (data) => {
+    //     this.status = data.status;
+    //     this.sources = data.sources;
 
-        console.log(
-          'ngOnInit getSources function ran with status "',
-          this.status,
-          '" and retrieved an array of',
-          +this.sources.length,
-          "sources."
-        );
-      },
-      (err) => {
-        console.log("an error occured: ", err);
-      }
-    );
+    //     console.log(
+    //       'ngOnInit getSources function ran with status "',
+    //       this.status,
+    //       '" and retrieved an array of',
+    //       +this.sources.length,
+    //       "sources."
+    //     );
+    //   },
+    //   (err) => {
+    //     console.log("an error occured: ", err);
+    //   }
+    // );
   }
 
   getCountryNews(countryCode: string) {

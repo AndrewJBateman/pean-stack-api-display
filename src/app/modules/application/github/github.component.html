@@ -1,1 +1,80 @@
-<p>github works!</p>
+<head>
+  <meta name="api" content="Shows data from the Google Books api" />
+</head>
+
+<body>
+  <div class="main-div">
+    <!--card for user book search-->
+    <div class="card rounded">
+      <div class="card-header bg-light">
+        <img
+          class="header-image float-left"
+          src="../../../../assets/params/images/logo/github-octocat.jpg"
+          alt="Github logo"
+        />
+        <h5 class="card-title text-dark">Github API</h5>
+        <h6 class="card-subtitle font-italic">
+          Search by username
+        </h6>
+      </div>
+      <div class="card-body">
+        <form
+          #githubSearch="ngForm"
+          method="POST"
+          (ngSubmit)="submitForm(githubSearch)"
+        >
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text text-info"
+                ><i class="fas fa-pen"></i
+              ></span>
+            </div>
+            <input
+              name="name"
+              type="text"
+              class="form-control"
+              placeholder="Enter username"
+              aria-label="Enter username"
+              required
+              ngModel
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-info"
+                type="submit"
+                [disabled]="!githubSearch.form.valid"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--cards for book search results-->
+    <div class="github-card">
+      <app-github-user [user]="user"></app-github-user>
+    </div>
+
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content"  >
+          <div class="modal-header">
+
+            <h5 class="modal-title" id="exampleModalLabel" *ngIf="clicked" >Book title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" *ngIf="clicked">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</body>

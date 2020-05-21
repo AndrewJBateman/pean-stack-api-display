@@ -109,6 +109,7 @@ public getNasaImage(): Observable<Apod> {
 ## :cool: Features - Frontend
 
 * [Versión 81.0.4044.92 (Build oficial) (64 bits)](https://www.google.com/chrome/) latest version was required to get e2e testing to work
+* [http data handling best practices](https://angular.io/guide/http) followed - i.e. use of separate service file to get API data then use of subscription callback function in component to subscribe to Observable data. Reponse object type defined using an interface model. Interface passed as type parameter to the HttpClient.get() method and RxJS map operator used to transform response data. Transformed data passed to async pipe.
 
 ## :clipboard: Status & To-Do List
 

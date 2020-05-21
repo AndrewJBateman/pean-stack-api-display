@@ -1,0 +1,16 @@
+<div class="card rounded" *ngIf="user">
+  <div class="card-header bg-light">
+    <img
+      class="header-image float-left"
+      [src]="user.avatar_url"
+      alt="Github user profile photo"
+    />
+    <h5 class="card-title text-dark">{{ user.name }}</h5>
+    <h6 class="card-subtitle font-italic">
+      Joined: {{ user.created_at | date }}
+    </h6>
+  </div>
+  <div class="card-body">
+    {{ user.login }}
+  </div>
+</div>
