@@ -26,6 +26,7 @@ export class GithubComponent implements OnInit {
       this.user = user;
       console.log('this user: ', this.user);
     });
+
   }
 
 }

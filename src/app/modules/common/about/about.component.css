@@ -1,11 +1,16 @@
 .main-div {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .card {
   max-width: 800px;
+  align-items: left;
+}
+
+button {
+  width: 160px;
+  align-items: left !important;
 }
 
 .fab, .fa, .fas, .far {

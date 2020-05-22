@@ -10,7 +10,6 @@
         <h5 class="mb-0">
           <button
             class="btn btn-outline-dark"
-            style="width: 140px;"
             data-toggle="collapse"
             data-target="#collapseOne"
             aria-expanded="true"
@@ -28,9 +27,14 @@
         data-parent="#accordion"
       >
         <div class="card-body">
-          Astronomy Picture of the Day (APOD) Data is fetched from the <a href="https://api.nasa.gov/index.html#getting-started"
-          >official NASA API</a>. The APOD can also be a video and npm module <a href="https://www.npmjs.com/package/safe-pipe"
-          >safe-pipe</a> was required to prevent the app from crashing. Data is displayed in a Bootstrap card with a description, date and credit text (where available) below.
+          Astronomy Picture of the Day (APOD) Data is fetched from the
+          <a href="https://api.nasa.gov/index.html#getting-started"
+            >official NASA API</a
+          >. The APOD can also be a video and npm module
+          <a href="https://www.npmjs.com/package/safe-pipe">safe-pipe</a> was
+          required to prevent the app from crashing. Data is displayed in a
+          Bootstrap card with a description, date and credit text (where
+          available) below.
         </div>
       </div>
     </div>
@@ -40,7 +44,6 @@
         <h5 class="mb-0">
           <button
             class="btn btn-outline-dark"
-            style="width: 140px;"
             data-toggle="collapse"
             data-target="#collapseTwo"
             aria-expanded="false"
@@ -59,9 +62,11 @@
       >
         <div class="card-body">
           Price data for a range of cryptocurrencies is fetched from the
-          <a href="https://min-api.cryptocompare.com/"
-            >CryptoCompare API</a
-          > and is displayed using a Bootstrap responsive table. The table also shows svg icons for each currency, retrieved from the assets folder. The cryptocurrency prices are displayed in euro but this can be changed to other currencies.
+          <a href="https://min-api.cryptocompare.com/">CryptoCompare API</a> and
+          is displayed using a Bootstrap responsive table. The table also shows
+          svg icons for each currency, retrieved from the assets folder. The
+          cryptocurrency prices are displayed in euro but this can be changed to
+          other currencies.
         </div>
       </div>
     </div>
@@ -71,7 +76,6 @@
         <h5 class="mb-0">
           <button
             class="btn btn-outline-dark"
-            style="width: 140px;"
             data-toggle="collapse"
             data-target="#collapseThree"
             aria-expanded="false"
@@ -105,7 +109,6 @@
         <h5 class="mb-0">
           <button
             class="btn btn-outline-dark"
-            style="width: 140px;"
             data-toggle="collapse"
             data-target="#collapseFour"
             aria-expanded="false"
@@ -126,9 +129,14 @@
           User country location data is fetched from
           <a href="https://ipapi.co"
             >ipapi, a real-time Geolocation & Reverse IP Lookup REST API</a
-          >. Using the user's country, news is fetched from the <a href="https://newsapi.org//">newsapi.org</a>,
-          a HTTP REST API for searching and retrieving live articles from the
-          web. This news API does not have the news for all countries - Spain is missing for example. If the user is in Spain the news will default to the 'us'. The code uses a location check service with an array of the 54 countries supported by the news API with a simple 'indexOf' array operation to see if the user's country is in the array.
+          >. Using the user's country, news is fetched from the
+          <a href="https://newsapi.org//">newsapi.org</a>, a HTTP REST API for
+          searching and retrieving live articles from the web. This news API
+          does not have the news for all countries - Spain is missing for
+          example. If the user is in Spain the news will default to the 'us'.
+          The code uses a location check service with an array of the 54
+          countries supported by the news API with a simple 'indexOf' array
+          operation to see if the user's country is in the array.
         </div>
       </div>
     </div>
@@ -138,14 +146,13 @@
         <h5 class="mb-0">
           <button
             class="btn btn-outline-dark"
-            style="width: 140px;"
             data-toggle="collapse"
             data-target="#collapseFive"
             aria-expanded="false"
             aria-controls="collapseFive"
           >
-            <i class="fas fa-book-open pr-1 text-info"></i>
-            Books API
+            <i class="fas fa-chart-bar pr-1 text-info"></i>
+            Charts API
           </button>
         </h5>
       </div>
@@ -158,8 +165,101 @@
         <div class="card-body">
           Data on books is fetched from the
           <a href="https://developers.google.com/books/docs/overview"
+            >Google Charts API</a
+          >Chart data is displayed in a grid of Bootstrap cards.
+        </div>
+      </div>
+    </div>
+    <!--card 6-->
+    <div class="card">
+      <div class="card-header" id="headingSix">
+        <h5 class="mb-0">
+          <button
+            class="btn btn-outline-dark"
+            data-toggle="collapse"
+            data-target="#collapseSix"
+            aria-expanded="false"
+            aria-controls="collapseSix"
+          >
+            <i class="fas fa-book-open pr-1 text-info"></i>
+            Books API
+          </button>
+        </h5>
+      </div>
+      <div
+        id="collapseSix"
+        class="collapse"
+        aria-labelledby="headingSix"
+        data-parent="#accordion"
+      >
+        <div class="card-body">
+          Data on books is fetched from the
+          <a href="https://developers.google.com/books/docs/overview"
             >Google Books API</a
-          >Book data is displayed in a grid of Bootstrap cards. Clicking on a card will activate a modal with more details about the book.
+          >Book data is displayed in a grid of Bootstrap cards. Clicking on a
+          card will activate a modal with more details about the book.
+        </div>
+      </div>
+    </div>
+    <!--card 7-->
+    <div class="card">
+      <div class="card-header" id="headingSeven">
+        <h5 class="mb-0">
+          <button
+            class="btn btn-outline-dark"
+            data-toggle="collapse"
+            data-target="#collapseSeven"
+            aria-expanded="false"
+            aria-controls="collapseSeven"
+          >
+            <i class="fas fa-book-reader pr-1 text-info"></i>
+            NY Times API
+          </button>
+        </h5>
+      </div>
+      <div
+        id="collapseSeven"
+        class="collapse"
+        aria-labelledby="headingSeven"
+        data-parent="#accordion"
+      >
+        <div class="card-body">
+          Data on bestsellers is fetched from the
+          <a href="https://developers.google.com/books/docs/overview"
+            >New York Times API</a
+          >Bestseller data is displayed in a grid of Bootstrap cards. Clicking
+          on a card will activate a modal with more details about the book.
+        </div>
+      </div>
+    </div>
+    <!--card 8-->
+    <div class="card">
+      <div class="card-header" id="headingEight">
+        <h5 class="mb-0">
+          <button
+            class="btn btn-outline-dark"
+            data-toggle="collapse"
+            data-target="#collapseEight"
+            aria-expanded="false"
+            aria-controls="collapseEight"
+          >
+            <i class="fab fa-github pr-1 text-info"></i>
+            Github API
+          </button>
+        </h5>
+      </div>
+      <div
+        id="collapseEight"
+        class="collapse"
+        aria-labelledby="headingEight"
+        data-parent="#accordion"
+      >
+        <div class="card-body">
+          Data on bestsellers is fetched from the
+          <a href="https://developers.google.com/books/docs/overview"
+            >New York Times API. </a
+          >Bestseller data is displayed in a grid of Bootstrap cards. Clicking
+          on a card will activate a modal with more details about the book.
         </div>
       </div>
     </div>

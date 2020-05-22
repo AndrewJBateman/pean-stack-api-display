@@ -5,12 +5,44 @@
       [src]="user.avatar_url"
       alt="Github user profile photo"
     />
-    <h5 class="card-title text-dark">{{ user.name }}</h5>
-    <h6 class="card-subtitle font-italic">
-      Joined: {{ user.created_at | date }}
+    <h5 class="card-title">{{ user.name }}</h5>
+
+    <h6 class="card-subtitle text-dark">
+      <i class="fas fa-globe-europe text-success pr-2"></i>{{ user.location }}
     </h6>
   </div>
-  <div class="card-body">
-    {{ user.login }}
+  <div class="card-body pb-0">
+    <p class="">
+      <i class="fas fa-user-tag text-warning pr-2"></i
+      ><span class="font-weight-bold pr-2">Bio:</span>{{ user.bio }}
+    </p>
+    <p>
+      <i class="fas fa-calendar-day text-dark pr-2"></i
+      ><span class="font-weight-bold pr-2">Joined:</span
+      >{{ user.created_at | dateConvert }}
+    </p>
+    <p>
+      <i class="fas fa-folder text-info pr-2"></i
+      ><span class="font-weight-bold pr-2">Repositories:</span
+      >{{ user.public_repos }}
+    </p>
+    <p>
+      <i class="far fa-user text-dark pr-2"></i
+      ><span class="font-weight-bold pr-2">Following:</span>{{ user.following }}
+    </p>
+    <p>
+      <i class="far fa-user text-dark pr-2"></i
+      ><span class="font-weight-bold pr-2">Followers:</span>{{ user.followers }}
+    </p>
+  </div>
+  <div class="d-flex justify-content-around">
+    <div class="p-2">
+      <a [routerLink]="['/github-repos']" class="btn btn-info"><i class="fas fa-list pr-2"></i>Repos</a>
+    </div>
+    <div class="p-2">
+      <a href="{{ user.html_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-info"
+        ><i class="fab fa-github pr-2"></i>Profile</a
+      >
+    </div>
   </div>
 </div>

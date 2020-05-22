@@ -47,6 +47,11 @@ const routes: Routes = [
       .then(mod => mod.GithubModule)
   },
   {
+    path: 'github-repos',
+    loadChildren: () => import('./modules/application/github/github-repos/github-repos.module')
+      .then(mod => mod.GithubReposModule)
+  },
+  {
     path: 'about',
     loadChildren: () => import('./modules/common/about/about.module')
       .then(mod => mod.AboutModule)
