@@ -4,6 +4,42 @@
 
 <div class="main-div">
   <div id="accordion">
+
+    <!--card model-->
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button
+            class="btn btn-outline-dark"
+            data-toggle="collapse"
+            data-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            <i class="fas fa-satellite-dish pr-1 text-info"></i>
+            NASA API
+          </button>
+        </h5>
+      </div>
+      <div
+        id="collapseOne"
+        class="collapse show"
+        aria-labelledby="headingOne"
+        data-parent="#accordion"
+      >
+        <div class="card-body">
+          Astronomy Picture of the Day (APOD) Data is fetched from the
+          <a href="https://api.nasa.gov/index.html#getting-started"
+            >official NASA API</a
+          >. The APOD can also be a video and npm module
+          <a href="https://www.npmjs.com/package/safe-pipe">safe-pipe</a> was
+          required to prevent the app from crashing. Data is displayed in a
+          Bootstrap card with a description, date and credit text (where
+          available) below.
+        </div>
+      </div>
+    </div>
+
     <!--card 1-->
     <div class="card">
       <div class="card-header" id="headingOne">

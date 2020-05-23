@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
 import { NytBestsellersComponent } from "./nyt-bestsellers.component";
 import { NytBestsellersRoutingModule } from "./nyt-bestsellers-routing.module";

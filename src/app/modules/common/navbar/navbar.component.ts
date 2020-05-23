@@ -34,7 +34,24 @@ export class NavbarComponent implements OnInit {
     return this.router.url === "/news";
   }
 
-  isDataRoute() {
-    return this.router.url === "/data";
+  isGoogleChartsRoute() {
+    return this.router.url === "/google-charts";
   }
+
+  isBooksRoute() {
+    return this.router.url === "/books";
+  }
+
+  isNytBestsellersRoute() {
+    return this.router.url === "/nyt-bestsellers";
+  }
+
+  isGithubUserRoute() {
+    return this.router.url === ("/github");
+  }
+
+  isGithubRepoRoute() {
+    return this.router.url.includes("/github-repos");
+  }
+
 }

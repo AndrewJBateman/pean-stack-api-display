@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 import { NytBestsellersService } from "../../../services/nyt-bestsellers.service";
 import { NytApiResponse } from "../../../models/nyt";
-import { Observable } from 'rxjs';
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-nyt-bestsellers",
@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 export class NytBestsellersComponent implements OnInit {
   bestsellers: Observable<NytApiResponse>;
   // bestsellers: any;
-  clicked: boolean=false;
+  clicked: boolean = false;
 
   constructor(private nytBestsellersService: NytBestsellersService) {}
 
@@ -29,8 +29,7 @@ export class NytBestsellersComponent implements OnInit {
     });
   }
 
-  onClick(id:string) {
-
-    this.clicked=true;
+  onClick(id: string) {
+    this.clicked = true;
   }
 }

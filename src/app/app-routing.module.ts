@@ -47,7 +47,7 @@ const routes: Routes = [
       .then(mod => mod.GithubModule)
   },
   {
-    path: 'github-repos',
+    path: 'github-repos/:username',
     loadChildren: () => import('./modules/application/github/github-repos/github-repos.module')
       .then(mod => mod.GithubReposModule)
   },

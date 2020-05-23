@@ -9,7 +9,8 @@
   margin: auto auto;
 }
 
-.card-title , .card-subtitle {
+.card-title,
+.card-subtitle {
   padding-left: 80px;
 }
 
@@ -19,6 +20,9 @@
   height: 64px;
 }
 
-.fab, .fa, .fas, .far {
+.fab,
+.fa,
+.fas,
+.far {
   font-size: 24px;
 }

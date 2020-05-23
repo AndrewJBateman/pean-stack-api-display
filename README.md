@@ -24,15 +24,18 @@
 ### Frontend
 
 * Angular frontend includes Bootstrap responsive navbar with icon links
+* About page **add *ngFor to accordian**
+* Contact **link to my website?**
+* Signin page - **use for backend or remove?**
 * Main section made of cards that link to API data
 * NASA card shows Astronomy Picture of the Day (APOD) from the [NASA API](https://api.nasa.gov/). Note video function requires npm module [safe-pipe](https://www.npmjs.com/package/safe-pipe)
 * Crypto card shows prices of a list of cryptocurrencies from the [CryptoCompare API](https://min-api.cryptocompare.com/)
 * Map card shows location data from the [ipapi API](https://ipapi.co/)
 * News card shows latest news from the [newsapi](https://newsapi.org/)
 * Google charts card shows a range of charts using the [Google Charts API](https://developers.google.com/chart/)
-* Google Book seaerch card lets user search for any book. Resullts displayed in an array of Bootstrap cards. **complete book detail modal**
-* New York Times API - bestseller list displayed **complete book detail modal**
-* Github card shows Github repo details from user search
+* Google Book search card lets user search for any book. Resullts displayed in an array of Bootstrap cards. **add book detail modal**
+* New York Times API - bestseller list displayed **add bestseller detail page**
+* Github card shows Github repo details from user search. Repo button redirects to repo list page. **add user input sanitization, github pagination to show more than 30 repos**
 * Progressive Web App (PWA) functionality added
 * Very high Lighthouse score but can be tweaked to be even higher - use jp2 images etc
 
@@ -109,12 +112,13 @@ public getNasaImage(): Observable<Apod> {
 ## :cool: Features - Frontend
 
 * [Versión 81.0.4044.92 (Build oficial) (64 bits)](https://www.google.com/chrome/) latest version was required to get e2e testing to work
-* [http data handling best practices](https://angular.io/guide/http) followed - i.e. use of separate service file to get API data then use of subscription callback function in component to subscribe to Observable data. Reponse object type defined using an interface model. Interface passed as type parameter to the HttpClient.get() method and RxJS map operator used to transform response data. Transformed data passed to async pipe.
+* [http data handling best practices](https://angular.io/guide/http) followed - i.e. use of separate service file to get API data then use of subscription callback function in component to subscribe to Observable data. Response object type defined using an interface model. Interface passed as type parameter to the HttpClient.get() method and RxJS map operator used to transform response data. Transformed data passed to async pipe.
+* [Angular Activated Route snapshot params](https://angular.io/api/router/ActivatedRoute) used to pass username from github user search page to github repo display page.
 
 ## :clipboard: Status & To-Do List
 
-* Status: frontend Nasa, Crypto, Map, News, Charts APIs working. Books API to finish
-* To-Do: complete frontend then do backend.
+* Status: all frontend API cards working.
+* To-Do: publish frontend then do backend.
 
 ## :clap: Inspiration/General Tools
 

@@ -65,15 +65,56 @@
     </a>
   </div>
 
-  <div *ngIf="isDataRoute()">
+  <div *ngIf="isGoogleChartsRoute()">
     <a
       class="nav-link"
-      [routerLink]="['/data']"
+      [routerLink]="['/google-charts']"
       routerLinkActive="nav-link-active"
     >
-      Data API
+      Google Charts API
     </a>
   </div>
+
+  <div *ngIf="isBooksRoute()">
+    <a
+      class="nav-link"
+      [routerLink]="['/books']"
+      routerLinkActive="nav-link-active"
+    >
+      Google Books API
+    </a>
+  </div>
+
+  <div *ngIf="isNytBestsellersRoute()">
+    <a
+      class="nav-link"
+      [routerLink]="['/nyt-bestsellers']"
+      routerLinkActive="nav-link-active"
+    >
+      NYT Bestsellers API
+    </a>
+  </div>
+
+  <div *ngIf="isGithubUserRoute()">
+    <a
+      class="nav-link"
+      [routerLink]="['/github']"
+      routerLinkActive="nav-link-active"
+    >
+      Github API
+    </a>
+  </div>
+
+  <div *ngIf="isGithubRepoRoute()">
+    <a
+      class="nav-link"
+      [routerLink]="['/github-repos/']"
+      routerLinkActive="nav-link-active"
+    >
+      Github API
+    </a>
+  </div>
+
 
   <button
     class="navbar-toggler"
