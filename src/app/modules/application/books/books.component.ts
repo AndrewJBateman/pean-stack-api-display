@@ -11,7 +11,7 @@ import { Book } from "../../../models/books";
 })
 export class BooksComponent implements OnInit {
   books: Observable<Book[]>;
-  clicked:boolean=false;
+  clicked = false;
 
   constructor(private googleBookService: GoogleBookService) {}
 
@@ -21,12 +21,10 @@ export class BooksComponent implements OnInit {
     if (bookTitle.length > 4) {
       this.books = this.googleBookService.findBook(bookTitle);
       // this.googleBookService.findBook(bookTitle).subscribe(books => this.books = this.items);
-      console.log("books", this.books);
     }
   }
 
-  onClick(id:string) {
-
-    this.clicked=true;
+  onClick(id: string) {
+    this.clicked = true;
   }
 }

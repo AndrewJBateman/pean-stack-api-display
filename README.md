@@ -31,7 +31,7 @@
 * NASA card shows Astronomy Picture of the Day (APOD) from the [NASA API](https://api.nasa.gov/). Note video function requires npm module [safe-pipe](https://www.npmjs.com/package/safe-pipe)
 * Crypto card shows prices of a list of cryptocurrencies from the [CryptoCompare API](https://min-api.cryptocompare.com/)
 * Map card shows location data from the [ipapi API](https://ipapi.co/)
-* News card shows latest news from the [newsapi](https://newsapi.org/)
+* News card shows latest news from the [newsapi](https://newsapi.org/) **?dropdown sources menu - solve problem with Bootstrap**
 * Google charts card shows a range of charts using the [Google Charts API](https://developers.google.com/chart/)
 * Google Book search card lets user search for any book. Resullts displayed in an array of Bootstrap cards. **add book detail modal**
 * New York Times API - bestseller list displayed **add bestseller detail page**
@@ -58,6 +58,8 @@
 * [Angular Express Engine](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
 * [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) to check quality of website
 * [Google Charts](https://developers.google.com/chart/interactive/docs/gallery)
+* [Palantir](https://palantir.github.io/tslint/) extensible linter for the TypeScript language
+* [Favicon generator website](https://favicon.io/favicon-generator/) to generate the simple 'AB' favicon
 
 ## :floppy_disk: Setup - Backend
 
@@ -66,12 +68,14 @@
 ## :floppy_disk: Setup - Frontend
 
 * Install dependencies using `npm i`
+* Run ``npm outdated` to see if any npm dependencies are outdated. Note: use Typescript v3.8.3 - NOT the latest version
 * Get yourself API keys for the Nasa, Google Maps and News apps
 * Run `ng serve` for a dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
-* Run `npm run lint` to lint test entire codebase
-* Run `npm run test` to run testing
-* Run `npm run e2e` to run end-to-end testing files in individual modules etc.
-* Run `npm run build:ssr` to generate a Server-Side-Rendered build file
+* Run `npm run lint` to lint test entire codebase using TSLint
+* Run `npm run test` to run unit tests using the Karma framework
+* Run `npm run e2e` to run end-to-end testing files in individual modules etc. using Protractor
+* Run `npm run build` to generate a build file without SSR
+* Run `npm run build:ssr` to generate a build file with SSR
 * Run `npm run serve:ssr` to see on a dev server
 * Run `firebase deploy` to deploy to Google Firebase Hosting (already setup)
 
@@ -117,8 +121,8 @@ public getNasaImage(): Observable<Apod> {
 
 ## :clipboard: Status & To-Do List
 
-* Status: all frontend API cards working.
-* To-Do: publish frontend then do backend.
+* Status: all frontend API cards working. TSLinting passes. `npm run test` returns 25 failed 11 success.
+* To-Do: add book & bestseller detail pages & nav, check SSR lighthouse score, publish frontend then do backend.
 
 ## :clap: Inspiration/General Tools
 

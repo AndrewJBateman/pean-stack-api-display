@@ -16,7 +16,6 @@ export class NasaComponent implements OnInit {
   ngOnInit() {
     this.nasaApi.getNasaImage().subscribe((response) => {
       this.nasaImgObj = response;
-      console.log(response);
     });
   }
 }

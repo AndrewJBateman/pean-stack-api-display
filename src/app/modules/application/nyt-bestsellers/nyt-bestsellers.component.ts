@@ -12,7 +12,7 @@ import { Observable } from "rxjs";
 export class NytBestsellersComponent implements OnInit {
   bestsellers: Observable<NytApiResponse>;
   // bestsellers: any;
-  clicked: boolean = false;
+  clicked = false;
 
   constructor(private nytBestsellersService: NytBestsellersService) {}
 

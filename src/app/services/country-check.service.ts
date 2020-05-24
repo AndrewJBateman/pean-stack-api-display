@@ -64,7 +64,6 @@ export class CountryCheckService {
       "ve",
       "za",
     ];
-    
     return countryCodeArray.indexOf(countryCode) !== -1;
   }
 }

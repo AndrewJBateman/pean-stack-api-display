@@ -15,25 +15,23 @@ export class MapComponent implements OnInit, AfterViewInit {
   lat = "";
   lng = "";
   country = "";
-  calling_code = "";
+  callingCode = "";
   city = "";
   ip = 0;
-  location: Object;
+  location: object;
   map: any;
 
   constructor(private locationService: LocationService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   // Called after component's views and child views are initialised
   ngAfterViewInit(): void {
     this.locationService.getLocation().subscribe((data: any) => {
-      console.log("location data: ", data);
       this.lat = data.latitude;
       this.lng = data.longitude;
       this.country = data.country_name;
-      this.calling_code = data.country_calling_code;
+      this.callingCode = data.country_calling_code;
       this.city = data.city;
       this.ip = data.ip;
 

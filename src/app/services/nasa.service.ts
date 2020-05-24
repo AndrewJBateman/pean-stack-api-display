@@ -9,7 +9,7 @@ import { environment } from "../../environments/environment";
   providedIn: "root",
 })
 export class NasaService {
-  apiKey: string = "";
+  apiKey: string;
 
   constructor(private http: HttpClient) {}
 

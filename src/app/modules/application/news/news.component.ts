@@ -34,14 +34,13 @@ export class NewsComponent implements OnInit {
 
   ngOnInit(): void {
     this.locationService.getLocation().subscribe((data) => {
-      console.log("country code search: ", data);
       const countryData = data;
       this.countryCode = countryData.country.toLowerCase();
       const checkedCountryCode = this.countryCheckService.checkApiIncludesCountry(
         this.countryCode
       )
-      // const checkedCountryCode = checkApiIncludesCountry(this.countryCode)
-        ? this.countryCode
+        ? // const checkedCountryCode = checkApiIncludesCountry(this.countryCode)
+          this.countryCode
         : this.defaultCountryCode;
 
       this.userCountry =
@@ -49,7 +48,6 @@ export class NewsComponent implements OnInit {
           ? this.defaultCountry
           : countryData.country_name;
 
-      console.log("Country code is: ", checkedCountryCode);
       this.getCountryNews(checkedCountryCode);
     });
 
@@ -77,8 +75,7 @@ export class NewsComponent implements OnInit {
     this.newsService
       .getNews("top-headlines?country=" + countryCode)
       .subscribe((data) => {
-        this.mArticles = data["articles"];
-        console.log("articles: ", this.mArticles);
+        this.mArticles = data.articles;
       });
   }
 }

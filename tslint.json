@@ -31,6 +31,7 @@
       true,
       140
     ],
+    "variable-name": [true, "check-format", "allow-leading-underscore", "allow-snake-case", "allow-pascal-case"],
     "member-access": false,
     "member-ordering": [
       true,
@@ -68,8 +69,8 @@
     "object-literal-sort-keys": false,
     "ordered-imports": false,
     "quotemark": [
-      true,
-      "single"
+      false,
+      "double"
     ],
     "trailing-comma": false,
     "no-conflicting-lifecycle": true,
