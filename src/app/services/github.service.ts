@@ -20,7 +20,7 @@ export class GithubService {
     const userSearchUrl = `${baseUrl + user}`;
 
     return this.http.get<User>(userSearchUrl).pipe(
-      tap((data: User) => console.log("tapped data:", data)),
+      // tap((data: User) => console.log("tapped data:", data)),
       map((obj) => obj),
       catchError((err) => {
         return throwError(
@@ -32,11 +32,7 @@ export class GithubService {
   }
 
   getRepos(user: string): Observable<Repo> {
-    const repoSearchUrl = `${
-      baseUrl +
-      user +
-      "/repos?per_page=100&page=1"
-    }`;
+    const repoSearchUrl = `${baseUrl + user + "/repos?per_page=100&page=1"}`;
     console.log("searchUrl: ", repoSearchUrl);
 
     return this.http
@@ -44,7 +40,7 @@ export class GithubService {
         params: { access_token: githubKey },
       })
       .pipe(
-        tap((data: Repo) => console.log("tapped data:", data)),
+        // tap((data: Repo) => console.log("tapped data:", data)),
         map((obj) => obj),
         catchError((err) => {
           return throwError(

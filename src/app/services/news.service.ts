@@ -23,7 +23,7 @@ export class NewsService {
   getNews(url: string): Observable<NewsApiResponse> {
     const newsUrl = `${apiUrl}/${url}&apiKey=${apiKey}`;
     return this.http.get<NewsApiResponse>(newsUrl).pipe(
-      tap((data: NewsApiResponse) => console.log("tapped data: ", data)),
+      // tap((data: NewsApiResponse) => console.log("tapped data: ", data)),
       map((data: NewsApiResponse) => data),
       catchError((err) => {
         return throwError("Problem fetching news from API, error: ", err);

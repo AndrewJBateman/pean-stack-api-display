@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
         type: "Nasa",
         title: "Nasa API",
         description: "Astronomy Picture of the Day.",
-        image: "nasa.png",
+        image: "nasa.jpg",
         link: "nasa",
       },
       {
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
         type: "Crypto",
         title: "Cryptocurrency API",
         description: "Cryptocurrency data table",
-        image: "crypto.png",
+        image: "crypto.jpg",
         link: "crypto",
       },
       {
@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
         type: "Map",
         title: "Map API",
         description: "Current location shown on map.",
-        image: "map.png",
+        image: "map.jpg",
         link: "map",
       },
       {
@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
         type: "News",
         title: "News API",
         description: "News from the user's country.",
-        image: "news.png",
+        image: "news.jpg",
         link: "news",
       },
       {
@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
         type: "Google-charts",
         title: "Google Charts",
         description: "Data shown using Google charts",
-        image: "google-charts.png",
+        image: "google-charts.jpg",
         link: "google-charts",
       },
       {
@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit {
         type: "Books",
         title: "Books API",
         description: "Google book search facility",
-        image: "books.png",
+        image: "books.jpg",
         link: "books",
       },
       {
@@ -67,7 +67,7 @@ export class HomeComponent implements OnInit {
         type: "Bestsellers",
         title: "Bestsellers API",
         description: "New York Times Bestsellers",
-        image: "nyt-bestsellers.png",
+        image: "nyt-bestsellers.jpg",
         link: "nyt-bestsellers",
       },
       {
@@ -75,7 +75,7 @@ export class HomeComponent implements OnInit {
         type: "Github",
         title: "Github API",
         description: "Github repo search",
-        image: "github.png",
+        image: "github.jpg",
         link: "github",
       }
     ];

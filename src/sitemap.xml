@@ -14,18 +14,27 @@
     <loc>https://pern-stack-api-display.web.app/signin</loc>
   </url>
   <url>
-    <loc>https://pern-stack-api-display.web.app/films</loc>
+    <loc>https://pern-stack-api-display.web.app/nasa</loc>
   </url>
   <url>
-    <loc>https://pern-stack-api-display.web.app/chartjs</loc>
+    <loc>https://pern-stack-api-display.web.app/crypto</loc>
   </url>
   <url>
-    <loc>https://pern-stack-api-display.web.app/components</loc>
+    <loc>https://pern-stack-api-display.web.app/map</loc>
   </url>
   <url>
-    <loc>https://pern-stack-api-display.web.app/services</loc>
+    <loc>https://pern-stack-api-display.web.app/news</loc>
   </url>
   <url>
-    <loc>https://pern-stack-api-display.web.app/items</loc>
+    <loc>https://pern-stack-api-display.web.app/google-charts</loc>
+  </url>
+  <url>
+    <loc>https://pern-stack-api-display.web.app/books</loc>
+  </url>
+  <url>
+    <loc>https://pern-stack-api-display.web.app/bestsellers</loc>
+  </url>
+  <url>
+    <loc>https://pern-stack-api-display.web.app/github</loc>
   </url>
 </urlset>

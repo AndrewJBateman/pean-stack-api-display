@@ -36,8 +36,7 @@
 * Google Book search card lets user search for any book. Resullts displayed in an array of Bootstrap cards. **add book detail modal**
 * New York Times API - bestseller list displayed **add bestseller detail page**
 * Github card shows Github repo details from user search. Repo button redirects to repo list page. **add user input sanitization, github pagination to show more than 30 repos**
-* Progressive Web App (PWA) functionality added
-* Very high Lighthouse score but can be tweaked to be even higher - use jp2 images etc
+* Good Lighthouse score performance: 87, accessibility: 100, Best practises: 93, SEO 100%, PWA - **improve**
 
 ## :camera: Screenshots
 
@@ -50,7 +49,7 @@
 ## :signal_strength: Technologies - Frontend
 
 * [Angular framework v9](https://angular.io/)
-* [Angular Universal](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
+* [Angular Universal v9](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
 * [Bootstrap v4](https://getbootstrap.com/)
 * [Font Awesome icons](https://fontawesome.com/icons?d=gallery)
 * [Font Awesome](https://fontawesome.com/) icons
@@ -118,6 +117,8 @@ public getNasaImage(): Observable<Apod> {
 * [Versión 81.0.4044.92 (Build oficial) (64 bits)](https://www.google.com/chrome/) latest version was required to get e2e testing to work
 * [http data handling best practices](https://angular.io/guide/http) followed - i.e. use of separate service file to get API data then use of subscription callback function in component to subscribe to Observable data. Response object type defined using an interface model. Interface passed as type parameter to the HttpClient.get() method and RxJS map operator used to transform response data. Transformed data passed to async pipe.
 * [Angular Activated Route snapshot params](https://angular.io/api/router/ActivatedRoute) used to pass username from github user search page to github repo display page.
+* [Angular Universal](https://angular.io/guide/universal) used to generate static pages using Server Side Rendering (SSR) - to increase display speed and add Search Engine Optimisation (SEO). _A normal Angular application executes in the browser, rendering pages in the DOM in response to user actions. Angular Universal executes on the server, generating static application pages that later get bootstrapped on the client. This means that the application generally renders more quickly, giving users a chance to view the application layout before it becomes fully interactive._
+* Progressive Web App (PWA) functionality added
 
 ## :clipboard: Status & To-Do List
 

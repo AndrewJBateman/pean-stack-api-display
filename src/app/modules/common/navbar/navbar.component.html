@@ -4,6 +4,7 @@
 >
   <a
     class="nav-link p-1"
+    aria-label="home nav link active"
     [routerLink]="['/']"
     routerLinkActive="nav-link-active"
     [routerLinkActiveOptions]="{ exact: true }"
@@ -17,6 +18,7 @@
   <div *ngIf="isHomeRoute()">
     <a
       class="nav-link"
+      aria-label="home nav link active"
       [routerLink]="['/']"
       routerLinkActive="nav-link-active"
       [routerLinkActiveOptions]="{ exact: true }"
@@ -28,6 +30,7 @@
   <div *ngIf="isNasaRoute()">
     <a
       class="nav-link"
+      aria-label="nasa nav link active"
       [routerLink]="['/nasa']"
       routerLinkActive="nav-link-active"
     >
@@ -38,6 +41,7 @@
   <div *ngIf="isCryptoRoute()">
     <a
       class="nav-link"
+      aria-label="crypto nav link active"
       [routerLink]="['/crypto']"
       routerLinkActive="nav-link-active"
     >
@@ -48,6 +52,7 @@
   <div *ngIf="isMapRoute()">
     <a
       class="nav-link"
+      aria-label="map nav link active"
       [routerLink]="['/map']"
       routerLinkActive="nav-link-active"
     >
@@ -58,6 +63,7 @@
   <div *ngIf="isNewsRoute()">
     <a
       class="nav-link"
+      aria-label="news nav link active"
       [routerLink]="['/news']"
       routerLinkActive="nav-link-active"
     >
@@ -68,6 +74,7 @@
   <div *ngIf="isGoogleChartsRoute()">
     <a
       class="nav-link"
+      aria-label="google charts nav link active"
       [routerLink]="['/google-charts']"
       routerLinkActive="nav-link-active"
     >
@@ -78,6 +85,7 @@
   <div *ngIf="isBooksRoute()">
     <a
       class="nav-link"
+      aria-label="Google books nav link active"
       [routerLink]="['/books']"
       routerLinkActive="nav-link-active"
     >
@@ -88,6 +96,7 @@
   <div *ngIf="isNytBestsellersRoute()">
     <a
       class="nav-link"
+      aria-label="New York Times bestsellers nav link active"
       [routerLink]="['/nyt-bestsellers']"
       routerLinkActive="nav-link-active"
     >
@@ -98,6 +107,7 @@
   <div *ngIf="isGithubUserRoute()">
     <a
       class="nav-link"
+      aria-label="github nav link active"
       [routerLink]="['/github']"
       routerLinkActive="nav-link-active"
     >
@@ -108,6 +118,7 @@
   <div *ngIf="isGithubRepoRoute()">
     <a
       class="nav-link"
+      aria-label="github repos nav link active"
       [routerLink]="['/github-repos/']"
       routerLinkActive="nav-link-active"
     >

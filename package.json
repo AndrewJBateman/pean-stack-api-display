@@ -13,6 +13,10 @@
     "build:ssr": "ng build --prod && ng run pean-stack-api-display:server:production",
     "prerender": "ng run pean-stack-api-display:prerender"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndrewJBateman/pean-stack-api-display.git"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.9",
@@ -30,7 +34,6 @@
     "@nguniversal/express-engine": "^9.1.1",
     "@nguniversal/module-map-ngfactory-loader": "^8.2.6",
     "bootstrap": "^4.5.0",
-    "countryapicheck": "^1.0.0",
     "dayjs": "^1.8.27",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
