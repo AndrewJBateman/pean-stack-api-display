@@ -36,7 +36,7 @@
 * Google Book search card lets user search for any book. Resullts displayed in an array of Bootstrap cards. **add book detail modal**
 * New York Times API - bestseller list displayed **add bestseller detail page**
 * Github card shows Github repo details from user search. Repo button redirects to repo list page. **add user input sanitization, github pagination to show more than 30 repos**
-* Good Lighthouse score performance: 87, accessibility: 100, Best practises: 93, SEO 100%, PWA - **improve**
+* Good Lighthouse score performance: 89, accessibility: 100, Best practises: 93, SEO 100%, PWA - **improve**
 
 ## :camera: Screenshots
 
@@ -59,6 +59,7 @@
 * [Google Charts](https://developers.google.com/chart/interactive/docs/gallery)
 * [Palantir](https://palantir.github.io/tslint/) extensible linter for the TypeScript language
 * [Favicon generator website](https://favicon.io/favicon-generator/) to generate the simple 'AB' favicon
+* [Node.js compression middleware](https://www.npmjs.com/package/compression)
 
 ## :floppy_disk: Setup - Backend
 
@@ -119,6 +120,7 @@ public getNasaImage(): Observable<Apod> {
 * [Angular Activated Route snapshot params](https://angular.io/api/router/ActivatedRoute) used to pass username from github user search page to github repo display page.
 * [Angular Universal](https://angular.io/guide/universal) used to generate static pages using Server Side Rendering (SSR) - to increase display speed and add Search Engine Optimisation (SEO). _A normal Angular application executes in the browser, rendering pages in the DOM in response to user actions. Angular Universal executes on the server, generating static application pages that later get bootstrapped on the client. This means that the application generally renders more quickly, giving users a chance to view the application layout before it becomes fully interactive._
 * Progressive Web App (PWA) functionality added
+* [Node.js compression middleware](https://www.npmjs.com/package/compression) used to add gzip/deflate compression coding to improve lighthouse audit score.
 
 ## :clipboard: Status & To-Do List
 
