@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "pern-stack-api-display"
+  },
+  "targets": {
+    "angular-rest-apis": {
+      "hosting": {
+        "pean-stack-api-display": [
+          "angular-rest-apis"
+        ]
+      }
+    }
   }
 }

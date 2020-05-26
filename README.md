@@ -24,10 +24,11 @@
 ### Frontend
 
 * Angular frontend includes Bootstrap responsive navbar with icon links
+* navbar drops down from top in phone size- **menu covers content - make transparent or auto close?**
 * About page **add *ngFor to accordian**
 * Contact **link to my website?**
 * Signin page - **use for backend or remove?**
-* Main section made of cards that link to API data
+* Main section made of Bootstrap cards that link to API data
 * NASA card shows Astronomy Picture of the Day (APOD) from the [NASA API](https://api.nasa.gov/). Note video function requires npm module [safe-pipe](https://www.npmjs.com/package/safe-pipe)
 * Crypto card shows prices of a list of cryptocurrencies from the [CryptoCompare API](https://min-api.cryptocompare.com/)
 * Map card shows location data from the [ipapi API](https://ipapi.co/)
@@ -89,22 +90,42 @@
 
 ## :computer: Code Examples - Frontend NASA API
 
-* function to get APOD data from NASA API as Observable using an Apod model response
+* function to get Github user and repo data from Github API as Observable using User and Repo model responses
 
 ```typescript
-export class NasaService {
-apiKey: string = "";
+export class GithubService {
+  constructor(private http: HttpClient) {}
 
-constructor(private http: HttpClient) {}
+  getUser(user: string): Observable<User> {
+    const userSearchUrl = `${baseUrl + user}`;
 
-public getNasaImage(): Observable<Apod> {
-  const year = new Date().getFullYear();
-  const month = new Date().getMonth() + 1;
-  const day = new Date().getDate();
-  this.apiKey = environment.NASA_KEY;
-  const apodUrl = `https://api.nasa.gov/planetary/apod?date=${year}-${month}-${day}&api_key=${this.apiKey}&hd=true`;
-  return this.http
-    .get<Apod>(apodUrl);
+    return this.http
+      .get<User>(userSearchUrl, { params })
+      .pipe(
+        map((obj) => obj),
+        catchError((err) => {
+          return throwError(
+            "There was a problem fetching data from Github API, error: ",
+            err
+          );
+        })
+      );
+  }
+
+  getRepos(user: string): Observable<Repo> {
+    const repoSearchUrl = `${baseUrl + user + "/repos?per_page=100&page=1"}`;
+
+    return this.http
+      .get<Repo>(repoSearchUrl, { params })
+      .pipe(
+        map((obj) => obj),
+        catchError((err) => {
+          return throwError(
+            "There was a problem fetching data from Github API, error: ",
+            err
+          );
+        })
+      );
   }
 }
 ```
@@ -121,10 +142,11 @@ public getNasaImage(): Observable<Apod> {
 * [Angular Universal](https://angular.io/guide/universal) used to generate static pages using Server Side Rendering (SSR) - to increase display speed and add Search Engine Optimisation (SEO). _A normal Angular application executes in the browser, rendering pages in the DOM in response to user actions. Angular Universal executes on the server, generating static application pages that later get bootstrapped on the client. This means that the application generally renders more quickly, giving users a chance to view the application layout before it becomes fully interactive._
 * Progressive Web App (PWA) functionality added
 * [Node.js compression middleware](https://www.npmjs.com/package/compression) used to add gzip/deflate compression coding to improve lighthouse audit score.
+* [headerParams](https://angular.io/api/common/http/HttpParams) used to add API keys to http request (only NASA does not allow this method)
 
 ## :clipboard: Status & To-Do List
 
-* Status: all frontend API cards working. TSLinting passes. `npm run test` returns 25 failed 11 success.
+* Status: all frontend API cards working. Build file created with no errors. TSLinting passes. `npm run test` returns 25 failed 11 success.
 * To-Do: add book & bestseller detail pages & nav, check SSR lighthouse score, publish frontend then do backend.
 
 ## :clap: Inspiration/General Tools
@@ -134,6 +156,7 @@ public getNasaImage(): Observable<Apod> {
 * [PostgreSQL Quick Command List](http://jcsites.juniata.edu/faculty/rhodes/dbms/pgsql.htm)
 * [Sitemaps XML format](https://www.sitemaps.org/protocol.html) used to create `sitemap.xml` to improve Lighthouse SEO score to 100%
 * [Archive converter](https://convertio.co/es/) converts png to jp2 etc
+* [Deployment to Firebase Hosting with Angular CLI 9 in 5 Easy Steps](https://www.techiediaries.com/angular-firebase/deployment-to-firebase-hosting-angular-cli-9/)
 
 ## :envelope: Contact
 

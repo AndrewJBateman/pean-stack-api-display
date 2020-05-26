@@ -5,8 +5,9 @@ import '@angular/localize/init';
 import 'zone.js/dist/zone-node';
 
 import { ngExpressEngine } from '@nguniversal/express-engine';
-const compression = require('compression')
+const compression = require('compression');
 import * as express from 'express';
+// const cors = require('cors');
 import { join } from 'path';
 
 import { AppServerModule } from './src/main.server';
@@ -17,6 +18,7 @@ import { existsSync } from 'fs';
 export function app() {
   const server = express();
   server.use(compression());
+  // server.use(cors);
   const distFolder = join(process.cwd(), 'dist/pean-stack-api-display/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
