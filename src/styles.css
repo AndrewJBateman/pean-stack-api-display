@@ -1,7 +1,5 @@
 @import "~leaflet/dist/leaflet.css";
 main {
-  color: black;
-  font-weight: 400;
   padding-top: 5rem;
   padding-left: 0 !important;
 }

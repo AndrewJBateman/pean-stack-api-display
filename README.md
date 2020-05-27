@@ -33,11 +33,11 @@
 * Crypto card shows prices of a list of cryptocurrencies from the [CryptoCompare API](https://min-api.cryptocompare.com/)
 * Map card shows location data from the [ipapi API](https://ipapi.co/)
 * News card shows latest news from the [newsapi](https://newsapi.org/) **?dropdown sources menu - solve problem with Bootstrap**
-* Google charts card shows a range of charts using the [Google Charts API](https://developers.google.com/chart/)
+* Google charts card shows a range of charts using the [Google Charts API](https://developers.google.com/chart/) **change data to come from backend json file then postgres database**
 * Google Book search card lets user search for any book. Resullts displayed in an array of Bootstrap cards. **add book detail modal**
 * New York Times API - bestseller list displayed **add bestseller detail page**
-* Github card shows Github repo details from user search. Repo button redirects to repo list page. **add user input sanitization, github pagination to show more than 30 repos**
-* Good Lighthouse score performance: 89, accessibility: 100, Best practises: 93, SEO 100%, PWA - **improve**
+* Github card shows Github repo details from user search. Repo button redirects to repo list page. **add user input sanitization, github pagination to show more than 30 repos, clear search input once query run, add my details as default results**
+* Deployed version: good Lighthouse score: performance: 91, accessibility: 100, Best practises: 100, SEO 100%, PWA - **improve**
 
 ## :camera: Screenshots
 
@@ -61,6 +61,7 @@
 * [Palantir](https://palantir.github.io/tslint/) extensible linter for the TypeScript language
 * [Favicon generator website](https://favicon.io/favicon-generator/) to generate the simple 'AB' favicon
 * [Node.js compression middleware](https://www.npmjs.com/package/compression)
+* [UnCSS Online](https://uncss-online.com/) to identify unused CSS. Useful and simple tool.
 
 ## :floppy_disk: Setup - Backend
 

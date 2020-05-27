@@ -33,7 +33,9 @@ export class GithubService {
   }
 
   getRepos(user: string): Observable<Repo> {
-    const repoSearchUrl = `${baseUrl + user + "/repos?per_page=100&page=1"}`;
+    const repoSearchUrl = `${
+      baseUrl + user + "/repos?order=updated&sort=desc?per_page=100&page=1"
+    }`;
 
     return this.http
       .get<Repo>(repoSearchUrl, { params })

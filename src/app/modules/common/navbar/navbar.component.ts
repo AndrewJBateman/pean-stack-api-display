@@ -42,8 +42,16 @@ export class NavbarComponent implements OnInit {
     return this.router.url === "/books";
   }
 
+  isBookDetailRoute() {
+    return this.router.url.includes("/book-detail");
+  }
+
   isNytBestsellersRoute() {
     return this.router.url === "/nyt-bestsellers";
+  }
+
+  isBestsellerDetailRoute() {
+    return this.router.url.includes("/bestseller-detail");
   }
 
   isGithubUserRoute() {

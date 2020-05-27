@@ -1,18 +1,8 @@
-h1,
 a {
   position: center;
   width: 70%;
   margin: 0 auto 4px auto;
   padding: 1em;
-}
-
-span.left {
-  font-weight: bold;
-}
-
-span.right {
-  float: right;
-  color: blue;
 }
 
 .card {

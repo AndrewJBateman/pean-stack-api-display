@@ -93,11 +93,33 @@
     </a>
   </div>
 
+  <div *ngIf="isBookDetailRoute()">
+    <a
+      class="nav-link"
+      aria-label="book detail nav link active"
+      [routerLink]="['/book-detail/']"
+      routerLinkActive="nav-link-active"
+    >
+      Google Books API
+    </a>
+  </div>
+
   <div *ngIf="isNytBestsellersRoute()">
     <a
       class="nav-link"
       aria-label="New York Times bestsellers nav link active"
       [routerLink]="['/nyt-bestsellers']"
+      routerLinkActive="nav-link-active"
+    >
+      NYT Bestsellers API
+    </a>
+  </div>
+
+  <div *ngIf="isBestsellerDetailRoute()">
+    <a
+      class="nav-link"
+      aria-label="New York Times bestseller detail nav link active"
+      [routerLink]="['/bestseller-detail']"
       routerLinkActive="nav-link-active"
     >
       NYT Bestsellers API
@@ -125,7 +147,6 @@
       Github API
     </a>
   </div>
-
 
   <button
     class="navbar-toggler"

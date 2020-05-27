@@ -37,9 +37,19 @@ const routes: Routes = [
       .then(mod => mod.BooksModule)
   },
   {
+    path: 'book-detail',
+    loadChildren: () => import('./modules/application/books/book-detail/book-detail.module')
+      .then(mod => mod.BookDetailModule)
+  },
+  {
     path: 'nyt-bestsellers',
     loadChildren: () => import('./modules/application/nyt-bestsellers/nyt-bestsellers.module')
       .then(mod => mod.NytBestsellersModule)
+  },
+  {
+    path: 'bestseller-detail',
+    loadChildren: () => import('./modules/application/nyt-bestsellers/bestseller-detail/bestseller-detail.module')
+      .then(mod => mod.BestsellerDetailModule)
   },
   {
     path: 'github',
