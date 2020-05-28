@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GoogleBookService } from '../../../../services/book-search.service';
+import { Book } from 'src/app/models/books';
 
 @Component({
   selector: 'app-book-detail',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book-detail.component.css']
 })
 export class BookDetailComponent implements OnInit {
+  book: Book;
 
-  constructor() { }
+  constructor(private googleBookService: GoogleBookService) { }
 
   ngOnInit(): void {
+    this.book = this.googleBookService.currentBook;
   }
 
 }

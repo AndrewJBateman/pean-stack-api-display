@@ -1,1 +1,135 @@
-<p>book-detail works!</p>
+<head>
+  <meta name="api" content="Shows Google Book search detail" />
+</head>
+
+<div class="main-div">
+  <!--book detail card-->
+  <div class="card">
+    <div class="row no-gutters">
+      <div class="col-sm-5" style="background: #868e96;">
+        <img
+          [src]="book.volumeInfo.imageLinks.thumbnail"
+          class="card-img-top h-100"
+          alt="book thumbnail image"
+        />
+      </div>
+      <div class="col-sm-7">
+        <div class="card-body">
+          <div class="d-flex flex-column">
+            <div>
+              <p>
+                <span class="text-secondary font-weight-bold">Title: </span>
+                {{ book.volumeInfo.title }}
+              </p>
+            </div>
+            <div *ngIf="book.volumeInfo.subtitle">
+              <p>
+                <span class="text-secondary font-weight-bold">Subtitle: </span>
+                {{ book.volumeInfo.subtitle }}
+              </p>
+            </div>
+            <div *ngIf="book.volumeInfo.authors">
+              <p>
+                <span class="text-secondary font-weight-bold">Authors: </span>
+                {{ book.volumeInfo.authors }}
+              </p>
+            </div>
+            <div *ngIf="book.volumeInfo.publisher">
+              <p>
+                <span class="text-secondary font-weight-bold">Publisher: </span>
+                {{ book.volumeInfo.publisher }}
+              </p>
+            </div>
+            <div *ngIf="book.volumeInfo.publishedDate">
+              <p>
+                <span class="text-secondary font-weight-bold"
+                  >Date Published:
+                </span>
+                {{ book.volumeInfo.publishedDate | date }}
+              </p>
+            </div>
+            <div *ngIf="book.volumeInfo.industryIdentifiers[0].identifier">
+              <p>
+                <span class="text-secondary font-weight-bold"
+                  >ISBN Number:
+                </span>
+                {{ book.volumeInfo.industryIdentifiers[0].identifier }}
+              </p>
+            </div>
+            <div *ngIf="book.volumeInfo.language">
+              <p>
+                <span class="text-secondary font-weight-bold">Language: </span>
+                <span class="badge badge-warning">{{
+                  book.volumeInfo.language
+                }}</span>
+              </p>
+            </div>
+
+            <div *ngIf="book.volumeInfo.categories">
+              <p>
+                <span
+                  class="text-secondary font-weight-bold"
+                  *ngIf="book.volumeInfo.categories.length === 1"
+                  >Category:
+                </span>
+                <span
+                  class="text-secondary font-weight-bold"
+                  *ngIf="book.volumeInfo.categories.length > 1"
+                  >Categories:
+                </span>
+                <span class="badge badge-warning">{{
+                  book.volumeInfo.categories[0]
+                }}</span>
+                <span
+                  class="badge badge-info"
+                  *ngIf="book.volumeInfo.categories[1]"
+                  >{{ book.volumeInfo.categories[1] }}</span
+                >
+              </p>
+            </div>
+            <div *ngIf="book.volumeInfo.pageCount">
+              <p>
+                <span class="text-secondary font-weight-bold"
+                  >Number of Pages:
+                </span>
+                <span class="badge badge-warning">{{
+                  book.volumeInfo.pageCount
+                }}</span>
+              </p>
+            </div>
+            <div *ngIf="book.volumeInfo.averageRating">
+              <p>
+                <span class="text-secondary font-weight-bold"
+                  >Average Rating:
+                </span>
+                <span class="badge badge-warning">{{
+                  book.volumeInfo.averageRating
+                }}</span>
+              </p>
+            </div>
+            <div *ngIf="book.volumeInfo.infoLink">
+              <a
+                href="{{ book.volumeInfo.infoLink }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline-secondary"
+                >More info.</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="card-text text-justify p-3" *ngIf="book.volumeInfo.description">
+        <span class="text-secondary font-weight-bold">Description: </span>
+        {{ book.volumeInfo.description }}
+      </p>
+      <p class="card-text p-3" *ngIf="!book.volumeInfo.description">
+        <span class="text-secondary"
+          >No description available</span
+        >
+      </p>
+    </div>
+  </div>
+</div>

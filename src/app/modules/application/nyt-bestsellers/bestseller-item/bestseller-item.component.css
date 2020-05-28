@@ -19,6 +19,9 @@
   height: 242px;
   min-width: 160px;
   max-width: 160px;
+  align-items: center;
+  padding: auto auto;
+  margin: auto auto;
 }
 
 .card:hover {
@@ -28,10 +31,6 @@
 a {
   color: inherit;
   text-decoration: none;
-}
-
-.card-title {
-  padding-left: 80px;
 }
 
 .category-text {

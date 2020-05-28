@@ -9,6 +9,8 @@ import { Book, GoogleBooksApiInterface } from "../models/books";
   providedIn: "root",
 })
 export class GoogleBookService {
+  currentBook: Book;
+  
   private API_URL = "https://www.googleapis.com/books/v1/volumes";
 
   constructor(private http: HttpClient) {}

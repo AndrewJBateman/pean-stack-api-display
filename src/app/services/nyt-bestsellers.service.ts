@@ -13,15 +13,17 @@ const apiKey = environment.NYT_KEY;
   providedIn: "root",
 })
 export class NytBestsellersService {
+  currentBestseller: any;
+
   constructor(private http: HttpClient) {}
 
   getBooks() {
     const booksUrl = `${apiUrl}api-key=${apiKey}`;
-    return this.http.get<NytApiResponse>(booksUrl).pipe(
+    return this.http.get<any>(booksUrl).pipe(
       // tap((data: NytApiResponse) =>
       //   console.log("tapped data:", data.results.lists)
       // ),
-      map((data: NytApiResponse) => data.results.lists),
+      map((data: any) => data.results.lists),
       catchError((err) => {
         return throwError(
           "Problem fetching bestsellers from API, error: ",
