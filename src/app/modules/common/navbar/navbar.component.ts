@@ -62,4 +62,12 @@ export class NavbarComponent implements OnInit {
     return this.router.url.includes("/github-repos");
   }
 
+  isAboutRoute() {
+    return this.router.url === "/about";
+  }
+
+  isContactRoute() {
+    return this.router.url === "/contact";
+  }
+
 }

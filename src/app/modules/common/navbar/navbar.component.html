@@ -15,6 +15,7 @@
     </span>
   </a>
 
+  <!--page titles that appear in nav-bar in active color only when page is active-->
   <div *ngIf="isHomeRoute()">
     <a
       class="nav-link"
@@ -148,6 +149,29 @@
     </a>
   </div>
 
+  <div *ngIf="isAboutRoute()">
+    <a
+      class="nav-link"
+      aria-label="about nav link active"
+      [routerLink]="['/about']"
+      routerLinkActive="nav-link-active"
+    >
+      About App
+    </a>
+  </div>
+
+  <div *ngIf="isContactRoute()">
+    <a
+      class="nav-link"
+      aria-label="contact nav link active"
+      [routerLink]="['/contact']"
+      routerLinkActive="nav-link-active"
+    >
+      About Author
+    </a>
+  </div>
+
+  <!--burger menu bar button only toggled on when small page size-->
   <button
     class="navbar-toggler"
     type="button"

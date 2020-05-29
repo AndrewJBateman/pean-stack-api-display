@@ -8,4 +8,7 @@ import { BookDetailRoutingModule } from "./book-detail-routing.module";
   exports: [BookDetailComponent],
   declarations: [BookDetailComponent],
 })
-export class BookDetailModule {}
+export class BookDetailModule {
+
+
+}

@@ -17,10 +17,10 @@
         <div class="card-body">
           <div class="d-flex flex-column">
             <div>
-              <p>
-                <span class="text-secondary font-weight-bold">Title: </span>
+              <h5>
+                <span class="text-dark font-weight-bold">Title: </span>
                 {{ book.volumeInfo.title }}
-              </p>
+              </h5>
             </div>
             <div *ngIf="book.volumeInfo.subtitle">
               <p>
@@ -107,14 +107,24 @@
                 }}</span>
               </p>
             </div>
-            <div *ngIf="book.volumeInfo.infoLink">
-              <a
-                href="{{ book.volumeInfo.infoLink }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline-secondary"
-                >More info.</a
-              >
+            <!--group of buttons at bottom of rhs list-->
+            <div class="d-flex justify-content-around">
+              <div class="p-2">
+                <a
+                  (click)="returnToList()"
+                  class="btn btn-outline-primary"
+                  >Back to List</a
+                >
+              </div>
+              <div *ngIf="book.volumeInfo.infoLink" class="p-2">
+                <a
+                  href="{{ book.volumeInfo.infoLink }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline-success"
+                  >More info.</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -122,13 +132,11 @@
     </div>
     <div>
       <p class="card-text text-justify p-3" *ngIf="book.volumeInfo.description">
-        <span class="text-secondary font-weight-bold">Description: </span>
+        <span class="text-dark font-weight-bold">Description: </span>
         {{ book.volumeInfo.description }}
       </p>
       <p class="card-text p-3" *ngIf="!book.volumeInfo.description">
-        <span class="text-secondary"
-          >No description available</span
-        >
+        <span class="text-secondary">No description available</span>
       </p>
     </div>
   </div>

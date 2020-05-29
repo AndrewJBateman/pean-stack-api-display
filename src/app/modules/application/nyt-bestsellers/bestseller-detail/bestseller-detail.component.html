@@ -84,14 +84,23 @@
                 {{ bestseller.books[0].primary_isbn13 }}
               </p>
             </div>
-            <div *ngIf="bestseller.books[0].amazon_product_url">
-              <a
-                href="{{ bestseller.books[0].amazon_product_url }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline-secondary"
-                >More info.</a
-              >
+
+            <!--group of buttons at bottom of rhs list-->
+            <div class="d-flex justify-content-around">
+              <div class="p-2">
+                <a (click)="returnToList()" class="btn btn-outline-primary"
+                  >Back to List</a
+                >
+              </div>
+              <div *ngIf="bestseller.books[0].amazon_product_url" class="p-2">
+                <a
+                  href="{{ bestseller.books[0].amazon_product_url }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline-success"
+                  >More info.</a
+                >
+              </div>
             </div>
           </div>
         </div>
