@@ -24,18 +24,17 @@
 ### Frontend
 
 * Angular frontend includes Bootstrap responsive navbar with icon links
-* navbar drops down from top in phone size- **menu covers content - make transparent or auto close?**
-* About page **add *ngFor to accordian**
-* Contact **link to my website?**
-* Signin page - **use for backend or remove?**
-* Main section made of Bootstrap cards that link to API data
+* navbar drops down from top in phone size
+* About this site page **add *ngFor to accordian**
+* Author info card that gets data from Github and provides contact links
+* Main section made of 8 Bootstrap cards that link to API data
 * NASA card shows Astronomy Picture of the Day (APOD) from the [NASA API](https://api.nasa.gov/). Note video function requires npm module [safe-pipe](https://www.npmjs.com/package/safe-pipe)
 * Crypto card shows prices of a list of cryptocurrencies from the [CryptoCompare API](https://min-api.cryptocompare.com/)
 * Map card shows location data from the [ipapi API](https://ipapi.co/)
-* News card shows latest news from the [newsapi](https://newsapi.org/) **?dropdown sources menu - solve problem with Bootstrap**
+* News card shows latest news from the [newsapi](https://newsapi.org/) **CORS error, dropdown sources menu - solve problem with Bootstrap**
 * Google charts card shows a range of charts using the [Google Charts API](https://developers.google.com/chart/) **change data to come from backend json file then postgres database**
-* Google Book search card lets user search for any book. Resullts displayed in an array of Bootstrap cards. **add book detail modal**
-* New York Times API - bestseller list displayed **add bestseller detail page**
+* Google Book search card lets user search for any book. Resullts displayed in an array of Bootstrap cards. Clicking on a book shows it in detail
+* New York Times API - bestseller list displayed. Clicking on a bestseller shows it in detail
 * Github card shows Github repo details from user search. Repo button redirects to repo list page. **add user input sanitization, github pagination to show more than 30 repos, clear search input once query run, add my details as default results**
 * Deployed version: good Lighthouse score: performance: 91, accessibility: 100, Best practises: 100, SEO 100%, PWA - **improve**
 

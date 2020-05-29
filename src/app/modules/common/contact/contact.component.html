@@ -2,4 +2,58 @@
   <meta name="contact" content="Shows contact details of author" />
 </head>
 
-<p>contact works!</p>
+<div class="card rounded" *ngIf="user">
+  <div class="card-header bg-light">
+    <img
+      class="header-image float-left"
+      [src]="user.avatar_url"
+      alt="Github user profile photo"
+    />
+    <h5 class="card-title">
+      <i class="fas fa-user-edit text-dark pr-2"></i>{{ user.name }}
+    </h5>
+    <p class="indent-text mb-0">
+      <i class="fas fa-compass text-success pr-2"></i>{{ user.location }}
+    </p>
+  </div>
+  <div class="card-body pb-0">
+    <p class="">
+      <i class="fas fa-user-tag text-warning pr-2"></i
+      ><span class="font-weight-bold pr-2">Bio:</span>{{ user.bio }}
+    </p>
+    <p>
+      <i class="fas fa-folder text-info pr-2"></i
+      ><span class="font-weight-bold pr-2">Github repositories:</span
+      >{{ user.public_repos }}
+    </p>
+  </div>
+  <div class="d-flex justify-content-around bg-light">
+    <div class="p-3">
+      <a
+        href="{{ user.html_url }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-dark"
+        ><i class="fab fa-github pr-2"></i>Profile</a
+      >
+    </div>
+    <div class="p-3">
+      <a
+        href="https://andrewbateman.org/contact"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-warning"
+        ><i class="fas fa-paper-plane pr-2"></i>Contact</a
+      >
+    </div>
+    <div class="p-3">
+      <a
+        href="https://andrewbateman.org"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-success"
+        ><i class="fas fa-user-circle pr-2"></i>My Site</a
+      >
+    </div>
+  </div>
+</div>

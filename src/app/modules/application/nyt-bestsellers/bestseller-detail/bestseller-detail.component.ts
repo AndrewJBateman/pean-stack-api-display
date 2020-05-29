@@ -14,6 +14,5 @@ export class BestsellerDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.bestseller = this.nytBestsellersService.currentBestseller;
-    console.log('bestseller chosen: ', this.bestseller);
   }
 }

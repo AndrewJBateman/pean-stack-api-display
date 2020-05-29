@@ -9,10 +9,6 @@ import { NytApiResponse } from "../../../../models/nyt";
 export class BestsellerItemComponent implements OnInit {
   @Input() bestseller: any;
 
-  // get id(): string {
-  //   return this.bestseller.list_id;
-  // }
-
   constructor() {}
 
   ngOnInit(): void {}

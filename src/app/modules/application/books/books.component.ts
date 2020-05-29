@@ -27,7 +27,6 @@ export class BooksComponent implements OnInit {
   onGoToBookDetail(book: Book) {
     this.clicked = true;
     this.googleBookService.currentBook = book;
-    console.log(book);
     this.router.navigate(['/book-detail']);
   }
 }

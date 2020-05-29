@@ -3,8 +3,6 @@ import { Router } from "@angular/router";
 import { NgForm } from "@angular/forms";
 
 import { GithubService } from "../../../services/github.service";
-import { User } from "../../../models/user";
-import { Observable } from "rxjs";
 
 @Component({
   selector: "app-github",

@@ -1,0 +1,20 @@
+.card {
+  max-width: 600px;
+  margin: auto auto;
+}
+
+.card-title,
+.indent-text {
+  padding-left: 80px;
+}
+
+.header-image {
+  background-size: cover;
+  width: 64px;
+  height: 64px;
+}
+
+.fab,
+.fas {
+  font-size: 24px;
+}

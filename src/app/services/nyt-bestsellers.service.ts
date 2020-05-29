@@ -20,9 +20,6 @@ export class NytBestsellersService {
   getBooks() {
     const booksUrl = `${apiUrl}api-key=${apiKey}`;
     return this.http.get<any>(booksUrl).pipe(
-      // tap((data: NytApiResponse) =>
-      //   console.log("tapped data:", data.results.lists)
-      // ),
       map((data: any) => data.results.lists),
       catchError((err) => {
         return throwError(
