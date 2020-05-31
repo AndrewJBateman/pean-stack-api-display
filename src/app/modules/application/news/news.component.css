@@ -1,16 +1,24 @@
 .main-div {
-  /* display: flex; */
   justify-content: center;
   align-items: center;
   padding: 0 !important;
 }
 
 .card {
-  max-width: 600px;
   margin: auto auto;
 }
 
-.card-text {
+.full-height {
+  height: 100%;
+}
+
+p.card-text {
+  font-size: 14px;
+  margin-bottom: 0 !important;
+}
+
+p.footer-text {
+  font-size: 16px;
   margin-bottom: 0 !important;
 }
 
@@ -18,7 +26,7 @@
   font-weight: bold;
 }
 
-.fab, .fas, .far {
-    font-size: 24px;
-    margin-right: 4px;
+.fas {
+    font-size: 16px;
+    margin-right: 2px;
   }
