@@ -1,5 +1,7 @@
 <head>
-  <meta name="api" content="Shows Nasa api data" />
+  <meta name="description" content="Shows Nasa api data" />
+  <link rel="preload" href="https://api.nasa.gov/planetary/apod?">
+  <link rel="preload" href="https://apod.nasa.gov">
 </head>
 
 <div class="main-div" *ngIf="nasaImgObj">
@@ -10,10 +12,10 @@
         src="../../../../assets/params/images/logo/nasa-image.jpg"
         alt="Nasa logo"
       />
-      <h5 class="card-title text-dark">Today's Image:</h5>
-      <h3 class="card-subtitle font-italic">
+      <h6 class="card-title text-dark">Today's Image:</h6>
+      <h5 class="card-subtitle font-italic">
         {{ nasaImgObj.title }}
-      </h3>
+      </h5>
     </div>
     <div class="card-body">
       <!-- Show image if the media_type = image -->

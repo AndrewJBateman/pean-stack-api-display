@@ -1,5 +1,7 @@
 <head>
-  <meta name="api" content="Shows New York Times News API data" />
+  <meta name="description" content="Shows New York Times News API data" />
+  <link rel="preload" href="https://api.nytimes.com">
+  <link rel="preload" href="https://static01.nyt.com">
 </head>
 
 <div class="main-div">
@@ -25,10 +27,10 @@
           </p>
         </div>
 
-        <div class="card-footer p-2">
+        <div class="card-footer p-2 bg-dark">
           <div class="d-flex justify-content-around">
             <p class="footer-text" *ngIf="article.created_date">
-              <i class="fas fa-calendar-day text-dark"></i>
+              <i class="fas fa-calendar-day text-light"></i>
               {{ article.created_date | dateConvert }}
             </p>
             <p class="link-text mb-0" *ngIf="article.url">
@@ -38,8 +40,8 @@
                 rel="noopener noreferrer"
                 alt="link for news article"
                 aria-label="link for news article"
-                aria-pressed="true"
-                ><i class="fas fa-external-link-alt"></i>article</a
+                class="text-light"
+                ><i class="fas fa-external-link-alt text-light"></i>article</a
               >
             </p>
           </div>

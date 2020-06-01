@@ -1,8 +1,10 @@
 <head>
   <meta
-    name="api"
+    name="description"
     content="Shows data from the New York Times Bestsellers API"
   />
+  <link rel="preload" href="https://api.nytimes.com" as="document>
+  <link rel="preload" href="https://s1.nyt.com" as="document" />
 </head>
 
 <body>
@@ -10,7 +12,8 @@
     <div class="title-card text-white bg-dark mb-2">
       <div class="card-body">
         <h5 class="card-title mb-0 text-center">
-          <i class="fas fa-award" aria-hidden="true"></i>New York Times Bestsellers by
+          <i class="fas fa-award" aria-hidden="true"></i>New York Times
+          Bestsellers by
           <i class="fas fa-clipboard-list" aria-hidden="true"></i>Category
         </h5>
       </div>
@@ -23,11 +26,8 @@
         *ngFor="let bestseller of bestsellerLists"
         (click)="onGoToBestsellerDetail(bestseller)"
       >
-        <app-bestseller-item
-          [bestseller]="bestseller"
-        ></app-bestseller-item>
+        <app-bestseller-item [bestseller]="bestseller"></app-bestseller-item>
       </div>
     </div>
-
   </div>
 </body>

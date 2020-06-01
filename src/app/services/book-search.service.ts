@@ -5,19 +5,19 @@ import { map } from "rxjs/operators";
 
 import { Book, GoogleBooksApiInterface } from "../models/books";
 
+const apiUrl = "https://www.googleapis.com/books/v1/volumes";
+
 @Injectable({
   providedIn: "root",
 })
 export class GoogleBookService {
   currentBook: Book;
-  
-  private API_URL = "https://www.googleapis.com/books/v1/volumes";
 
   constructor(private http: HttpClient) {}
 
   findBook(title: string): Observable<Book[]> {
     return this.http
-      .get<GoogleBooksApiInterface>(`${this.API_URL}?q=${title}&maxResults=40`)
+      .get<GoogleBooksApiInterface>(`${apiUrl}?q=${title}&maxResults=40`)
       .pipe(map((data: GoogleBooksApiInterface) => data.items));
   }
 }

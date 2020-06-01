@@ -45,17 +45,19 @@ export class MapComponent implements OnInit, AfterViewInit {
             lat: 48.858222,
             lng: 2.2945,
           };
-      const zoomLevel = 12;
+      const zoomLevel = 13;
       this.map = L.map("map", {
         center: [myLocation.lat, myLocation.lng],
         zoom: zoomLevel,
       });
 
       const mainLayer = L.tileLayer(
-        "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
         {
           minZoom: 2,
           maxZoom: 17,
+          tileSize: 256,
+          tileOffset: -1,
           attribution: "Open Street Map",
         }
       );
