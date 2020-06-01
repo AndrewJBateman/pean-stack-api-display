@@ -14,7 +14,7 @@
           *ngIf="article.multimedia[3].url"
           class="card-img-top"
           src="{{ article.multimedia[3].url }}"
-          alt="news article image"
+          alt="image for news article"
         />
         <div class="card-body p-2">
           <h6 class="card-title">
@@ -36,6 +36,8 @@
                 href="{{ article.url }}"
                 target="_blank"
                 rel="noopener noreferrer"
+                alt="link for news article"
+                aria-label="link for news article"
                 aria-pressed="true"
                 ><i class="fas fa-external-link-alt"></i>article</a
               >

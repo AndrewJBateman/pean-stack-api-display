@@ -14,7 +14,7 @@ export class CryptoService {
   constructor(private http: HttpClient) {}
 
   // function to get crypto prices from the API - no API key required.
-  public getPrices(): Observable<Crypto> {
+  getPrices(): Observable<Crypto> {
     const fsymsList =
       "ADA,BCH,BTC,BTS,DASH,EOS,ETH,ETC,LTC,NEO,REP,QTUM,TRX,USDT,XLM,XMR,XRP,ZRX,ZEC";
     return this.http
@@ -23,6 +23,6 @@ export class CryptoService {
           fsymsList +
           "&tsyms=EUR"
       )
-      .pipe(map((result) => (this.result = result)));
+      .pipe(map((data: Crypto) => data));
   }
 }

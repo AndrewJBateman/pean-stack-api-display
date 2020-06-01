@@ -18,11 +18,10 @@ export class GithubService {
 
   getUser(user: string): Observable<User> {
     const userSearchUrl = `${baseUrl + user}`;
-
     return this.http
       .get<User>(userSearchUrl, { params })
       .pipe(
-        map((obj) => obj),
+        map((data: User) => data),
         catchError((err) => {
           return throwError(
             "There was a problem fetching data from Github API, error: ",

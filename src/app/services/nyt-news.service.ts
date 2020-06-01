@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { throwError } from "rxjs";
+import { throwError, Observable } from "rxjs";
 import { map, catchError, tap } from "rxjs/operators";
 
 import { TopStories } from "../models/nyt";
@@ -15,7 +15,7 @@ const apiKey = environment.NYT_NEWS_KEY;
 export class NytNewsService {
   constructor(private http: HttpClient) {}
 
-  getNews() {
+  getNews(): Observable<TopStories> {
     const booksUrl = `${apiUrl}api-key=${apiKey}`;
     return this.http.get<TopStories>(booksUrl).pipe(
       map((data: TopStories) => data),

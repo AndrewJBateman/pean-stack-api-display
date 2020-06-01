@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 import { NytBestsellersService } from "../../../services/nyt-bestsellers.service";
-import { NytApiResponse } from "../../../models/nyt";
+import { Book, Books, List } from "../../../models/nyt";
 import { Observable } from "rxjs";
 import { Router } from '@angular/router';
 
@@ -11,7 +11,8 @@ import { Router } from '@angular/router';
   styleUrls: ["./nyt-bestsellers.component.css"],
 })
 export class NytBestsellersComponent implements OnInit {
-  bestsellers: Observable<NytApiResponse>;
+  bestsellerLists: Array<List>;
+  bestsellers: Array<Book>;
   clicked = false;
 
   constructor(private nytBestsellersService: NytBestsellersService, private router: Router) {}
@@ -21,12 +22,12 @@ export class NytBestsellersComponent implements OnInit {
   }
 
   getBestsellers() {
-    this.nytBestsellersService.getBooks().subscribe((data: any) => {
-      this.bestsellers = data;
+    this.nytBestsellersService.getBooks().subscribe((data: Books) => {
+      this.bestsellerLists = data.results.lists;
     });
   }
 
-  onGoToBestsellerDetail(bestseller: NytApiResponse) {
+  onGoToBestsellerDetail(bestseller: Book[]) {
     this.clicked = true;
     this.nytBestsellersService.currentBestseller = bestseller;
     this.router.navigate(['/bestseller-detail']);

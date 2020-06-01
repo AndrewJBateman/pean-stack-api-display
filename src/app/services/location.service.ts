@@ -5,16 +5,16 @@ import { map, catchError } from "rxjs/operators";
 
 import { Location } from "../models/location";
 
+const apiUrl = "https://ipapi.co/json/";
+
 @Injectable({
   providedIn: "root",
 })
 export class LocationService {
   constructor(private http: HttpClient) {}
 
-  getLocation() {
-    const locationSearchUrl = "https://ipapi.co/json/";
-
-    return this.http.get<Location>(locationSearchUrl).pipe(
+  getLocation(): Observable<Location> {
+    return this.http.get<Location>(apiUrl).pipe(
       map((data: Location) => data),
       catchError((err) => {
         return throwError("Location not found, error: ", err);

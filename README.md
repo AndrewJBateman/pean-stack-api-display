@@ -36,7 +36,7 @@
 * Google Book search card lets user search for any book. Results displayed in an array of Bootstrap cards. Clicking on a book shows it in detail **change method of passing book. save list for back button return**
 * New York Times API - bestseller list displayed. Clicking on a bestseller shows it in detail **correct router data transfer**
 * Github card shows Github repo details from user search. Repo button redirects to repo list page. **add user input sanitization, github pagination to show more than 30 repos, clear search input once query run, add my details as default results**
-* Deployed version: good Lighthouse score: performance: 89 (remove unused CSS, reduce Server Response Times, eliminate render-blocking resources...), accessibility: 100, Best practises: 100, SEO 100%, PWA - **improve**
+* Deployed version: good Lighthouse score (mobile): home page: performance: 91% ('Remove dead rules from stylesheets and defer the loading of CSS not used for above-the-fold content to reduce unnecessary bytes consumed by network activity.'), accessibility: 100%, Best practises: 100%, SEO 100%, PWA - **improve**
 
 ## :camera: Screenshots
 
@@ -69,7 +69,7 @@
 ## :floppy_disk: Setup - Frontend
 
 * Install dependencies using `npm i`
-* Run ``npm outdated` to see if any npm dependencies are outdated. Note: use Typescript v3.8.3 - NOT the latest version
+* Run `npm outdated` to see if any npm dependencies are outdated. Note: use Typescript v3.8.3 - NOT the latest version
 * Get yourself API keys for the Nasa, Google Maps and News apps
 * Run `ng serve` for a dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
 * Run `npm run lint` to lint test entire codebase using TSLint
@@ -146,7 +146,7 @@ export class GithubService {
 
 ## :clipboard: Status & To-Do List
 
-* Status: all frontend API cards working. Build file created with no errors. TSLinting passes. `npm run test` returns 25 failed 11 success.
+* Status: all frontend API cards working. Build file created with no errors. Deployed to Firebase
 * To-Do: add book & bestseller detail pages & nav, check SSR lighthouse score, publish frontend then do backend.
 
 ## :clap: Inspiration/General Tools
