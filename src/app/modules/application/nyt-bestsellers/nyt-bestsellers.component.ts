@@ -1,9 +1,9 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ComponentFactoryResolver } from "@angular/core";
 
 import { NytBestsellersService } from "../../../services/nyt-bestsellers.service";
 import { Book, Books, List } from "../../../models/nyt";
 import { Observable } from "rxjs";
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from "@angular/router";
 
 @Component({
   selector: "app-nyt-bestsellers",
@@ -13,9 +13,13 @@ import { Router } from '@angular/router';
 export class NytBestsellersComponent implements OnInit {
   bestsellerLists: Array<List>;
   bestsellers: Array<Book>;
-  clicked = false;
+  bestseller: Book;
+  // clicked = false;
 
-  constructor(private nytBestsellersService: NytBestsellersService, private router: Router) {}
+  constructor(
+    private nytBestsellersService: NytBestsellersService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.getBestsellers();
@@ -27,9 +31,16 @@ export class NytBestsellersComponent implements OnInit {
     });
   }
 
-  onGoToBestsellerDetail(bestseller: Book[]) {
-    this.clicked = true;
-    this.nytBestsellersService.currentBestseller = bestseller;
-    this.router.navigate(['/bestseller-detail']);
+  async onGoToBestsellerDetail(bestseller: Book) {
+    console.log('book chosen');
+
+    console.log('bestseller chosen: ', bestseller);
+    // this.clicked = true;
+    let navigationExtras: NavigationExtras = {
+      state: {
+        bestseller: bestseller,
+      },
+    };
+    await this.router.navigate(["/bestseller-detail"], navigationExtras);
   }
 }

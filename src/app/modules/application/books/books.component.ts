@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from "@angular/router";
 
 import { GoogleBookService } from "../../../services/book-search.service";
 import { Book } from "../../../models/books";
@@ -14,7 +14,10 @@ export class BooksComponent implements OnInit {
   books: Observable<Book[]>;
   clicked = false;
 
-  constructor(private googleBookService: GoogleBookService, private router: Router) {}
+  constructor(
+    private googleBookService: GoogleBookService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
 
@@ -24,9 +27,13 @@ export class BooksComponent implements OnInit {
     }
   }
 
-  onGoToBookDetail(book: Book) {
+  onGoToBookDetail(book: Book): void {
     this.clicked = true;
-    this.googleBookService.currentBook = book;
-    this.router.navigate(['/book-detail']);
+    const navigationExtras: NavigationExtras = {
+      state: {
+        book
+      },
+    };
+    this.router.navigate(["/book-detail"], navigationExtras);
   }
 }

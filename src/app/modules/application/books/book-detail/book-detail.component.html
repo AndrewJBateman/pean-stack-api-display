@@ -3,7 +3,6 @@
 </head>
 
 <div class="main-div">
-  <!--book detail card-->
   <div class="card">
     <div class="row no-gutters">
       <div class="col-sm-5" style="background: #868e96;">
@@ -116,12 +115,12 @@
                   >Back to List</a
                 >
               </div>
-              <div *ngIf="book.volumeInfo.infoLink" class="p-2">
+              <div *ngIf="book.volumeInfo.infoLink" class="p-2 text-dark">
                 <a
                   href="{{ book.volumeInfo.infoLink }}"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="btn btn-outline-success"
+                  class="btn btn-outline-dark"
                   >More info.</a
                 >
               </div>

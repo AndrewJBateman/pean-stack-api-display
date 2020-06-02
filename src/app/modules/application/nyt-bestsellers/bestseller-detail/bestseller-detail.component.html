@@ -1,10 +1,13 @@
 <head>
-  <meta name="api" content="Shows new York Times book detail" />
+  <meta name="description" content="Shows new York Times book detail" />
 </head>
 
 <div class="main-div">
-  <!--bestseller detail card-->
-  <div class="card">
+  <p>{{ title }}</p>
+  <div class="p-2">
+    <a (click)="returnToList()" class="btn btn-outline-primary">Back to List</a>
+    <!--bestseller detail card-->
+    <!-- <div class="card">
     <div class="row no-gutters">
       <div class="col-sm-4" style="background: #868e96;">
         <img
@@ -85,7 +88,6 @@
               </p>
             </div>
 
-            <!--group of buttons at bottom of rhs list-->
             <div class="d-flex justify-content-around">
               <div class="p-2">
                 <a (click)="returnToList()" class="btn btn-outline-primary"
@@ -97,7 +99,7 @@
                   href="{{ bestseller.books[0].amazon_product_url }}"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="btn btn-outline-success"
+                  class="btn btn-outline-dark"
                   >More info.</a
                 >
               </div>
@@ -118,5 +120,6 @@
         <span class="text-secondary">No description available</span>
       </p>
     </div>
+  </div> -->
   </div>
 </div>

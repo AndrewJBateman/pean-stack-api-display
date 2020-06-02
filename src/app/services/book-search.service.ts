@@ -11,8 +11,6 @@ const apiUrl = "https://www.googleapis.com/books/v1/volumes";
   providedIn: "root",
 })
 export class GoogleBookService {
-  currentBook: Book;
-
   constructor(private http: HttpClient) {}
 
   findBook(title: string): Observable<Book[]> {
