@@ -1,125 +1,127 @@
 <head>
-  <meta name="description" content="Shows new York Times book detail" />
+  <meta name="description" content="Shows new York Times bestseller detail" />
 </head>
 
 <div class="main-div">
-  <p>{{ title }}</p>
-  <div class="p-2">
-    <a (click)="returnToList()" class="btn btn-outline-primary">Back to List</a>
+ <div class="p-2">
     <!--bestseller detail card-->
-    <!-- <div class="card">
-    <div class="row no-gutters">
-      <div class="col-sm-4" style="background: #868e96;">
-        <img
-          [src]="bestseller.books[0].book_image"
-          class="card-img-top h-100"
-          *ngIf="bestseller.books[0].book_image"
-          alt="bestseller thumbnail image"
-        />
-      </div>
-      <div class="col-sm-8">
-        <div class="card-body">
-          <div class="d-flex flex-column">
-            <div *ngIf="bestseller.display_name">
-              <p>
-                <span class="text-secondary font-weight-bold">Category: </span>
-                {{ bestseller.display_name }}
-              </p>
-            </div>
-            <div *ngIf="bestseller.books[0].rank">
-              <p>
-                <span class="text-secondary font-weight-bold">Rank: </span>
-                <span class="badge badge-warning"
-                  >{{ bestseller.books[0].rank }}
-                </span>
-              </p>
-            </div>
-            <div *ngIf="bestseller.books[0].rank">
-              <p>
-                <span class="text-secondary font-weight-bold"
-                  >Rank Last Week:
-                </span>
-                <span class="badge badge-warning">{{
-                  bestseller.books[0].rank_last_week
-                }}</span>
-              </p>
-            </div>
-            <div *ngIf="bestseller.books[0].weeks_on_list">
-              <p>
-                <span class="text-secondary font-weight-bold"
-                  >Weeks on List:
-                </span>
-                <span class="badge badge-warning">{{
-                  bestseller.books[0].weeks_on_list
-                }}</span>
-              </p>
-            </div>
-            <div *ngIf="bestseller.books[0].title">
-              <p>
-                <span class="text-secondary font-weight-bold">Title: </span>
-                {{ bestseller.books[0].title }}
-              </p>
-            </div>
-            <div *ngIf="bestseller.books[0].author">
-              <p>
-                <span class="text-secondary font-weight-bold">Author: </span>
-                {{ bestseller.books[0].author }}
-              </p>
-            </div>
-            <div *ngIf="bestseller.books[0].publisher">
-              <p>
-                <span class="text-secondary font-weight-bold">Publisher: </span>
-                {{ bestseller.books[0].publisher }}
-              </p>
-            </div>
-            <div *ngIf="">
-              <p>
-                <span class="text-secondary font-weight-bold"
-                  >Date Published:
-                </span>
-              </p>
-            </div>
-            <div *ngIf="bestseller.books[0].primary_isbn13">
-              <p>
-                <span class="text-secondary font-weight-bold"
-                  >ISBN Number:
-                </span>
-                {{ bestseller.books[0].primary_isbn13 }}
-              </p>
-            </div>
-
-            <div class="d-flex justify-content-around">
-              <div class="p-2">
-                <a (click)="returnToList()" class="btn btn-outline-primary"
-                  >Back to List</a
-                >
+    <div class="card">
+      <div class="row no-gutters">
+        <div class="col-sm-4" style="background: #868e96;">
+          <img
+            [src]="bestseller.books[0].book_image"
+            class="card-img-top h-100"
+            *ngIf="bestseller.books[0].book_image"
+            alt="bestseller thumbnail image"
+          />
+        </div>
+        <div class="col-sm-8">
+          <div class="card-body">
+            <div class="d-flex flex-column">
+              <div *ngIf="bestseller.display_name">
+                <p>
+                  <span class="text-secondary font-weight-bold"
+                    >Category:
+                  </span>
+                  {{ bestseller.display_name }}
+                </p>
               </div>
-              <div *ngIf="bestseller.books[0].amazon_product_url" class="p-2">
-                <a
-                  href="{{ bestseller.books[0].amazon_product_url }}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-outline-dark"
-                  >More info.</a
-                >
+              <div *ngIf="bestseller.books[0].rank">
+                <p>
+                  <span class="text-secondary font-weight-bold">Rank: </span>
+                  <span class="badge badge-warning"
+                    >{{ bestseller.books[0].rank }}
+                  </span>
+                </p>
+              </div>
+              <div *ngIf="bestseller.books[0].rank">
+                <p>
+                  <span class="text-secondary font-weight-bold"
+                    >Rank Last Week:
+                  </span>
+                  <span class="badge badge-warning">{{
+                    bestseller.books[0].rank_last_week
+                  }}</span>
+                </p>
+              </div>
+              <div *ngIf="bestseller.books[0].weeks_on_list">
+                <p>
+                  <span class="text-secondary font-weight-bold"
+                    >Weeks on List:
+                  </span>
+                  <span class="badge badge-warning">{{
+                    bestseller.books[0].weeks_on_list
+                  }}</span>
+                </p>
+              </div>
+              <div *ngIf="bestseller.books[0].title">
+                <p>
+                  <span class="text-secondary font-weight-bold">Title: </span>
+                  {{ bestseller.books[0].title }}
+                </p>
+              </div>
+              <div *ngIf="bestseller.books[0].author">
+                <p>
+                  <span class="text-secondary font-weight-bold">Author: </span>
+                  {{ bestseller.books[0].author }}
+                </p>
+              </div>
+              <div *ngIf="bestseller.books[0].publisher">
+                <p>
+                  <span class="text-secondary font-weight-bold"
+                    >Publisher:
+                  </span>
+                  {{ bestseller.books[0].publisher }}
+                </p>
+              </div>
+              <div *ngIf="">
+                <p>
+                  <span class="text-secondary font-weight-bold"
+                    >Date Published:
+                  </span>
+                </p>
+              </div>
+              <div *ngIf="bestseller.books[0].primary_isbn13">
+                <p>
+                  <span class="text-secondary font-weight-bold"
+                    >ISBN Number:
+                  </span>
+                  {{ bestseller.books[0].primary_isbn13 }}
+                </p>
+              </div>
+
+              <div class="d-flex justify-content-around">
+                <div class="p-2">
+                  <a (click)="returnToList()" class="btn btn-outline-primary"
+                    >Back to List</a
+                  >
+                </div>
+                <div *ngIf="bestseller.books[0].amazon_product_url" class="p-2">
+                  <a
+                    href="{{ bestseller.books[0].amazon_product_url }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-outline-dark"
+                    >More info.</a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div>
+        <p
+          class="card-text text-justify p-3"
+          *ngIf="bestseller.books[0].description"
+        >
+          <span class="text-secondary font-weight-bold">Description: </span>
+          {{ bestseller.books[0].description }}
+        </p>
+        <p class="card-text p-3" *ngIf="!bestseller.books[0].description">
+          <span class="text-secondary">No description available</span>
+        </p>
+      </div>
     </div>
-    <div>
-      <p
-        class="card-text text-justify p-3"
-        *ngIf="bestseller.books[0].description"
-      >
-        <span class="text-secondary font-weight-bold">Description: </span>
-        {{ bestseller.books[0].description }}
-      </p>
-      <p class="card-text p-3" *ngIf="!bestseller.books[0].description">
-        <span class="text-secondary">No description available</span>
-      </p>
-    </div>
-  </div> -->
   </div>
 </div>

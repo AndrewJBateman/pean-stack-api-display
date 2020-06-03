@@ -14,7 +14,6 @@ export class NytBestsellersComponent implements OnInit {
   bestsellerLists: Array<List>;
   bestsellers: Array<Book>;
   bestseller: Book;
-  // clicked = false;
 
   constructor(
     private nytBestsellersService: NytBestsellersService,
@@ -31,16 +30,13 @@ export class NytBestsellersComponent implements OnInit {
     });
   }
 
-  async onGoToBestsellerDetail(bestseller: Book) {
-    console.log('book chosen');
+  onGoToBestsellerDetail(bestseller: Book) {
 
-    console.log('bestseller chosen: ', bestseller);
-    // this.clicked = true;
     let navigationExtras: NavigationExtras = {
       state: {
         bestseller: bestseller,
       },
     };
-    await this.router.navigate(["/bestseller-detail"], navigationExtras);
+    this.router.navigate(["/bestseller-detail"], navigationExtras);
   }
 }

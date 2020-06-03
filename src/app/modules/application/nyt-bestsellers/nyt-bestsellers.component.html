@@ -24,9 +24,11 @@
       <div
         class="bestseller-card align-center col-lg-2 col-md-4 col-sm-4 col-xs-6 pb-3"
         *ngFor="let bestseller of bestsellerLists; index as i"
-
       >
-        <app-bestseller-item [bestseller]="bestseller" (click)="onGoToBestsellerDetail(bestseller)  "></app-bestseller-item>
+        <app-bestseller-item
+          [bestseller]="bestseller"
+          (click)="onGoToBestsellerDetail(bestseller)"
+        ></app-bestseller-item>
       </div>
     </div>
   </div>

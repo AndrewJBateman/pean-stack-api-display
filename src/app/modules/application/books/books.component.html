@@ -1,5 +1,5 @@
 <head>
-  <meta  name="description"  content="Shows data from the Google Books api" />
+  <meta name="description" content="Shows data from the Google Books api" />
 </head>
 
 <body>
@@ -19,28 +19,41 @@
       </div>
       <div class="card-body">
         <!--User input of book title-->
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text text-light bg-dark"
-              ><i class="fas fa-pen"></i
-            ></span>
-          </div>
+        <form #searchForm="ngForm" (ngSubmit)="bookQuery(searchWord.value); searchForm.reset()">
           <input
-            ngInput
+            #searchWord="ngModel"
             type="text"
-            class="form-control"
-            placeholder="Enter book title"
+            ngModel
+            name="searchQuery"
+            id="searchQuery"
+            placeholder="Enter book title.."
             aria-label="Enter book title"
-            (keyup)="bookQuery($event.target.value)"
+            name="search"
+            required
           />
-        </div>
+          <button
+            class="btn btn-dark"
+            [disabled]="searchForm.invalid"
+            type="submit"
+          >
+            Search
+          </button>
+          <button
+            *ngIf="storedItems"
+            class="btn btn-warning"
+            type="button"
+            (click)="clearStore()"
+          >
+            Clear
+          </button>
+        </form>
       </div>
     </div>
     <!--cards for book search results-->
     <div class="row">
       <div
         class="book-card col-lg-2 col-md-3 col-sm-3 col-xs-6 p-2 text-center"
-        *ngFor="let book of books | async"
+        *ngFor="let book of books"
       >
         <img
           style="width: 140px; height: 224px;"

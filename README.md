@@ -61,6 +61,7 @@
 * [Favicon generator website](https://favicon.io/favicon-generator/) to generate the simple 'AB' favicon
 * [Node.js compression middleware](https://www.npmjs.com/package/compression)
 * [UnCSS Online](https://uncss-online.com/) to identify unused CSS. Useful and simple tool.
+* [Window sessionStorage](https://www.w3schools.com/jsref/prop_win_sessionstorage.asp) used to store book search strings.
 
 ## :floppy_disk: Setup - Backend
 
