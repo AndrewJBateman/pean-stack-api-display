@@ -19,7 +19,10 @@
       </div>
       <div class="card-body">
         <!--User input of book title-->
-        <form #searchForm="ngForm" (ngSubmit)="bookQuery(searchWord.value); searchForm.reset()">
+        <form
+          #searchForm="ngForm"
+          (ngSubmit)="bookQuery(searchWord.value); searchForm.reset()"
+        >
           <input
             #searchWord="ngModel"
             type="text"

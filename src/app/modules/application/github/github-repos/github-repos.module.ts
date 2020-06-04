@@ -10,6 +10,6 @@ import { PipesModule } from "../../../../pipes/pipes.module";
   imports: [CommonModule, GithubReposRoutingModule, PipesModule],
   exports: [GithubReposComponent],
   declarations: [GithubReposComponent],
-  providers: [GithubService],
+  providers: [GithubService]
 })
 export class GithubReposModule {}

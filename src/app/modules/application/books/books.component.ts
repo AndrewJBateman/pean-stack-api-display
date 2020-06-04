@@ -1,9 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit} from "@angular/core";
 import { Observable } from "rxjs";
 import { Router, NavigationExtras } from "@angular/router";
 import { FormGroup, FormBuilder } from "@angular/forms";
 
 import { GoogleBookService } from "../../../services/book-search.service";
+import { PersistanceService } from "../../../services/localstorage.service";
 import { Book } from "../../../models/books";
 
 @Component({
@@ -24,17 +25,18 @@ export class BooksComponent implements OnInit {
   constructor(
     private googleBookService: GoogleBookService,
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private storageService: PersistanceService
   ) {}
 
   ngOnInit(): void {
     if (this.storedBooks !== null) {
       this.storedItems = true;
-      this.books = JSON.parse(sessionStorage.getItem("this.searchedBooks"));
-      console.log("storedBooks array contents: ", this.books);
+      // this.books = JSON.parse(sessionStorage.getItem("this.searchedBooks"));
+      this.books = this.storageService.get("this.searchedBooks");
     } else {
       this.storedItems = false;
-      console.log("There are no books in storage");
+      console.log("There is no book search in storage");
     }
     this.searchForm = this.fb.group({
       searchQuery: [""],
@@ -42,29 +44,23 @@ export class BooksComponent implements OnInit {
   }
 
   clearStore() {
-    localStorage.clear();
-    this.searchForm.reset()
+    this.storageService.clear();
+    this.searchForm.reset();
     this.books = [];
     this.storedItems = false;
   }
   // search for books and store search query.
   bookQuery(userQuery: string): void {
     if (userQuery && userQuery.length) {
-      sessionStorage.setItem("this.searchedItem", userQuery);
-      this.searchString = sessionStorage.getItem("this.searchedItem");
+      this.storageService.set("this.searchedItem", userQuery);
+      this.searchString = this.storageService.get("this.searchedItem");
       this.storedItems = true;
       this.googleBookService
         .findBook(this.searchString)
         .subscribe((data: Book[]) => {
           this.books = data;
-          console.log("this.books ", this.books);
-          sessionStorage.setItem(
-            "this.searchedBooks",
-            JSON.stringify(this.books)
-          );
-          this.storedBooks = JSON.parse(
-            sessionStorage.getItem("this.searchedBooks")
-          );
+          this.storageService.set("this.searchedBooks", this.books);
+          this.storedBooks = this.storageService.get("this.searchedBooks");
         });
     }
   }

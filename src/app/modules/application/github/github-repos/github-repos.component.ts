@@ -1,7 +1,9 @@
 import { Component, OnInit } from "@angular/core";
-import { GithubService } from "../../../../services/github.service";
 import { Repo } from "src/app/models/repo";
 import { ActivatedRoute } from "@angular/router";
+import { Location } from "@angular/common";
+
+import { GithubService } from "../../../../services/github.service";
 
 @Component({
   selector: "app-github-repos",
@@ -14,16 +16,22 @@ export class GithubReposComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private githubService: GithubService
+    private githubService: GithubService,
+    private location: Location
   ) {}
 
-  // run seaerchRepos function with input username from router params
+  // on init run searchRepos function with input username from router params
   ngOnInit(): void {
     this.searchRepos(this.route.snapshot.params.username);
   }
+
   searchRepos(userName: string) {
     this.githubService.getRepos(userName).subscribe((repos) => {
       this.repos = repos;
     });
+  }
+
+  returnToUser() {
+    this.location.back();
   }
 }

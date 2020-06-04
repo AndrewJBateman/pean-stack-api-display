@@ -2,6 +2,24 @@
   <meta  name="description" content="Shows repo data from the Github API" />
 </head>
 
+<div class="card">
+  <div class="d-flex justify-content-around">
+    <div class="p-2">
+      <a (click)="returnToUser()" class="btn btn-outline-primary"
+        >Back to List</a
+      >
+    </div>
+    <div class="p-2">
+      <a
+        href=""
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-outline-dark"
+        >More info.</a
+      >
+    </div>
+  </div>
+</div>
 <!--cards for book search results-->
 <div class="github-card pb-2" *ngFor="let repo of repos">
   <div class="card rounded" *ngIf="repo">
