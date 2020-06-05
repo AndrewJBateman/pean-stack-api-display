@@ -1,5 +1,5 @@
 <head>
-  <meta  name="description" content="Shows repo user data from the Github API" />
+  <meta name="description" content="Shows repo user data from the Github API" />
 </head>
 
 <div class="card rounded" *ngIf="user">
@@ -10,21 +10,31 @@
       alt="Github user profile photo"
     />
     <h5 class="card-title">{{ user.name }}</h5>
-
+    <!--user bio-->
     <h6 class="card-subtitle text-dark">
-      <i class="fas fa-globe-europe text-success pr-2"></i>{{ user.location }}
+      <div *ngIf="user.location">
+        <i class="fas fa-globe-europe text-success pr-2"></i>{{ user.location }}
+      </div>
+      <div *ngIf="!user.location">
+        <i class="fas fa-globe-europe text-success pr-2"></i>No user location
+        data
+      </div>
     </h6>
   </div>
   <div class="card-body pb-0">
-    <p class="">
+    <!--user bio-->
+    <p>
       <i class="fas fa-user-tag text-warning pr-2"></i
-      ><span class="font-weight-bold pr-2">Bio:</span>{{ user.bio }}
+      ><span *ngIf="user.bio" class="font-weight-bold pr-2">Bio: {{ user.bio }}</span>
+      <span *ngIf="!user.bio" class="font-weight-bold pr-2">Bio: No user bio</span>
     </p>
+    <!--user repos-->
     <p>
       <i class="fas fa-folder text-info pr-2"></i
-      ><span class="font-weight-bold pr-2">Repositories:</span
-      >{{ user.public_repos }}
+      ><span *ngIf="user.public_repos" class="font-weight-bold pr-2">Repositories: {{ user.public_repos }}</span>
+      <span *ngIf="!user.public_repos" class="font-weight-bold pr-2">Repositories: no user repos</span>
     </p>
+    <!--user joined date-->
     <p>
       <i class="fas fa-calendar-day text-dark pr-2"></i
       ><span class="font-weight-bold pr-2">Joined:</span
@@ -41,7 +51,7 @@
   </div>
   <div class="d-flex justify-content-around">
     <div class="p-2">
-      <a [routerLink]="['/github-repos', user.login]" class="btn btn-info"
+      <a [routerLink]="['/github-repos', user.login]" class="btn btn-dark"
         ><i class="fas fa-list pr-2"></i>Repos</a
       >
     </div>
@@ -50,7 +60,7 @@
         href="{{ user.html_url }}"
         target="_blank"
         rel="noopener noreferrer"
-        class="btn btn-info"
+        class="btn btn-dark"
         ><i class="fab fa-github pr-2"></i>Profile</a
       >
     </div>

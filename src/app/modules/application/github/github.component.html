@@ -21,7 +21,7 @@
         <form
           #githubSearch="ngForm"
           method="POST"
-          (ngSubmit)="submitForm(githubSearch)"
+          (ngSubmit)="submitForm(githubSearch); githubSearch.reset()"
         >
           <div class="input-group mb-0">
             <div class="input-group-prepend">
@@ -30,9 +30,11 @@
               ></span>
             </div>
             <input
+              id="name"
               name="name"
               type="text"
               class="form-control"
+              minlength="4"
               placeholder="Enter username"
               aria-label="Enter username"
               required
@@ -46,6 +48,14 @@
               >
                 Search
               </button>
+              <button
+                class="btn btn-warning"
+                type="button"
+                (click)="clearUser(); githubSearch.reset()"
+                [disabled]="!githubSearch.value.name"
+              >
+                Clear
+              </button>
             </div>
           </div>
         </form>
@@ -53,7 +63,7 @@
     </div>
 
     <!--cards for book search results-->
-    <div class="github-card">
+    <div class="github-card" *ngIf="!displayCleared">
       <app-github-user [user]="user"></app-github-user>
     </div>
   </div>

@@ -26,7 +26,7 @@ export class GithubReposComponent implements OnInit {
   }
 
   searchRepos(userName: string) {
-    this.githubService.getRepos(userName).subscribe((repos) => {
+    this.githubService.getRepos(userName).subscribe((repos: Repo) => {
       this.repos = repos;
     });
   }

@@ -12,14 +12,26 @@ import { GithubService } from "../../../services/github.service";
 export class GithubComponent implements OnInit {
   user: any;
   form: NgForm;
+  displayCleared = false;
 
   constructor(private router: Router, private githubService: GithubService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getUser("andrewjbateman");
+  }
 
-  submitForm(myform: any) {
-    this.githubService.getUser(myform.value.name).subscribe((user) => {
+  submitForm(githubSearch: any) {
+    this.getUser(githubSearch.value.name);
+  }
+
+  getUser(userName: string) {
+    this.displayCleared = false;
+    this.githubService.getUser(userName).subscribe((user) => {
       this.user = user;
     });
+  }
+
+  clearUser() {
+    this.displayCleared = true;
   }
 }

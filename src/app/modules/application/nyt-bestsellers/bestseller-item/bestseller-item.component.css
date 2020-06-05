@@ -16,7 +16,8 @@
 }
 
 .card-body {
-  height: 242px;
+  align-items: center;
+  height: auto;
   min-width: 160px;
   max-width: 160px;
   align-items: center;

@@ -23,7 +23,7 @@
 
 ### Frontend
 
-* Angular frontend includes Bootstrap responsive navbar with icon links
+* Angular frontend includes Bootstrap responsive navbar with icon links**localstorage does not work in SSR - deploy non-SSR version for now**
 * navbar drops down from top in phone size
 * About this site page **add *ngFor to accordian**
 * Author info card that gets data from Github and provides contact links
@@ -35,7 +35,7 @@
 * Google charts card shows a range of charts using the [Google Charts API](https://developers.google.com/chart/) **change data to come from backend json file then postgres database**
 * Google Book search card lets user search for any book. Results displayed in an array of Bootstrap cards. Clicking on a book shows it in detail**add function to replace bad thumbnails**
 * New York Times API - bestseller list displayed. Clicking on a bestseller shows it in a detail page with a link to the original article.
-* Github card shows Github repo details from user search. Repo button redirects to repo list page. **add user input sanitization, github pagination to show more than 30 repos, add sessionStorage & clear search input once query run, add my details as default results**
+* Github card shows Github repo details from user search. Repo button redirects to repo list page. **github pagination to show more than 30 repos, add sessionStorage**
 * Deployed version: good Lighthouse score (mobile): home page: performance: 91% ('Remove dead rules from stylesheets and defer the loading of CSS not used for above-the-fold content to reduce unnecessary bytes consumed by network activity.'), accessibility: 100%, Best practises: 100%, SEO 100%, PWA
 
 ## :camera: Screenshots
@@ -144,6 +144,7 @@ export class GithubService {
 * Progressive Web App (PWA) functionality added
 * [Node.js compression middleware](https://www.npmjs.com/package/compression) used to add gzip/deflate compression coding to improve lighthouse audit score.
 * [headerParams](https://angular.io/api/common/http/HttpParams) used to add API keys to http request (only NASA does not allow this method)
+* [Storing array in session storage](https://stackoverflow.com/questions/51123210/storing-array-content-in-session-storage)
 
 ## :clipboard: Status & To-Do List
 
@@ -158,6 +159,7 @@ export class GithubService {
 * [Sitemaps XML format](https://www.sitemaps.org/protocol.html) used to create `sitemap.xml` to improve Lighthouse SEO score to 100%
 * [Archive converter](https://convertio.co/es/) converts png to jp2 etc
 * [Deployment to Firebase Hosting with Angular CLI 9 in 5 Easy Steps](https://www.techiediaries.com/angular-firebase/deployment-to-firebase-hosting-angular-cli-9/)
+* [Efficiently load JavaScript with defer and async](https://flaviocopes.com/javascript-async-defer/)
 
 ## :envelope: Contact
 

@@ -11,7 +11,7 @@ export class PersistanceService {
       console.error("Error saving to localStorage", err);
     }
   }
-  
+
   get(key: string) {
     try {
       return JSON.parse(sessionStorage.getItem(key));
@@ -21,7 +21,7 @@ export class PersistanceService {
     }
   }
 
-  clear() {
-    localStorage.clear();
+  clear(): void {
+    sessionStorage.clear();
   }
 }
