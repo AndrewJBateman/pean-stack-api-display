@@ -1,8 +1,8 @@
 export const environment = {
   production: false,
 
-  application:
-  {
-    name: 'API Dashboard'
-  }
+
+  application: {
+    name: "API Dashboard",
+  },
 };

@@ -1,4 +1,4 @@
-import { Component, OnInit} from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
 import { Router, NavigationExtras } from "@angular/router";
 import { FormGroup, FormBuilder } from "@angular/forms";

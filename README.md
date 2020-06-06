@@ -23,7 +23,7 @@
 
 ### Frontend
 
-* Angular frontend includes Bootstrap responsive navbar with icon links**localstorage does not work in SSR - deploy non-SSR version for now**
+* Angular frontend includes Bootstrap responsive navbar with icon links**localstorage does not work in SSR - deploy non-SSR version for now, no cache manager**
 * navbar drops down from top in phone size
 * About this site page **add *ngFor to accordian**
 * Author info card that gets data from Github and provides contact links
@@ -41,6 +41,14 @@
 ## :camera: Screenshots
 
 ![Frontend screenshot](./img/front.png)
+![Frontend screenshot](./img/nasa.png)
+![Frontend screenshot](./img/news.png)
+![Frontend screenshot](./img/info.png)
+![Frontend screenshot](./img/map.png)
+![Frontend screenshot](./img/news.png)
+![Frontend screenshot](./img/books.png)
+![Frontend screenshot](./img/bestsellers.png)
+![Frontend screenshot](./img/github.png)
 
 ## :signal_strength: Technologies - Backend
 

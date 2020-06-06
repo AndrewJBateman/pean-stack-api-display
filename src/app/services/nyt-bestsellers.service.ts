@@ -7,7 +7,7 @@ import { Books } from "../models/nyt";
 import { environment } from "../../environments/environment";
 
 const apiUrl = "https://api.nytimes.com/svc/books/v3/lists/overview.json?";
-const apiKey = environment.NYT_KEY;
+const apiKey = environment.NYT_BEST_KEY;
 
 @Injectable({
   providedIn: "root",
