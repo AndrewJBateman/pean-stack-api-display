@@ -161,11 +161,14 @@
         data-parent="#accordion"
       >
         <div class="card-body">
-          News is fetched from the
+          News data is obtained from the
           <a
             href="https://developer.nytimes.com/docs/top-stories-product/1/overview"
             >New York Times Top Stories HTTP REST API.</a
-          >
+          > Each Bootstrap News card shows an image with title and content.
+          There is a footer that shows the date of the article as '..ago' via a
+          custom 'date-convert' pipe based on the Day.js minimalist JavaScript
+          library. There is also a hyper-link to the original NYT article.
         </div>
       </div>
     </div>
@@ -192,10 +195,15 @@
         data-parent="#accordion"
       >
         <div class="card-body">
-          Data on books is fetched from the
+          Bootstrap accordian-style collapsible cards are used to display data
+          from the
           <a href="https://developers.google.com/books/docs/overview"
             >Google Charts API</a
-          >Chart data is displayed in a grid of Bootstrap cards.
+          >
+          in a range of formats, including line, pie, gauge (3 gauges shown),
+          table and bar-chart. All charts have their own components. Only one
+          card is displayed at a time - clicking on one will collapse the other
+          one.
         </div>
       </div>
     </div>
@@ -224,8 +232,9 @@
         <div class="card-body">
           Data on books is fetched from the
           <a href="https://developers.google.com/books/docs/overview"
-            >Google Books API</a
-          >Book data is displayed in a grid of Bootstrap cards. Clicking on a
+            >Google Books API.</a
+          >
+          Book data is displayed in a grid of Bootstrap cards. Clicking on a
           card will activate ruote the user to a page with more details about
           the book.
         </div>
@@ -256,10 +265,10 @@
         <div class="card-body">
           Data on bestsellers is fetched from the
           <a href="https://developer.nytimes.com/docs/books-product/1/overview"
-            >New York Times API</a
-          >Bestseller data is displayed in a grid of Bootstrap cards. Clicking
-          on a card will route the user to a page with more details about the
-          book.
+            >New York Times API.</a
+          >
+          Bestseller data is displayed in a grid of Bootstrap cards. Clicking on
+          a card will route the user to a page with more details about the book.
         </div>
       </div>
     </div>
@@ -287,7 +296,7 @@
       >
         <div class="card-body">
           User and repository data is fetched from the
-          <a href="https://developer.github.com/v3/">Github REST API v3.</a
+          <a href="https://developer.github.com/v3/">Github REST API v3. </a
           >Github card shows Github repo details from user search. Repo button
           redirects to repo list page.
         </div>

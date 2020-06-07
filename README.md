@@ -30,7 +30,7 @@
 * Main section made of 8 Bootstrap cards that link to API data
 * NASA card shows Astronomy Picture of the Day (APOD) from the [NASA API](https://api.nasa.gov/). Note video function requires npm module [safe-pipe](https://www.npmjs.com/package/safe-pipe)
 * Crypto card shows prices of a list of cryptocurrencies from the [CryptoCompare API](https://min-api.cryptocompare.com/)
-* Map card shows location data from the [ipapi API](https://ipapi.co/)
+* Map card shows location data from the [ipapi API](https://ipapi.co/) using the Leaflet JavaScript maps library.
 * NYT News card shows latest news from the [New York Times Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview)
 * Google charts card shows a range of charts using the [Google Charts API](https://developers.google.com/chart/) **change data to come from backend json file then postgres database**
 * Google Book search card lets user search for any book. Results displayed in an array of Bootstrap cards. Clicking on a book shows it in detail**add function to replace bad thumbnails**
@@ -48,6 +48,7 @@
 ![Frontend screenshot](./img/news.png)
 ![Frontend screenshot](./img/books.png)
 ![Frontend screenshot](./img/bestsellers.png)
+![Frontend screenshot](./img/bestseller-detail.png)
 ![Frontend screenshot](./img/github.png)
 
 ## :signal_strength: Technologies - Backend
