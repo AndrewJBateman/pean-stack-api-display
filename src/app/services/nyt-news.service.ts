@@ -20,7 +20,7 @@ export class NytNewsService {
     return this.http.get<TopStories>(booksUrl).pipe(
       map((data: TopStories) => data),
       catchError((err) => {
-        return throwError("Problem fetching news from API, error: ", err);
+        return throwError(err);
       })
     );
   }

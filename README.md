@@ -88,7 +88,7 @@
 * Run `npm run build` to generate a build file without SSR
 * Run `npm run build:ssr` to generate a build file with SSR
 * Run `npm run serve:ssr` to see on a dev server
-* Run `firebase deploy` to deploy to Google Firebase Hosting (already setup)
+* Run `ng deploy` to deploy to Google Firebase Hosting (already setup)
 
 ## :computer: Code Examples - Backend
 

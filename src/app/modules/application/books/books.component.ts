@@ -32,7 +32,7 @@ export class BooksComponent implements OnInit {
   ngOnInit(): void {
     if (this.storedBooks !== null) {
       this.storedItems = true;
-      this.books = this.storageService.get("this.searchedBooks");
+      this.storedBooks = this.storageService.get("this.searchedBooks");
     } else {
       this.storedItems = false;
       console.log("There is no book search in storage");

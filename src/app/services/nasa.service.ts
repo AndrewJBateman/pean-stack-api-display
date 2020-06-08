@@ -20,7 +20,7 @@ export class NasaService {
     // const month = new Date().getMonth() + 1;
     // const day = new Date().getDate();
     // const apodUrl = `${apiUrl}date=${year}-${month}-${day}&api_key=${apiKey}&hd=true`;
-    const apodUrl = `${apiUrl}&api_key=${apiKey}&hd=true`;  
+    const apodUrl = `${apiUrl}&api_key=${apiKey}&hd=true`;
     return this.http.get<Apod>(apodUrl).pipe(
       map((data: Apod) => data),
       catchError((err) => {

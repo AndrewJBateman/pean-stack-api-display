@@ -32,9 +32,9 @@ export class NytBestsellersComponent implements OnInit {
 
   onGoToBestsellerDetail(bestseller: Book) {
 
-    let navigationExtras: NavigationExtras = {
+    const navigationExtras: NavigationExtras = {
       state: {
-        bestseller: bestseller,
+        bestseller
       },
     };
     this.router.navigate(["/bestseller-detail"], navigationExtras);
