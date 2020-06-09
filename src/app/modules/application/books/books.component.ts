@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Inject, PLATFORM_ID } from "@angular/core";
+import { isPlatformBrowser } from "@angular/common";
 import { Observable } from "rxjs";
 import { Router, NavigationExtras } from "@angular/router";
 import { FormGroup, FormBuilder } from "@angular/forms";
@@ -19,23 +20,27 @@ export class BooksComponent implements OnInit {
   searchedItem: string;
   searchString: string;
   searchedBooks: Book[];
-  storedBooks: Book[];
+  booksArray: Book[];
   storedItems = false;
 
   constructor(
     private googleBookService: GoogleBookService,
     private router: Router,
     private fb: FormBuilder,
-    private storageService: PersistanceService
+    private storageService: PersistanceService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
-    if (this.storedBooks !== null) {
-      this.storedItems = true;
-      this.storedBooks = this.storageService.get("this.searchedBooks");
-    } else {
-      this.storedItems = false;
-      console.log("There is no book search in storage");
+    // check if platform browser then show stored book array if it exists
+    if (isPlatformBrowser(this.platformId)) {
+      if (this.booksArray !== null) {
+        this.storedItems = true;
+        this.booksArray = this.storageService.get("this.searchedBooks");
+      } else {
+        this.storedItems = false;
+        console.log("There is no book search in storage");
+      }
     }
     this.searchForm = this.fb.group({
       searchQuery: [""],
@@ -45,22 +50,30 @@ export class BooksComponent implements OnInit {
   clearStore() {
     this.storageService.clear();
     this.searchForm.reset();
-    this.books = [];
+    this.booksArray = [];
     this.storedItems = false;
   }
   // search for books and store search query.
   bookQuery(userQuery: string): void {
     if (userQuery && userQuery.length) {
-      this.storageService.set("this.searchedItem", userQuery);
-      this.searchString = this.storageService.get("this.searchedItem");
-      this.storedItems = true;
-      this.googleBookService
-        .findBook(this.searchString)
-        .subscribe((data: Book[]) => {
-          this.books = data;
-          this.storageService.set("this.searchedBooks", this.books);
-          this.storedBooks = this.storageService.get("this.searchedBooks");
-        });
+      if (isPlatformBrowser(this.platformId)) {
+        this.storageService.set("this.searchedItem", userQuery);
+        this.searchString = this.storageService.get("this.searchedItem");
+        this.storedItems = true;
+        this.googleBookService
+          .findBook(this.searchString)
+          .subscribe((data: Book[]) => {
+            this.books = data;
+            this.storageService.set("this.searchedBooks", this.books);
+            this.booksArray = this.storageService.get("this.searchedBooks");
+          });
+      } else {
+        this.googleBookService
+          .findBook(this.searchString)
+          .subscribe((data: Book[]) => {
+            this.booksArray = data;
+          });
+      }
     }
   }
 

@@ -1,10 +1,7 @@
 import { Component, AfterViewInit, OnInit } from "@angular/core";
 import * as L from "leaflet";
-import { Observable, Subject } from "rxjs";
-import { map } from "rxjs/operators";
 
 import { LocationService } from "../../../services/location.service";
-import { Location } from "../../../models/location";
 
 @Component({
   selector: "app-map",

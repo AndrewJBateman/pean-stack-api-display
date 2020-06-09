@@ -23,7 +23,7 @@
 
 ### Frontend
 
-* Angular frontend includes Bootstrap responsive navbar with icon links**localstorage does not work in SSR - deploy non-SSR version for now, no cache manager**
+* Angular frontend includes Bootstrap responsive navbar with icon links
 * navbar drops down from top in phone size
 * About this site page **add *ngFor to accordian**
 * Author info card that gets data from Github and provides contact links
@@ -154,6 +154,7 @@ export class GithubService {
 * [Node.js compression middleware](https://www.npmjs.com/package/compression) used to add gzip/deflate compression coding to improve lighthouse audit score.
 * [headerParams](https://angular.io/api/common/http/HttpParams) used to add API keys to http request (only NASA does not allow this method)
 * [Storing array in session storage](https://stackoverflow.com/questions/51123210/storing-array-content-in-session-storage)
+* [Zain Zafar, Medium: LocalStorage with Angular Universal](https://medium.com/@zainzafar/localstorage-with-angular-universal-2a111fb4af72)
 
 ## :clipboard: Status & To-Do List
 
