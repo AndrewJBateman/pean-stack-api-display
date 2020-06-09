@@ -1,7 +1,7 @@
 <head>
   <meta name="description" content="Shows Nasa api data" />
-  <link rel="preload" href="https://api.nasa.gov/planetary/apod?">
-  <link rel="preload" href="https://apod.nasa.gov">
+  <link rel="preload" href="https://api.nasa.gov/planetary/apod?" as "fetch">
+  <link rel="preload" href="https://api.nasa.gov" as "fetch">
 </head>
 
 <div class="main-div" *ngIf="nasaImgObj">
@@ -9,7 +9,7 @@
     <div class="card-header bg-light">
       <img
         class="header-image float-left"
-        src="../../../../assets/params/images/logo/nasa-image.jpg"
+        src="../../../../assets/params/images/logo/nasa-image.png"
         alt="Nasa logo"
       />
       <h6 class="card-title text-dark">Today's Image:</h6>

@@ -1,7 +1,7 @@
 <head>
   <meta name="description" content="Shows New York Times News API data" />
-  <link rel="preload" href="https://api.nytimes.com">
-  <link rel="preload" href="https://static01.nyt.com">
+  <link rel="preload" href="https://api.nytimes.com" as "fetch">
+  <link rel="preload" href="https://static01.nyt.com" as "fetch">
 </head>
 
 <div class="main-div">
@@ -11,11 +11,10 @@
       class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4"
       *ngFor="let article of mArticles"
     >
-      <div class="card full-height">
+      <div class="card full-height" *ngIf="article.multimedia[2].url">
         <img
-          *ngIf="article.multimedia[3].url"
           class="card-img-top"
-          src="{{ article.multimedia[3].url }}"
+          src="{{ article.multimedia[2].url }}"
           alt="image for news article"
         />
         <div class="card-body p-2">

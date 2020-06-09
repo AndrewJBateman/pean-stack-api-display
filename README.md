@@ -30,13 +30,13 @@
 * Main section made of 8 Bootstrap cards that link to API data
 * NASA card shows Astronomy Picture of the Day (APOD) from the [NASA API](https://api.nasa.gov/). Note video function requires npm module [safe-pipe](https://www.npmjs.com/package/safe-pipe)
 * Crypto card shows prices of a list of cryptocurrencies from the [CryptoCompare API](https://min-api.cryptocompare.com/)
-* Map card shows location data from the [ipapi API](https://ipapi.co/) using the Leaflet JavaScript maps library.
+* Map card shows location data from the [ipapi API](https://ipapi.co/) using the Leaflet JavaScript maps library.**Does not use passive listeners to improve scrolling performance**
 * NYT News card shows latest news from the [New York Times Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview)
-* Google charts card shows a range of charts using the [Google Charts API](https://developers.google.com/chart/) **change data to come from backend json file then postgres database**
-* Google Book search card lets user search for any book. Results displayed in an array of Bootstrap cards. Clicking on a book shows it in detail**add function to replace bad thumbnails**
-* New York Times API - bestseller list displayed. Clicking on a bestseller shows it in a detail page with a link to the original article.
+* Google charts card shows a range of charts using the [Google Charts API](https://developers.google.com/chart/) **change data to come from backend json file then postgres database, Does not use passive listeners to improve scrolling performance**
+* Google Book search card lets user search for any book. Results displayed in an array of Bootstrap cards. Clicking on a book shows it in detail.**Book links do not use HTTPS, Displays images with incorrect aspect ratio**
+* New York Times API - bestseller list displayed. Clicking on a bestseller shows it in a detail page with a link to the original article.**Displays images with incorrect aspect ratio**
 * Github card shows Github repo details from user search. Repo button redirects to repo list page. **github pagination to show more than 30 repos, add sessionStorage**
-* Deployed version: good Lighthouse score (mobile): home page: performance: 91% ('Remove dead rules from stylesheets and defer the loading of CSS not used for above-the-fold content to reduce unnecessary bytes consumed by network activity.'), accessibility: 100%, Best practises: 100%, SEO 100%, PWA
+* Deployed version: good Lighthouse score (mobile): home page: performance: 91% ('Remove dead rules from stylesheets and defer the loading of CSS not used for above-the-fold content to reduce unnecessary bytes consumed by network activity.'), accessibility: 100%, Best practises: 100%, SEO 100%, PWA. **Add cache policy, remove unused Bootstrap CSS**
 
 ## :camera: Screenshots
 

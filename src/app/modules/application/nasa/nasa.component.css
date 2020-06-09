@@ -21,8 +21,6 @@
 }
 
 .header-image {
-  background-image: url("../../../../assets/params/images/logo/nasa-image.jpg");
-  background-size: cover;
   width: 64px;
   height: 64px;
 }
