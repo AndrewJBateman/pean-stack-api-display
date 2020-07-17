@@ -42,14 +42,15 @@
 
 ![Frontend screenshot](./img/front.png)
 ![Frontend screenshot](./img/nasa.png)
-![Frontend screenshot](./img/news.png)
-![Frontend screenshot](./img/info.png)
+![Frontend screenshot](./img/crypto.png)
 ![Frontend screenshot](./img/map.png)
 ![Frontend screenshot](./img/news.png)
+![Frontend screenshot](./img/charts.png)
 ![Frontend screenshot](./img/books.png)
 ![Frontend screenshot](./img/bestsellers.png)
 ![Frontend screenshot](./img/bestseller-detail.png)
 ![Frontend screenshot](./img/github.png)
+![Frontend screenshot](./img/info.png)
 
 ## :signal_strength: Technologies - Backend
 
