@@ -23,7 +23,7 @@ export interface List {
   list_name: string;
   list_name_encoded: string;
   updated: string;
-};
+}
 
 export interface Book {
   age_group: string;

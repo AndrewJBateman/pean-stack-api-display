@@ -24,24 +24,29 @@ export class BarChartComponent implements OnInit {
 
   private drawChart() {
     const data = this.gLib.visualization.arrayToDataTable([
-      ['Element', 'Density', { role: 'style' }, { role: 'annotation' }],
-      ['Copper', 8.94, '#b87333', 'Cu'],            // RGB value
-      ['Silver', 10.49, 'silver', 'Ag'],            // English color name
-      ['Gold', 19.30, 'gold', 'Au'],
-      ['Platinum', 21.45, 'color: #e5e4e2', 'Pt' ], // CSS-style declaration
-   ]);
+      ["Element", "Density", { role: "style" }, { role: "annotation" }],
+      ["Copper", 8.94, "#b87333", "Cu"], // RGB value
+      ["Silver", 10.49, "silver", "Ag"], // English color name
+      ["Gold", 19.3, "gold", "Au"],
+      ["Platinum", 21.45, "color: #e5e4e2", "Pt"], // CSS-style declaration
+    ]);
 
-   const view = new this.gLib.visualization.DataView(data);
-      view.setColumns([0, 1,
-                       { calc: "stringify",
-                         sourceColumn: 1,
-                         type: "string",
-                         role: "annotation" },
-                       2]);
+    const view = new this.gLib.visualization.DataView(data);
+    view.setColumns([
+      0,
+      1,
+      {
+        calc: "stringify",
+        sourceColumn: 1,
+        type: "string",
+        role: "annotation",
+      },
+      2,
+    ]);
 
     const options = {
       title: "Density of Precious Metals, in g/cm^3",
-      bar: {groupWidth: "95%"},
+      bar: { groupWidth: "95%" },
       legend: { position: "none" },
     };
 
@@ -50,6 +55,5 @@ export class BarChartComponent implements OnInit {
     );
 
     chart.draw(data, options);
-
   }
 }

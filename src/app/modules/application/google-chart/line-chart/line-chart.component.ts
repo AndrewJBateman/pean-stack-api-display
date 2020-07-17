@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
-import { GoogleChartService } from  '../../../../services/google-chart.service';
+import { GoogleChartService } from "../../../../services/google-chart.service";
 
 @Component({
   selector: "app-line-chart",

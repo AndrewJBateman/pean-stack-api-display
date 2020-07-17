@@ -32,7 +32,7 @@
 * Crypto card shows prices of a list of cryptocurrencies from the [CryptoCompare API](https://min-api.cryptocompare.com/)
 * Map card shows location data from the [ipapi API](https://ipapi.co/) using the Leaflet JavaScript maps library.**Does not use passive listeners to improve scrolling performance**
 * NYT News card shows latest news from the [New York Times Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview)
-* Google charts card shows a range of charts using the [Google Charts API](https://developers.google.com/chart/) **change data to come from backend json file then postgres database, Does not use passive listeners to improve scrolling performance**
+* Google charts card shows a range of charts using the [Google Charts API](https://developers.google.com/chart/) **Fix/replace pie chart labels, change data to come from backend json file then postgres database, Does not use passive listeners to improve scrolling performance**
 * Google Book search card lets user search for any book. Results displayed in an array of Bootstrap cards. Clicking on a book shows it in detail.**Book links do not use HTTPS, Displays images with incorrect aspect ratio**
 * New York Times API - bestseller list displayed. Clicking on a bestseller shows it in a detail page with a link to the original article.**Displays images with incorrect aspect ratio**
 * Github card shows Github repo details from user search. Repo button redirects to repo list page. **github pagination to show more than 30 repos, add sessionStorage**
@@ -58,11 +58,11 @@
 
 ## :signal_strength: Technologies - Frontend
 
-* [Angular framework v9](https://angular.io/)
-* [Angular Universal v9](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
+* [Angular framework v10](https://angular.io/)
+* [Angular Universal v10](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
 * [Bootstrap v4](https://getbootstrap.com/)
 * [Font Awesome icons](https://fontawesome.com/icons?d=gallery)
-* [Font Awesome](https://fontawesome.com/) icons
+* [Font Awesome v5](https://fontawesome.com/) icons
 * [jQuery v3](https://jquery.com/download/) required by Bootstrap. Latest version 3.5.1 resolved nav-bar breaking change in previous version.
 * [Angular Express Engine](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
 * [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) to check quality of website
@@ -84,8 +84,6 @@
 * Get yourself API keys for the Nasa, Google Maps and News apps
 * Run `ng serve` for a dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
 * Run `npm run lint` to lint test entire codebase using TSLint
-* Run `npm run test` to run unit tests using the Karma framework
-* Run `npm run e2e` to run end-to-end testing files in individual modules etc. using Protractor
 * Run `npm run build` to generate a build file without SSR
 * Run `npm run build:ssr` to generate a build file with SSR
 * Run `npm run serve:ssr` to see on a dev server
