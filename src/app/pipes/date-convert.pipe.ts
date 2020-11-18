@@ -9,7 +9,7 @@ dayjs.extend(relativeTime);
   name: "dateConvert",
 })
 export class DateConvertPipe implements PipeTransform {
-  transform(value: string): string {
+  transform(value: string): string | null {
     return dayjs(value).fromNow();
   }
 }

@@ -58,8 +58,8 @@
 
 ## :signal_strength: Technologies - Frontend
 
-* [Angular framework v10](https://angular.io/)
-* [Angular Universal v10](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
+* [Angular framework v11](https://angular.io/)
+* [Angular Universal v11](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
 * [Bootstrap v4](https://getbootstrap.com/)
 * [Font Awesome icons](https://fontawesome.com/icons?d=gallery)
 * [Font Awesome v5](https://fontawesome.com/) icons
@@ -80,7 +80,7 @@
 ## :floppy_disk: Setup - Frontend
 
 * Install dependencies using `npm i`
-* Run `npm outdated` to see if any npm dependencies are outdated. Note: use Typescript v3.8.3 - NOT the latest version
+* Run `npm outdated` to see if any npm dependencies are outdated.
 * Get yourself API keys for the Nasa, Google Maps and News apps
 * Run `ng serve` for a dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
 * Run `npm run lint` to lint test entire codebase using TSLint
@@ -157,8 +157,8 @@ export class GithubService {
 
 ## :clipboard: Status & To-Do List
 
-* Status: all frontend API cards working. Build file created with no errors. Deployed to Firebase
-* To-Do: add book & bestseller detail pages & nav, check SSR lighthouse score, publish frontend then do backend.
+* Status: Working. Build file created with no errors. Deployed to Firebase
+* To-Do: Fis SSR, check SSR lighthouse score, add backend & connect to frontend cards
 
 ## :clap: Inspiration/General Tools
 

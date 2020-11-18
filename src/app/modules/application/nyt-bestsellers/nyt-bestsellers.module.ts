@@ -7,7 +7,7 @@ import { BestsellerItemComponent } from "./bestseller-item/bestseller-item.compo
 
 @NgModule({
   imports: [CommonModule, NytBestsellersRoutingModule],
-  exports: [NytBestsellersComponent],
+  exports: [NytBestsellersComponent, BestsellerItemComponent],
   declarations: [NytBestsellersComponent, BestsellerItemComponent],
 })
 export class NytBestsellersModule {}

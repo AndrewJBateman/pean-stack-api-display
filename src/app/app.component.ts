@@ -8,7 +8,7 @@ import { Meta } from '@angular/platform-browser';
 })
 export class AppComponent implements OnInit{
   title = 'angular-apis';
-  version = 'Angular version 9.1.4';
+  version = 'Angular version 11';
 
   constructor(
     private metaTagService: Meta
