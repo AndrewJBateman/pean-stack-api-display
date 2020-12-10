@@ -51,6 +51,7 @@
 ![Frontend screenshot](./img/bestseller-detail.png)
 ![Frontend screenshot](./img/github.png)
 ![Frontend screenshot](./img/info.png)
+![Frontend test screenshot](./img/karma.png)
 
 ## :signal_strength: Technologies - Backend
 
@@ -83,11 +84,16 @@
 * Run `npm outdated` to see if any npm dependencies are outdated.
 * Get yourself API keys for the Nasa, Google Maps and News apps
 * Run `ng serve` for a dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
-* Run `npm run lint` to lint test entire codebase using TSLint
+* Run `npm run lint` to lint test entire codebase using TSLint.
 * Run `npm run build` to generate a build file without SSR
 * Run `npm run build:ssr` to generate a build file with SSR
-* Run `npm run serve:ssr` to see on a dev server
+* Run `npm run serve:ssr` to see on a dev server `http://localhost:4000`
 * Run `ng deploy` to deploy to Google Firebase Hosting (already setup)
+
+## :wrench: Testing
+
+* Run `npm run test` to run Jasmine tests using Karma
+* Run `npm run e2e` to run end to end testing
 
 ## :computer: Code Examples - Backend
 
@@ -155,10 +161,11 @@ export class GithubService {
 * [Storing array in session storage](https://stackoverflow.com/questions/51123210/storing-array-content-in-session-storage)
 * [Zain Zafar, Medium: LocalStorage with Angular Universal](https://medium.com/@zainzafar/localstorage-with-angular-universal-2a111fb4af72)
 
-## :clipboard: Status & To-Do List
+## :clipboard: Status, Testing & To-Do List
 
-* Status: Working. Build file created with no errors. Deployed to Firebase
-* To-Do: Fis SSR, check SSR lighthouse score, add backend & connect to frontend cards
+* Status: Working. Build file created with no errors. All files pass linting. Deployed to Firebase
+* Testing: 7 test files all pass. e2e runs and passes but no specs
+* To-Do: Add more Jasmine & e2e test files. Add backend & connect to frontend cards
 
 ## :clap: Inspiration/General Tools
 
@@ -169,6 +176,7 @@ export class GithubService {
 * [Archive converter](https://convertio.co/es/) converts png to jp2 etc
 * [Deployment to Firebase Hosting with Angular CLI 9 in 5 Easy Steps](https://www.techiediaries.com/angular-firebase/deployment-to-firebase-hosting-angular-cli-9/)
 * [Efficiently load JavaScript with defer and async](https://flaviocopes.com/javascript-async-defer/)
+* [Google Analytics: Add gtag.js to your site](https://developers.google.com/analytics/devguides/collection/gtagjs)
 
 ## :envelope: Contact
 

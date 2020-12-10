@@ -8,10 +8,10 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('pean-stack-api-display');
-  });
+  // it('should display welcome message', async () => {
+  //   await page.navigateTo();
+  //   expect(await page.getTitleText()).toEqual('angular-apis');
+  // });
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
