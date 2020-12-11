@@ -65,7 +65,7 @@
 * [Font Awesome icons](https://fontawesome.com/icons?d=gallery)
 * [Font Awesome v5](https://fontawesome.com/) icons
 * [jQuery v3](https://jquery.com/download/) required by Bootstrap. Latest version 3.5.1 resolved nav-bar breaking change in previous version.
-* [Angular Express Engine](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
+* [Angular Express Engine v11](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
 * [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) to check quality of website
 * [Google Charts](https://developers.google.com/chart/interactive/docs/gallery)
 * [Palantir](https://palantir.github.io/tslint/) extensible linter for the TypeScript language
@@ -92,8 +92,8 @@
 
 ## :wrench: Testing
 
-* Run `npm run test` to run Jasmine tests using Karma
-* Run `npm run e2e` to run end to end testing
+* Run `ng test` to run Jasmine unit tests via [Karma](https://karma-runner.github.io)
+* Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## :computer: Code Examples - Backend
 
