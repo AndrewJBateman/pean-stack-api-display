@@ -1,5 +1,7 @@
+import { Breakpoints } from "@angular/cdk/layout";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { CLOUDINARY_CONFIG, NgxPictureModule } from "ngx-picture";
 import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
@@ -22,7 +24,8 @@ import { PipesModule } from "./pipes/pipes.module";
     AppRoutingModule,
     HttpClientModule,
     PipesModule,
-    FormsModule
+    FormsModule,
+    NgxPictureModule.forRoot(CLOUDINARY_CONFIG),
   ],
   providers: [],
   bootstrap: [AppComponent],

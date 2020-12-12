@@ -52,6 +52,7 @@
 ![Frontend screenshot](./img/github.png)
 ![Frontend screenshot](./img/info.png)
 ![Frontend test screenshot](./img/karma.png)
+![build test screenshot](./img/lighthse-pc.png)
 
 ## :signal_strength: Technologies - Backend
 
@@ -73,6 +74,7 @@
 * [Node.js compression middleware](https://www.npmjs.com/package/compression)
 * [UnCSS Online](https://uncss-online.com/) to identify unused CSS. Useful and simple tool.
 * [Window sessionStorage](https://www.w3schools.com/jsref/prop_win_sessionstorage.asp) used to store book search strings.
+* [ngx-picture](https://www.npmjs.com/package/ngx-picture) Angular library - [Github link](https://github.com/JayChase/ngx-picture) - to help properly size, lazy load images, and use next generation formats.
 
 ## :floppy_disk: Setup - Backend
 
@@ -165,7 +167,7 @@ export class GithubService {
 
 * Status: Working. Build file created with no errors. All files pass linting. Deployed to Firebase
 * Testing: 7 test files all pass. e2e runs and passes but no specs
-* To-Do: Add more Jasmine & e2e test files. Add backend & connect to frontend cards
+* To-Do: Add more Jasmine & e2e test files. Add backend & connect to frontend cards. Reduce render time for mobile build version.
 
 ## :clap: Inspiration/General Tools
 
@@ -177,6 +179,8 @@ export class GithubService {
 * [Deployment to Firebase Hosting with Angular CLI 9 in 5 Easy Steps](https://www.techiediaries.com/angular-firebase/deployment-to-firebase-hosting-angular-cli-9/)
 * [Efficiently load JavaScript with defer and async](https://flaviocopes.com/javascript-async-defer/)
 * [Google Analytics: Add gtag.js to your site](https://developers.google.com/analytics/devguides/collection/gtagjs)
+* [Lars Bilde: Youtube: Advanced Web Apps 2019 | Unit Testing in Angular | S3P1 | Introduction](https://www.youtube.com/watch?v=va5mY68yo4A&list=PL8jcXf-CLpxolmjV5_taFP0c5LyCveDF1)
+* [Logrocket: 5 tricks to eliminate render blocking resources](https://blog.logrocket.com/5-tricks-to-eliminate-render-blocking-resources/)
 
 ## :envelope: Contact
 

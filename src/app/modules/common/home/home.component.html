@@ -14,16 +14,19 @@
     <div class="card full-height" routerLink="/{{ item.link }}">
       <div class="card-img">
         <a>
-          <img
+          <ngx-picture
             class="card-img-top"
             src="./assets/params/images/api-images/{{ item.image }}"
             alt="Card image {{ item.title }}"
-          />
+            [lazyLoad]="true"
+            #picture
+          >
+          </ngx-picture>
         </a>
       </div>
       <div class="card-body">
         <h6 class="card-title">
-          <span style="font-size: 14px;"
+          <span style="font-size: 14px"
             ><i class="{{ item.icon }} fa-lg mr-2 text-info"></i
             ><strong>{{ item.title }} </strong></span
           >

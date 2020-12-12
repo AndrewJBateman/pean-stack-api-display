@@ -20,6 +20,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.0.4",
+    "@angular/cdk": "^11.0.2",
     "@angular/common": "~11.0.4",
     "@angular/compiler": "~11.0.4",
     "@angular/core": "~11.0.4",
@@ -42,6 +43,7 @@
     "firebase": "~8",
     "jquery": "^3.5.1",
     "leaflet": "^1.7.1",
+    "ngx-picture": "^2.0.14",
     "rxjs": "~6.6.3",
     "safe-pipe": "^1.0.3",
     "tslib": "^2.0.3",

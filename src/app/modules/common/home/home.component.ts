@@ -1,4 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Inject, OnInit, ViewChild } from "@angular/core";
+import { NgxPictureConfig, NGX_PICTURE_CONFIG } from "ngx-picture";
+import { PictureComponent } from "ngx-picture";
+
 import { Meta, Title } from "@angular/platform-browser";
 import { environment } from "../../../../environments/environment";
 
@@ -8,11 +11,21 @@ import { environment } from "../../../../environments/environment";
   styleUrls: ["./home.component.css"],
 })
 export class HomeComponent implements OnInit {
+  breakpoints = this.ngxPictureConfig.breakpoints;
+
+  @ViewChild('picture', { static: false })
+  picture: PictureComponent;
+
   name = environment.application.name;
 
   features: any;
 
-  constructor(private meta: Meta, private titleService: Title) {
+  constructor(
+    @Inject(NGX_PICTURE_CONFIG)
+    private ngxPictureConfig: NgxPictureConfig,
+    private meta: Meta,
+    private titleService: Title
+  ) {
     this.features = [
       {
         icon: "fas fa-satellite-dish",
@@ -77,7 +90,7 @@ export class HomeComponent implements OnInit {
         description: "Github repo search",
         image: "github.jpg",
         link: "github",
-      }
+      },
     ];
   }
 
