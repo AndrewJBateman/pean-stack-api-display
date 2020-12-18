@@ -24,7 +24,7 @@
 ### Frontend
 
 * Angular frontend includes Bootstrap responsive navbar with icon links
-* navbar drops down from top in phone size
+* Navbar drops down from top in phone size
 * About this site page **add *ngFor to accordian**
 * Author info card that gets data from Github and provides contact links
 * Main section made of 8 Bootstrap cards that link to API data
@@ -37,6 +37,7 @@
 * New York Times API - bestseller list displayed. Clicking on a bestseller shows it in a detail page with a link to the original article.**Displays images with incorrect aspect ratio**
 * Github card shows Github repo details from user search. Repo button redirects to repo list page. **github pagination to show more than 30 repos, add sessionStorage**
 * Deployed version: good Lighthouse score (mobile): home page: performance: 91% ('Remove dead rules from stylesheets and defer the loading of CSS not used for above-the-fold content to reduce unnecessary bytes consumed by network activity.'), accessibility: 100%, Best practises: 100%, SEO 100%, PWA. **Add cache policy, remove unused Bootstrap CSS**
+* [Versión 81.0.4044.92 (Build oficial) (64 bits)](https://www.google.com/chrome/) latest version was required to get e2e testing to work
 
 ## :camera: Screenshots
 
@@ -64,7 +65,6 @@
 * [Angular Universal v11](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
 * [Bootstrap v4](https://getbootstrap.com/)
 * [Font Awesome icons](https://fontawesome.com/icons?d=gallery)
-* [Font Awesome v5](https://fontawesome.com/) icons
 * [jQuery v3](https://jquery.com/download/) required by Bootstrap. Latest version 3.5.1 resolved nav-bar breaking change in previous version.
 * [Angular Express Engine v11](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
 * [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) to check quality of website
@@ -153,7 +153,6 @@ export class GithubService {
 
 ## :cool: Features - Frontend
 
-* [Versión 81.0.4044.92 (Build oficial) (64 bits)](https://www.google.com/chrome/) latest version was required to get e2e testing to work
 * [http data handling best practices](https://angular.io/guide/http) followed - i.e. use of separate service file to get API data then use of subscription callback function in component to subscribe to Observable data. Response object type defined using an interface model. Interface passed as type parameter to the HttpClient.get() method and RxJS map operator used to transform response data. Transformed data passed to async pipe.
 * [Angular Activated Route snapshot params](https://angular.io/api/router/ActivatedRoute) used to pass username from github user search page to github repo display page.
 * [Angular Universal](https://angular.io/guide/universal) used to generate static pages using Server Side Rendering (SSR) - to increase display speed and add Search Engine Optimisation (SEO). _A normal Angular application executes in the browser, rendering pages in the DOM in response to user actions. Angular Universal executes on the server, generating static application pages that later get bootstrapped on the client. This means that the application generally renders more quickly, giving users a chance to view the application layout before it becomes fully interactive._
@@ -167,7 +166,7 @@ export class GithubService {
 
 * Status: Working. Build file created with no errors. All files pass linting. Deployed to Firebase
 * Testing: 7 test files all pass. e2e runs and passes but no specs
-* To-Do: Add more Jasmine & e2e test files. Add backend & connect to frontend cards. Reduce render time for mobile build version.
+* To-Do: Lighthouse: Fix SEO & reduce render time for mobile build version.. Add more Jasmine & e2e test files. Add backend & connect to frontend cards.
 
 ## :clap: Inspiration/General Tools
 
