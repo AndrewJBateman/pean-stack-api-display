@@ -41,19 +41,18 @@
 
 ## :camera: Screenshots
 
-![Frontend screenshot](./img/front.png)
-![Frontend screenshot](./img/nasa.png)
-![Frontend screenshot](./img/crypto.png)
-![Frontend screenshot](./img/map.png)
-![Frontend screenshot](./img/news.png)
-![Frontend screenshot](./img/charts.png)
-![Frontend screenshot](./img/books.png)
-![Frontend screenshot](./img/bestsellers.png)
-![Frontend screenshot](./img/bestseller-detail.png)
-![Frontend screenshot](./img/github.png)
-![Frontend screenshot](./img/info.png)
-![Frontend test screenshot](./img/karma.png)
-![build test screenshot](./img/lighthse-pc.png)
+![Frontend screenshot](./img/pean.jpg)
+![Frontend screenshot](./img/nasa.jpg)
+![Frontend screenshot](./img/crypto.jpg)
+![Frontend screenshot](./img/map.jpg)
+![Frontend screenshot](./img/news.jpg)
+![Frontend screenshot](./img/charts.jpg)
+![Frontend screenshot](./img/books.jpg)
+![Frontend screenshot](./img/bestsellers.jpg)
+![Frontend screenshot](./img/bestseller-detail.jpg)
+![Frontend screenshot](./img/github.jpg)
+![Frontend screenshot](./img/info.jpg)
+![Frontend test screenshot](./img/karma.jpg)
 
 ## :signal_strength: Technologies - Backend
 
@@ -75,6 +74,7 @@
 * [UnCSS Online](https://uncss-online.com/) to identify unused CSS. Useful and simple tool.
 * [Window sessionStorage](https://www.w3schools.com/jsref/prop_win_sessionstorage.asp) used to store book search strings.
 * [ngx-picture](https://www.npmjs.com/package/ngx-picture) Angular library - [Github link](https://github.com/JayChase/ngx-picture) - to help properly size, lazy load images, and use next generation formats.
+* [Easy-Resize.com](https://www.easy-resize.com/en/) to resize pictures online
 
 ## :floppy_disk: Setup - Backend
 
