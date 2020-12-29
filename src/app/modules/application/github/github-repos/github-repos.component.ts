@@ -1,9 +1,9 @@
 import { Component, OnInit } from "@angular/core";
-import { Repo } from "src/app/models/repo";
 import { ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
 
 import { GithubService } from "../../../../services/github.service";
+import { Repo } from "src/app/models/repo";
 
 @Component({
   selector: "app-github-repos",

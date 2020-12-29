@@ -12,10 +12,13 @@
     *ngFor="let item of features"
   >
     <div class="card full-height" routerLink="/{{ item.link }}">
-      <div class="card-img">
+      <div>
         <a>
           <ngx-picture
+            class="card-img"
             src="./assets/params/images/api-images/{{ item.image }}"
+            width="640"
+            height="360"
             alt="Card image {{ item.title }}"
             [lazyLoad]="true"
             #picture
@@ -26,7 +29,6 @@
       <div class="card-body">
         <h6 class="card-title">
           <span style="font-size: 14px"
-            ><i class="{{ item.icon }} fa-lg mr-2 text-info"></i
             ><strong>{{ item.title }} </strong></span
           >
         </h6>

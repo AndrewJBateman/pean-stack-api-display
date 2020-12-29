@@ -1,6 +1,6 @@
 $(function () {
-  var navMain = $("#navbarsExampleDefault");
+  var navMain = $("#mainNavbar");
   navMain.on("click", "a", null, function () {
-    navMain.collapse('hide');
+    navMain.collapse("hide");
   });
 });

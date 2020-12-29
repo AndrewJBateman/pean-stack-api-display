@@ -11,6 +11,10 @@ import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
 import { NavbarComponent } from "./modules/common/navbar/navbar.component";
 import { PipesModule } from "./pipes/pipes.module";
+import { SvgInfoComponent } from './components/svg-info/svg-info.component';
+import { SvgListComponent } from './components/svg-list/svg-list.component';
+import { SvgGithubComponent } from './components/svg-github/svg-github.component';
+import { SvgContactComponent } from './components/svg-contact/svg-contact.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +22,10 @@ import { PipesModule } from "./pipes/pipes.module";
     HomeComponent,
     NotFoundComponent,
     NavbarComponent,
+    SvgInfoComponent,
+    SvgListComponent,
+    SvgGithubComponent,
+    SvgContactComponent,
   ],
   imports: [
     BrowserModule,

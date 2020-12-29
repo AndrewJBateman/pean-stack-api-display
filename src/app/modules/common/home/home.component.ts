@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
   ) {
     this.features = [
       {
-        icon: "fas fa-satellite-dish",
         type: "Nasa",
         title: "Nasa API",
         description: "Astronomy Picture of the Day.",
@@ -36,7 +35,6 @@ export class HomeComponent implements OnInit {
         link: "nasa",
       },
       {
-        icon: "fab fa-btc",
         type: "Crypto",
         title: "Cryptocurrency API",
         description: "Cryptocurrency data table",
@@ -44,7 +42,6 @@ export class HomeComponent implements OnInit {
         link: "crypto",
       },
       {
-        icon: "fas fa-map-marker",
         type: "Map",
         title: "Map API",
         description: "Current location shown on map.",
@@ -52,7 +49,6 @@ export class HomeComponent implements OnInit {
         link: "map",
       },
       {
-        icon: "far fa-newspaper",
         type: "News",
         title: "News API",
         description: "News from the user's country.",
@@ -60,7 +56,6 @@ export class HomeComponent implements OnInit {
         link: "news",
       },
       {
-        icon: "fas fa-chart-bar",
         type: "Google-charts",
         title: "Google Charts",
         description: "Data shown using Google charts",
@@ -68,7 +63,6 @@ export class HomeComponent implements OnInit {
         link: "google-charts",
       },
       {
-        icon: "fas fa-book-open",
         type: "Books",
         title: "Books API",
         description: "Google book search facility",
@@ -76,7 +70,6 @@ export class HomeComponent implements OnInit {
         link: "books",
       },
       {
-        icon: "fas fa-book-reader",
         type: "Bestsellers",
         title: "Bestsellers API",
         description: "New York Times Bestsellers",
@@ -84,7 +77,6 @@ export class HomeComponent implements OnInit {
         link: "nyt-bestsellers",
       },
       {
-        icon: "fab fa-github",
         type: "Github",
         title: "Github API",
         description: "Github repo search",

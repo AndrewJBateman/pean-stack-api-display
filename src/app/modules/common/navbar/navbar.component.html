@@ -10,7 +10,7 @@
     [routerLinkActiveOptions]="{ exact: true }"
   >
     <span class="mr-1">
-      <i class="fas fa-list"></i>
+      <app-svg-list></app-svg-list>
       <!-- {{ name }} -->
     </span>
   </a>
@@ -176,56 +176,46 @@
     class="navbar-toggler"
     type="button"
     data-toggle="collapse"
-    data-target="#navbarsExampleDefault"
-    aria-controls="navbarsExampleDefault"
+    data-target="#mainNavbar"
+    aria-controls="mainNavbar"
     aria-expanded="false"
     aria-label="Toggle navigation"
   >
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+  <div class="collapse navbar-collapse" id="mainNavbar">
     <ul class="navbar-nav ml-auto">
       <li>
         <a
           class="nav-link"
-          aria-label="about nav link active"
+          aria-label="about nav link"
           routerLink="/about"
           routerLinkActive="nav-link-active"
           [routerLinkActiveOptions]="{ exact: true }"
         >
-          <i class="fa fa-info-circle"></i>
+          <app-svg-info></app-svg-info>
         </a>
       </li>
-      <!-- <li>
-        <a
-          class="nav-link"
-          routerLink="/signin"
-          routerLinkActive="nav-link-active"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
-          <i class="fas user-shield"></i>
-        </a>
-      </li> -->
       <li>
         <a
           class="nav-link"
-          aria-label="contact nav link active"
+          aria-label="contact nav link"
           routerLink="/contact"
           routerLinkActive="nav-link-active"
           [routerLinkActiveOptions]="{ exact: true }"
         >
-          <i class="far fa-address-card"></i>
+          <app-svg-contact></app-svg-contact>
         </a>
       </li>
       <li>
         <a
-          class="nav-link-social"
+          class="nav-link"
           aria-label="github nav link"
           href="https://github.com/AndrewJBateman"
           target="_blank"
           rel="noreferrer"
         >
-          <i class="fab fa-github social"></i>
+          <app-svg-github></app-svg-github>
         </a>
       </li>
     </ul>
