@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { map } from "rxjs/operators";
+import { map, take } from "rxjs/operators";
 import { Observable } from "rxjs";
 
 import { Crypto } from "../models/crypto";
@@ -23,6 +23,8 @@ export class CryptoService {
           fsymsList +
           "&tsyms=EUR"
       )
-      .pipe(map((data: Crypto) => data));
+      .pipe(
+        take(1),
+      );
   }
 }

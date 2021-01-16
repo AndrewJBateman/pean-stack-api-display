@@ -25,13 +25,13 @@ export class GithubReposComponent implements OnInit {
     this.searchRepos(this.route.snapshot.params.username);
   }
 
-  searchRepos(userName: string) {
+  searchRepos(userName: string): any {
     this.githubService.getRepos(userName).subscribe((repos: Repo) => {
       this.repos = repos;
     });
   }
 
-  returnToUser() {
+  returnToUser(): void {
     this.location.back();
   }
 }

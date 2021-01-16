@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 import { GoogleChartService } from "../../../../services/google-chart.service";
 
@@ -7,7 +7,7 @@ import { GoogleChartService } from "../../../../services/google-chart.service";
   templateUrl: "./bar-chart.component.html",
   styleUrls: ["./bar-chart.component.css"],
 })
-export class BarChartComponent implements OnInit {
+export class BarChartComponent {
   private gLib: any;
 
   constructor(private gChartService: GoogleChartService) {
@@ -20,9 +20,7 @@ export class BarChartComponent implements OnInit {
     this.gLib.charts.setOnLoadCallback(this.drawChart.bind(this));
   }
 
-  ngOnInit() {}
-
-  private drawChart() {
+  private drawChart(): any {
     const data = this.gLib.visualization.arrayToDataTable([
       ["Element", "Density", { role: "style" }, { role: "annotation" }],
       ["Copper", 8.94, "#b87333", "Cu"], // RGB value

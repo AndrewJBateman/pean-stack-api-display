@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Observable } from "rxjs";
 import { NasaService } from "../../../services/nasa.service";
 
 @Component({
@@ -13,7 +14,7 @@ export class NasaComponent implements OnInit {
 
   constructor(private nasaApi: NasaService) {}
 
-  ngOnInit() {
+  ngOnInit(): any {
     this.nasaApi.getNasaImage().subscribe((response) => {
       this.nasaImgObj = response;
     });

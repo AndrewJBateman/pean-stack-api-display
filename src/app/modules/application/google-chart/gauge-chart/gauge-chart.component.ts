@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 import { GoogleChartService } from "../../../../services/google-chart.service";
 
@@ -7,7 +7,7 @@ import { GoogleChartService } from "../../../../services/google-chart.service";
   templateUrl: "./gauge-chart.component.html",
   styleUrls: ["./gauge-chart.component.css"],
 })
-export class GaugeChartComponent implements OnInit {
+export class GaugeChartComponent {
   private gLib: any;
 
   constructor(private gChartService: GoogleChartService) {
@@ -20,9 +20,7 @@ export class GaugeChartComponent implements OnInit {
     this.gLib.charts.setOnLoadCallback(this.drawChart.bind(this));
   }
 
-  ngOnInit() {}
-
-  private drawChart() {
+  private drawChart(): void {
     const data = this.gLib.visualization.arrayToDataTable([
       ["Label", "Value"],
       ["Memory", 80],

@@ -13,7 +13,7 @@ export class CryptoComponent implements OnInit {
 
   constructor(private cryptoService: CryptoService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.cryptoService.getPrices().subscribe((res) => {
       this.cryptos = res;
     });

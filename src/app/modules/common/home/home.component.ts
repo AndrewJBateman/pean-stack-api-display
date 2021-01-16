@@ -13,7 +13,7 @@ import { environment } from "../../../../environments/environment";
 export class HomeComponent implements OnInit {
   breakpoints = this.ngxPictureConfig.breakpoints;
 
-  @ViewChild('picture', { static: false })
+  @ViewChild("picture", { static: false })
   picture: PictureComponent;
 
   name = environment.application.name;
@@ -86,7 +86,7 @@ export class HomeComponent implements OnInit {
     ];
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.titleService.setTitle("Angular APIs");
     this.meta.addTag({
       name: "Angular app",

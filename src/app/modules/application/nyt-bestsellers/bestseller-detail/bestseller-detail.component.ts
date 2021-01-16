@@ -29,7 +29,7 @@ export class BestsellerDetailComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  returnToList() {
+  returnToList(): void {
     this.location.back();
   }
 }

@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { throwError, Observable } from "rxjs";
-import { map, catchError, tap } from "rxjs/operators";
+import { catchError, take } from "rxjs/operators";
 
 import { Books } from "../models/nyt";
 import { environment } from "../../environments/environment";
@@ -20,7 +20,7 @@ export class NytBestsellersService {
   getBooks(): Observable<Books> {
     const booksUrl = `${apiUrl}api-key=${apiKey}`;
     return this.http.get<Books>(booksUrl).pipe(
-      map((data: Books) => data),
+      take(1),
       catchError((err) => {
         return throwError(
           "Problem fetching bestsellers from API, error: ",

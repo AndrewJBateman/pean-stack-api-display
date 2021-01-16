@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, OnInit } from "@angular/core";
+import { Component, AfterViewInit } from "@angular/core";
 import * as L from "leaflet";
 
 import { LocationService } from "../../../services/location.service";
@@ -8,7 +8,7 @@ import { LocationService } from "../../../services/location.service";
   templateUrl: "./map.component.html",
   styleUrls: ["./map.component.css"],
 })
-export class MapComponent implements OnInit, AfterViewInit {
+export class MapComponent implements AfterViewInit {
   lat = "";
   lng = "";
   country = "";
@@ -19,8 +19,6 @@ export class MapComponent implements OnInit, AfterViewInit {
   map: any;
 
   constructor(private locationService: LocationService) {}
-
-  ngOnInit() {}
 
   // Called after component's views and child views are initialised
   ngAfterViewInit(): void {

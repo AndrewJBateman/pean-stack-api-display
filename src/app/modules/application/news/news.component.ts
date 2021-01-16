@@ -17,7 +17,7 @@ export class NewsComponent implements OnInit {
     this.getNytNews();
   }
 
-  getNytNews() {
+  getNytNews(): any {
     this.newsService.getNews().subscribe((data: TopStories) => {
       this.mArticles = data.results;
     });

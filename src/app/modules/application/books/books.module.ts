@@ -4,12 +4,12 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { BooksComponent } from "./books.component";
 import { BooksRoutingModule } from "./books-routing.module";
-import { PersistanceService } from '../../../services/localstorage.service';
+import { PersistanceService } from "../../../services/localstorage.service";
 
 @NgModule({
   imports: [CommonModule, BooksRoutingModule, FormsModule, ReactiveFormsModule],
   exports: [BooksComponent],
   declarations: [BooksComponent],
-  providers: [PersistanceService]
+  providers: [PersistanceService],
 })
 export class BooksModule {}

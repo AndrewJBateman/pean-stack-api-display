@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 import { GoogleChartService } from "../../../../services/google-chart.service";
 
@@ -7,7 +7,7 @@ import { GoogleChartService } from "../../../../services/google-chart.service";
   templateUrl: "./line-chart.component.html",
   styleUrls: ["./line-chart.component.css"],
 })
-export class LineChartComponent implements OnInit {
+export class LineChartComponent {
   private gLib: any;
 
   constructor(private gChartService: GoogleChartService) {
@@ -19,10 +19,7 @@ export class LineChartComponent implements OnInit {
     // Set a callback to run when the Google Visualization API is loaded.
     this.gLib.charts.setOnLoadCallback(this.drawChart.bind(this));
   }
-
-  ngOnInit() {}
-
-  private drawChart() {
+  private drawChart(): any {
     const data = this.gLib.visualization.arrayToDataTable([
       ["Year", "Sales", "Expenses"],
       ["2004", 1000, 400],

@@ -20,18 +20,18 @@ export class GithubComponent implements OnInit {
     this.getUser("andrewjbateman");
   }
 
-  submitForm(githubSearch: any) {
+  submitForm(githubSearch: any): any {
     this.getUser(githubSearch.value.name);
   }
 
-  getUser(userName: string) {
+  getUser(userName: string): any {
     this.displayCleared = false;
     this.githubService.getUser(userName).subscribe((user) => {
       this.user = user;
     });
   }
 
-  clearUser() {
+  clearUser(): void {
     this.displayCleared = true;
   }
 }

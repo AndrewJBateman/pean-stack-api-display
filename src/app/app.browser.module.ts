@@ -1,19 +1,23 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import {
+  BrowserModule,
+  BrowserTransferStateModule,
+} from "@angular/platform-browser";
 
-import { AppModule } from './app.module';
-import { AppComponent } from './app.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
+import { AppModule } from "./app.module";
+import { AppComponent } from "./app.component";
+import { ServiceWorkerModule } from "@angular/service-worker";
+import { environment } from "../environments/environment";
 
 @NgModule({
   imports: [
     AppModule,
-    BrowserModule.withServerTransition({ appId: 'pern-stack-api-display' }),
+    BrowserModule.withServerTransition({ appId: "pern-stack-api-display" }),
     BrowserTransferStateModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register("ngsw-worker.js", {
+      enabled: environment.production,
+    }),
   ],
   bootstrap: [AppComponent],
 })
-
-export class AppBrowserModule { }
+export class AppBrowserModule {}

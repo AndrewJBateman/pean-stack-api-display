@@ -12,7 +12,7 @@ export class GoogleChartService {
     this.google = google;
   }
 
-  getGoogle() {
+  getGoogle(): any {
     return this.google;
   }
 }

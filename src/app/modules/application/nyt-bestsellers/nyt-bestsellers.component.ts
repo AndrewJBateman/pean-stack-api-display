@@ -24,13 +24,13 @@ export class NytBestsellersComponent implements OnInit {
     this.getBestsellers();
   }
 
-  getBestsellers() {
+  getBestsellers(): any {
     this.nytBestsellersService.getBooks().subscribe((data: Books) => {
       this.bestsellerLists = data.results.lists;
     });
   }
 
-  onGoToBestsellerDetail(bestseller: Book) {
+  onGoToBestsellerDetail(bestseller: Book): any {
 
     const navigationExtras: NavigationExtras = {
       state: {

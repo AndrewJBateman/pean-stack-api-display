@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
 
@@ -9,7 +9,7 @@ import { Book } from "src/app/models/books";
   templateUrl: "./book-detail.component.html",
   styleUrls: ["./book-detail.component.css"],
 })
-export class BookDetailComponent implements OnInit {
+export class BookDetailComponent {
   book: Book;
 
   constructor(
@@ -24,9 +24,7 @@ export class BookDetailComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
-
-  returnToList() {
+  returnToList(): void {
     this.location.back();
   }
 }

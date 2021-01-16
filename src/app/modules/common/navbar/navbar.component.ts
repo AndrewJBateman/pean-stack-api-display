@@ -14,59 +14,59 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  isHomeRoute() {
+  isHomeRoute(): boolean {
     return this.router.url === "/";
   }
 
-  isNasaRoute() {
+  isNasaRoute(): boolean {
     return this.router.url === "/nasa";
   }
 
-  isCryptoRoute() {
+  isCryptoRoute(): boolean {
     return this.router.url === "/crypto";
   }
 
-  isMapRoute() {
+  isMapRoute(): boolean {
     return this.router.url === "/map";
   }
 
-  isNewsRoute() {
+  isNewsRoute(): boolean {
     return this.router.url === "/news";
   }
 
-  isGoogleChartsRoute() {
+  isGoogleChartsRoute(): boolean {
     return this.router.url === "/google-charts";
   }
 
-  isBooksRoute() {
+  isBooksRoute(): boolean {
     return this.router.url === "/books";
   }
 
-  isBookDetailRoute() {
+  isBookDetailRoute(): boolean {
     return this.router.url.includes("/book-detail");
   }
 
-  isNytBestsellersRoute() {
+  isNytBestsellersRoute(): boolean {
     return this.router.url === "/nyt-bestsellers";
   }
 
-  isBestsellerDetailRoute() {
+  isBestsellerDetailRoute(): boolean {
     return this.router.url.includes("/bestseller-detail");
   }
 
-  isGithubUserRoute() {
+  isGithubUserRoute(): boolean {
     return this.router.url === ("/github");
   }
 
-  isGithubRepoRoute() {
+  isGithubRepoRoute(): boolean {
     return this.router.url.includes("/github-repos");
   }
 
-  isAboutRoute() {
+  isAboutRoute(): boolean {
     return this.router.url === "/about";
   }
 
-  isContactRoute() {
+  isContactRoute(): boolean {
     return this.router.url === "/contact";
   }
 

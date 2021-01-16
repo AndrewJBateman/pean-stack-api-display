@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component} from "@angular/core";
 import { GoogleChartService } from "../../../../services/google-chart.service";
 
 @Component({
@@ -6,7 +6,7 @@ import { GoogleChartService } from "../../../../services/google-chart.service";
   templateUrl: "./pie-chart.component.html",
   styleUrls: ["./pie-chart.component.css"],
 })
-export class PieChartComponent implements OnInit {
+export class PieChartComponent {
   private gLib: any;
 
   constructor(private gChartService: GoogleChartService) {
@@ -19,9 +19,7 @@ export class PieChartComponent implements OnInit {
     this.gLib.charts.setOnLoadCallback(this.drawChart.bind(this));
   }
 
-  ngOnInit() {}
-
-  private drawChart() {
+  private drawChart(): void {
     const chart = new this.gLib.visualization.PieChart(
       document.getElementById("divPieChart")
     );

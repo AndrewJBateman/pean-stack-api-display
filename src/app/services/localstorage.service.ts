@@ -12,7 +12,7 @@ export class PersistanceService {
     }
   }
 
-  get(key: string) {
+  get(key: string): string {
     try {
       return JSON.parse(sessionStorage.getItem(key));
     } catch (err) {

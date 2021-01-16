@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { throwError, Observable } from "rxjs";
-import { map, catchError, tap } from "rxjs/operators";
+import { catchError, take } from "rxjs/operators";
 
 import { User } from "../models/user";
 import { Repo } from "../models/repo";
@@ -21,7 +21,7 @@ export class GithubService {
     return this.http
       .get<User>(userSearchUrl, { params })
       .pipe(
-        map((data: User) => data),
+        take(1),
         catchError((err) => {
           return throwError(
             "There was a problem fetching data from Github API, error: ",
@@ -39,7 +39,7 @@ export class GithubService {
     return this.http
       .get<Repo>(repoSearchUrl, { params })
       .pipe(
-        map((obj) => obj),
+        take(1),
         catchError((err) => {
           return throwError(
             "There was a problem fetching data from Github API, error: ",

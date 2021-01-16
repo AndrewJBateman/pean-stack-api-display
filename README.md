@@ -25,7 +25,7 @@
 
 - Angular frontend includes Bootstrap responsive navbar with icon links
 - Navbar drops down from top in phone size
-- About this site page **add \*ngFor to accordian**
+- About this site page
 - Author info card that gets data from Github and provides contact links
 - Main section made of 8 Bootstrap cards that link to API data
 - NASA card shows Astronomy Picture of the Day (APOD) from the [NASA API](https://api.nasa.gov/). Note video function requires npm module [safe-pipe](https://www.npmjs.com/package/safe-pipe)
@@ -63,7 +63,7 @@
 - [Angular framework v11](https://angular.io/)
 - [Angular Universal v11](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
 - [Bootstrap v4](https://getbootstrap.com/)
-- [Font Awesome icons](https://fontawesome.com/icons?d=gallery)
+- [Font Awesome icons](https://fontawesome.com/icons?d=gallery) converted to svg components
 - [jQuery v3](https://jquery.com/download/) required by Bootstrap. Latest version 3.5.1 resolved nav-bar breaking change in previous version.
 - [Angular Express Engine v11](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
 - [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) to check quality of website
@@ -115,11 +115,10 @@ export class GithubService {
 
   getUser(user: string): Observable<User> {
     const userSearchUrl = `${baseUrl + user}`;
-
     return this.http
       .get<User>(userSearchUrl, { params })
       .pipe(
-        map((obj) => obj),
+        take(1),
         catchError((err) => {
           return throwError(
             "There was a problem fetching data from Github API, error: ",
@@ -130,12 +129,14 @@ export class GithubService {
   }
 
   getRepos(user: string): Observable<Repo> {
-    const repoSearchUrl = `${baseUrl + user + "/repos?per_page=100&page=1"}`;
+    const repoSearchUrl = `${
+      baseUrl + user + "/repos?order=updated&sort=desc?per_page=100&page=1"
+    }`;
 
     return this.http
       .get<Repo>(repoSearchUrl, { params })
       .pipe(
-        map((obj) => obj),
+        take(1),
         catchError((err) => {
           return throwError(
             "There was a problem fetching data from Github API, error: ",
@@ -154,6 +155,7 @@ export class GithubService {
 ## :cool: Features - Frontend
 
 - [http data handling best practices](https://angular.io/guide/http) followed - i.e. use of separate service file to get API data then use of subscription callback function in component to subscribe to Observable data. Response object type defined using an interface model. Interface passed as type parameter to the HttpClient.get() method and RxJS map operator used to transform response data. Transformed data passed to async pipe.
+- [RxJS take](https://rxjs-dev.firebaseapp.com/api/operators/take)) used instead of map() to emit only the first count value emitted by the source Observable. Then it completes - so no need to unsubscribe to avoid memory leaks.
 - [Angular Activated Route snapshot params](https://angular.io/api/router/ActivatedRoute) used to pass username from github user search page to github repo display page.
 - [Angular Universal](https://angular.io/guide/universal) used to generate static pages using Server Side Rendering (SSR) - to increase display speed and add Search Engine Optimisation (SEO). _A normal Angular application executes in the browser, rendering pages in the DOM in response to user actions. Angular Universal executes on the server, generating static application pages that later get bootstrapped on the client. This means that the application generally renders more quickly, giving users a chance to view the application layout before it becomes fully interactive._
 - Progressive Web App (PWA) functionality added

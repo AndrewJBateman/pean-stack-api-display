@@ -47,7 +47,7 @@ export class BooksComponent implements OnInit {
     });
   }
 
-  clearStore() {
+  clearStore(): void {
     this.storageService.clear();
     this.searchForm.reset();
     this.booksArray = [];
