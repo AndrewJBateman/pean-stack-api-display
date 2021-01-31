@@ -14,9 +14,7 @@
           alt="Book logo"
         />
         <h5 class="card-title text-dark">Google Book API</h5>
-        <h6 class="card-subtitle font-italic">
-          Search by title
-        </h6>
+        <h6 class="card-subtitle font-italic">Search by title</h6>
       </div>
       <div class="card-body">
         <!--User input of book title-->
@@ -53,16 +51,19 @@
         </form>
       </div>
     </div>
-    <!--cards for book search results-->
-    <div class="row">
+    <!--cards for book search result-->
+    <div class="row" *ngIf="booksArray">
       <div
         class="book-card col-lg-2 col-md-3 col-sm-3 col-xs-6 p-2 text-center"
         *ngFor="let book of booksArray"
       >
         <img
-          style="width: 140px; height: 224px;"
-          *ngIf="book.volumeInfo.imageLinks.thumbnail"
-          [src]="book.volumeInfo.imageLinks.thumbnail"
+          src="{{
+            book.volumeInfo.imageLinks != undefined
+              ? book.volumeInfo.imageLinks.smallThumbnail
+              : 'assets/params/images/not-found.png'
+          }}"
+          style="width: 140px; height: 224px"
           (click)="onGoToBookDetail(book)"
           alt="Book image"
         />

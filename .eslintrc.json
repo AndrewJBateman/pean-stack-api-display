@@ -1,0 +1,29 @@
+{
+    "env": {
+				"browser": true
+    },
+		"extends": "eslint:recommended",
+		"parser": "babel-eslint",
+    "parserOptions": {
+			"ecmaFeatures": {
+				"legacyDecorators": true,
+				"jsx": true
+			},
+			"ecmaVersion": 6,
+			"sourceType": "module",
+			"allowImportExportEverywhere": true
+    },
+    "rules": {
+			"strict": 0,
+        "indent": 0,
+        "linebreak-style": 0,
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+				]
+    }
+}

@@ -5,9 +5,13 @@
 <div class="main-div">
   <div class="card">
     <div class="row no-gutters">
-      <div class="col-sm-4" style="background: #868e96;">
+      <div class="col-sm-4" style="background: #868e96">
         <img
-          [src]="book.volumeInfo.imageLinks.thumbnail"
+          src="{{
+            book.volumeInfo.imageLinks != undefined
+              ? book.volumeInfo.imageLinks.thumbnail
+              : 'assets/params/images/not-found.png'
+          }}"
           class="card-img-top h-100"
           alt="book thumbnail image"
         />
@@ -20,12 +24,6 @@
                 <span class="text-dark font-weight-bold">Title: </span>
                 {{ book.volumeInfo.title }}
               </h5>
-            </div>
-            <div *ngIf="book.volumeInfo.subtitle">
-              <p>
-                <span class="text-secondary font-weight-bold">Subtitle: </span>
-                {{ book.volumeInfo.subtitle }}
-              </p>
             </div>
             <div *ngIf="book.volumeInfo.authors">
               <p>
@@ -109,9 +107,7 @@
             <!--group of buttons at bottom of rhs list-->
             <div class="d-flex justify-content-around">
               <div class="p-2">
-                <a
-                  (click)="returnToList()"
-                  class="btn btn-outline-primary"
+                <a (click)="returnToList()" class="btn btn-outline-primary"
                   >Back to List</a
                 >
               </div>

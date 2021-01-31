@@ -20,7 +20,7 @@ export class BooksComponent implements OnInit {
   searchedItem: string;
   searchString: string;
   searchedBooks: Book[];
-  booksArray: Book[];
+  booksArray: {};
   storedItems = false;
 
   constructor(

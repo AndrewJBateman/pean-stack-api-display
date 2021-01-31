@@ -1,3 +1,4 @@
+// API interface
 export interface GoogleBooksApiInterface {
   kind: string;
   totalItems: number;
@@ -11,94 +12,79 @@ export interface Book {
   volumeInfo: VolumeInfo;
   saleInfo: SaleInfo;
   accessInfo: AccessInfo;
-  searchInfo: SearchInfo;
 }
-export interface VolumeInfo {
-  title: string;
-  authors?: string[] | null;
-  publisher: string;
-  publishedDate: string;
-  description?: string | null;
-  industryIdentifiers?: IndustryIdentifiersEntity[] | null;
-  readingModes: ReadingModes;
-  pageCount?: number | null;
-  printType: string;
-  categories?: string[] | null;
-  averageRating?: number | null;
-  ratingsCount?: number | null;
-  maturityRating: string;
-  allowAnonLogging: boolean;
-  contentVersion: string;
-  imageLinks: ImageLinks;
-  language: string;
-  previewLink: string;
-  infoLink: string;
-  canonicalVolumeLink: string;
-  subtitle?: string | null;
-  panelizationSummary?: PanelizationSummary | null;
-}
-export interface IndustryIdentifiersEntity {
-  type: string;
-  identifier: string;
-}
-export interface ReadingModes {
-  text: boolean;
-  image: boolean;
-}
-export interface ImageLinks {
-  smallThumbnail: string;
-  thumbnail: string;
-}
-export interface PanelizationSummary {
-  containsEpubBubbles: boolean;
-  containsImageBubbles: boolean;
-}
-export interface SaleInfo {
-  country: string;
-  saleability: string;
-  isEbook: boolean;
-  listPrice?: ListPriceOrRetailPrice | null;
-  retailPrice?: ListPriceOrRetailPrice1 | null;
-  buyLink?: string | null;
-  offers?: OffersEntity[] | null;
-}
-export interface ListPriceOrRetailPrice {
-  amount: number;
-  currencyCode: string;
-}
-export interface ListPriceOrRetailPrice1 {
-  amount: number;
-  currencyCode: string;
-}
-export interface OffersEntity {
-  finskyOfferType: number;
-  listPrice: ListPriceOrRetailPrice2;
-  retailPrice: ListPriceOrRetailPrice2;
-}
-export interface ListPriceOrRetailPrice2 {
-  amountInMicros: number;
-  currencyCode: string;
-}
+
 export interface AccessInfo {
   country: string;
   viewability: string;
   embeddable: boolean;
   publicDomain: boolean;
   textToSpeechPermission: string;
-  epub: PdfOrEpub;
-  pdf: PdfOrEpub;
-  webReaderLink: string;
+  epub: Epub;
+  pdf: PDF;
   accessViewStatus: string;
-  quoteSharingAllowed: boolean;
 }
-export interface PdfOrEpub {
+
+export interface Epub {
   isAvailable: boolean;
-  acsTokenLink?: string | null;
+  acsTokenLink: string;
 }
-export interface SearchInfo {
-  textSnippet: string;
+
+export interface PDF {
+  isAvailable: boolean;
 }
-export interface SearchParams {
-  param: string;
-  paramLabel: string;
+
+export interface SaleInfo {
+  country: string;
+  saleability: string;
+  isEbook: boolean;
+  listPrice: Price;
+  retailPrice: Price;
+  buyLink: string;
+}
+
+export interface Price {
+  amount: number;
+  currencyCode: string;
+}
+
+export interface VolumeInfo {
+  title: string;
+  authors: string[];
+  publisher: string;
+  publishedDate: Date;
+  description: string;
+  industryIdentifiers: IndustryIdentifier[];
+  pageCount: number;
+  dimensions: Dimensions;
+  printType: string;
+  mainCategory: string;
+  categories: string[];
+  averageRating: number;
+  ratingsCount: number;
+  contentVersion: string;
+  imageLinks: ImageLinks;
+  language: string;
+  infoLink: string;
+  canonicalVolumeLink: string;
+}
+
+export interface Dimensions {
+  height: string;
+  width: string;
+  thickness: string;
+}
+
+export interface ImageLinks {
+  smallThumbnail: string;
+  thumbnail: string;
+  small: string;
+  medium: string;
+  large: string;
+  extraLarge: string;
+}
+
+export interface IndustryIdentifier {
+  type: string;
+  identifier: string;
 }

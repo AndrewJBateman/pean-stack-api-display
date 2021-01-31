@@ -20,6 +20,7 @@ export class BookDetailComponent {
     this.activatedRoute.queryParams.subscribe((params) => {
       if (this.router.getCurrentNavigation().extras.state) {
         this.book = this.router.getCurrentNavigation().extras.state.book;
+        console.log("this.book", this.book);
       }
     });
   }
