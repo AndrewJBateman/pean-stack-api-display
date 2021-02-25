@@ -168,7 +168,7 @@ export class GithubService {
 
 * Status: Working. Build file created with no errors. All files pass linting. Deployed to Firebase
 * Testing: 7 test files all pass. e2e runs and passes but no specs
-* To-Do: Lighthouse: Fix SEO & reduce render time for mobile build version. Add purgecss. Add more Jasmine & e2e test files. Replace all bootstrap font-awesome icons and uninstall font-awesome. Reduce image sizes to 5KB. Add backend & connect to frontend cards.
+* To-Do: Lighthouse: Fix SEO & reduce render time for mobile build version. Add purgecss. Add more Jasmine & e2e test files. Replace all bootstrap font-awesome icons and uninstall font-awesome. Reduce image sizes. Add backend & connect to frontend cards.
 
 ## :clap: Inspiration/General Tools
 
@@ -183,6 +183,7 @@ export class GithubService {
 * [Lars Bilde: Youtube: Advanced Web Apps 2019 | Unit Testing in Angular | S3P1 | Introduction](https://www.youtube.com/watch?v=va5mY68yo4A&list=PL8jcXf-CLpxolmjV5_taFP0c5LyCveDF1)
 * [Logrocket: 5 tricks to eliminate render blocking resources](https://blog.logrocket.com/5-tricks-to-eliminate-render-blocking-resources/)
 * [Cloud Engineering Studio: Yoko Ishioka: Componentize SVGs in Angular and style them on the fly](https://cloudengineering.studio/articles/componentize-svgs-in-angular-and-style-them-on-the-fly)
+* [Codegrepper: “the keyword import is reserved” Code Answer](https://www.codegrepper.com/code-examples/whatever/the+keyword+import+is+reserved)
 
 ## :envelope: Contact
 
