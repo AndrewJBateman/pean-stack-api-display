@@ -1,6 +1,7 @@
 # :zap: PEAN Full Stack API Display
 
-* PostgreSQL Express Angular Node (PEAN) full-stack app, integrates Angular frontend with Node.js backend. Shows a collection of API data.
+* PostgreSQL Express Angular Node (PEAN) full-stack app, integrates Angular frontend with Node.js backend.
+* Data fetched from public APIs and a Postgres database.
 
 **\* Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -19,13 +20,15 @@
 
 ### Backend
 
-* to follow
+* During dev PostgreSQL needs to be installed and running - I started it from my Windows 10 PostgreSQL 12 dropdown option 'SQL shell (psql)' or from the Node.js command prompt
+* Data for metals stored in a Postgres database then displayed on the frontend using Express.js
+* Postman used to test the backend
 
 ### Frontend
 
 * Angular frontend includes Bootstrap responsive navbar with icon links
 * Navbar drops down from top in phone size
-* About this site page
+* About this site page - summary info on each page
 * Author info card that gets data from Github and provides contact links
 * Main section made of 8 Bootstrap cards that link to API data
 * NASA card shows Astronomy Picture of the Day (APOD) from the [NASA API](https://api.nasa.gov/). Note video function requires npm module [safe-pipe](https://www.npmjs.com/package/safe-pipe)
@@ -56,7 +59,12 @@
 
 ## :signal_strength: Technologies - Backend
 
-* to follow
+* [PostgreSQL v12](https://www.postgresql.org/)
+* [PostgreSQL Installer for Windows](https://www.postgresqltutorial.com/install-postgresql/)
+* [Express.js middleware v4](https://expressjs.com/)
+* [Node.js v12](https://nodejs.org/es/)
+* [Nodemon](https://www.npmjs.com/package/nodemon) npm module so backend server will automatically restart after code changes
+* [Postman API](https://www.postman.com/downloads/) to simulate a frontend
 
 ## :signal_strength: Technologies - Frontend
 
@@ -78,7 +86,13 @@
 
 ## :floppy_disk: Setup - Backend
 
-* to follow
+* Install dependencies using `npm i`
+* Install [nodemon](https://www.npmjs.com/package/nodemon) globally if you don't already have it
+* Install [PostgreSQL](https://www.postgresql.org/) & run it (requires the password you created during installation)
+* Add database access credentials to `db.js` - recommend installing [npm dotenv](https://www.npmjs.com/package/dotenv) & using .env to hide credentials if commiting to Github
+* Postgresql shell commands: `\l` list all databases. `\c` database1 connect to database1. `\dt` inspect tables. `\d+` inspect table & show relation information. `\q` to quit
+* From root run `nodemon server` for a dev server
+* During dev `http://localhost:5000/` can be accessed for CRUD operations such as POST, GET, PUT, DELETE etc. using Postman
 
 ## :floppy_disk: Setup - Frontend
 
@@ -150,7 +164,7 @@ export class GithubService {
 
 ## :cool: Features - Backend
 
-* to follow
+* All data stored in PostgreSQL database that can also be viewed and changed from the PostgreSQL shell (psql) or other command prompt
 
 ## :cool: Features - Frontend
 

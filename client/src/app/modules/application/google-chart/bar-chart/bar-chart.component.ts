@@ -1,16 +1,20 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 import { GoogleChartService } from "../../../../services/google-chart.service";
+import { CrudService } from "../../../../services/crud.service";
+import { Metal } from "src/app/models/metal";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-bar-chart",
   templateUrl: "./bar-chart.component.html",
   styleUrls: ["./bar-chart.component.css"],
 })
-export class BarChartComponent {
+export class BarChartComponent implements OnInit {
   private gLib: any;
+  private crudData: Observable<Metal[]>;
 
-  constructor(private gChartService: GoogleChartService) {
+  constructor(private gChartService: GoogleChartService, private crudService: CrudService) {
     this.gLib = this.gChartService.getGoogle();
 
     // Load the Visualization API and the controls package.
@@ -18,6 +22,14 @@ export class BarChartComponent {
 
     // Set a callback to run when the Google Visualization API is loaded.
     this.gLib.charts.setOnLoadCallback(this.drawChart.bind(this));
+  }
+
+  ngOnInit(): void {
+    this.crudService.getAllMetals().subscribe((data: any) => {
+      this.crudData = data;
+      console.log("this.crudData: ", this.crudData);
+    });
+
   }
 
   private drawChart(): any {
