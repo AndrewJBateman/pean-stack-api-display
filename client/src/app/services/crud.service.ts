@@ -13,7 +13,6 @@ export class CrudService {
   constructor(private http: HttpClient) { }
 
   getAllMetals(): Observable<Metal[]> {
-    console.log("getAllMetals service started")
     return this.http.get<Metal[]>(baseUrl);
   }
 

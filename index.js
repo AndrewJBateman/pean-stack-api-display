@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === "production") {
 // get all metals
 app.get("/metals", async (req, res) => {
 	try {
-		const allMetals = await pool.query("SELECT * from metals");
+		const allMetals = await pool.query("SELECT * from metalsData");
 		res.status(200).json(allMetals.rows);
 	} catch (err) {
 		console.error(err.message);

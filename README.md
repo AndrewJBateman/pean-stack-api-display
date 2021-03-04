@@ -35,7 +35,7 @@
 * Crypto card shows prices of a list of cryptocurrencies from the [CryptoCompare API](https://min-api.cryptocompare.com/)
 * Map card shows location data from the [ipapi API](https://ipapi.co/) using the Leaflet JavaScript maps library.**Does not use passive listeners to improve scrolling performance**
 * NYT News card shows latest news from the [New York Times Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview)
-* Google charts card shows a range of charts using the [Google Charts API](https://developers.google.com/chart/) **Fix/replace pie chart labels, change data to come from backend json file then postgres database, Does not use passive listeners to improve scrolling performance**
+* Google charts card shows a range of charts using the [Google Charts API](https://developers.google.com/chart/) **Fix/replace pie chart labels, Does not use passive listeners to improve scrolling performance**
 * Google Book search card lets user search for any book. Results displayed in an array of Bootstrap cards. Clicking on a book shows it in detail.**Book links do not use HTTPS, Displays images with incorrect aspect ratio**
 * New York Times API - bestseller list displayed. Clicking on a bestseller shows it in a detail page with a link to the original article.**Displays images with incorrect aspect ratio**
 * Github card shows Github repo details from user search. Repo button redirects to repo list page. **github pagination to show more than 30 repos, add sessionStorage**
@@ -91,7 +91,7 @@
 * Install [PostgreSQL](https://www.postgresql.org/) & run it (requires the password you created during installation)
 * Add database access credentials to `db.js` - recommend installing [npm dotenv](https://www.npmjs.com/package/dotenv) & using .env to hide credentials if commiting to Github
 * Postgresql shell commands: `\l` list all databases. `\c` database1 connect to database1. `\dt` inspect tables. `\d+` inspect table & show relation information. `\q` to quit
-* From root run `nodemon server` for a dev server
+* From root run `npm run start` for a dev server
 * During dev `http://localhost:5000/` can be accessed for CRUD operations such as POST, GET, PUT, DELETE etc. using Postman
 
 ## :floppy_disk: Setup - Frontend
@@ -113,10 +113,15 @@
 
 ## :computer: Code Examples - Backend
 
-* to follow
+* database.sql to create a table
 
-```javascript
-
+```sql
+CREATE TABLE metalsData(
+  element VARCHAR(20),
+  density DOUBLE PRECISION,
+  color VARCHAR(20),
+  symbol VARCHAR(2)
+);
 ```
 
 ## :computer: Code Examples - Frontend NASA API

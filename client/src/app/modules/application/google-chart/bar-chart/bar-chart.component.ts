@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 import { GoogleChartService } from "../../../../services/google-chart.service";
 import { CrudService } from "../../../../services/crud.service";
-import { Metal } from "src/app/models/metal";
+import { Metal } from "../../../../models/metal";
 import { Observable } from "rxjs";
 
 @Component({
@@ -10,7 +10,9 @@ import { Observable } from "rxjs";
   templateUrl: "./bar-chart.component.html",
   styleUrls: ["./bar-chart.component.css"],
 })
+
 export class BarChartComponent implements OnInit {
+
   private gLib: any;
   private crudData: Observable<Metal[]>;
 
@@ -24,46 +26,44 @@ export class BarChartComponent implements OnInit {
     this.gLib.charts.setOnLoadCallback(this.drawChart.bind(this));
   }
 
-  ngOnInit(): void {
-    this.crudService.getAllMetals().subscribe((data: any) => {
-      this.crudData = data;
-      console.log("this.crudData: ", this.crudData);
-    });
+  ngOnInit(): any {
 
   }
-
   private drawChart(): any {
-    const data = this.gLib.visualization.arrayToDataTable([
-      ["Element", "Density", { role: "style" }, { role: "annotation" }],
-      ["Copper", 8.94, "#b87333", "Cu"], // RGB value
-      ["Silver", 10.49, "silver", "Ag"], // English color name
-      ["Gold", 19.3, "gold", "Au"],
-      ["Platinum", 21.45, "color: #e5e4e2", "Pt"], // CSS-style declaration
-    ]);
+    let dbDataArr = [];
+    this.crudService.getAllMetals().subscribe((items: Metal[]) => {
+      console.log("items: ", items);
+      dbDataArr.push(...items);
+      const tempDataArray = [];
+      dbDataArr.forEach(
+        item => tempDataArray.push([item.element, item.density, item.color, item.symbol])
+      );
+      const chartDataArr = [["Element", "Density", { role: "style" }, { role: "annotation" }], ...tempDataArray];
+      const data = this.gLib.visualization.arrayToDataTable(chartDataArr);
 
-    const view = new this.gLib.visualization.DataView(data);
-    view.setColumns([
-      0,
-      1,
-      {
-        calc: "stringify",
-        sourceColumn: 1,
-        type: "string",
-        role: "annotation",
-      },
-      2,
-    ]);
+      const view = new this.gLib.visualization.DataView(data);
+      view.setColumns([
+        0,
+        1,
+        {
+          calc: "stringify",
+          sourceColumn: 1,
+          type: "string",
+          role: "annotation",
+        },
+        2,
+      ]);
 
-    const options = {
-      title: "Density of Precious Metals, in g/cm^3",
-      bar: { groupWidth: "95%" },
-      legend: { position: "none" },
-    };
+      const options = {
+        title: "Density of Precious Metals, in g/cm^3",
+        bar: { groupWidth: "95%" },
+        legend: { position: "none" },
+      };
 
-    const chart = new this.gLib.visualization.BarChart(
-      document.getElementById("divBarChart")
-    );
-
-    chart.draw(data, options);
+      const chart = new this.gLib.visualization.BarChart(
+        document.getElementById("divBarChart")
+      );
+      chart.draw(data, options);
+    });
   }
 }

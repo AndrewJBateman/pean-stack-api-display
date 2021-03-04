@@ -1,6 +1,13 @@
+// export class Metal {
+//   id: number;
+//   name: string;
+//   symbol: string;
+//   density: number;
+// }
+
 export class Metal {
-  id: number;
-  name: string;
-  symbol: string;
+  element: string;
   density: number;
+  color: string;
+  symbol: string;
 }
