@@ -1,9 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 import { GoogleChartService } from "../../../../services/google-chart.service";
 import { CrudService } from "../../../../services/crud.service";
 import { Metal } from "../../../../models/metal";
-import { Observable } from "rxjs";
 
 @Component({
   selector: "app-bar-chart",
@@ -11,28 +10,20 @@ import { Observable } from "rxjs";
   styleUrls: ["./bar-chart.component.css"],
 })
 
-export class BarChartComponent implements OnInit {
-
+export class BarChartComponent {
   private gLib: any;
-  private crudData: Observable<Metal[]>;
 
   constructor(private gChartService: GoogleChartService, private crudService: CrudService) {
     this.gLib = this.gChartService.getGoogle();
-
-    // Load the Visualization API and the controls package.
     this.gLib.charts.load("current", { packages: ["corechart"] });
-
-    // Set a callback to run when the Google Visualization API is loaded.
     this.gLib.charts.setOnLoadCallback(this.drawChart.bind(this));
   }
 
-  ngOnInit(): any {
-
-  }
-  private drawChart(): any {
+  // load metals data from backend database then add it to the array for display by google charts
+  // data converted to array dbDataArr then used to create tempDataArray that is spread into the chartDataArray
+  private drawChart(): void {
     let dbDataArr = [];
     this.crudService.getAllMetals().subscribe((items: Metal[]) => {
-      console.log("items: ", items);
       dbDataArr.push(...items);
       const tempDataArray = [];
       dbDataArr.forEach(
@@ -40,7 +31,6 @@ export class BarChartComponent implements OnInit {
       );
       const chartDataArr = [["Element", "Density", { role: "style" }, { role: "annotation" }], ...tempDataArray];
       const data = this.gLib.visualization.arrayToDataTable(chartDataArr);
-
       const view = new this.gLib.visualization.DataView(data);
       view.setColumns([
         0,
@@ -56,6 +46,8 @@ export class BarChartComponent implements OnInit {
 
       const options = {
         title: "Density of Precious Metals, in g/cm^3",
+        width: 500,
+        height: 300,
         bar: { groupWidth: "95%" },
         legend: { position: "none" },
       };

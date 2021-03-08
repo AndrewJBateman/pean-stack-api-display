@@ -90,7 +90,7 @@
 * Install [nodemon](https://www.npmjs.com/package/nodemon) globally if you don't already have it
 * Install [PostgreSQL](https://www.postgresql.org/) & run it (requires the password you created during installation)
 * Add database access credentials to `db.js` - recommend installing [npm dotenv](https://www.npmjs.com/package/dotenv) & using .env to hide credentials if commiting to Github
-* Postgresql shell commands: `\l` list all databases. `\c` database1 connect to database1. `\dt` inspect tables. `\d+` inspect table & show relation information. `\q` to quit
+* Postgresql shell commands: `\l` list all databases. `\c database1` connect to database1. `\dt` to list all tables. `\d+` to inspect table. `\d table1` to see description of table1 & show relation information. `\q` to quit
 * From root run `npm run start` for a dev server
 * During dev `http://localhost:5000/` can be accessed for CRUD operations such as POST, GET, PUT, DELETE etc. using Postman
 
@@ -182,6 +182,7 @@ export class GithubService {
 * [headerParams](https://angular.io/api/common/http/HttpParams) used to add API keys to http request (only NASA does not allow this method)
 * [Storing array in session storage](https://stackoverflow.com/questions/51123210/storing-array-content-in-session-storage)
 * [Zain Zafar, Medium: LocalStorage with Angular Universal](https://medium.com/@zainzafar/localstorage-with-angular-universal-2a111fb4af72)
+* [SQLSERVER tutorial INT](https://www.sqlservertutorial.net/sql-server-basics/sql-server-int/)
 
 ## :clipboard: Status, Testing & To-Do List
 

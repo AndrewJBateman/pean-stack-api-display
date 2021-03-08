@@ -19,11 +19,51 @@ if (process.env.NODE_ENV === "production") {
 
 // ROUTES
 
-// get all metals
+// get metals data
 app.get("/metals", async (req, res) => {
 	try {
 		const allMetals = await pool.query("SELECT * from metalsData");
 		res.status(200).json(allMetals.rows);
+	} catch (err) {
+		console.error(err.message);
+	}
+});
+
+// get companyPerformance data
+app.get("/companyPerformance", async (req, res) => {
+	try {
+		const companyPerfData = await pool.query("SELECT * from companyPerfData");
+		res.status(200).json(companyPerfData.rows);
+	} catch (err) {
+		console.error(err.message);
+	}
+});
+
+// get framework market share data
+app.get("/frameworkMarketshare", async (req, res) => {
+	try {
+		const frameworkMarketData = await pool.query("SELECT * from frameworkMarketData");
+		res.status(200).json(frameworkMarketData.rows);
+	} catch (err) {
+		console.error(err.message);
+	}
+});
+
+// get gauge data
+app.get("/gaugeData", async (req, res) => {
+	try {
+		const gaugeData = await pool.query("SELECT * from gaugeData");
+		res.status(200).json(gaugeData.rows);
+	} catch (err) {
+		console.error(err.message);
+	}
+});
+
+// get country data
+app.get("/countryData", async (req, res) => {
+	try {
+		const countryData = await pool.query("SELECT * from countryData");
+		res.status(200).json(countryData.rows);
 	} catch (err) {
 		console.error(err.message);
 	}
