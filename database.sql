@@ -44,7 +44,8 @@ INSERT INTO countryData(name, population, bordersMed) VALUES ('Poland', 38, FALS
 INSERT INTO countryData(name, population, bordersMed) VALUES ('Ukraine', 44, FALSE);
 INSERT INTO countryData(name, population, bordersMed) VALUES ('Romania', 19, FALSE);
 
-SELECT * FROM metalsData;
+SELECT * FROM metalsData ORDER BY density ASC;
 SELECT * FROM companyPerfData;
 SELECT * FROM frameworkMarketData;
 SELECT * FROM gaugeData;
+SELECT * FROM countryData ORDER BY population ASC;

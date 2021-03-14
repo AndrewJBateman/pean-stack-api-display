@@ -26,10 +26,10 @@
           </p>
         </div>
 
-        <div class="card-footer p-2 bg-dark">
+        <div class="card-footer p-2 backgroundSecondaryBlue">
           <div class="d-flex justify-content-around">
             <p class="footer-text" *ngIf="article.created_date">
-              <i class="fas fa-calendar-day text-light"></i>
+              <app-svg-calender></app-svg-calender>
               {{ article.created_date | dateConvert }}
             </p>
             <p class="link-text mb-0" *ngIf="article.url">
@@ -40,7 +40,9 @@
                 alt="link for news article"
                 aria-label="link for news article"
                 class="text-light"
-                ><i class="fas fa-external-link-alt text-light"></i>article</a
+                >
+                <app-svg-link></app-svg-link>
+                article</a
               >
             </p>
           </div>

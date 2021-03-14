@@ -35,26 +35,22 @@ export class TableChartComponent {
       const data = new this.gLib.visualization.DataTable();
 
       data.addColumn("string", "Country");
-      data.addColumn("number", "Pop'n (mln)");
-      data.addColumn("boolean", "Borders Med. Sea");
+      data.addColumn("number", "Pop. (MM)");
+      data.addColumn("boolean", "Borders Med.");
       data.addRows([...chartDataArray]);
 
+      const cssClassNames = {
+        'headerRow': 'cssHeaderRow',
+        'tableCell': 'cssTableCell',
+    };
+
       const options = {
-        title: "Top Ten European Countries by Populations",
-        showRowNumber: true,
+        title: "Top Ten European Countries by Population",
+        showRowNumber: false,
         allowHtml: true,
         cssClassNames: cssClassNames
       };
-      var cssClassNames = {
-        'headerRow': 'cssHeaderRow',
-        'tableRow': 'cssTableRow',
-        'oddTableRow': 'cssOddTableRow',
-        'selectedTableRow': 'cssSelectedTableRow',
-        'hoverTableRow': 'cssHoverTableRow',
-        'headerCell': 'cssHeaderCell',
-        'tableCell': 'cssTableCell',
-        'rowNumberCell': 'cssRowNumberCell'
-    };
+
       table.draw(data, options);
     });
   }

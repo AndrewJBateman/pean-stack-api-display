@@ -3,9 +3,6 @@
 </head>
 
 <div class="card rounded text-center" *ngIf="cryptos">
-  <!-- <div class="card-header">
-    CryptoCurrency Prices
-  </div> -->
   <div class="card-body p-0">
     <table class="table table-hover table-bordered">
       <thead class="bg-light">
@@ -32,8 +29,9 @@
     </table>
   </div>
   <div class="card-footer bg-dark text-light">
-    <p class="mb-0">
-      Data provided by the:<a
+    <p class="mb-0 text-left">
+      Data from the:<a
+        class="crypto-footer-link"
         href="https://min-api.cryptocompare.com/"
         rel="noreferrer"
         target="_blank"

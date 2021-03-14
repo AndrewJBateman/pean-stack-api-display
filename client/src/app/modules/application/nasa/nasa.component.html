@@ -46,13 +46,13 @@
         <div class="d-flex justify-content-around">
           <div class="p-2">
             <p class="mb-0">
-              <i class="fas fa-calendar-day text-success"></i>
+              <app-svg-calender></app-svg-calender>
               {{ nasaImgObj.date | date }}
             </p>
           </div>
           <div class="p-2" *ngIf="nasaImgObj.copyright">
             <p class="mb-0">
-              <i class="far fa-copyright text-success"></i>
+              <app-svg-copyright></app-svg-copyright>
               {{ nasaImgObj.copyright }}
             </p>
           </div>

@@ -10,9 +10,18 @@ import { BarChartComponent } from "./bar-chart/bar-chart.component";
 
 import { GoogleChartComponent } from "./google-chart.component";
 import { GoogleChartRoutingModule } from "./google-chart-routing.module";
+import { SvgChartComponent } from "./../../../components/svg-chart/svg-chart.component";
+import { SvgDatabaseModule } from "./../../../components/svg-database/svg-database.module";
+import { SvgCaretrModule } from "./../../../components/svg-caretr/svg-caretr.module";
 
 @NgModule({
-  imports: [CommonModule, GoogleChartServiceModule, GoogleChartRoutingModule],
+  imports: [
+    CommonModule,
+    GoogleChartServiceModule,
+    GoogleChartRoutingModule,
+    SvgDatabaseModule,
+    SvgCaretrModule,
+  ],
   exports: [
     LineChartComponent,
     PieChartComponent,
@@ -27,6 +36,7 @@ import { GoogleChartRoutingModule } from "./google-chart-routing.module";
     TableChartComponent,
     GaugeChartComponent,
     BarChartComponent,
+    SvgChartComponent,
   ],
 })
 export class GoogleChartModule {}

@@ -1,0 +1,13 @@
+svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+  background: inherit;
+  background-color: inherit;
+  padding-bottom: 4px;
+}
+
+img {
+  width: inherit;
+  height: inherit;
+}

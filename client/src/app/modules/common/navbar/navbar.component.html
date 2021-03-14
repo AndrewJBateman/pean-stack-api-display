@@ -1,16 +1,22 @@
 <nav
   class="navbar navbar-expand-md fixed-top navbar-dark"
-  style="background-color: #455a64"
 >
   <a
-    class="nav-link p-1"
+    class="nav-link p-0"
+    style="height: 40px;"
     aria-label="home nav link active"
     [routerLink]="['/']"
     routerLinkActive="nav-link-active"
     [routerLinkActiveOptions]="{ exact: true }"
   >
     <span class="mr-1">
-      <app-svg-list></app-svg-list>
+      <div *ngIf="isHomeRoute()">
+        <app-svg-list style="fill: #f3b4ee !important"></app-svg-list>
+      </div>
+      <div *ngIf="!isHomeRoute()">
+        <app-svg-list style="fill: white !important"></app-svg-list>
+      </div>
+
       <!-- {{ name }} -->
     </span>
   </a>

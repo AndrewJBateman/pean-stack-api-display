@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { throwError, Observable } from "rxjs";
-import { catchError, take } from "rxjs/operators";
+import { catchError, take} from "rxjs/operators";
 
 import { Books } from "../models/nyt";
 import { environment } from "../../environments/environment";

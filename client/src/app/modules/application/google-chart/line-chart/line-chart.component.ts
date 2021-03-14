@@ -32,11 +32,11 @@ export class LineChartComponent {
       const data = this.gLib.visualization.arrayToDataTable(chartDataArr);
 
       const options = {
-        title: "Yearly Company Performance",
+        // title: "Yearly Company Performance",
         subtitle: 'in millions of euro (EUR)',
         vAxis: { title: "Revenue (million euro)" },
         hAxis: { title: "Year" },
-        width: 400,
+        width: 350,
         height: 300,
         curveType: "function",
         legend: { position: "bottom" },

@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === "production") {
 // get metals data
 app.get("/metals", async (req, res) => {
 	try {
-		const allMetals = await pool.query("SELECT * from metalsData");
+		const allMetals = await pool.query("SELECT * FROM metalsData ORDER BY density ASC");
 		res.status(200).json(allMetals.rows);
 	} catch (err) {
 		console.error(err.message);
@@ -32,7 +32,7 @@ app.get("/metals", async (req, res) => {
 // get companyPerformance data
 app.get("/companyPerformance", async (req, res) => {
 	try {
-		const companyPerfData = await pool.query("SELECT * from companyPerfData");
+		const companyPerfData = await pool.query("SELECT * FROM companyPerfData");
 		res.status(200).json(companyPerfData.rows);
 	} catch (err) {
 		console.error(err.message);
@@ -42,7 +42,7 @@ app.get("/companyPerformance", async (req, res) => {
 // get framework market share data
 app.get("/frameworkMarketshare", async (req, res) => {
 	try {
-		const frameworkMarketData = await pool.query("SELECT * from frameworkMarketData");
+		const frameworkMarketData = await pool.query("SELECT * FROM frameworkMarketData");
 		res.status(200).json(frameworkMarketData.rows);
 	} catch (err) {
 		console.error(err.message);
@@ -52,7 +52,7 @@ app.get("/frameworkMarketshare", async (req, res) => {
 // get gauge data
 app.get("/gaugeData", async (req, res) => {
 	try {
-		const gaugeData = await pool.query("SELECT * from gaugeData");
+		const gaugeData = await pool.query("SELECT * FROM gaugeData");
 		res.status(200).json(gaugeData.rows);
 	} catch (err) {
 		console.error(err.message);
@@ -62,7 +62,7 @@ app.get("/gaugeData", async (req, res) => {
 // get country data
 app.get("/countryData", async (req, res) => {
 	try {
-		const countryData = await pool.query("SELECT * from countryData");
+		const countryData = await pool.query("SELECT * FROM countryData ORDER BY population DESC");
 		res.status(200).json(countryData.rows);
 	} catch (err) {
 		console.error(err.message);

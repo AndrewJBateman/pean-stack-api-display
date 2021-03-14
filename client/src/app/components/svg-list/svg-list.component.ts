@@ -1,12 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-svg-list",
-  templateUrl: "../../../../src/assets/svgs/house.svg",
-  styleUrls: ["../svg.component.css"],
+  templateUrl: "../../../../src/assets/svgs/list.svg",
+  styleUrls: ["../svg-large.component.css"],
 })
-export class SvgListComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class SvgListComponent {}

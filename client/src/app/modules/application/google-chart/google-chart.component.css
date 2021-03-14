@@ -9,7 +9,13 @@
   margin: auto auto;
 }
 
-.fas, .far {
-  font-size: 24px;
-  margin-right: 4px;
+.card-chart-btn {
+  width: 110px; text-align: left
+}
+
+.header-image {
+  background-size: cover;
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
 }

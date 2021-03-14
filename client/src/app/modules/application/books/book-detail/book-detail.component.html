@@ -27,19 +27,19 @@
             </div>
             <div *ngIf="book.volumeInfo.authors">
               <p>
-                <span class="text-secondary font-weight-bold">Authors: </span>
+                <span class="textSecondaryBlue font-weight-bold">Authors: </span>
                 {{ book.volumeInfo.authors }}
               </p>
             </div>
             <div *ngIf="book.volumeInfo.publisher">
               <p>
-                <span class="text-secondary font-weight-bold">Publisher: </span>
+                <span class="textSecondaryBlue font-weight-bold">Publisher: </span>
                 {{ book.volumeInfo.publisher }}
               </p>
             </div>
             <div *ngIf="book.volumeInfo.publishedDate">
               <p>
-                <span class="text-secondary font-weight-bold"
+                <span class="textSecondaryBlue font-weight-bold"
                   >Date Published:
                 </span>
                 {{ book.volumeInfo.publishedDate | date }}
@@ -47,7 +47,7 @@
             </div>
             <div *ngIf="book.volumeInfo.industryIdentifiers[0].identifier">
               <p>
-                <span class="text-secondary font-weight-bold"
+                <span class="textSecondaryBlue font-weight-bold"
                   >ISBN Number:
                 </span>
                 {{ book.volumeInfo.industryIdentifiers[0].identifier }}
@@ -55,7 +55,7 @@
             </div>
             <div *ngIf="book.volumeInfo.language">
               <p>
-                <span class="text-secondary font-weight-bold">Language: </span>
+                <span class="textSecondaryBlue font-weight-bold">Language: </span>
                 <span class="badge badge-warning">{{
                   book.volumeInfo.language
                 }}</span>
@@ -65,12 +65,12 @@
             <div *ngIf="book.volumeInfo.categories">
               <p>
                 <span
-                  class="text-secondary font-weight-bold"
+                  class="textSecondaryBlue font-weight-bold"
                   *ngIf="book.volumeInfo.categories.length === 1"
                   >Category:
                 </span>
                 <span
-                  class="text-secondary font-weight-bold"
+                  class="textSecondaryBlue font-weight-bold"
                   *ngIf="book.volumeInfo.categories.length > 1"
                   >Categories:
                 </span>
@@ -86,7 +86,7 @@
             </div>
             <div *ngIf="book.volumeInfo.pageCount">
               <p>
-                <span class="text-secondary font-weight-bold"
+                <span class="textSecondaryBlue font-weight-bold"
                   >Number of Pages:
                 </span>
                 <span class="badge badge-warning">{{
@@ -96,7 +96,7 @@
             </div>
             <div *ngIf="book.volumeInfo.averageRating">
               <p>
-                <span class="text-secondary font-weight-bold"
+                <span class="textSecondaryBlue font-weight-bold"
                   >Average Rating:
                 </span>
                 <span class="badge badge-warning">{{
@@ -107,7 +107,7 @@
             <!--group of buttons at bottom of rhs list-->
             <div class="d-flex justify-content-around">
               <div class="p-2">
-                <a (click)="returnToList()" class="btn btn-outline-primary"
+                <a (click)="returnToList()" class="btn btn-outline-primary textSecondaryBlue"
                   >Back to List</a
                 >
               </div>
@@ -126,11 +126,11 @@
       </div>
     </div>
     <div>
-      <p class="card-text text-justify p-3" *ngIf="book.volumeInfo.description">
+      <p class="card-text textSecondaryBlue text-justify p-3" *ngIf="book.volumeInfo.description">
         <span class="text-dark font-weight-bold">Description: </span>
         {{ book.volumeInfo.description }}
       </p>
-      <p class="card-text p-3" *ngIf="!book.volumeInfo.description">
+      <p class="card-text textSecondaryBlue p-3" *ngIf="!book.volumeInfo.description">
         <span class="text-secondary">No description available</span>
       </p>
     </div>

@@ -13,10 +13,12 @@
     <!--user bio-->
     <h6 class="card-subtitle text-dark">
       <div *ngIf="user.location">
-        <i class="fas fa-globe-europe text-success pr-2"></i>{{ user.location }}
+        <app-svg-globe></app-svg-globe>
+        {{ user.location }}
       </div>
       <div *ngIf="!user.location">
-        <i class="fas fa-globe-europe text-success pr-2"></i>No user location
+        <app-svg-globe></app-svg-globe>
+        No user location
         data
       </div>
     </h6>
@@ -30,8 +32,8 @@
     </p>
     <!--user repos-->
     <p>
-      <i class="fas fa-folder text-info pr-2"></i
-      ><span *ngIf="user.public_repos" class="font-weight-bold pr-2">Repositories: {{ user.public_repos }}</span>
+      <app-svg-list></app-svg-list>
+      <span *ngIf="user.public_repos" class="font-weight-bold pr-2">Repositories: {{ user.public_repos }}</span>
       <span *ngIf="!user.public_repos" class="font-weight-bold pr-2">Repositories: no user repos</span>
     </p>
     <!--user joined date-->

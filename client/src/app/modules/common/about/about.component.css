@@ -12,7 +12,3 @@ button {
   width: 160px;
   align-items: left !important;
 }
-
-.fab, .fas, .far {
-  font-size: 24px;
-}

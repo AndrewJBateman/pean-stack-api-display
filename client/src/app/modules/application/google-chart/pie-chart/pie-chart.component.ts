@@ -39,23 +39,23 @@ export class PieChartComponent {
         data.addRows([...chartDataArray]);
 
         const options = {
-          title: "Top Framework Job Market Share",
+          // title: "Top Framework Job Market Share",
           // legend:'none',
           // width: '80%',
           // height: '80%',
-          // chartArea: {
-          //   left: "3%",
-          //   top: "3%",
-          //   height: "94%",
-          //   width: 94%"
-          // },
+          chartArea: {
+            left: "3%",
+            top: "3%",
+            height: "94%",
+            width: "94%"
+          },
           is3D: true,
           pieHole: 0.2,
           pieSliceTextStyle: {
             color: "white",
             margin: 0,
             padding: 0,
-            position: "center",
+            // position: "center",
           },
         };
         chart.draw(data, options);

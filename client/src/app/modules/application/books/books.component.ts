@@ -47,6 +47,10 @@ export class BooksComponent implements OnInit {
     });
   }
 
+  // ngOnDestroy(): void {
+  //   this.clearStore();
+  // }
+
   clearStore(): void {
     this.storageService.clear();
     this.searchForm.reset();

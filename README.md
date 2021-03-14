@@ -1,7 +1,14 @@
 # :zap: PEAN Full Stack API Display
 
-* PostgreSQL Express Angular Node (PEAN) full-stack app, integrates Angular frontend with Node.js backend.
-* Data fetched from public APIs and a Postgres database.
+* PostgreSQL Express Angular Node (PEAN) full-stack app
+* PostgreSQL backend database using Node.js/express.js to perform CRUD operations on data
+* Angular frontend with Bootstrap styling to display API and backend data
+
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/pean-stack-api-display?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/AndrewJBateman/pean-stack-api-display?style=for-the-badge)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/pean-stack-api-display?style=for-the-badge)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/pean-stack-api-display?style=for-the-badge)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/AndrewJBateman/pean-stack-api-display?style=for-the-badge)
 
 **\* Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -21,8 +28,7 @@
 ### Backend
 
 * During dev PostgreSQL needs to be installed and running - I started it from my Windows 10 PostgreSQL 12 dropdown option 'SQL shell (psql)' or from the Node.js command prompt
-* Data for metals stored in a Postgres database then displayed on the frontend using Express.js
-* Postman used to test the backend
+* Data for Google Charts data page stored in a Postgres database then displayed on the frontend using Express.js
 
 ### Frontend
 
@@ -188,7 +194,8 @@ export class GithubService {
 
 * Status: Working. Build file created with no errors. All files pass linting. Deployed to Firebase
 * Testing: 7 test files all pass. e2e runs and passes but no specs
-* To-Do: Lighthouse: Fix SEO & reduce render time for mobile build version. Add purgecss. Add more Jasmine & e2e test files. Replace all bootstrap font-awesome icons and uninstall font-awesome. Reduce image sizes. Add backend & connect to frontend cards.
+* To-Do: Lighthouse: Fix SEO & reduce render time for mobile build version. Add purgecss. Add more Jasmine & e2e test files.
+* To-Do: Replace all bootstrap font-awesome icons. Reduce image sizes.
 
 ## :clap: Inspiration/General Tools
 

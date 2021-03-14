@@ -15,6 +15,7 @@ const apiKey = environment.NASA_KEY;
 export class NasaService {
   constructor(private http: HttpClient) {}
 
+  //  rxjs take(1) takes the first emission of Nasa data and unsubscribes from the observable.
   getNasaImage(): Observable<Apod> {
     const apodUrl = `${apiUrl}&api_key=${apiKey}&hd=true`;
     return this.http.get<Apod>(apodUrl).pipe(

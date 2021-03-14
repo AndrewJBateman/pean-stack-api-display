@@ -9,3 +9,10 @@ a {
   max-width: 800px;
   margin: auto auto;
 }
+
+.crypto-footer-link
+ {
+   color: white;
+   font-style: bold;
+   font-weight: 600;
+ }

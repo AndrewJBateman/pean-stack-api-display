@@ -3,11 +3,11 @@
 </head>
 
 <div class="main-div">
- <div class="p-2">
+  <div class="p-2">
     <!--bestseller detail card-->
     <div class="card">
       <div class="row no-gutters">
-        <div class="col-sm-4" style="background: #868e96;">
+        <div class="col-sm-4" style="background: #868e96">
           <img
             [src]="bestseller.books[0].book_image"
             class="card-img-top h-100"
@@ -20,7 +20,7 @@
             <div class="d-flex flex-column">
               <div *ngIf="bestseller.display_name">
                 <p>
-                  <span class="text-secondary font-weight-bold"
+                  <span class="textSecondaryBlue font-weight-bold"
                     >Category:
                   </span>
                   {{ bestseller.display_name }}
@@ -28,7 +28,7 @@
               </div>
               <div *ngIf="bestseller.books[0].rank">
                 <p>
-                  <span class="text-secondary font-weight-bold">Rank: </span>
+                  <span class="textSecondaryBlue font-weight-bold">Rank: </span>
                   <span class="badge badge-warning"
                     >{{ bestseller.books[0].rank }}
                   </span>
@@ -36,7 +36,7 @@
               </div>
               <div *ngIf="bestseller.books[0].rank">
                 <p>
-                  <span class="text-secondary font-weight-bold"
+                  <span class="textSecondaryBlue font-weight-bold"
                     >Rank Last Week:
                   </span>
                   <span class="badge badge-warning">{{
@@ -46,7 +46,7 @@
               </div>
               <div *ngIf="bestseller.books[0].weeks_on_list">
                 <p>
-                  <span class="text-secondary font-weight-bold"
+                  <span class="textSecondaryBlue font-weight-bold"
                     >Weeks on List:
                   </span>
                   <span class="badge badge-warning">{{
@@ -56,19 +56,23 @@
               </div>
               <div *ngIf="bestseller.books[0].title">
                 <p>
-                  <span class="text-secondary font-weight-bold">Title: </span>
+                  <span class="textSecondaryBlue font-weight-bold"
+                    >Title:
+                  </span>
                   {{ bestseller.books[0].title }}
                 </p>
               </div>
               <div *ngIf="bestseller.books[0].author">
                 <p>
-                  <span class="text-secondary font-weight-bold">Author: </span>
+                  <span class="textSecondaryBlue font-weight-bold"
+                    >Author:
+                  </span>
                   {{ bestseller.books[0].author }}
                 </p>
               </div>
               <div *ngIf="bestseller.books[0].publisher">
                 <p>
-                  <span class="text-secondary font-weight-bold"
+                  <span class="textSecondaryBlue font-weight-bold"
                     >Publisher:
                   </span>
                   {{ bestseller.books[0].publisher }}
@@ -76,14 +80,14 @@
               </div>
               <div *ngIf="">
                 <p>
-                  <span class="text-secondary font-weight-bold"
+                  <span class="textSecondaryBlue font-weight-bold"
                     >Date Published:
                   </span>
                 </p>
               </div>
               <div *ngIf="bestseller.books[0].primary_isbn13">
                 <p>
-                  <span class="text-secondary font-weight-bold"
+                  <span class="textSecondaryBlue font-weight-bold"
                     >ISBN Number:
                   </span>
                   {{ bestseller.books[0].primary_isbn13 }}
@@ -92,7 +96,7 @@
 
               <div class="d-flex justify-content-around">
                 <div class="p-2">
-                  <a (click)="returnToList()" class="btn btn-outline-primary"
+                  <a (click)="returnToList()" class="btn btn-outline-primary textSecondaryBlue"
                     >Back to List</a
                   >
                 </div>
@@ -115,11 +119,13 @@
           class="card-text text-justify p-3"
           *ngIf="bestseller.books[0].description"
         >
-          <span class="text-secondary font-weight-bold">Description: </span>
+          <span class="textSecondaryBlue font-weight-bold">Description: </span>
           {{ bestseller.books[0].description }}
         </p>
         <p class="card-text p-3" *ngIf="!bestseller.books[0].description">
-          <span class="text-secondary">No description available</span>
+          <span class="textSecondaryBlue font-weight-bold"
+            >No description available</span
+          >
         </p>
       </div>
     </div>
