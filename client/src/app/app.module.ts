@@ -12,8 +12,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { NavbarComponent } from "./modules/common/navbar/navbar.component";
 import { PipesModule } from "./pipes/pipes.module";
 import { SvgListModule } from "./components/svg-list/svg-list.module";
+import { SvgGithubModule } from "./components/svg-github/svg-github.module";
 import { SvgInfoComponent } from "./components/svg-info/svg-info.component";
-import { SvgGithubComponent } from "./components/svg-github/svg-github.component";
 import { SvgContactComponent } from "./components/svg-contact/svg-contact.component";
 
 @NgModule({
@@ -23,8 +23,7 @@ import { SvgContactComponent } from "./components/svg-contact/svg-contact.compon
     NotFoundComponent,
     NavbarComponent,
     SvgInfoComponent,
-    SvgGithubComponent,
-    SvgContactComponent,
+    SvgContactComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +32,8 @@ import { SvgContactComponent } from "./components/svg-contact/svg-contact.compon
     PipesModule,
     FormsModule,
     NgxPictureModule.forRoot(CLOUDINARY_CONFIG),
-    SvgListModule
+    SvgListModule,
+    SvgGithubModule
   ],
   providers: [],
   bootstrap: [AppComponent],

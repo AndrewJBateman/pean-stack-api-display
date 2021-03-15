@@ -9,61 +9,70 @@
       [src]="user.avatar_url"
       alt="Github user profile photo"
     />
-    <h5 class="card-title">{{ user.name }}</h5>
+    <h5 class="card-title textSecondaryBlue">{{ user.name }}</h5>
     <!--user bio-->
-    <h6 class="card-subtitle text-dark">
+    <h6 class="card-subtitle">
       <div *ngIf="user.location">
-        <app-svg-globe></app-svg-globe>
-        {{ user.location }}
+        <app-svg-globe class="text-dark pr-1"></app-svg-globe>
+        <span class="textSecondaryBlue">{{ user.location }}</span>
       </div>
       <div *ngIf="!user.location">
         <app-svg-globe></app-svg-globe>
-        No user location
-        data
+        No user location data
       </div>
     </h6>
   </div>
   <div class="card-body pb-0">
     <!--user bio-->
     <p>
-      <i class="fas fa-user-tag text-warning pr-2"></i
-      ><span *ngIf="user.bio" class="font-weight-bold pr-2">Bio: {{ user.bio }}</span>
-      <span *ngIf="!user.bio" class="font-weight-bold pr-2">Bio: No user bio</span>
+      <app-svg-user></app-svg-user>
+      <span *ngIf="user.bio" class="px-1 textSecondaryBlue">{{
+        user.bio
+      }}</span>
+      <span *ngIf="!user.bio" class="pr-1">No user bio</span>
     </p>
-    <!--user repos-->
-    <p>
-      <app-svg-list></app-svg-list>
-      <span *ngIf="user.public_repos" class="font-weight-bold pr-2">Repositories: {{ user.public_repos }}</span>
-      <span *ngIf="!user.public_repos" class="font-weight-bold pr-2">Repositories: no user repos</span>
+
+    <!--user repos, joined date-->
+    <p class="text-dark">
+      Repos:
+      <span *ngIf="user.public_repos" class="textSecondaryBlue pr-2">{{
+        user.public_repos
+      }}</span>
+      <span *ngIf="!user.public_repos" class="textSecondaryBlue pr-2"
+        >no user repos</span
+      >
+      Joined:
+      <span class="textSecondaryBlue pr-2">{{
+        user.created_at | dateConvert
+      }}</span>
     </p>
-    <!--user joined date-->
-    <p>
-      <i class="fas fa-calendar-day text-dark pr-2"></i
-      ><span class="font-weight-bold pr-2">Joined:</span
-      >{{ user.created_at | dateConvert }}
-    </p>
-    <p>
-      <i class="far fa-user text-dark pr-2"></i
-      ><span class="font-weight-bold pr-2">Following:</span>{{ user.following }}
-    </p>
-    <p>
-      <i class="far fa-user text-dark pr-2"></i
-      ><span class="font-weight-bold pr-2">Followers:</span>{{ user.followers }}
+
+    <!--user following, followers-->
+    <p class="text-dark">
+      Following:
+      <span class="textSecondaryBlue pr-2">{{ user.following }}</span>
+      Followers:
+      <span class="textSecondaryBlue pr-2">{{ user.followers }}</span>
     </p>
   </div>
   <div class="d-flex justify-content-around">
     <div class="p-2">
-      <a [routerLink]="['/github-repos', user.login]" class="btn btn-dark"
-        ><i class="fas fa-list pr-2"></i>Repos</a
+      <a
+        [routerLink]="['/github-repos', user.login]"
+        class="btn btn-outline-dark"
       >
+        <app-svg-folder class="pr-1"></app-svg-folder
+        ><span class="textSecondaryBlue">Repos</span>
+      </a>
     </div>
     <div class="p-2">
       <a
         href="{{ user.html_url }}"
         target="_blank"
         rel="noopener noreferrer"
-        class="btn btn-dark"
-        ><i class="fab fa-github pr-2"></i>Profile</a
+        class="btn btn-outline-dark"
+        ><app-svg-person class="pr-1"></app-svg-person
+        ><span class="textSecondaryBlue">Profile</span></a
       >
     </div>
   </div>

@@ -21,17 +21,17 @@
 }
 
 .card-title {
-  padding-left: 80px;
+  padding-left: 60px;
 }
 
 .card-subtitle {
-  padding-left: 80px;
+  padding-left: 60px;
 }
 
 .header-image {
   background-size: cover;
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
 }
 
 .book-card {

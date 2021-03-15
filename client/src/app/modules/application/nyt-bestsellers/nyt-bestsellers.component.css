@@ -1,19 +1,30 @@
-.container-fluid {
-  padding: 0 auto;
-}
-
 .main {
-  /* display: flex; */
   justify-content: center;
   align-items: center;
-  padding: 0 auto;
 }
 
 .title-card {
-  max-width: 400px;
+  max-width: 230px;
   margin: auto auto;
 }
 
 .bestseller-card {
   padding: 12px auto;
+}
+
+.card-title {
+  padding-left: 60px;
+}
+
+.card-subtitle {
+  padding-left: 60px;
+}
+
+.card-text {
+  margin: 16px 0;
+}
+
+.header-image {
+  width: 48px;
+  height: 48px;
 }

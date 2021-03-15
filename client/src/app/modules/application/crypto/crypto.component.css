@@ -5,14 +5,17 @@ a {
   padding: 1em;
 }
 
+table {
+  margin-bottom: 0;
+}
+
 .card {
   max-width: 800px;
   margin: auto auto;
 }
 
-.crypto-footer-link
- {
-   color: white;
-   font-style: bold;
-   font-weight: 600;
- }
+.crypto-footer-link {
+  color: white;
+  font-style: bold;
+  font-weight: 600;
+}

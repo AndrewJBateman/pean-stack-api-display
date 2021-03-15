@@ -9,20 +9,20 @@
 }
 
 .card-title {
-  padding-left: 80px;
+  padding-left: 60px;
+}
+
+.card-subtitle {
+  padding-left: 60px;
 }
 
 .card-text {
   margin: 16px 0;
 }
 
-.card-subtitle {
-  padding-left: 80px;
-}
-
 .header-image {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
 }
 
 #video {

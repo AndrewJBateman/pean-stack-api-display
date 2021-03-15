@@ -9,7 +9,7 @@
         <tr>
           <th scope="col">Cryptocurrency</th>
           <th scope="col">Symbol</th>
-          <th scope="col"><i class="fas fa-euro-sign"> Price</i></th>
+          <th scope="col" class="text-right">&#x20AC; Price</th>
         </tr>
       </thead>
       <tbody>
@@ -23,12 +23,14 @@
               alt="crypto icon for {{ crypto }}"
             />
           </td>
-          <td>{{ cryptos[crypto].EUR | currency: "EUR" }}</td>
+          <td class="text-right">
+            {{ cryptos[crypto].EUR | currency: "EUR" }}
+          </td>
         </tr>
       </tbody>
     </table>
   </div>
-  <div class="card-footer bg-dark text-light">
+  <div class="card-footer backgroundSecondaryBlue text-light">
     <p class="mb-0 text-left">
       Data from the:<a
         class="crypto-footer-link"

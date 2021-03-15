@@ -186,7 +186,7 @@ export class GithubService {
 * Progressive Web App (PWA) functionality added
 * [Node.js compression middleware](https://www.npmjs.com/package/compression) used to add gzip/deflate compression coding to improve lighthouse audit score.
 * [headerParams](https://angular.io/api/common/http/HttpParams) used to add API keys to http request (only NASA does not allow this method)
-* [Storing array in session storage](https://stackoverflow.com/questions/51123210/storing-array-content-in-session-storage)
+* [Storing array in session storage](https://stackoverflow.com/questions/51123210/storing-array-content-in-session-storage) - clears storage automatically when session is over
 * [Zain Zafar, Medium: LocalStorage with Angular Universal](https://medium.com/@zainzafar/localstorage-with-angular-universal-2a111fb4af72)
 * [SQLSERVER tutorial INT](https://www.sqlservertutorial.net/sql-server-basics/sql-server-int/)
 
@@ -195,7 +195,7 @@ export class GithubService {
 * Status: Working. Build file created with no errors. All files pass linting. Deployed to Firebase
 * Testing: 7 test files all pass. e2e runs and passes but no specs
 * To-Do: Lighthouse: Fix SEO & reduce render time for mobile build version. Add purgecss. Add more Jasmine & e2e test files.
-* To-Do: Replace all bootstrap font-awesome icons. Reduce image sizes.
+* To-Do: github pages, not-found - Replace all bootstrap font-awesome icons. Reduce image sizes.
 
 ## :clap: Inspiration/General Tools
 

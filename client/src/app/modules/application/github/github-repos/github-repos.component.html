@@ -5,17 +5,8 @@
 <div class="card bg-light">
   <div class="d-flex justify-content-around">
     <div class="p-2">
-      <a (click)="returnToUser()" class="btn btn-outline-primary"
+      <a (click)="returnToUser()" class="btn btn-outline-dark"
         >Back to List</a
-      >
-    </div>
-    <div class="p-2">
-      <a
-        href="https://help.github.com/en/github/getting-started-with-github/signing-up-for-a-new-github-account"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn btn-outline-dark"
-        ><i class="fab fa-github pr-2"></i>Sign up</a
       >
     </div>
   </div>
@@ -23,64 +14,27 @@
 <!--cards for book search results-->
 <div class="github-card pb-2" *ngFor="let repo of repos">
   <div class="card rounded" *ngIf="repo">
-    <div class="card-header text-white bg-info">
+    <div class="card-header text-white backgroundSecondaryBlue">
       <h6 class="card-title mb-0">
-        <i class="fab fa-github pr-2"></i>Name:
-        {{ repo.name }}
+        Name: {{ repo.name }}
       </h6>
     </div>
     <div class="card-body pb-0">
       <p class="mb-2">
-        <i class="fas fa-user-tag text-success pr-2"></i
-        ><span class="font-weight-bold pr-2">Description:</span
+        <span class="font-weight-bold pr-2">Description:</span
         >{{ repo.description }}
       </p>
       <p class="mb-2">
-        <i class="fas fa-calendar-day text-warning pr-2"></i
-        ><span class="font-weight-bold pr-2 mb-2">Updated:</span
+        <span class="font-weight-bold pr-2 mb-2">Updated:</span
         >{{ repo.updated_at | dateConvert }}
       </p>
       <p class="mb-2" *ngIf="repo.language">
-        <i class="fas fa-folder text-dark pr-2"></i
-        ><span class="font-weight-bold pr-2 mb-2">Language:</span
+        <span class="font-weight-bold pr-2 mb-2">Language:</span
         >{{ repo.language }}
       </p>
       <p class="mb-2" *ngIf="!repo.language">
-        <i class="fas fa-folder text-info pr-2"></i
-        ><span class="font-weight-bold pr-2">Languages:</span>None
+        <span class="font-weight-bold pr-2">Languages:</span>None
       </p>
-    </div>
-    <div class="d-flex justify-content-around">
-      <div class="p-2">
-        <a
-          href="{{ repo.stargazers_url }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline-info btn-sm"
-          ><i class="fas fa-code-branch pr-2"></i
-          ><span class="text-secondary">{{ repo.forks }}</span></a
-        >
-      </div>
-      <div class="p-2">
-        <a
-          href="{{ repo.branches_url }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline-info btn-sm"
-          ><i class="fas fa-binoculars pr-2"></i
-          ><span class="text-secondary">{{ repo.stargazers_count }}</span></a
-        >
-      </div>
-      <div class="p-2">
-        <a
-          href="{{ repo.html_url }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline-info btn-sm"
-          ><i class="fas fa-link pr-2"></i
-          ><span class="text-secondary">View</span></a
-        >
-      </div>
     </div>
   </div>
 </div>
