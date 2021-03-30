@@ -24,7 +24,7 @@ export class BarChartComponent {
   // load metals data from backend database then add it to the array for display by google charts
   // data converted to array dbDataArr then used to create tempDataArray that is spread into the chartDataArray
   private drawChart(): void {
-    let dbDataArr = [];
+    const dbDataArr = [];
     this.crudService.getAllMetals().subscribe((items: Metal[]) => {
       dbDataArr.push(...items);
       const tempDataArray = [];

@@ -21,7 +21,7 @@ export class PieChartComponent {
   }
 
   private drawChart(): void {
-    let dbDataArr = [];
+    const dbDataArr = [];
     this.crudService
       .getFrameworkMarketshare()
       .subscribe((items: FrameworkMarketshare[]) => {
@@ -47,7 +47,7 @@ export class PieChartComponent {
             left: "3%",
             top: "3%",
             height: "94%",
-            width: "94%"
+            width: "94%",
           },
           is3D: true,
           pieHole: 0.2,

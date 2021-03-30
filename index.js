@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
 
 // ROUTES
 
-// get metals data
+// get all metals data
 app.get("/metals", async (req, res) => {
 	try {
 		const allMetals = await pool.query("SELECT * FROM metalsData ORDER BY density ASC");
@@ -35,7 +35,7 @@ app.get("/companyPerformance", async (req, res) => {
 		const companyPerfData = await pool.query("SELECT * FROM companyPerfData");
 		res.status(200).json(companyPerfData.rows);
 	} catch (err) {
-		console.error(err.message);
+		res.send(err.message);
 	}
 });
 

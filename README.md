@@ -97,7 +97,7 @@
 * Install [PostgreSQL](https://www.postgresql.org/) & run it (requires the password you created during installation)
 * Add database access credentials to `db.js` - recommend installing [npm dotenv](https://www.npmjs.com/package/dotenv) & using .env to hide credentials if commiting to Github
 * Postgresql shell commands: `\l` list all databases. `\c database1` connect to database1. `\dt` to list all tables. `\d+` to inspect table. `\d table1` to see description of table1 & show relation information. `\q` to quit
-* From root run `npm run start` for a dev server
+* **From root run `npm run start` for a dev server**
 * During dev `http://localhost:5000/` can be accessed for CRUD operations such as POST, GET, PUT, DELETE etc. using Postman
 
 ## :floppy_disk: Setup - Frontend
@@ -106,7 +106,7 @@
 * Run `npm outdated` to see if any npm dependencies are outdated.
 * Get yourself API keys for the Nasa, Google Maps and News apps
 * Run `ng serve` for a dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
-* Run `npm run lint` to lint test entire codebase using TSLint.
+* Run `npm run lint` to lint test entire client-side codebase using TSLint.
 * Run `npm run build` to generate a build file without SSR
 * Run `npm run build:ssr` to generate a build file with SSR. Add `defer=""` to browser css file ref.
 * Run `npm run serve:ssr` to see on a dev server `http://localhost:4000`
@@ -192,10 +192,10 @@ export class GithubService {
 
 ## :clipboard: Status, Testing & To-Do List
 
-* Status: Working. Build file created with no errors. All files pass linting. Deployed to Firebase
+* Status: Working. Build file created with no errors. All files pass linting. Client deployed to Firebase
 * Testing: 7 test files all pass. e2e runs and passes but no specs
 * To-Do: Lighthouse: Fix SEO & reduce render time for mobile build version. Add purgecss. Add more Jasmine & e2e test files.
-* To-Do: github pages, not-found - Replace all bootstrap font-awesome icons. Reduce image sizes.
+* To-Do: Deploy as full-stack
 
 ## :clap: Inspiration/General Tools
 

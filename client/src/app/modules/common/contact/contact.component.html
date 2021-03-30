@@ -9,21 +9,22 @@
       [src]="user.avatar_url"
       alt="Github user profile photo"
     />
-    <h5 class="card-title">
-      <i class="fas fa-user-edit text-info pr-2"></i>{{ user.name }}
-    </h5>
+    <h4 class="card-title">
+      {{ user.name }}
+    </h4>
     <p class="indent-text mb-0">
-      <i class="fas fa-compass text-success pr-2"></i>{{ user.location }}
+      <app-svg-globe></app-svg-globe>
+      {{ user.location }}
     </p>
   </div>
   <div class="card-body pb-0">
     <p class="">
-      <i class="fas fa-user-tag text-warning pr-2"></i
-      ><span class="font-weight-bold pr-2">Bio:</span>{{ user.bio }}
+      <app-svg-person class="pr-1"></app-svg-person>
+      <span class="font-weight-bold pr-2">Bio:</span>{{ user.bio }}
     </p>
     <p>
-      <i class="fas fa-folder text-info pr-2"></i
-      ><span class="font-weight-bold pr-2">Github repositories:</span
+      <app-svg-folder class="pr-1"></app-svg-folder>
+      <span class="font-weight-bold pr-2">Github repositories:</span
       >{{ user.public_repos }}
     </p>
   </div>
@@ -34,7 +35,8 @@
         target="_blank"
         rel="noopener noreferrer"
         class="btn btn-dark"
-        ><i class="fab fa-github pr-2"></i>Profile</a
+      >
+        Profile</a
       >
     </div>
     <div class="p-3">
@@ -43,7 +45,7 @@
         target="_blank"
         rel="noopener noreferrer"
         class="btn btn-warning"
-        ><i class="fas fa-paper-plane pr-2"></i>Contact</a
+        >Contact</a
       >
     </div>
     <div class="p-3">
@@ -52,7 +54,7 @@
         target="_blank"
         rel="noopener noreferrer"
         class="btn btn-success"
-        ><i class="fas fa-user-circle pr-2"></i>Site</a
+        >Site</a
       >
     </div>
   </div>

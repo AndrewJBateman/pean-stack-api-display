@@ -1,3 +1,7 @@
 .app main {
   padding-left: 1rem;
 }
+
+a {
+  color: #6a5eff;
+}

@@ -22,7 +22,7 @@ export class TableChartComponent {
   }
 
   private drawTable(): void {
-    let dbDataArr = [];
+    const dbDataArr = [];
     this.crudService.getCountryData().subscribe((items: CountryData[]) => {
       dbDataArr.push(...items);
       const chartDataArray = [];
@@ -40,15 +40,14 @@ export class TableChartComponent {
       data.addRows([...chartDataArray]);
 
       const cssClassNames = {
-        'headerRow': 'cssHeaderRow',
-        'tableCell': 'cssTableCell',
-    };
+        tableCell: "cssTableCell",
+      };
 
       const options = {
         title: "Top Ten European Countries by Population",
         showRowNumber: false,
         allowHtml: true,
-        cssClassNames: cssClassNames
+        cssClassNames
       };
 
       table.draw(data, options);

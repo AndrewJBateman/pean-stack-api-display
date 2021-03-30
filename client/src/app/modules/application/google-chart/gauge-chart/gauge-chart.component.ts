@@ -19,7 +19,7 @@ export class GaugeChartComponent {
   }
 
   private drawChart(): void {
-    let dbDataArr = [];
+    const dbDataArr = [];
     this.crudService.getGaugeData().subscribe((items: GaugeData[]) => {
       dbDataArr.push(...items);
       const chartDataArray = [];

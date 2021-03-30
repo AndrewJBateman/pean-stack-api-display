@@ -1,21 +1,19 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Metal } from '../models/metal';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { Metal } from "../models/metal";
 import { CompanyPerformance } from "../models/companyPerformance";
 import { FrameworkMarketshare } from "../models/frameworkMarketshare";
 import { GaugeData } from "../models/gaugeData";
 import { CountryData } from "../models/countryData";
 
-const baseUrl = 'http://localhost:5000';
-let Model: Metal[] | CompanyPerformance[];
+const baseUrl = "http://localhost:5000";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class CrudService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAllMetals(): Observable<Metal[]> {
     return this.http.get<Metal[]>(`${baseUrl}/metals`);
@@ -26,7 +24,9 @@ export class CrudService {
   }
 
   getFrameworkMarketshare(): Observable<FrameworkMarketshare[]> {
-    return this.http.get<FrameworkMarketshare[]>(`${baseUrl}/frameworkMarketshare`);
+    return this.http.get<FrameworkMarketshare[]>(
+      `${baseUrl}/frameworkMarketshare`
+    );
   }
 
   getGaugeData(): Observable<GaugeData[]> {
@@ -48,5 +48,4 @@ export class CrudService {
   deleteMetal(id: number): Observable<Metal> {
     return this.http.delete<Metal>(`${baseUrl}/${id}`);
   }
-
 }
