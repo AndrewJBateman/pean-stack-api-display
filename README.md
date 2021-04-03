@@ -105,7 +105,8 @@
 * Install dependencies using `npm i`
 * Run `npm outdated` to see if any npm dependencies are outdated.
 * Get yourself API keys for the Nasa, Google Maps and News apps
-* Run `ng serve` for a dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
+* Run `ng serve` for a non-SSR dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
+* Run `npm run dev:ssr` for an SSR dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
 * Run `npm run lint` to lint test entire client-side codebase using TSLint.
 * Run `npm run build` to generate a build file without SSR
 * Run `npm run build:ssr` to generate a build file with SSR. Add `defer=""` to browser css file ref.

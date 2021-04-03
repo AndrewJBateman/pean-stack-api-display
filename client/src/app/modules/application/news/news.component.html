@@ -11,12 +11,16 @@
       class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4"
       *ngFor="let article of mArticles"
     >
-      <div class="card full-height" *ngIf="article.multimedia[2].url">
+      <div
+        class="card full-height"
+      >
         <img
           class="card-img-top"
-          src="{{ article.multimedia[2].url }}"
+          src="{{ article.multimedia != null
+            ? article.multimedia[2].url
+            : 'assets/svgs/nyt.svg'}}"
           alt="image for news article"
-        />
+         />
         <div class="card-body p-2">
           <h6 class="card-title">
             {{ article.title }}
