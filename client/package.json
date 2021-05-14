@@ -45,7 +45,7 @@
     "jquery": "^3.6.0",
     "leaflet": "^1.7.1",
     "ngx-picture": "^2.0.14",
-    "safe-pipe": "^1.0.3",
+    "rxjs": "^6.5.3",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
   },
