@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "pern-stack-api-display"
+    "default": "angular-rest-apis"
   },
   "targets": {
     "angular-rest-apis": {
@@ -11,4 +11,5 @@
       }
     }
   }
+
 }

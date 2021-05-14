@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://pern-stack-api-display.web.app/</loc>
+  </url>
+  <url>
+    <loc>https://pern-stack-api-display.web.app/about</loc>
+  </url>
+  <url>
+    <loc>https://pern-stack-api-display.web.app/contact</loc>
+  </url>
+  <url>
+    <loc>https://pern-stack-api-display.web.app/signin</loc>
+  </url>
+  <url>
+    <loc>https://pern-stack-api-display.web.app/nasa</loc>
+  </url>
+  <url>
+    <loc>https://pern-stack-api-display.web.app/crypto</loc>
+  </url>
+  <url>
+    <loc>https://pern-stack-api-display.web.app/map</loc>
+  </url>
+  <url>
+    <loc>https://pern-stack-api-display.web.app/news</loc>
+  </url>
+  <url>
+    <loc>https://pern-stack-api-display.web.app/google-charts</loc>
+  </url>
+  <url>
+    <loc>https://pern-stack-api-display.web.app/books</loc>
+  </url>
+  <url>
+    <loc>https://pern-stack-api-display.web.app/bestsellers</loc>
+  </url>
+  <url>
+    <loc>https://pern-stack-api-display.web.app/github</loc>
+  </url>
+</urlset>

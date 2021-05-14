@@ -4,7 +4,7 @@ import { HttpClient } from "@angular/common/http";
 
 import { Apod } from "../models/apod";
 import { environment } from "../../environments/environment";
-import { map, catchError, take } from "rxjs/operators";
+import { catchError, take } from "rxjs/operators";
 
 const apiUrl = "https://api.nasa.gov/planetary/apod?";
 const apiKey = environment.NASA_KEY;

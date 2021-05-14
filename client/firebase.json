@@ -1,16 +1,7 @@
 {
   "hosting": [
     {
-      "public": "dist/pean-stack-api-display/browser",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ]
-    },
-    {
-      "target": "pean-stack-api-display",
-      "public": "dist/pean-stack-api-display/browser",
+      "public": "dist/browser",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -19,9 +10,36 @@
       "rewrites": [
         {
           "source": "**",
-          "destination": "/index.html"
+          "function": "ssr"
+        }
+      ]
+    },
+    {
+      "target": "pean-stack-api-display",
+      "public": "dist\\dist\\browser",
+      "ignore": [
+        "**/.*"
+      ],
+      "headers": [
+        {
+          "source": "*.[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].+(css|js)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "public,max-age=31536000,immutable"
+            }
+          ]
+        }
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "function": "ssr"
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "source": "dist"
+  }
 }

@@ -3,14 +3,12 @@
 * PostgreSQL Express Angular Node (PEAN) full-stack app
 * PostgreSQL backend database using Node.js/express.js to perform CRUD operations on data
 * Angular frontend with Bootstrap styling to display API and backend data
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/pean-stack-api-display?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/AndrewJBateman/pean-stack-api-display?style=for-the-badge)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/pean-stack-api-display?style=for-the-badge)
-![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/pean-stack-api-display?style=for-the-badge)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/AndrewJBateman/pean-stack-api-display?style=for-the-badge)
-
-**\* Note: to open web links in a new window use: _ctrl+click on link_**
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/pean-stack-api-display?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/pean-stack-api-display?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/pean-stack-api-display?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/pean-stack-api-display?style=plastic)
 
 ## :page_facing_up: Table of contents
 
@@ -25,7 +23,9 @@
 
 ## :books: General info
 
-### Backend
+* Using Angular Server Side Rendering [causes problems with @angular/fire, @agm/core, and @ngx-translate](https://medium.com/@gregor.srdic/running-an-angular-universal-app-on-google-cloud-a712f66565d9) - try deploying to Google App Engine
+
+* ### Backend
 
 * During dev PostgreSQL needs to be installed and running - I started it from my Windows 10 PostgreSQL 12 dropdown option 'SQL shell (psql)' or from the Node.js command prompt
 * Data for Google Charts data page stored in a Postgres database then displayed on the frontend using Express.js
@@ -37,7 +37,6 @@
 * About this site page - summary info on each page
 * Author info card that gets data from Github and provides contact links
 * Main section made of 8 Bootstrap cards that link to API data
-* NASA card shows Astronomy Picture of the Day (APOD) from the [NASA API](https://api.nasa.gov/). Note video function requires npm module [safe-pipe](https://www.npmjs.com/package/safe-pipe)
 * Crypto card shows prices of a list of cryptocurrencies from the [CryptoCompare API](https://min-api.cryptocompare.com/)
 * Map card shows location data from the [ipapi API](https://ipapi.co/) using the Leaflet JavaScript maps library.**Does not use passive listeners to improve scrolling performance**
 * NYT News card shows latest news from the [New York Times Top Stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview)
@@ -109,7 +108,7 @@
 * Run `npm run dev:ssr` for an SSR dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
 * Run `npm run lint` to lint test entire client-side codebase using TSLint.
 * Run `npm run build` to generate a build file without SSR
-* Run `npm run build:ssr` to generate a build file with SSR. Add `defer=""` to browser css file ref.
+* Run `npm run build:ssr` to generate a build file with SSR. Add `defer` to browser css file ref.
 * Run `npm run serve:ssr` to see on a dev server `http://localhost:4000`
 * Run `ng deploy` to deploy to Google Firebase Hosting (already setup)
 
@@ -180,7 +179,7 @@ export class GithubService {
 
 ## :cool: Features - Frontend
 
-* [http data handling best practices](https://angular.io/guide/http) followed - i.e. use of separate service file to get API data then use of subscription callback function in component to subscribe to Observable data. Response object type defined using an interface model. Interface passed as type parameter to the HttpClient.get() method and RxJS map operator used to transform response data. Transformed data passed to async pipe.
+* [http data handling best practices](https://angular.io/guide/http) followed - i.e. use of separate service file to get API data then use of subscription callback function in component to subscribe to Observable data. Response object type defined using an interface model. Interface passed as type parameter to the HttpClient.get() method. Transformed data passed to async pipe.
 * [RxJS take](https://rxjs-dev.firebaseapp.com/api/operators/take)) used instead of map() to emit only the first count value emitted by the source Observable. Then it completes - so no need to unsubscribe to avoid memory leaks.
 * [Angular Activated Route snapshot params](https://angular.io/api/router/ActivatedRoute) used to pass username from github user search page to github repo display page.
 * [Angular Universal](https://angular.io/guide/universal) used to generate static pages using Server Side Rendering (SSR) - to increase display speed and add Search Engine Optimisation (SEO). _A normal Angular application executes in the browser, rendering pages in the DOM in response to user actions. Angular Universal executes on the server, generating static application pages that later get bootstrapped on the client. This means that the application generally renders more quickly, giving users a chance to view the application layout before it becomes fully interactive._
@@ -190,10 +189,12 @@ export class GithubService {
 * [Storing array in session storage](https://stackoverflow.com/questions/51123210/storing-array-content-in-session-storage) - clears storage automatically when session is over
 * [Zain Zafar, Medium: LocalStorage with Angular Universal](https://medium.com/@zainzafar/localstorage-with-angular-universal-2a111fb4af72)
 * [SQLSERVER tutorial INT](https://www.sqlservertutorial.net/sql-server-basics/sql-server-int/)
+* [Deploy Angular 9+ apps to Firebase Hosting](https://blog.logrocket.com/deploy-angular-9-apps-to-firebase-hosting/)
 
 ## :clipboard: Status, Testing & To-Do List
 
-* Status: Working. Build file created with no errors. All files pass linting. Client deployed to Firebase
+* Status: Working. Build file created with no errors. All files pass linting. Client deployed to Firebase.
+* Dependencies updated may 2021
 * Testing: 7 test files all pass. e2e runs and passes but no specs
 * To-Do: Lighthouse: Fix SEO & reduce render time for mobile build version. Add purgecss. Add more Jasmine & e2e test files.
 * To-Do: Deploy as full-stack
@@ -213,6 +214,10 @@ export class GithubService {
 * [Cloud Engineering Studio: Yoko Ishioka: Componentize SVGs in Angular and style them on the fly](https://cloudengineering.studio/articles/componentize-svgs-in-angular-and-style-them-on-the-fly)
 * [Codegrepper: “the keyword import is reserved” Code Answer](https://www.codegrepper.com/code-examples/whatever/the+keyword+import+is+reserved)
 
+## :file_folder: License
+
+* This project is licensed under the terms of the MIT license.
+
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
