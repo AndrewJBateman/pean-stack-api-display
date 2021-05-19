@@ -73,12 +73,12 @@
 
 ## :signal_strength: Technologies - Frontend
 
-* [Angular framework v11](https://angular.io/)
-* [Angular Universal v11](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
+* [Angular framework v12](https://angular.io/)
+* [Angular Universal v12](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
 * [Bootstrap v4](https://getbootstrap.com/)
 * [Font Awesome icons](https://fontawesome.com/icons?d=gallery) converted to svg components
 * [jQuery v3](https://jquery.com/download/) required by Bootstrap. Latest version 3.5.1 resolved nav-bar breaking change in previous version.
-* [Angular Express Engine v11](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
+* [Angular Express Engine v12](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
 * [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) to check quality of website
 * [Google Charts](https://developers.google.com/chart/interactive/docs/gallery)
 * [Palantir](https://palantir.github.io/tslint/) extensible linter for the TypeScript language
@@ -197,7 +197,7 @@ export class GithubService {
 * Dependencies updated may 2021
 * Testing: 7 test files all pass. e2e runs and passes but no specs
 * To-Do: Lighthouse: Fix SEO & reduce render time for mobile build version. Add purgecss. Add more Jasmine & e2e test files.
-* To-Do: Deploy as full-stack
+* To-Do: Fix burger menu drop down and alignment. Deploy as full-stack
 
 ## :clap: Inspiration/General Tools
 
