@@ -194,8 +194,10 @@ export class GithubService {
 ## :clipboard: Status, Testing & To-Do List
 
 * Status: Working. Build file created with no errors. All files pass linting. Client deployed to Firebase.
-* Dependencies updated may 2021
+* Dependencies updated june 2021
 * Testing: 7 test files all pass. e2e runs and passes but no specs
+* To-Do: fix map location iPapi which is rate limited
+* To-Do: fix bestseller top header - icon should be to the left of the title.
 * To-Do: Lighthouse: Fix SEO & reduce render time for mobile build version. Add purgecss. Add more Jasmine & e2e test files.
 * To-Do: Fix burger menu drop down and alignment. Deploy as full-stack
 
