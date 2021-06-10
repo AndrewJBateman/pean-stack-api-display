@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "dev:ssr": "ng run pean-stack-api-display:serve-ssr",
     "serve:ssr": "node dist/pean-stack-api-display/server/main.js",
-    "build:ssr": "ng build --prod && ng run pean-stack-api-display:server:production",
+    "build:ssr": "ng build --configuration production && ng run pean-stack-api-display:server:production",
     "prerender": "ng run pean-stack-api-display:prerender",
     "build:functions": "npm run --prefix functions build",
     "build:all": "npm run build:ssr && npm run build:functions"
