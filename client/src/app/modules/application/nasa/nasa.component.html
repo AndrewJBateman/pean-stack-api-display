@@ -7,15 +7,23 @@
 <div class="main-div" *ngIf="nasaImgObj">
   <div class="card rounded">
     <div class="card-header bg-light">
-      <img
-        class="header-image float-left"
-        src="../../../../assets/params/images/logo/nasa-image.png"
-        alt="Nasa logo"
-      />
-      <h6 class="card-title text-dark">Today's Image:</h6>
-      <h5 class="card-subtitle font-italic">
-        {{ nasaImgObj.title }}
-      </h5>
+      <div class="row">
+        <div class="col-2">
+          <img
+          class="header-image float-left"
+          src="../../../../assets/params/images/logo/nasa-image.png"
+          alt="Nasa logo"
+        />
+        </div>
+        <div class="col-10">
+          <h6 class="card-title text-dark float-left p-0">Today's Image:</h6>
+          <h5 class="card-subtitle font-italic float-left p-0">
+            {{ nasaImgObj.title }}
+          </h5>
+        </div>
+      </div>
+
+
     </div>
     <div class="card-body">
       <!-- Show image if the media_type = image -->
