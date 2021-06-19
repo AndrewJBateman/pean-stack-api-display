@@ -3,28 +3,10 @@
   align-items: center;
 }
 
-.title-card {
-  max-width: 230px;
-  margin: auto auto;
-}
-
 .bestseller-card {
   padding: 12px auto;
 }
 
-.card-title {
-  padding-left: 60px;
-}
-
-.card-subtitle {
-  padding-left: 60px;
-}
-
 .card-text {
   margin: 16px 0;
-}
-
-.header-image {
-  width: 48px;
-  height: 48px;
 }
