@@ -5,147 +5,150 @@
 <div class="main-div">
   <div class="card rounded">
     <div class="card-header bg-light">
-      <img
-        class="header-image float-left"
-        src="../../../../assets/svgs/chart.svg"
-        alt="Book logo"
-      />
-      <h5 class="card-title text-dark">Google Charts</h5>
-      <h6 class="card-subtitle font-italic">Data from POSTgreSQL</h6>
+      <div class="row">
+        <div class="col-2">
+          <img
+            class="header-image"
+            src="../../../../assets/svgs/chart.svg"
+            alt="Chart logo"
+          />
+        </div>
+        <div class="col-10">
+          <h5 class="card-title text-dark float-left p-0">Google Charts</h5>
+          <h6 class="card-subtitle font-italic float-left p-0">
+            Data from POSTgreSQL
+          </h6>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div id="accordion">
-    <!--card 1-->
-    <div class="card rounded">
-      <div class="bg-light pb-0" id="headingOne">
-        <h5 class="card-title text-dark pb-0">
-          <button
-            class="card-chart-btn btn btn-outline-dark"
-            data-toggle="collapse"
-            data-target="#collapseOne"
-            aria-expanded="true"
-            aria-controls="collapseOne"
-          >
-            Line Chart
-          </button>
-        </h5>
-      </div>
+  <div class="accordion" id="accordionExample">
+    <!--item 1-->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+        >
+          Line Chart
+        </button>
+      </h2>
       <div
         id="collapseOne"
-        class="collapse show"
+        class="accordion-collapse collapse show"
         aria-labelledby="headingOne"
-        data-parent="#accordion"
+        data-bs-parent="#accordionExample"
       >
-        <div class="card-body">
+        <div class="accordion-body">
           <app-line-chart></app-line-chart>
         </div>
       </div>
     </div>
 
-    <!--card 2-->
-    <div class="card rounded">
-      <div class="bg-light pb-0" id="headingTwo">
-        <h5 class="card-title text-dark pb-0">
-          <button
-            class="card-chart-btn btn btn-outline-dark"
-            data-toggle="collapse"
-            data-target="#collapseTwo"
-            aria-expanded="false"
-            aria-controls="collapseTwo"
-          >
-            Pie Chart
-          </button>
-        </h5>
-      </div>
+    <!--item 2-->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo"
+          aria-expanded="false"
+          aria-controls="collapseTwo"
+        >
+          Pie Chart
+        </button>
+      </h2>
       <div
         id="collapseTwo"
-        class="collapse hide"
+        class="accordion-collapse collapse"
         aria-labelledby="headingTwo"
-        data-parent="#accordion"
+        data-bs-parent="#accordionExample"
       >
-        <div class="card-body">
+        <div class="accordion-body">
           <app-pie-chart></app-pie-chart>
         </div>
       </div>
     </div>
 
-    <!--card 3-->
-    <div class="card rounded">
-      <div class="bg-light pb-0" id="headingThree">
-        <h5 class="card-title text-dark pb-0">
-          <button
-            class="card-chart-btn btn btn-outline-dark"
-            data-toggle="collapse"
-            data-target="#collapseThree"
-            aria-expanded="false"
-            aria-controls="collapseThree"
-          >
-            Gauges
-          </button>
-        </h5>
-      </div>
+    <!--item 3-->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseThree"
+          aria-expanded="false"
+          aria-controls="collapseThree"
+        >
+          Gauges
+        </button>
+      </h2>
       <div
         id="collapseThree"
-        class="collapse hide"
+        class="accordion-collapse collapse"
         aria-labelledby="headingThree"
-        data-parent="#accordion"
+        data-bs-parent="#accordionExample"
       >
-        <div class="card-body">
+        <div class="accordion-body">
           <app-gauge-chart></app-gauge-chart>
         </div>
       </div>
     </div>
 
-    <!--card 4-->
-    <div class="card rounded">
-      <div class="bg-light pb-0" id="headingFour">
-        <h5 class="card-title text-dark pb-0">
-          <button
-            class="card-chart-btn btn btn-outline-dark"
-            data-toggle="collapse"
-            data-target="#collapseFour"
-            aria-expanded="false"
-            aria-controls="collapseFour"
-          >
-            Table Chart
-          </button>
-        </h5>
-      </div>
+    <!--item 4-->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseFour"
+          aria-expanded="false"
+          aria-controls="collapseFour"
+        >
+          Gauges
+        </button>
+      </h2>
       <div
         id="collapseFour"
-        class="collapse hide"
+        class="accordion-collapse collapse"
         aria-labelledby="headingFour"
-        data-parent="#accordion"
+        data-bs-parent="#accordionExample"
       >
-        <div class="card-body">
+        <div class="accordion-body">
           <app-table-chart></app-table-chart>
         </div>
       </div>
     </div>
 
-    <!--card 5-->
-    <div class="card rounded">
-      <div class="bg-light pb-0" id="headingFive">
-        <h5 class="card-title text-dark pb-0">
-          <button
-            class="card-chart-btn btn btn-outline-dark"
-            data-toggle="collapse"
-            data-target="#collapseFive"
-            aria-expanded="false"
-            aria-controls="collapseFive"
-          >
-            Bar Chart
-          </button>
-        </h5>
-      </div>
+    <!--item 5-->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseFive"
+          aria-expanded="false"
+          aria-controls="collapseFive"
+        >
+          Bar Chart
+        </button>
+      </h2>
       <div
         id="collapseFive"
-        class="collapse hide"
+        class="accordion-collapse collapse"
         aria-labelledby="headingFive"
-        data-parent="#accordion"
+        data-bs-parent="#accordionExample"
       >
-        <div class="card-body">
+        <div class="accordion-body">
           <app-bar-chart></app-bar-chart>
         </div>
       </div>
