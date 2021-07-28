@@ -14,7 +14,7 @@ app.use(express.json()); // req.body
 if (process.env.NODE_ENV === "production") {
 	// service static content
 	// npm run build
-	app.use(express.static(path.join(__dirname, "client/build")));
+	app.use(express.static(path.join(__dirname, "client/build/browser")));
 }
 
 // ROUTES
@@ -23,6 +23,7 @@ if (process.env.NODE_ENV === "production") {
 app.get("/metals", async (req, res) => {
 	try {
 		const allMetals = await pool.query("SELECT * FROM metalsData ORDER BY density ASC");
+    console.log('table: ', allMetals);
 		res.status(200).json(allMetals.rows);
 	} catch (err) {
 		console.error(err.message);
@@ -124,7 +125,7 @@ app.delete("/metals/:id", async (req, res) => {
 });
 
 app.get("*", (req, res) => {
-	res.sendFile(path.join(__dirname, "client/build/index.html"));
+	res.sendFile(path.join(__dirname, "client/build/pean-stack-api-display/index.html"));
 });
 
 app.listen(PORT, () => {
