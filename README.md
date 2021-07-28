@@ -75,7 +75,7 @@
 
 * [Angular framework v12](https://angular.io/)
 * [Angular Universal v12](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
-* [Bootstrap v4](https://getbootstrap.com/)
+* [Bootstrap v5](https://getbootstrap.com/)
 * [Font Awesome icons](https://fontawesome.com/icons?d=gallery) converted to svg components
 * [jQuery v3](https://jquery.com/download/) required by Bootstrap. Latest version 3.5.1 resolved nav-bar breaking change in previous version.
 * [Angular Express Engine v12](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
@@ -103,7 +103,7 @@
 
 * Install dependencies using `npm i`
 * Run `npm outdated` to see if any npm dependencies are outdated.
-* Get yourself API keys for the Nasa, Google Maps and News apps
+* Add your API keys for the Nasa, Google Maps and News apps to `environment.ts` & `environment.prod.ts` files
 * Run `ng serve` for a non-SSR dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
 * Run `npm run dev:ssr` for an SSR dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
 * Run `npm run lint` to lint test entire client-side codebase using TSLint.
@@ -194,9 +194,8 @@ export class GithubService {
 ## :clipboard: Status, Testing & To-Do List
 
 * Status: Working. Build file created with no errors. All files pass linting. Client deployed to Firebase.
-* Dependencies updated june 2021
 * Testing: 7 test files all pass. e2e runs and passes but no specs
-* To-Do: fix bestseller top header - icon should be to the left of the title.
+* To-Do: backend database and test SSR
 * To-Do: Lighthouse: Fix SEO & reduce render time for mobile build version. Fix images: "Image natural dimensions should be proportional to the display size and the pixel ratio to maximize image clarity."
 * To-Do: Add purgecss. Add more Jasmine & e2e test files.
 * To-Do: Fix burger menu drop down and alignment. Deploy as full-stack
