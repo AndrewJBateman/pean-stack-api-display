@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const pool = require("./db");
 const path = require("path");
+const pool = require(path.join(__dirname, "./db"));
 const PORT = process.env.PORT || 5000;
 
 // process.env.NODE_ENV => production or undefined
@@ -14,7 +14,11 @@ app.use(express.json()); // req.body
 if (process.env.NODE_ENV === "production") {
 	// service static content
 	// npm run build
-	app.use(express.static(path.join(__dirname, "client/build/browser")));
+	app.use(
+		express.static(
+			path.join(__dirname, "client/dist/pean-stack-api-display/browser")
+		)
+	);
 }
 
 // ROUTES
@@ -22,8 +26,10 @@ if (process.env.NODE_ENV === "production") {
 // get all metals data
 app.get("/metals", async (req, res) => {
 	try {
-		const allMetals = await pool.query("SELECT * FROM metalsData ORDER BY density ASC");
-    console.log('table: ', allMetals);
+		const allMetals = await pool.query(
+			"SELECT * FROM metalsData ORDER BY density ASC"
+		);
+		console.log("table: ", allMetals);
 		res.status(200).json(allMetals.rows);
 	} catch (err) {
 		console.error(err.message);
@@ -43,7 +49,9 @@ app.get("/companyPerformance", async (req, res) => {
 // get framework market share data
 app.get("/frameworkMarketshare", async (req, res) => {
 	try {
-		const frameworkMarketData = await pool.query("SELECT * FROM frameworkMarketData");
+		const frameworkMarketData = await pool.query(
+			"SELECT * FROM frameworkMarketData"
+		);
 		res.status(200).json(frameworkMarketData.rows);
 	} catch (err) {
 		console.error(err.message);
@@ -63,7 +71,9 @@ app.get("/gaugeData", async (req, res) => {
 // get country data
 app.get("/countryData", async (req, res) => {
 	try {
-		const countryData = await pool.query("SELECT * FROM countryData ORDER BY population DESC");
+		const countryData = await pool.query(
+			"SELECT * FROM countryData ORDER BY population DESC"
+		);
 		res.status(200).json(countryData.rows);
 	} catch (err) {
 		console.error(err.message);
@@ -125,7 +135,9 @@ app.delete("/metals/:id", async (req, res) => {
 });
 
 app.get("*", (req, res) => {
-	res.sendFile(path.join(__dirname, "client/build/pean-stack-api-display/index.html"));
+	res.sendFile(
+		path.join(__dirname, "client/build/pean-stack-api-display/index.html")
+	);
 });
 
 app.listen(PORT, () => {
