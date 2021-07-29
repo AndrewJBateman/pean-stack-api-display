@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
 	// npm run build
 	app.use(
 		express.static(
-			path.join(__dirname, "client/dist/pean-stack-api-display/browser")
+			path.join(__dirname, "/dist/pean-stack-api-display/browser")
 		)
 	);
 }
