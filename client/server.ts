@@ -19,6 +19,7 @@ const template = fs.readFileSync(path.join('.', 'dist/pean-stack-api-display/bro
 const win = domino.createWindow(template);
 // mock
 global['window'] = win;
+global['navigator'] = win.navigator;
 // not implemented property and functions
 Object.defineProperty(win.document.body.style, 'transform', {
   value: () => {
