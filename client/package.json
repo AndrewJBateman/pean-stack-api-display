@@ -4,13 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run pean-stack-api-display:serve-ssr",
     "serve:ssr": "node dist/pean-stack-api-display/server/main.js",
-    "build:ssr": "ng build --configuration production && ng run pean-stack-api-display:server:production"
+    "build:ssr": "ng build --configuration production && ng run pean-stack-api-display:server:production",
+    "prerender": "ng run pean-stack-api-display:prerender"
   },
   "repository": {
     "type": "git",
