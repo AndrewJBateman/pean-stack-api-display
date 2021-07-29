@@ -8,12 +8,10 @@ const PORT = process.env.PORT || 5000;
 // process.env.NODE_ENV => production or undefined
 
 // middleware
+app.use(express.json());
 app.use(cors());
-app.use(express.json()); // req.body
 
 if (process.env.NODE_ENV === "production") {
-	// service static content
-	// npm run build
 	app.use(
 		express.static(
 			path.join(__dirname, "/dist/pean-stack-api-display/browser")
