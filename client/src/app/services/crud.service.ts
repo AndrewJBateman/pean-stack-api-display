@@ -7,7 +7,8 @@ import { FrameworkMarketshare } from "../models/frameworkMarketshare";
 import { GaugeData } from "../models/gaugeData";
 import { CountryData } from "../models/countryData";
 
-const baseUrl = "http://localhost:5000";
+// const baseUrl = "http://localhost:5000";
+const baseUrl = "https://pean-stack-apis.herokuapp.com";
 
 @Injectable({
   providedIn: "root",
