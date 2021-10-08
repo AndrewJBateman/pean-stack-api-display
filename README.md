@@ -103,7 +103,7 @@
 
 ## :floppy_disk: Setup - Frontend
 
-* Install dependencies using `npm i`
+* From `/client` install dependencies using `npm i`
 * Run `npm outdated` to see if any npm dependencies are outdated.
 * Add your API keys for the Nasa, Google Maps and News apps to `environment.ts` & `environment.prod.ts` files
 * Run `ng serve` for a non-SSR dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
@@ -195,12 +195,17 @@ export class GithubService {
 
 ## :clipboard: Status, Testing & To-Do List
 
-* Status: Working. Build file created with no errors. All files pass linting. Client deployed to Firebase.
-* Testing: 7 test files all pass. e2e runs and passes but no specs
+* **Status:** Check deploy status. Working. Build file created with no errors. All files pass linting.
+* **Dev Note:** in dev. currently have to add API keys (NASA, NEWS, BESTSELLERS & GITHUB). No Postgres data.
+* **Testing:** 7 test files all pass. e2e runs and passes but no specs
+* To-Do: Add Postgres data in simple file to be accessed during dev.
 * To-Do: backend database and test SSR
 * To-Do: Lighthouse: Fix SEO & reduce render time for mobile build version. Fix images: "Image natural dimensions should be proportional to the display size and the pixel ratio to maximize image clarity."
 * To-Do: Add purgecss. Add more Jasmine & e2e test files.
-* To-Do: Fix burger menu drop down and alignment. Deploy as full-stack
+* To-Do: About page - replace accordian with cards.
+* To-Do: Contact page - replace icons
+* To-Do: Fix burger menu drop down and alignment.
+* To-Do: Deploy as full-stack
 
 ## :clap: Inspiration/General Tools
 
