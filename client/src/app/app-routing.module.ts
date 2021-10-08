@@ -97,13 +97,6 @@ const routes: Routes = [
         (mod) => mod.ContactModule
       ),
   },
-  {
-    path: "signin",
-    loadChildren: () =>
-      import("./modules/common/signin/signin.module").then(
-        (mod) => mod.SigninModule
-      ),
-  },
   { path: "**", component: NotFoundComponent },
 ];
 
