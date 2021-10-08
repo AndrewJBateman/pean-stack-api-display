@@ -1,13 +1,15 @@
+// require('dotenv').config();
+
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { throwError, Observable } from "rxjs";
 import { catchError, take } from "rxjs/operators";
 
 import { TopStories } from "../models/nyt";
-import { environment } from "../../environments/environment";
 
 const apiUrl = "https://api.nytimes.com/svc/topstories/v2/home.json?";
-const apiKey = environment.NYT_NEWS_KEY;
+const apiKey = process.env.NYT_NEWS_KEY;
+// const apiKey = "DEV: YOUR API KEY HERE"
 
 @Injectable({
   providedIn: "root",

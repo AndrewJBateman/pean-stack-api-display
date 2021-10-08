@@ -1,13 +1,15 @@
+// require('dotenv').config();
+
 import { Injectable } from "@angular/core";
 import { Observable, throwError } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 
 import { Apod } from "../models/apod";
-import { environment } from "../../environments/environment";
 import { catchError, take } from "rxjs/operators";
 
 const apiUrl = "https://api.nasa.gov/planetary/apod?";
-const apiKey = environment.NASA_KEY;
+const apiKey = process.env.NASA_KEY;
+// const apiKey = "DEV: YOUR API KEY HERE";
 
 @Injectable({
   providedIn: "root",

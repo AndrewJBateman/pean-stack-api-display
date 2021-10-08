@@ -1,3 +1,5 @@
+// require('dotenv').config();
+
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { throwError, Observable } from "rxjs";
@@ -5,10 +7,12 @@ import { catchError, take } from "rxjs/operators";
 
 import { User } from "../models/user";
 import { Repo } from "../models/repo";
-import { environment } from "src/environments/environment";
 
 const baseUrl = "https://api.github.com/users/";
-const params = new HttpParams().set("api_key", environment.GITHUB_KEY);
+const githubAPIKey = process.env.GITHUB_KEY;
+// const githubAPIKey = "DEV: YOUR API KEY HERE";
+
+const params = new HttpParams().set("api_key", githubAPIKey);
 
 @Injectable({
   providedIn: "root",

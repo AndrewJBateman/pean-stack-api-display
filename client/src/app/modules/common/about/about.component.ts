@@ -9,16 +9,16 @@ export class AboutComponent implements OnInit {
   features: any;
 
   constructor() {
-    /* this.features = [
+    this.features = [
       {
         expanded: true,
         icon: "fas fa-satellite-dish",
         title: "NASA API",
         state: "show",
         description: `Astronomy Picture of the Day (APOD) Data is fetched from the
-        <a href="https://api.nasa.gov/index.html#getting-started">official NASA API</a>.
+        <a href="https://api.nasa.gov/index.html#getting-started" target="_blank" rel="noreferrer noopener">official NASA API</a>.
         The APOD can also be a video and npm module
-        <a href="https://www.npmjs.com/package/safe-pipe">safe-pipe</a>
+        <a href="https://www.npmjs.com/package/safe-pipe" target="_blank" rel="noreferrer noopener">safe-pipe</a>
         was required to prevent the app from crashing.
         Data is displayed in a Bootstrap card with a description, date and credit text (where available) below.`,
       },
@@ -111,7 +111,7 @@ export class AboutComponent implements OnInit {
         >Github card shows Github repo details from user search. Repo button
         redirects to repo list page.`,
       }
-    ]; */
+    ];
   }
 
   ngOnInit(): void {}
