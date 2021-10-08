@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://pern-stack-api-display.web.app/sitemap.xml
