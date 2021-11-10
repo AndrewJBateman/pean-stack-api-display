@@ -8,35 +8,35 @@
   <!--news cards-->
   <div class="row">
     <div
-      class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4"
+      class="mb-4 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3"
       *ngFor="let article of mArticles"
     >
-      <div
-        class="card full-height"
-      >
+      <div class="card full-height">
         <img
           class="card-img-top"
-          src="{{ article.multimedia != null
-            ? article.multimedia[2].url
-            : 'assets/svgs/nyt.svg'}}"
-          alt="image for news article"
-         />
-        <div class="card-body p-2">
+          src="{{
+            article.multimedia[0].url
+              ? article.multimedia[0]
+              : 'assets/svgs/nyt.svg'
+          }}"
+          alt="news article"
+        />
+        <div class="p-2 card-body">
           <h6 class="card-title">
             {{ article.title }}
           </h6>
-          <p class="card-text mb-0" *ngIf="article.abstract">
+          <p class="mb-0 card-text" *ngIf="article.abstract">
             {{ article.abstract }}
           </p>
         </div>
 
-        <div class="card-footer p-2 backgroundSecondaryBlue">
+        <div class="p-2 card-footer backgroundSecondaryBlue">
           <div class="d-flex justify-content-around">
             <p class="footer-text" *ngIf="article.created_date">
               <app-svg-calender></app-svg-calender>
               {{ article.created_date | dateConvert }}
             </p>
-            <p class="link-text mb-0" *ngIf="article.url">
+            <p class="mb-0 link-text" *ngIf="article.url">
               <a
                 href="{{ article.url }}"
                 target="_blank"
@@ -44,7 +44,7 @@
                 alt="link for news article"
                 aria-label="link for news article"
                 class="text-light"
-                >
+              >
                 <app-svg-link></app-svg-link>
                 article</a
               >
