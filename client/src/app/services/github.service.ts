@@ -1,5 +1,3 @@
-// require('dotenv').config();
-
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { throwError, Observable } from "rxjs";
@@ -22,17 +20,15 @@ export class GithubService {
 
   getUser(user: string): Observable<User> {
     const userSearchUrl = `${baseUrl + user}`;
-    return this.http
-      .get<User>(userSearchUrl, { params })
-      .pipe(
-        take(1),
-        catchError((err) => {
-          return throwError(
-            "There was a problem fetching data from Github API, error: ",
-            err
-          );
-        })
-      );
+    return this.http.get<User>(userSearchUrl, { params }).pipe(
+      take(1),
+      catchError((err) => {
+        return throwError(
+          "There was a problem fetching data from Github API, error: ",
+          err
+        );
+      })
+    );
   }
 
   getRepos(user: string): Observable<Repo> {
@@ -40,16 +36,14 @@ export class GithubService {
       baseUrl + user + "/repos?order=updated&sort=desc?per_page=100&page=1"
     }`;
 
-    return this.http
-      .get<Repo>(repoSearchUrl, { params })
-      .pipe(
-        take(1),
-        catchError((err) => {
-          return throwError(
-            "There was a problem fetching data from Github API, error: ",
-            err
-          );
-        })
-      );
+    return this.http.get<Repo>(repoSearchUrl, { params }).pipe(
+      take(1),
+      catchError((err) => {
+        return throwError(
+          "There was a problem fetching data from Github API, error: ",
+          err
+        );
+      })
+    );
   }
 }

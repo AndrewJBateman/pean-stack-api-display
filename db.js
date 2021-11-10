@@ -1,5 +1,4 @@
 const Pool = require("pg").Pool;
-// require("dotenv").config();
 
 const devConfig =
   `postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD}` +

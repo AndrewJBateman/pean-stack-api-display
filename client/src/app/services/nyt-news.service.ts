@@ -1,5 +1,3 @@
-// require('dotenv').config();
-
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { throwError, Observable } from "rxjs";
@@ -18,8 +16,8 @@ export class NytNewsService {
   constructor(private http: HttpClient) {}
 
   getNews(): Observable<TopStories> {
-    const booksUrl = `${apiUrl}api-key=${apiKey}`;
-    return this.http.get<TopStories>(booksUrl).pipe(
+    const newsUrl = `${apiUrl}api-key=${apiKey}`;
+    return this.http.get<TopStories>(newsUrl).pipe(
       take(1),
       catchError((err) => {
         return throwError(err);

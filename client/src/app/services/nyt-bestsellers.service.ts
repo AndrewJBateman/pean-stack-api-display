@@ -1,5 +1,3 @@
-// require('dotenv').config();
-
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { throwError, Observable } from "rxjs";
@@ -9,6 +7,7 @@ import { Books } from "../models/nyt";
 
 const apiUrl = "https://api.nytimes.com/svc/books/v3/lists/overview.json?";
 const apiKey = process.env.NYT_BEST_KEY;
+
 // const apiKey = "DEV: YOUR API KEY HERE"
 
 @Injectable({

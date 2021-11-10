@@ -1,5 +1,3 @@
-// require('dotenv').config();
-
 import { Injectable } from "@angular/core";
 import { Observable, throwError } from "rxjs";
 import { HttpClient } from "@angular/common/http";
@@ -19,6 +17,7 @@ export class NasaService {
 
   //  rxjs take(1) takes the first emission of Nasa data and unsubscribes from the observable.
   getNasaImage(): Observable<Apod> {
+    console.log("API key: ", apiKey)
     const apodUrl = `${apiUrl}&api_key=${apiKey}&hd=true`;
     return this.http.get<Apod>(apodUrl).pipe(
       take(1),
