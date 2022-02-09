@@ -25,7 +25,7 @@ export class NytBestsellersComponent implements OnInit {
   }
 
   getBestsellers(): any {
-    this.nytBestsellersService.getBooks().subscribe((data: Books) => {
+    this.nytBestsellersService.getBooks().subscribe((data: any) => {
       this.bestsellerLists = data.results.lists;
     });
   }

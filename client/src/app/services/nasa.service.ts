@@ -17,12 +17,11 @@ export class NasaService {
 
   //  rxjs take(1) takes the first emission of Nasa data and unsubscribes from the observable.
   getNasaImage(): Observable<Apod> {
-    console.log("API key: ", apiKey)
     const apodUrl = `${apiUrl}&api_key=${apiKey}&hd=true`;
     return this.http.get<Apod>(apodUrl).pipe(
       take(1),
       catchError((err) => {
-        return throwError("Problem fetching apod from NASA API, error: ", err);
+        throw "error in getting API data. Details: " + err;
       })
     );
   }

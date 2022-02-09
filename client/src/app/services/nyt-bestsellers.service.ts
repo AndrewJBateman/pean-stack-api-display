@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { throwError, Observable } from "rxjs";
-import { catchError, take} from "rxjs/operators";
+import { catchError, map, take, tap, filter } from "rxjs/operators";
 
-import { Books } from "../models/nyt";
+import { Book } from "../models/books";
 
 const apiUrl = "https://api.nytimes.com/svc/books/v3/lists/overview.json?";
 const apiKey = process.env.NYT_BEST_KEY;
@@ -18,15 +18,16 @@ export class NytBestsellersService {
 
   constructor(private http: HttpClient) {}
 
-  getBooks(): Observable<Books> {
+
+
+
+  getBooks(): Observable<Book[]> {
     const booksUrl = `${apiUrl}api-key=${apiKey}`;
-    return this.http.get<Books>(booksUrl).pipe(
+    return this.http.get<any>(booksUrl).pipe(
       take(1),
+      map(items => items.filter(item => item.volumeInfo.imageLinks != null)),
       catchError((err) => {
-        return throwError(
-          "Problem fetching bestsellers from API, error: ",
-          err
-        );
+        throw 'error in getting API data. Details: ' + err;
       })
     );
   }

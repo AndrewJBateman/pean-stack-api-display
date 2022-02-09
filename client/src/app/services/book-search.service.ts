@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
+import { catchError, map } from "rxjs/operators";
 
 import { Book, GoogleBooksApiInterface } from "../models/books";
 
@@ -16,6 +16,11 @@ export class GoogleBookService {
   findBook(title: string): Observable<Book[]> {
     return this.http
       .get<GoogleBooksApiInterface>(`${apiUrl}?q=${title}&maxResults=40`)
-      .pipe(map((data: GoogleBooksApiInterface) => data.items));
+      .pipe(
+        map((data: GoogleBooksApiInterface) => data.items),
+        catchError((err) => {
+          throw "error in getting API data. Details: " + err;
+        })
+      );
   }
 }

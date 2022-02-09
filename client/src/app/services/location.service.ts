@@ -17,7 +17,7 @@ export class LocationService {
     return this.http.get<Location>(apiUrl).pipe(
       take(1),
       catchError((err) => {
-        return throwError("Location not found, error: ", err);
+        throw "error in getting API data. Details: " + err;
       })
     );
   }

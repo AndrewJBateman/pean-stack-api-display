@@ -7,7 +7,7 @@ import { TopStories } from "../models/nyt";
 
 const apiUrl = "https://api.nytimes.com/svc/topstories/v2/home.json?";
 const apiKey = process.env.NYT_NEWS_KEY;
-// const apiKey = "DEV: YOUR API KEY HERE"
+// const apiKey = "YOUR API KEY"
 
 @Injectable({
   providedIn: "root",
@@ -20,7 +20,7 @@ export class NytNewsService {
     return this.http.get<TopStories>(newsUrl).pipe(
       take(1),
       catchError((err) => {
-        return throwError(err);
+        throw 'error in getting API data. Details: ' + err;
       })
     );
   }
