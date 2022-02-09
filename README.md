@@ -75,12 +75,12 @@
 
 ## :signal_strength: Technologies - Frontend
 
-* [Angular framework v12](https://angular.io/)
-* [Angular Universal v12](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
+* [Angular framework v13](https://angular.io/)
+* [Angular Universal v13](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
 * [Bootstrap v5](https://getbootstrap.com/)
 * [Font Awesome icons](https://fontawesome.com/icons?d=gallery) converted to svg components
 * [jQuery v3](https://jquery.com/download/) required by Bootstrap. Latest version 3.5.1 resolved nav-bar breaking change in previous version.
-* [Angular Express Engine v12](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
+* [Angular Express Engine v13](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
 * [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) to check quality of website
 * [Google Charts](https://developers.google.com/chart/interactive/docs/gallery)
 * [Palantir](https://palantir.github.io/tslint/) extensible linter for the TypeScript language
@@ -104,8 +104,7 @@
 ## :floppy_disk: Setup - Frontend
 
 * From `/client` install dependencies using `npm i`
-* Run `npm outdated` to see if any npm dependencies are outdated.
-* Add your API keys for the Nasa, Google Maps and News apps to `environment.ts` & `environment.prod.ts` files
+* Add your API keys for the Nasa, Google Maps and News apps to `environment.ts` & `environment.prod.ts` files or individual modules as I have done for deployment reasons
 * Run `ng serve` for a non-SSR dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
 * Run `npm run dev:ssr` for an SSR dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
 * Run `npm run lint` to lint test entire client-side codebase using TSLint.
@@ -147,10 +146,7 @@ export class GithubService {
       .pipe(
         take(1),
         catchError((err) => {
-          return throwError(
-            "There was a problem fetching data from Github API, error: ",
-            err
-          );
+        throw "error in getting API data. Details: " + err;
         })
       );
   }
@@ -165,10 +161,7 @@ export class GithubService {
       .pipe(
         take(1),
         catchError((err) => {
-          return throwError(
-            "There was a problem fetching data from Github API, error: ",
-            err
-          );
+        throw "error in getting API data. Details: " + err;
         })
       );
   }
