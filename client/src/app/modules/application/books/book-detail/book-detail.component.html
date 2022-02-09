@@ -27,13 +27,17 @@
             </div>
             <div *ngIf="book.volumeInfo.authors">
               <p>
-                <span class="textSecondaryBlue font-weight-bold">Authors: </span>
+                <span class="textSecondaryBlue font-weight-bold"
+                  >Authors:
+                </span>
                 {{ book.volumeInfo.authors }}
               </p>
             </div>
             <div *ngIf="book.volumeInfo.publisher">
               <p>
-                <span class="textSecondaryBlue font-weight-bold">Publisher: </span>
+                <span class="textSecondaryBlue font-weight-bold"
+                  >Publisher:
+                </span>
                 {{ book.volumeInfo.publisher }}
               </p>
             </div>
@@ -55,8 +59,10 @@
             </div>
             <div *ngIf="book.volumeInfo.language">
               <p>
-                <span class="textSecondaryBlue font-weight-bold">Language: </span>
-                <span class="badge badge-warning">{{
+                <span class="textSecondaryBlue font-weight-bold"
+                  >Language:
+                </span>
+                <span class="badge bg-warning">{{
                   book.volumeInfo.language
                 }}</span>
               </p>
@@ -74,11 +80,11 @@
                   *ngIf="book.volumeInfo.categories.length > 1"
                   >Categories:
                 </span>
-                <span class="badge badge-warning">{{
+                <span class="badge bg-secondary">{{
                   book.volumeInfo.categories[0]
                 }}</span>
                 <span
-                  class="badge badge-info"
+                  class="badge bg-info"
                   *ngIf="book.volumeInfo.categories[1]"
                   >{{ book.volumeInfo.categories[1] }}</span
                 >
@@ -89,7 +95,7 @@
                 <span class="textSecondaryBlue font-weight-bold"
                   >Number of Pages:
                 </span>
-                <span class="badge badge-warning">{{
+                <span class="badge bg-primary">{{
                   book.volumeInfo.pageCount
                 }}</span>
               </p>
@@ -99,7 +105,7 @@
                 <span class="textSecondaryBlue font-weight-bold"
                   >Average Rating:
                 </span>
-                <span class="badge badge-warning">{{
+                <span class="badge bg-success">{{
                   book.volumeInfo.averageRating
                 }}</span>
               </p>
@@ -107,7 +113,9 @@
             <!--group of buttons at bottom of rhs list-->
             <div class="d-flex justify-content-around">
               <div class="p-2">
-                <a (click)="returnToList()" class="btn btn-outline-primary textSecondaryBlue"
+                <a
+                  (click)="returnToList()"
+                  class="btn btn-outline-primary textSecondaryBlue"
                   >Back to List</a
                 >
               </div>
@@ -126,11 +134,17 @@
       </div>
     </div>
     <div>
-      <p class="card-text textSecondaryBlue text-justify p-3" *ngIf="book.volumeInfo.description">
+      <p
+        class="card-text textSecondaryBlue text-justify p-3"
+        *ngIf="book.volumeInfo.description"
+      >
         <span class="text-dark font-weight-bold">Description: </span>
         {{ book.volumeInfo.description }}
       </p>
-      <p class="card-text textSecondaryBlue p-3" *ngIf="!book.volumeInfo.description">
+      <p
+        class="card-text textSecondaryBlue p-3"
+        *ngIf="!book.volumeInfo.description"
+      >
         <span class="text-secondary">No description available</span>
       </p>
     </div>
