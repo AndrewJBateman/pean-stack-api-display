@@ -2,7 +2,7 @@ import { Component, OnInit, Inject, PLATFORM_ID } from "@angular/core";
 import { isPlatformBrowser } from "@angular/common";
 import { Observable } from "rxjs";
 import { Router, NavigationExtras } from "@angular/router";
-import { FormGroup, FormBuilder } from "@angular/forms";
+import { UntypedFormGroup, UntypedFormBuilder } from "@angular/forms";
 
 import { GoogleBookService } from "../../../services/book-search.service";
 import { PersistanceService } from "../../../services/localstorage.service";
@@ -16,7 +16,7 @@ import { Book } from "../../../models/books";
 export class BooksComponent implements OnInit {
   books: Book[];
   data: Observable<Book[]>;
-  searchForm: FormGroup;
+  searchForm: UntypedFormGroup;
   searchedItem: string;
   searchString: string;
   searchedBooks: Book[];
@@ -26,7 +26,7 @@ export class BooksComponent implements OnInit {
   constructor(
     private googleBookService: GoogleBookService,
     private router: Router,
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private storageService: PersistanceService,
     @Inject(PLATFORM_ID) private platformId: object
   ) {}
