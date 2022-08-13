@@ -46,7 +46,7 @@
     <div class="row" *ngIf="booksArray">
       <div
         class="p-2 text-center book-card col-lg-2 col-md-3 col-sm-3 col-xs-6"
-        *ngFor="let book of booksArray"
+        *ngFor="let book of booksArray; trackBy: bookTrackbyFn"
       >
         <img
           src="{{

@@ -4,9 +4,9 @@ import { Observable } from "rxjs";
 import { Router, NavigationExtras } from "@angular/router";
 import { UntypedFormGroup, UntypedFormBuilder } from "@angular/forms";
 
-import { GoogleBookService } from "../../../services/book-search.service";
+import { GoogleBookService } from "./book-services/book-search.service";
 import { PersistanceService } from "../../../services/localstorage.service";
-import { Book } from "../../../models/books";
+import { Book } from "./book-models/books";
 
 @Component({
   selector: "app-books",
@@ -88,5 +88,9 @@ export class BooksComponent implements OnInit {
       },
     };
     this.router.navigate(["/book-detail"], navigationExtras);
+  }
+
+  bookTrackbyFn(index: number, item: any): number {
+    return item.bookId;
   }
 }
