@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 import { NytNewsService } from "../../../services/nyt-news.service";
-import { TopStory, TopStories } from "../../../models/nyt";
+import { TopStory, TopStories } from "../nyt-bestsellers/nyt-models/nyt";
 
 @Component({
   selector: "app-news",

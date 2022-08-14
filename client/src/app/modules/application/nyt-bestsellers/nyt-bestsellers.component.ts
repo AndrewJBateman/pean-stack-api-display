@@ -1,7 +1,7 @@
 import { Component, OnInit, ComponentFactoryResolver } from "@angular/core";
 
-import { NytBestsellersService } from "../../../services/nyt-bestsellers.service";
-import { Book, Books, List } from "../../../models/nyt";
+import { NytBestsellersService } from "./nyt-services/nyt-bestsellers.service";
+import { Book, Books, List } from "./nyt-models/nyt";
 import { Observable } from "rxjs";
 import { Router, NavigationExtras } from "@angular/router";
 
@@ -31,10 +31,9 @@ export class NytBestsellersComponent implements OnInit {
   }
 
   onGoToBestsellerDetail(bestseller: Book): any {
-
     const navigationExtras: NavigationExtras = {
       state: {
-        bestseller
+        bestseller,
       },
     };
     this.router.navigate(["/bestseller-detail"], navigationExtras);

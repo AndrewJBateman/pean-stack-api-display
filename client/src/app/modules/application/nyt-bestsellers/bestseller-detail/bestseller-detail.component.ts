@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
 
-import { List } from "../../../../models/nyt";
+import { List } from "../nyt-models/nyt";
 
 @Component({
   selector: "app-bestseller-detail",
