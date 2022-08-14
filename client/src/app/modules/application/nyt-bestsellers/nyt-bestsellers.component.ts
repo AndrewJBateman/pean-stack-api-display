@@ -1,4 +1,4 @@
-import { Component, OnInit, ComponentFactoryResolver } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 import { NytBestsellersService } from "./nyt-services/nyt-bestsellers.service";
 import { Book, Books, List } from "./nyt-models/nyt";
@@ -11,7 +11,7 @@ import { Router, NavigationExtras } from "@angular/router";
   styleUrls: ["./nyt-bestsellers.component.css"],
 })
 export class NytBestsellersComponent implements OnInit {
-  bestsellerLists: Array<List>;
+  bestsellerLists: Observable<Books | List[]>;
   bestsellers: Array<Book>;
   bestseller: Book;
 
@@ -25,9 +25,7 @@ export class NytBestsellersComponent implements OnInit {
   }
 
   getBestsellers(): any {
-    this.nytBestsellersService.getBooks().subscribe((data: any) => {
-      this.bestsellerLists = data.results.lists;
-    });
+    this.bestsellerLists = this.nytBestsellersService.getBooks();
   }
 
   onGoToBestsellerDetail(bestseller: Book): any {

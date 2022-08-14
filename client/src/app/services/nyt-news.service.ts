@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { throwError, Observable } from "rxjs";
+import { Observable } from "rxjs";
 import { catchError, take } from "rxjs/operators";
 
-import { TopStories } from "../models/nyt";
+import { TopStories } from "../modules/application/nyt-bestsellers/nyt-models/nyt";
 
 const apiUrl = "https://api.nytimes.com/svc/topstories/v2/home.json?";
 const apiKey = process.env.NYT_NEWS_KEY;
@@ -20,7 +20,7 @@ export class NytNewsService {
     return this.http.get<TopStories>(newsUrl).pipe(
       take(1),
       catchError((err) => {
-        throw 'error in getting API data. Details: ' + err;
+        throw "error in getting API data. Details: " + err;
       })
     );
   }
