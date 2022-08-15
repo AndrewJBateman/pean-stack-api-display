@@ -3,9 +3,11 @@ import { HttpClient } from "@angular/common/http";
 import { take } from "rxjs/operators";
 import { Observable } from "rxjs";
 
-import { Crypto } from "../models/crypto";
+import { Crypto } from "../crypto-models/crypto";
 
-@Injectable()
+@Injectable({
+  providedIn: "root",
+})
 export class CryptoService {
   result: any;
   currencyCode: string;

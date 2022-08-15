@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { CryptoService } from "../../../services/crypto.service";
+import { Observable } from "rxjs";
+import { CryptoService } from "./crypto-services/crypto.service";
 
 @Component({
   selector: "app-crypto",
@@ -17,5 +18,9 @@ export class CryptoComponent implements OnInit {
     this.cryptoService.getPrices().subscribe((res) => {
       this.cryptos = res;
     });
+  }
+
+  cryptoTrackbyFn(index: number, item: any): number {
+    return item.cryptoId;
   }
 }
