@@ -12,8 +12,6 @@ import { SvgUserComponent } from "./../../../components/svg-user/svg-user.compon
 import { SvgPersonModule } from "./../../../components/svg-person/svg-person.module";
 import { SvgFolderModule } from "./../../../components/svg-folder/svg-folder.module";
 
-import { GithubService } from "../../../services/github.service";
-
 @NgModule({
   imports: [CommonModule, GithubRoutingModule, FormsModule, PipesModule, SvgFolderModule, SvgPersonModule, SvgGlobeModule],
   exports: [GithubComponent],
@@ -23,6 +21,6 @@ import { GithubService } from "../../../services/github.service";
     SvgPenComponent,
     SvgUserComponent
   ],
-  providers: [GithubService],
+  providers: [],
 })
 export class GithubModule {}

@@ -8,7 +8,7 @@ import { Repo } from "../models/repo";
 
 const baseUrl = "https://api.github.com/users/";
 const githubAPIKey = process.env.GITHUB_KEY;
-// const githubAPIKey = "DEV: YOUR API KEY HERE";
+// const githubAPIKey = "DEV API KEY HERE";
 
 const params = new HttpParams().set("api_key", githubAPIKey);
 

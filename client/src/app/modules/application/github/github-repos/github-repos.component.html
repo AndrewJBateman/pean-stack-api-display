@@ -12,7 +12,7 @@
   </div>
 </div>
 <!--cards for book search results-->
-<div class="github-card pb-2" *ngFor="let repo of repos">
+<div class="github-card pb-2" *ngFor="let repo of repos | async; trackBy: repoTrackbyFn">
   <div class="card rounded" *ngIf="repo">
     <div class="card-header text-white backgroundSecondaryBlue">
       <h6 class="card-title mb-0">

@@ -3,7 +3,8 @@ import { ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
 
 import { GithubService } from "../../../../services/github.service";
-import { Repo } from "src/app/models/repo";
+import { Repo } from "../../../../models/repo";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-github-repos",
@@ -11,7 +12,7 @@ import { Repo } from "src/app/models/repo";
   styleUrls: ["./github-repos.component.css"],
 })
 export class GithubReposComponent implements OnInit {
-  repos: Repo;
+  repos: Observable<Repo>;
   userName: any;
 
   constructor(
@@ -25,13 +26,15 @@ export class GithubReposComponent implements OnInit {
     this.searchRepos(this.route.snapshot.params.username);
   }
 
-  searchRepos(userName: string): any {
-    this.githubService.getRepos(userName).subscribe((repos: Repo) => {
-      this.repos = repos;
-    });
+  searchRepos(userName: string): void {
+    this.repos = this.githubService.getRepos(userName);
   }
 
   returnToUser(): void {
     this.location.back();
+  }
+
+  repoTrackbyFn(index: number, item: any): number {
+    return item.repoId;
   }
 }
