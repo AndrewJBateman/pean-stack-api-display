@@ -1,6 +1,6 @@
 .main-div {
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
 }
 
 .card {
@@ -8,10 +8,10 @@
   align-items: left;
 }
 
-button {
+/* button {
   width: 160px;
   align-items: left !important;
-}
+} */
 
 a {
   color: #6a5eff;
