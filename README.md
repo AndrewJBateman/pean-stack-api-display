@@ -12,14 +12,22 @@
 
 ## :page_facing_up: Table of contents
 
-* [:zap: PEAN Full Stack API Display](#zap-pean-stack-api-display)
+* [:zap: PEAN Full Stack API Display](#zap-pean-full-stack-api-display)
   * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
+    * [Frontend](#frontend)
   * [:camera: Screenshots](#camera-screenshots)
-  * [:signal_strength: Technologies](#signal_strength-technologies)
-  * [:floppy_disk: Setup](#floppy_disk-setup)
-  * [:cool: Features](#cool-features)
-  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:signal_strength: Technologies - Backend](#signal_strength-technologies---backend)
+  * [:signal_strength: Technologies - Frontend](#signal_strength-technologies---frontend)
+  * [:floppy_disk: Setup - Backend](#floppy_disk-setup---backend)
+  * [:floppy_disk: Setup - Frontend](#floppy_disk-setup---frontend)
+  * [:wrench: Testing](#wrench-testing)
+  * [:computer: Code Examples - Backend](#computer-code-examples---backend)
+  * [:computer: Code Examples - Frontend NASA API](#computer-code-examples---frontend-nasa-api)
+  * [:cool: Features - Backend](#cool-features---backend)
+  * [:cool: Features - Frontend](#cool-features---frontend)
+  * [:clipboard: Status, Testing & To-Do List](#clipboard-status-testing--to-do-list)
+  * [:clap: Inspiration/General Tools](#clap-inspirationgeneral-tools)
   * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
@@ -75,12 +83,12 @@
 
 ## :signal_strength: Technologies - Frontend
 
-* [Angular framework v13](https://angular.io/)
-* [Angular Universal v13](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
+* [Angular framework v14](https://angular.io/)
+* [Angular Universal v14](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
 * [Bootstrap v5](https://getbootstrap.com/)
 * [Font Awesome icons](https://fontawesome.com/icons?d=gallery) converted to svg components
 * [jQuery v3](https://jquery.com/download/) required by Bootstrap. Latest version 3.5.1 resolved nav-bar breaking change in previous version.
-* [Angular Express Engine v13](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
+* [Angular Express Engine v14](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
 * [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) to check quality of website
 * [Google Charts](https://developers.google.com/chart/interactive/docs/gallery)
 * [Palantir](https://palantir.github.io/tslint/) extensible linter for the TypeScript language
@@ -195,7 +203,6 @@ export class GithubService {
 * To-Do: backend database and test SSR
 * To-Do: Lighthouse: Fix SEO & reduce render time for mobile build version. Fix images: "Image natural dimensions should be proportional to the display size and the pixel ratio to maximize image clarity."
 * To-Do: Add purgecss. Add more Jasmine & e2e test files.
-* To-Do: About page - replace accordian with cards.
 * To-Do: Contact page - replace icons
 * To-Do: Fix burger menu drop down and alignment.
 * To-Do: Deploy as full-stack
