@@ -13,7 +13,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let crypto of objectKeys(cryptos)">
+        <tr *ngFor="let crypto of objectKeys(cryptos); trackBy: cryptoTrackbyFn">
           <th scope="row">{{ crypto }}</th>
           <td>
             <img
