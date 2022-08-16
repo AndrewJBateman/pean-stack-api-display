@@ -97,4 +97,8 @@ export class HomeComponent implements OnInit {
       content: "This is a PWA app",
     });
   }
+
+  featureTrackbyFn(index: number, item: any): number {
+    return item.featureId;
+  }
 }

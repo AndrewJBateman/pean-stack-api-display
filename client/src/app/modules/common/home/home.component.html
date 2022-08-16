@@ -9,7 +9,7 @@
 <div class="row">
   <div
     class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4"
-    *ngFor="let item of features"
+    *ngFor="let item of features; trackBy: featureTrackbyFn"
   >
     <div class="card full-height" routerLink="/{{ item.link }}">
       <div>
