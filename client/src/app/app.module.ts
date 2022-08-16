@@ -1,4 +1,3 @@
-import { Breakpoints } from "@angular/cdk/layout";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { CLOUDINARY_CONFIG, NgxPictureModule } from "ngx-picture";
