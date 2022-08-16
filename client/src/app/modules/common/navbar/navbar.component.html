@@ -3,7 +3,7 @@
 >
   <a
     class="nav-link mb-3"
-    style="height: 40px;"
+    style="height: 40px; margin: 12px 4px 0 4px;"
     aria-label="home nav link active"
     [routerLink]="['/']"
     routerLinkActive="nav-link-active"
@@ -11,7 +11,7 @@
   >
     <span class="mr-1">
       <div *ngIf="isHomeRoute()">
-        <app-svg-list style="fill: #f3b4ee !important"></app-svg-list>
+        <app-svg-list style="fill: #f3b4ee !important;"></app-svg-list>
       </div>
       <div *ngIf="!isHomeRoute()">
         <app-svg-list style="fill: white !important"></app-svg-list>
