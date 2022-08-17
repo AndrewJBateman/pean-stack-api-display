@@ -33,8 +33,8 @@ export class MapComponent implements AfterViewInit {
       // if location data returned use that, else use location of the Eiffel Tower
       const myLocation = data
         ? {
-            lat: this.lat,
-            lng: this.lng,
+            lat: +this.lat,
+            lng: +this.lng,
           }
         : {
             lat: 48.858222,
@@ -52,7 +52,6 @@ export class MapComponent implements AfterViewInit {
           minZoom: 2,
           maxZoom: 17,
           tileSize: 256,
-          tileOffset: -1,
           attribution: "Open Street Map",
         }
       );
