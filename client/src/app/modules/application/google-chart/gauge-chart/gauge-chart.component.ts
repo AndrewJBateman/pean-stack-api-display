@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
-import { GaugeData } from "src/app/models/gaugeData";
-import { CrudService } from "src/app/services/crud.service";
+import { Component } from "@angular/core"
 
-import { GoogleChartService } from "../../../../services/google-chart.service";
+import { GaugeData } from "../data-models/gaugeData";
+import { CrudService } from "../data-services/crud.service";
+import { GoogleChartService } from "../data-services/google-chart.service";
 
 @Component({
   selector: "app-gauge-chart",

@@ -1,8 +1,8 @@
 import { Component } from "@angular/core";
 
-import { GoogleChartService } from "../../../../services/google-chart.service";
-import { CrudService } from "../../../../services/crud.service";
-import { CompanyPerformance } from "../../../../models/companyPerformance";
+import { GoogleChartService } from "../data-services/google-chart.service";
+import { CrudService } from "../data-services/crud.service";
+import { CompanyPerformance } from "../data-models/companyPerformance";
 import { Observable } from "rxjs";
 
 @Component({

@@ -1,8 +1,8 @@
 import { Component } from "@angular/core";
 
-import { GoogleChartService } from "../../../../services/google-chart.service";
-import { CrudService } from "../../../../services/crud.service";
-import { Metal } from "../../../../models/metal";
+import { GoogleChartService } from "../data-services/google-chart.service";
+import { CrudService } from "../data-services/crud.service";
+import { Metal } from "../data-models/metal";
 
 @Component({
   selector: "app-bar-chart",

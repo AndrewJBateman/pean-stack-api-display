@@ -1,8 +1,8 @@
 import { Component } from "@angular/core";
 
-import { GoogleChartService } from "../../../../services/google-chart.service";
-import { CrudService } from "src/app/services/crud.service";
-import { CountryData } from "src/app/models/countryData";
+import { GoogleChartService } from "../data-services/google-chart.service";
+import { CrudService } from "../data-services/crud.service";
+import { CountryData } from "../data-models/countryData";
 
 @Component({
   selector: "app-table-chart",

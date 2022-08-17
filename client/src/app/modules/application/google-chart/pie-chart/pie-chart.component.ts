@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
-import { FrameworkMarketshare } from "src/app/models/frameworkMarketshare";
-import { CrudService } from "src/app/services/crud.service";
-import { GoogleChartService } from "../../../../services/google-chart.service";
+import { FrameworkMarketshare } from "../data-models/frameworkMarketshare";
+import { CrudService } from "../data-services/crud.service";
+import { GoogleChartService } from "../data-services/google-chart.service";
 
 @Component({
   selector: "app-pie-chart",

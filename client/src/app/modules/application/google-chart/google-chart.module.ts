@@ -1,7 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
-import { GoogleChartServiceModule } from "../../../services/google-chart.service.module";
 import { LineChartComponent } from "./line-chart/line-chart.component";
 import { PieChartComponent } from "./pie-chart/pie-chart.component";
 import { TableChartComponent } from "./table-chart/table-chart.component";
@@ -13,6 +12,7 @@ import { GoogleChartRoutingModule } from "./google-chart-routing.module";
 import { SvgChartComponent } from "./../../../components/svg-chart/svg-chart.component";
 import { SvgDatabaseModule } from "./../../../components/svg-database/svg-database.module";
 import { SvgCaretrModule } from "./../../../components/svg-caretr/svg-caretr.module";
+import { GoogleChartServiceModule } from "./data-services/google-chart.service.module";
 
 @NgModule({
   imports: [

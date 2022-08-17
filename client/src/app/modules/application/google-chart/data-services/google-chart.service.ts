@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { GoogleChartServiceModule } from "./google-chart.service.module";
+import { GoogleChartServiceModule } from "../data-services/google-chart.service.module";
 
 declare const google: any;
 

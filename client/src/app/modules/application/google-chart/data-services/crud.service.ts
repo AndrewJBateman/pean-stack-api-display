@@ -1,11 +1,12 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { Metal } from "../models/metal";
-import { CompanyPerformance } from "../models/companyPerformance";
-import { FrameworkMarketshare } from "../models/frameworkMarketshare";
-import { GaugeData } from "../models/gaugeData";
-import { CountryData } from "../models/countryData";
+
+import { Metal } from "../data-models/metal";
+import { CompanyPerformance } from "../data-models/companyPerformance";
+import { FrameworkMarketshare } from "../data-models/frameworkMarketshare";
+import { GaugeData } from "../data-models/gaugeData";
+import { CountryData } from "..//data-models/countryData";
 
 // const baseUrl = "http://localhost:5000";
 const baseUrl = "https://pean-stack-apis.herokuapp.com";
