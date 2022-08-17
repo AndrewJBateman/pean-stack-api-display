@@ -4,7 +4,7 @@
   <link rel="preload" href="https://api.nasa.gov" as "fetch"> -->
 </head>
 
-<div class="main-div" *ngIf="nasaImgObj">
+<div class="main-div" *ngIf="nasaImgObj$ | async as nasaImgObj">
   <div class="card rounded">
     <div class="card-header bg-light">
       <div class="row">

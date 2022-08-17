@@ -2,12 +2,12 @@ import { Injectable } from "@angular/core";
 import { Observable, throwError } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 
-import { Apod } from "../models/apod";
+import { Apod } from "../nasa-models/apod";
 import { catchError, take } from "rxjs/operators";
 
 const apiUrl = "https://api.nasa.gov/planetary/apod?";
-const apiKey = process.env.NASA_KEY;
-// const apiKey = "DEV: YOUR API KEY HERE";
+// const apiKey = process.env.NASA_KEY;
+const apiKey = "6jziDKGbSC1KSZUsNSTgfvkBxGdy1giBj6uPcztL";
 
 @Injectable({
   providedIn: "root",
