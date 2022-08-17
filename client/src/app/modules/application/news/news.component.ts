@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 
-import { NytNewsService } from "../../../services/nyt-news.service";
-import { TopStory, TopStories } from "../nyt-bestsellers/nyt-models/nyt";
+import { NytNewsService } from "./news-services/nyt-news.service";
+import { TopStory, TopStories } from "./news-models/nyt-news";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-news",
@@ -9,7 +10,7 @@ import { TopStory, TopStories } from "../nyt-bestsellers/nyt-models/nyt";
   styleUrls: ["./news.component.css"],
 })
 export class NewsComponent implements OnInit {
-  mArticles: Array<TopStory>;
+  mArticles$: Observable<TopStories | TopStory[]>;
 
   constructor(private newsService: NytNewsService) {}
 
@@ -17,9 +18,11 @@ export class NewsComponent implements OnInit {
     this.getNytNews();
   }
 
-  getNytNews(): any {
-    this.newsService.getNews().subscribe((data: TopStories) => {
-      this.mArticles = data.results;
-    });
+  getNytNews(): void {
+    this.mArticles$ = this.newsService.getNews();
+  }
+
+  newsTrackbyFn(index: number, item: any): number {
+    return item.newsId;
   }
 }
