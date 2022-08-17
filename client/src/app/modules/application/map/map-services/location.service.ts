@@ -3,7 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
 import { map, catchError, take } from "rxjs/operators";
 
-import { Location } from "../models/location";
+import { Location } from "../map-models/location";
 
 const apiUrl = "https://ipapi.co/json/";
 
