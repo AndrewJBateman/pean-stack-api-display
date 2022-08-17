@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 import { NytBestsellersService } from "./nyt-services/nyt-bestsellers.service";
-import { Book, Books, List } from "./nyt-models/nyt";
+import { Book, Books, List } from "./nyt-models/nyt-bestsellers";
 import { Observable } from "rxjs";
 import { Router, NavigationExtras } from "@angular/router";
 

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { Books } from "../nyt-models/nyt";
+import { Books } from "../nyt-models/nyt-bestsellers";
 
 @Component({
   selector: "app-bestseller-item",
