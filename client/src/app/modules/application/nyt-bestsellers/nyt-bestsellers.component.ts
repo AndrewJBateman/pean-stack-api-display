@@ -11,7 +11,7 @@ import { Router, NavigationExtras } from "@angular/router";
   styleUrls: ["./nyt-bestsellers.component.css"],
 })
 export class NytBestsellersComponent implements OnInit {
-  bestsellerLists: Observable<Books | List[]>;
+  bestsellerLists$: Observable<Books | List[]>;
   bestsellers: Array<Book>;
   bestseller: Book;
 
@@ -25,7 +25,7 @@ export class NytBestsellersComponent implements OnInit {
   }
 
   getBestsellers(): any {
-    this.bestsellerLists = this.nytBestsellersService.getBooks();
+    this.bestsellerLists$ = this.nytBestsellersService.getBooks();
   }
 
   onGoToBestsellerDetail(bestseller: Book): any {
