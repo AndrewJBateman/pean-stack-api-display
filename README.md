@@ -197,7 +197,7 @@ export class GithubService {
 ## :clipboard: Status, Testing & To-Do List
 
 * **Status:** Deployed to Heroku. Backend working. Build file created with no errors. All files pass linting.
-* **Dev Note:** in dev. currently have to add API keys (NASA, NEWS, BESTSELLERS & GITHUB). No Postgres data.
+* **Dev Note:** in dev. currently have to add API keys (NASA, NEWS, BESTSELLERS & GITHUB). No Postgres data - fix backend.
 * **Testing:** 7 test files all pass. e2e runs and passes but no specs
 * To-Do: Add Postgres data in simple file to be accessed during dev.
 * To-Do: backend database and test SSR
