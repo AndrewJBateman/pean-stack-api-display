@@ -34,7 +34,7 @@ INSERT INTO metalsData(element, density, color, symbol) VALUES ('Titanium', 4.5,
 INSERT INTO metalsData(element, density, color, symbol) VALUES ('Vanadium', 6.11, '#d4b8cf', 'V');
 INSERT INTO metalsData(element, density, color, symbol) VALUES ('Chromium', 7.19, '#fff500', 'Cr');
 INSERT INTO metalsData(element, density, color, symbol) VALUES ('Iron', 7.87, '#d4661b', 'Fe');
-INSERT INTO metalsData(element, density, color, symbol) VALUES ('Cobalt', 8.9, '#0047AB', 'Co');
+INSERT INTO metalsData(element, density, color, symbol) VALUES ('Cobalt', 8.9, '#0047ab', 'Co');
 INSERT INTO metalsData(element, density, color, symbol) VALUES ('Copper', 8.94, '#b87333', 'Cu');
 INSERT INTO metalsData(element, density, color, symbol) VALUES ('Silver', 10.49, 'silver', 'Ag');
 INSERT INTO metalsData(element, density, color, symbol) VALUES ('Gold', 19.3, 'gold', 'Au');

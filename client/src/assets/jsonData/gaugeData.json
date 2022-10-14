@@ -1,0 +1,14 @@
+[
+  {
+    "label": "Memory",
+    "reading": 80
+  },
+  {
+    "label": "CPU",
+    "reading": 55
+  },
+  {
+    "label": "Network",
+    "reading": 68
+  }
+]

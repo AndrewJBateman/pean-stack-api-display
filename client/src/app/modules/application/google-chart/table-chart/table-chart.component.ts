@@ -1,8 +1,10 @@
 import { Component } from "@angular/core";
 
+
 import { GoogleChartService } from "../data-services/google-chart.service";
 import { CrudService } from "../data-services/crud.service";
 import { CountryData } from "../data-models/countryData";
+import countryData from "../../../../../assets/jsonData/countryData.json";
 
 @Component({
   selector: "app-table-chart",
@@ -11,6 +13,7 @@ import { CountryData } from "../data-models/countryData";
 })
 export class TableChartComponent {
   private gLib: any;
+  countryData: CountryData[] = countryData;
 
   constructor(
     private gChartService: GoogleChartService,
@@ -23,7 +26,8 @@ export class TableChartComponent {
 
   private drawTable(): void {
     const dbDataArr = [];
-    this.crudService.getCountryData().subscribe((items: CountryData[]) => {
+    this.crudService.getCountryData()?.subscribe((items: CountryData[]) => {
+      items.length > 0 ? console.log("there are items") : console.log("no items");
       dbDataArr.push(...items);
       const chartDataArray = [];
       dbDataArr.forEach((item) =>

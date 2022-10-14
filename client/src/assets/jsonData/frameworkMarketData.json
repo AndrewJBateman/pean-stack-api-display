@@ -1,0 +1,14 @@
+[
+  {
+    "framework": "React",
+    "share": 57.5
+  },
+  {
+    "framework": "Angular",
+    "share": 31.5
+  },
+  {
+    "framework": "Vue",
+    "share": 11.0
+  }
+]

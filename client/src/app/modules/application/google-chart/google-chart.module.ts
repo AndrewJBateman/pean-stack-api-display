@@ -20,14 +20,14 @@ import { GoogleChartServiceModule } from "./data-services/google-chart.service.m
     GoogleChartServiceModule,
     GoogleChartRoutingModule,
     SvgDatabaseModule,
-    SvgCaretrModule,
+    SvgCaretrModule
   ],
   exports: [
     LineChartComponent,
     PieChartComponent,
     TableChartComponent,
     GaugeChartComponent,
-    BarChartComponent,
+    BarChartComponent
   ],
   declarations: [
     GoogleChartComponent,
@@ -36,7 +36,7 @@ import { GoogleChartServiceModule } from "./data-services/google-chart.service.m
     TableChartComponent,
     GaugeChartComponent,
     BarChartComponent,
-    SvgChartComponent,
+    SvgChartComponent
   ],
 })
 export class GoogleChartModule {}

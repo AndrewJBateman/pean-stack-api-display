@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Russia",
+    "population": 146,
+    "bordersMed": false
+  },
+  {
+    "name": "Germany",
+    "population": 84,
+    "bordersMed": false
+  },
+  {
+    "name": "Turkey",
+    "population": 85,
+    "bordersMed": true
+  },
+  {
+    "name": "France",
+    "population": 65,
+    "bordersMed": true
+  },
+  {
+    "name": "UK",
+    "population": 68,
+    "bordersMed": false
+  },
+  {
+    "name": "Italy",
+    "population": 60,
+    "bordersMed": true
+  },
+  {
+    "name": "Spain",
+    "population": 47,
+    "bordersMed": true
+  },
+  {
+    "name": "Poland",
+    "population": 38,
+    "bordersMed": false
+  },
+  {
+    "name": "Ukraine",
+    "population": 44,
+    "bordersMed": false
+  },
+  {
+    "name": "Romania",
+    "population": 19,
+    "bordersMed": false
+  }
+]

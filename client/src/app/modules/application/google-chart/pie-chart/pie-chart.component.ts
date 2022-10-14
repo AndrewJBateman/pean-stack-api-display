@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { FrameworkMarketshare } from "../data-models/frameworkMarketshare";
 import { CrudService } from "../data-services/crud.service";
 import { GoogleChartService } from "../data-services/google-chart.service";
+import frameworkMarketData from "../../../../../assets/jsonData/frameworkMarketData.json";
 
 @Component({
   selector: "app-pie-chart",
@@ -10,6 +11,7 @@ import { GoogleChartService } from "../data-services/google-chart.service";
 })
 export class PieChartComponent {
   private gLib: any;
+  frameworkMarketData: FrameworkMarketshare[] = frameworkMarketData;
 
   constructor(
     private gChartService: GoogleChartService,

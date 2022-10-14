@@ -1,9 +1,10 @@
 import { Component } from "@angular/core";
+import { Observable } from "rxjs";
 
 import { GoogleChartService } from "../data-services/google-chart.service";
 import { CrudService } from "../data-services/crud.service";
 import { CompanyPerformance } from "../data-models/companyPerformance";
-import { Observable } from "rxjs";
+import compPerfData from "../../../../../assets/jsonData/compPerfData.json";
 
 @Component({
   selector: "app-line-chart",
@@ -13,6 +14,7 @@ import { Observable } from "rxjs";
 export class LineChartComponent {
   private gLib: any;
   private crudData: Observable<CompanyPerformance[]>;
+  compPerfData: CompanyPerformance[] = compPerfData;
 
   constructor(
     private gChartService: GoogleChartService,

@@ -3,6 +3,7 @@ import { Component } from "@angular/core";
 import { GoogleChartService } from "../data-services/google-chart.service";
 import { CrudService } from "../data-services/crud.service";
 import { Metal } from "../data-models/metal";
+import metalsData from "../../../../../assets/jsonData/metalsData.json";
 
 @Component({
   selector: "app-bar-chart",
@@ -11,6 +12,7 @@ import { Metal } from "../data-models/metal";
 })
 export class BarChartComponent {
   private gLib: any;
+  metals: Metal[] = metalsData;
 
   constructor(
     private gChartService: GoogleChartService,

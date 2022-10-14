@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Location } from "@angular/common";
 
-import { Book } from "src/app/modules/application/books/book-models/books";
+import { Book } from "../book-models/books";
 
 @Component({
   selector: "app-book-detail",

@@ -3,6 +3,7 @@ import { Component } from "@angular/core"
 import { GaugeData } from "../data-models/gaugeData";
 import { CrudService } from "../data-services/crud.service";
 import { GoogleChartService } from "../data-services/google-chart.service";
+import gaugeData from "../../../../../assets/jsonData/gaugeData.json";
 
 @Component({
   selector: "app-gauge-chart",
@@ -11,6 +12,7 @@ import { GoogleChartService } from "../data-services/google-chart.service";
 })
 export class GaugeChartComponent {
   private gLib: any;
+  gaugeData: GaugeData[] = gaugeData;
 
   constructor(private gChartService: GoogleChartService, private crudService: CrudService) {
     this.gLib = this.gChartService.getGoogle();
