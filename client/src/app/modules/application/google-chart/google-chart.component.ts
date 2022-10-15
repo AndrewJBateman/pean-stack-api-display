@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { environment } from "../../../../environments/environment";
 
 @Component({
   selector: "app-google-chart",
@@ -6,7 +7,9 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./google-chart.component.css"],
 })
 export class GoogleChartComponent implements OnInit {
-  constructor() {}
+  isProd = true;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    !environment.production ? (this.isProd = false) : null;
+  }
 }
