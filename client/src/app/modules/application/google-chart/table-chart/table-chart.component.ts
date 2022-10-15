@@ -1,5 +1,4 @@
-import { Component } from "@angular/core";
-
+import { Component, Input } from "@angular/core";
 
 import { GoogleChartService } from "../data-services/google-chart.service";
 import { CrudService } from "../data-services/crud.service";
@@ -12,6 +11,7 @@ import countryData from "../../../../../assets/jsonData/countryData.json";
   styleUrls: ["./table-chart.component.css"],
 })
 export class TableChartComponent {
+  @Input() isProd: boolean = true;
   private gLib: any;
   countryData: CountryData[] = countryData;
 
@@ -26,35 +26,36 @@ export class TableChartComponent {
 
   private drawTable(): void {
     const dbDataArr = [];
-    this.crudService.getCountryData()?.subscribe((items: CountryData[]) => {
-      items.length > 0 ? console.log("there are items") : console.log("no items");
-      dbDataArr.push(...items);
-      const chartDataArray = [];
-      dbDataArr.forEach((item) =>
-        chartDataArray.push([item.name, item.population, item.bordersmed])
-      );
-      const table = new this.gLib.visualization.Table(
-        document.getElementById("divTableChart")
-      );
-      const data = new this.gLib.visualization.DataTable();
+    const tempDataArray = [];
+    const cssClassNames = {
+      tableCell: "cssTableCell",
+    };
+    const options = {
+      showRowNumber: false,
+      allowHtml: true,
+      cssClassNames,
+    };
 
-      data.addColumn("string", "Country");
-      data.addColumn("number", "Pop. (MM)");
-      data.addColumn("boolean", "Borders Med.");
-      data.addRows([...chartDataArray]);
+    this.isProd
+      ? this.crudService.getCountryData().subscribe((items: CountryData[]) => {
+          dbDataArr.push(...items);
+          dbDataArr.forEach((item) =>
+            tempDataArray.push([item.name, item.population, item.bordersMed])
+          );
+        })
+      : countryData.forEach((item) =>
+          tempDataArray.push([item.name, item.population, item.bordersMed])
+        );
 
-      const cssClassNames = {
-        tableCell: "cssTableCell",
-      };
-
-      const options = {
-        title: "Top Ten European Countries by Population",
-        showRowNumber: false,
-        allowHtml: true,
-        cssClassNames
-      };
-
-      table.draw(data, options);
-    });
+    // create chart data using the above database or assets data
+    const table = new this.gLib.visualization.Table(
+      document.getElementById("divTableChart")
+    );
+    const data = new this.gLib.visualization.DataTable();
+    data.addColumn("string", "Country");
+    data.addColumn("number", "Pop. (MM)");
+    data.addColumn("boolean", "Borders Med.");
+    data.addRows([...tempDataArray]);
+    table.draw(data, options);
   }
 }

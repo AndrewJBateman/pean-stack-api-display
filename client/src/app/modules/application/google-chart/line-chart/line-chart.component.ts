@@ -1,5 +1,4 @@
-import { Component } from "@angular/core";
-import { Observable } from "rxjs";
+import { Component, Input } from "@angular/core";
 
 import { GoogleChartService } from "../data-services/google-chart.service";
 import { CrudService } from "../data-services/crud.service";
@@ -12,8 +11,8 @@ import compPerfData from "../../../../../assets/jsonData/compPerfData.json";
   styleUrls: ["./line-chart.component.css"],
 })
 export class LineChartComponent {
+  @Input() isProd: boolean = true;
   private gLib: any;
-  private crudData: Observable<CompanyPerformance[]>;
   compPerfData: CompanyPerformance[] = compPerfData;
 
   constructor(
@@ -27,32 +26,37 @@ export class LineChartComponent {
 
   private drawChart(): void {
     const dbDataArr = [];
-    this.crudService
-      .getCompanyPerformance()
-      .subscribe((items: CompanyPerformance[]) => {
-        dbDataArr.push(...items);
-        const tempDataArray = [];
-        dbDataArr.forEach((item) =>
+    const tempDataArray = [];
+    const options = {
+      subtitle: "in millions of euro (EUR)",
+      vAxis: { title: "Revenue (million euro)" },
+      hAxis: { title: "Year" },
+      width: 350,
+      height: 300,
+      curveType: "function",
+      legend: { position: "bottom" },
+    };
+    this.isProd
+      ? this.crudService
+          .getCompanyPerformance()
+          .subscribe((items: CompanyPerformance[]) => {
+            dbDataArr.push(...items);
+            dbDataArr.forEach((item) =>
+              tempDataArray.push([item.year, item.sales, item.expenses])
+            );
+          })
+      : compPerfData.forEach((item) =>
           tempDataArray.push([item.year, item.sales, item.expenses])
         );
-        const chartDataArr = [["Year", "Sales", "Expenses"], ...tempDataArray];
-        const data = this.gLib.visualization.arrayToDataTable(chartDataArr);
 
-        const options = {
-          // title: "Yearly Company Performance",
-          subtitle: "in millions of euro (EUR)",
-          vAxis: { title: "Revenue (million euro)" },
-          hAxis: { title: "Year" },
-          width: 350,
-          height: 300,
-          curveType: "function",
-          legend: { position: "bottom" },
-        };
-
-        const chart = new this.gLib.visualization.LineChart(
-          document.getElementById("divLineChart")
-        );
-        chart.draw(data, options);
-      });
+    // create chart data using the above database or assets data
+    const data = this.gLib.visualization.arrayToDataTable([
+      ["Year", "Sales", "Expenses"],
+      ...tempDataArray,
+    ]);
+    const chart = new this.gLib.visualization.LineChart(
+      document.getElementById("divLineChart")
+    );
+    chart.draw(data, options);
   }
 }

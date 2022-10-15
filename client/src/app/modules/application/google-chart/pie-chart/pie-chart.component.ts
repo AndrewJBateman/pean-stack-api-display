@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { FrameworkMarketshare } from "../data-models/frameworkMarketshare";
 import { CrudService } from "../data-services/crud.service";
 import { GoogleChartService } from "../data-services/google-chart.service";
@@ -10,6 +10,7 @@ import frameworkMarketData from "../../../../../assets/jsonData/frameworkMarketD
   styleUrls: ["./pie-chart.component.css"],
 })
 export class PieChartComponent {
+  @Input() isProd: boolean = true;
   private gLib: any;
   frameworkMarketData: FrameworkMarketshare[] = frameworkMarketData;
 
@@ -24,43 +25,45 @@ export class PieChartComponent {
 
   private drawChart(): void {
     const dbDataArr = [];
-    this.crudService
-      .getFrameworkMarketshare()
-      .subscribe((items: FrameworkMarketshare[]) => {
-        dbDataArr.push(...items);
-        const chartDataArray = [];
-        dbDataArr.forEach((item) =>
-          chartDataArray.push([item.framework, +item.share])
-        );
-        const chart = new this.gLib.visualization.PieChart(
-          document.getElementById("divPieChart")
-        );
-        const data = new this.gLib.visualization.DataTable();
-        data.addColumn("string", "Framework");
-        data.addColumn("number", "%");
-        data.addRows([...chartDataArray]);
+    const tempDataArray = [];
+    const options = {
+      chartArea: {
+        left: "3%",
+        top: "3%",
+        height: "94%",
+        width: "94%",
+      },
+      is3D: true,
+      pieHole: 0.2,
+      pieSliceTextStyle: {
+        color: "white",
+        margin: 0,
+        padding: 0,
+        // position: "center",
+      },
+    };
 
-        const options = {
-          // title: "Top Framework Job Market Share",
-          // legend:'none',
-          // width: '80%',
-          // height: '80%',
-          chartArea: {
-            left: "3%",
-            top: "3%",
-            height: "94%",
-            width: "94%",
-          },
-          is3D: true,
-          pieHole: 0.2,
-          pieSliceTextStyle: {
-            color: "white",
-            margin: 0,
-            padding: 0,
-            // position: "center",
-          },
-        };
-        chart.draw(data, options);
-      });
+    this.isProd
+      ? this.crudService
+          .getFrameworkMarketshare()
+          .subscribe((items: FrameworkMarketshare[]) => {
+            dbDataArr.push(...items);
+            dbDataArr.forEach((item) =>
+              tempDataArray.push([item.framework, +item.share])
+            );
+          })
+      : frameworkMarketData.forEach((item) =>
+          tempDataArray.push([item.framework, +item.share])
+        );
+
+    // create chart data using the above database or assets data
+    const data = new this.gLib.visualization.DataTable();
+    const chart = new this.gLib.visualization.PieChart(
+      document.getElementById("divPieChart")
+    );
+    data.addColumn("string", "Framework");
+    data.addColumn("number", "%");
+    data.addRows([...tempDataArray]);
+    chart.draw(data, options);
   }
 }
