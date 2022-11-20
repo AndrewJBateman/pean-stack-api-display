@@ -39,6 +39,7 @@
 
 * During dev PostgreSQL needs to be installed and running - I started it from my Windows 10 PostgreSQL 12 dropdown option 'SQL shell (psql)' or from the Node.js command prompt
 * Data for Google Charts data page stored in a Postgres database then displayed on the frontend using Express.js
+* Copy of charts data stored in assets folder so charts can be displayed even if database not up and running.
 
 ### Frontend
 
@@ -199,8 +200,8 @@ export class GithubService {
 * **Status:** Deployed to Heroku. Backend working. Build file created with no errors. All files pass linting.
 * **Dev Note:** in dev. currently have to add API keys (NASA, NEWS, BESTSELLERS & GITHUB). No Postgres data - fix backend.
 * **Testing:** 7 test files all pass. e2e runs and passes but no specs
-* To-Do: Add Postgres data in simple file to be accessed during dev.
-* To-Do: backend database and test SSR
+* To-Do: New database - Supabase?
+* test SSR
 * To-Do: Lighthouse: Fix SEO & reduce render time for mobile build version. Fix images: "Image natural dimensions should be proportional to the display size and the pixel ratio to maximize image clarity."
 * To-Do: Add purgecss. Add more Jasmine & e2e test files.
 * To-Do: Contact page - replace icons
@@ -221,6 +222,7 @@ export class GithubService {
 * [Logrocket: 5 tricks to eliminate render blocking resources](https://blog.logrocket.com/5-tricks-to-eliminate-render-blocking-resources/)
 * [Cloud Engineering Studio: Yoko Ishioka: Componentize SVGs in Angular and style them on the fly](https://cloudengineering.studio/articles/componentize-svgs-in-angular-and-style-them-on-the-fly)
 * [Codegrepper: “the keyword import is reserved” Code Answer](https://www.codegrepper.com/code-examples/whatever/the+keyword+import+is+reserved)
+* [Tech Seeker: Steps To Setup PostgreSQL Database Using ElephantSql Cloud Service](https://www.learmoreseekmore.com/2020/09/postgresql-elephantsql-cloudserv.html)
 
 ## :file_folder: License
 
