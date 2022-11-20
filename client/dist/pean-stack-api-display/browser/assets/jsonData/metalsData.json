@@ -1,0 +1,62 @@
+[
+  {
+    "element": "Magnesium",
+    "density": 1.74,
+    "color": "#696969",
+    "symbol": "Mg"
+  },
+  {
+    "element": "Titanium",
+    "density": 4.5,
+    "color": "blue",
+    "symbol": "Ti"
+  },
+  {
+    "element": "Vanadium",
+    "density": 4.5,
+    "color": "#d4b8cf",
+    "symbol": "V"
+  },
+  {
+    "element": "Chromium",
+    "density": 7.19,
+    "color": "#fff500",
+    "symbol": "Cr"
+  },
+  {
+    "element": "Iron",
+    "density": 7.87,
+    "color": "#d4661b",
+    "symbol": "Fe"
+  },
+  {
+    "element": "Cobalt",
+    "density": 8.9,
+    "color": "#0047ab",
+    "symbol": "Co"
+  },
+  {
+    "element": "Copper",
+    "density": 8.94,
+    "color": "#b87333",
+    "symbol": "Cu"
+  },
+  {
+    "element": "Silver",
+    "density": 10.49,
+    "color": "silver",
+    "symbol": "Ag"
+  },
+  {
+    "element": "Gold",
+    "density": 19.3,
+    "color": "gold",
+    "symbol": "Au"
+  },
+  {
+    "element": "Platinum",
+    "density": 21.45,
+    "color": "#e5e4e2",
+    "symbol": "Pt"
+  }
+]
