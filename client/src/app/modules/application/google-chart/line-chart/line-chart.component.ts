@@ -44,6 +44,16 @@ export class LineChartComponent {
             dbDataArr.forEach((item) =>
               tempDataArray.push([item.year, item.sales, item.expenses])
             );
+
+            // create chart using the above array
+            const data = this.gLib.visualization.arrayToDataTable([
+              ["Year", "Sales", "Expenses"],
+              ...tempDataArray,
+            ]);
+            const chart = new this.gLib.visualization.LineChart(
+              document.getElementById("divLineChart")
+            );
+            chart.draw(data, options);
           })
       : compPerfData.forEach((item) =>
           tempDataArray.push([item.year, item.sales, item.expenses])
