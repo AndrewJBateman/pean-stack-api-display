@@ -84,12 +84,12 @@
 
 ## :signal_strength: Technologies - Frontend
 
-* [Angular framework v14](https://angular.io/)
-* [Angular Universal v14](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
+* [Angular framework v15](https://angular.io/)
+* [Angular Universal v15](https://angular.io/guide/universal) Server-Side Rendering(SSR) by a Node Express web server
 * [Bootstrap v5](https://getbootstrap.com/)
 * [Font Awesome icons](https://fontawesome.com/icons?d=gallery) converted to svg components
 * [jQuery v3](https://jquery.com/download/) required by Bootstrap. Latest version 3.5.1 resolved nav-bar breaking change in previous version.
-* [Angular Express Engine v14](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
+* [Angular Express Engine v15](https://www.npmjs.com/package/@nguniversal/express-engine) for running Angular Apps on the server for server side rendering
 * [Google Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse) to check quality of website
 * [Google Charts](https://developers.google.com/chart/interactive/docs/gallery)
 * [Palantir](https://palantir.github.io/tslint/) extensible linter for the TypeScript language
@@ -198,13 +198,12 @@ export class GithubService {
 ## :clipboard: Status, Testing & To-Do List
 
 * **Status:** Deployed to Heroku. Backend working. Build file created with no errors. All files pass linting.
-* **Dev Note:** in dev. currently have to add API keys (NASA, NEWS, BESTSELLERS & GITHUB). No Postgres data - fix backend.
 * **Testing:** 7 test files all pass. e2e runs and passes but no specs
 * To-Do: New database - Supabase?
 * test SSR
 * To-Do: Lighthouse: Fix SEO & reduce render time for mobile build version. Fix images: "Image natural dimensions should be proportional to the display size and the pixel ratio to maximize image clarity."
 * To-Do: Add purgecss. Add more Jasmine & e2e test files.
-* To-Do: Contact page - replace icons
+* To-Do: Contact page - header titles next to image, replace icons
 * To-Do: Fix burger menu drop down and alignment.
 * To-Do: Deploy as full-stack
 
