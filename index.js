@@ -27,7 +27,6 @@ app.get("/metals", async (req, res) => {
 		const allMetals = await pool.query(
 			"SELECT * FROM metalsData ORDER BY density ASC"
 		);
-		console.log("table: ", allMetals);
 		res.status(200).json(allMetals.rows);
 	} catch (err) {
 		console.error(err.message);

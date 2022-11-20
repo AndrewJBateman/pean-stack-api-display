@@ -17,10 +17,10 @@ export class GoogleBookService {
     return this.http
       .get<GoogleBooksApiInterface>(`${apiUrl}?q=${title}&maxResults=40`)
       .pipe(
-        tap((data: GoogleBooksApiInterface) =>
-          console.log("data: ", data.items)
-        ),
-        map((data: GoogleBooksApiInterface) => data.items.filter(item => item.saleInfo.saleability !== "NOT_FOR_SALE") || []),
+        // tap((data: GoogleBooksApiInterface) =>
+        //   console.log("data: ", data.items)
+        // ),
+        map((data: GoogleBooksApiInterface) => data.items?.filter(item => item.saleInfo.saleability !== "NOT_FOR_SALE") || []),
         catchError((err) => {
           throw "error in getting API data. Details: " + err;
         })
