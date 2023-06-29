@@ -2,12 +2,13 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { catchError, map, take } from "rxjs/operators";
+import { environment } from "../../../../../environments/environment";
 
 import { Books, List } from "../nyt-models/nyt-bestsellers";
 
 const apiUrl = "https://api.nytimes.com/svc/books/v3/lists/full-overview.json?";
-const apiKey = process.env.NYT_BEST_KEY;
-
+// const apiKey = process.env.NYT_BEST_KEY;
+const apiKey = environment.NYT_BEST_KEY;
 // const apiKey = "YOUR DEV KEY HERE"
 
 @Injectable({
