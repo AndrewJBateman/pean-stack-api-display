@@ -13,22 +13,22 @@
 ## :page_facing_up: Table of contents
 
 * [:zap: PEAN Full Stack API Display](#zap-pean-full-stack-api-display)
-  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:page\_facing\_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
     * [Frontend](#frontend)
   * [:camera: Screenshots](#camera-screenshots)
-  * [:signal_strength: Technologies - Backend](#signal_strength-technologies---backend)
-  * [:signal_strength: Technologies - Frontend](#signal_strength-technologies---frontend)
-  * [:floppy_disk: Setup - Backend](#floppy_disk-setup---backend)
-  * [:floppy_disk: Setup - Frontend](#floppy_disk-setup---frontend)
+  * [:signal\_strength: Technologies - Backend](#signal_strength-technologies---backend)
+  * [:signal\_strength: Technologies - Frontend](#signal_strength-technologies---frontend)
+  * [:floppy\_disk: Setup - Backend](#floppy_disk-setup---backend)
+  * [:floppy\_disk: Setup - Frontend](#floppy_disk-setup---frontend)
   * [:wrench: Testing](#wrench-testing)
   * [:computer: Code Examples - Backend](#computer-code-examples---backend)
   * [:computer: Code Examples - Frontend NASA API](#computer-code-examples---frontend-nasa-api)
   * [:cool: Features - Backend](#cool-features---backend)
   * [:cool: Features - Frontend](#cool-features---frontend)
-  * [:clipboard: Status, Testing & To-Do List](#clipboard-status-testing--to-do-list)
+  * [:clipboard: Status, Testing \& To-Do List](#clipboard-status-testing--to-do-list)
   * [:clap: Inspiration/General Tools](#clap-inspirationgeneral-tools)
-  * [:file_folder: License](#file_folder-license)
+  * [:file\_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -183,7 +183,7 @@ export class GithubService {
 
 ## :cool: Features - Frontend
 
-* [http data handling best practices](https://angular.io/guide/http) followed - i.e. use of separate service file to get API data then use of subscription callback function in component to subscribe to Observable data. Response object type defined using an interface model. Interface passed as type parameter to the HttpClient.get() method. Transformed data passed to async pipe.
+* [HTTP data handling best practices](https://angular.io/guide/http) followed - i.e. use of separate service file to get API data then use of subscription callback function in component to subscribe to Observable data. Response object type defined using an interface model. Interface passed as type parameter to the HttpClient.get() method. Transformed data passed to async pipe.
 * [RxJS take](https://rxjs-dev.firebaseapp.com/api/operators/take)) used instead of map() to emit only the first count value emitted by the source Observable. Then it completes - so no need to unsubscribe to avoid memory leaks.
 * [Angular Activated Route snapshot params](https://angular.io/api/router/ActivatedRoute) used to pass username from github user search page to github repo display page.
 * [Angular Universal](https://angular.io/guide/universal) used to generate static pages using Server Side Rendering (SSR) - to increase display speed and add Search Engine Optimisation (SEO). _A normal Angular application executes in the browser, rendering pages in the DOM in response to user actions. Angular Universal executes on the server, generating static application pages that later get bootstrapped on the client. This means that the application generally renders more quickly, giving users a chance to view the application layout before it becomes fully interactive._
