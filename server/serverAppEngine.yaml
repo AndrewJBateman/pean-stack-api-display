@@ -1,0 +1,4 @@
+runtime: node16
+service: server
+env_variables:
+  GAE_DB_SOCKET: "/cloudsql/angular-material-ssr:europe-west6:ng-stack-data"

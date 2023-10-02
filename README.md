@@ -102,7 +102,7 @@
 
 ## :floppy_disk: Setup - Backend
 
-* Install dependencies using `npm i`
+* From `\server` install dependencies using `npm i`
 * Install [nodemon](https://www.npmjs.com/package/nodemon) globally if you don't already have it
 * Install [PostgreSQL](https://www.postgresql.org/) & run it (requires the password you created during installation)
 * Add database access credentials to `db.js` - recommend installing [npm dotenv](https://www.npmjs.com/package/dotenv) & using .env to hide credentials if commiting to Github
@@ -116,7 +116,6 @@
 * Add your API keys for the Nasa, Google Maps and News apps to `environment.ts` & `environment.prod.ts` files or individual modules as I have done for deployment reasons
 * Run `ng serve` for a non-SSR dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
 * Run `npm run dev:ssr` for an SSR dev server. Frontend will open at `http://localhost:4200/` - refreshes on code changes
-* Run `npm run lint` to lint test entire client-side codebase using TSLint.
 * Run `npm run build` to generate a build file without SSR
 * Run `npm run build:ssr` to generate a build file with SSR. Add `defer` to browser css file ref.
 * Run `npm run serve:ssr` to see on a dev server `http://localhost:4000`
@@ -197,7 +196,7 @@ export class GithubService {
 
 ## :clipboard: Status, Testing & To-Do List
 
-* **Status:** Deployed to Heroku. Backend working. Build file created with no errors. All files pass linting.
+* **Status:** Deployed to Heroku. Backend working. Build file created with no errors.
 * **Testing:** 7 test files all pass. e2e runs and passes but no specs
 * To-Do: New database - Supabase?
 * test SSR
@@ -229,4 +228,4 @@ export class GithubService {
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: `gomezbateman@yahoo.com`

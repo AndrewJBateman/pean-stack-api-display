@@ -13,6 +13,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "dayjs",
+              "leaflet",
+              "dayjs/plugin/relativeTim"
+            ],
             "outputPath": "dist/pean-stack-api-display/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -189,9 +194,7 @@
           "options": {
             "browserTarget": "pean-stack-api-display:build:production",
             "serverTarget": "pean-stack-api-display:server:production",
-            "routes": [
-              "/"
-            ]
+            "routes": ["/"]
           },
           "configurations": {
             "production": {}

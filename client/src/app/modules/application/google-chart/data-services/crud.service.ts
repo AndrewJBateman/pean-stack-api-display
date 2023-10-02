@@ -8,14 +8,21 @@ import { FrameworkMarketshare } from "../data-models/frameworkMarketshare";
 import { GaugeData } from "../data-models/gaugeData";
 import { CountryData } from "..//data-models/countryData";
 
-// const baseUrl = "http://localhost:5000";
-const baseUrl = "https://pean-stack-apis.herokuapp.com";
+const baseUrl = "http://localhost:5000";
+// const baseUrl = "https://pean-stack-apis.herokuapp.com";
 
 @Injectable({
   providedIn: "root",
 })
 export class CrudService {
   constructor(private http: HttpClient) {}
+
+  async getTestData(): Promise<any> {
+    const response = this.http.get("http://localhost:5000/db-test");
+    const responseData = await response;
+    console.log(responseData => console.log(responseData));
+    return responseData;
+  }
 
   getAllMetals(): Observable<Metal[]> {
     return this.http.get<Metal[]>(`${baseUrl}/metals`);
